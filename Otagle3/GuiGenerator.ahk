@@ -182,7 +182,7 @@ BuildHTMLFile(){
         <li class="menu-bar__item">
         <a class="item__link" href="#">Configure</a>
         <ul class="sub-menu">
-        <li class="sub-menu__item"><a class="item__link sub__link" href="#">Add layer</a></li>
+        <li class="sub-menu__item"  onclick="ahk.addLayer(event)"><a class="item__link sub__link" href="#">Add layer</a></li>
         <li class="sub-menu__item"><a class="item__link sub__link" href="#">Erase layer</a></li>
         </ul>
         </li>

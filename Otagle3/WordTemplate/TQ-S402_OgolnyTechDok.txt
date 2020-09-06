@@ -1,8 +1,0 @@
-Plik TQ-S402A-en_OgolnyTechDok.exportedUI to plik s³u¿¹cy do dostosowania paska szybki dostêp w programie Word do makr obecnych w szablonie - umieszcza on przyciski obs³uguj¹ce makra na górnym pasku w Wordzie.
-¯eby za³adowaæ przyciski, nale¿y:
-1. Wejœæ w Plik > Opcje
-2. Wybraæ "Pasek narzêdzi szybki dostêp"
-3. Z prawej strony na dole klikn¹æ "Importuj/Eksportuj"
-4. Wybraæ "Importuj plik dostosowañ" i otworzyæ plik TQ-S402A-en_OgolnyTechDok.exportedUI
-5. Zgodziæ siê na zast¹pienie dostosowañ.
-Na górze okna Worda pojawi¹ siê ikony makr.

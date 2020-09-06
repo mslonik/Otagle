@@ -1,8 +1,0 @@
-TQ-S402A-en_OgolnyTechDok.exportedUI is a file used to customize the Quick Access Toolbar in Word. The file places buttons to open Macros on the toolbar in MS Word.
-To load the buttons, do as follows:
-1. Click File > Options
-2. Click Quick Access Toolbar
-3. Click "Import/Export" on the right side
-4. Click "Import customization file", and choose TQ-S402A-en_OgolnyTechDok.exportedUI
-5. Accept change of your customized toolbar.
-Macro buttons will be shown in the toolbar.

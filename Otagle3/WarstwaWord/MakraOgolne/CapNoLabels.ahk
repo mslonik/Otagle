@@ -89,7 +89,13 @@ OK4:
 			Index := MyListBox4
             WinActivate, ahk_class OpusApp
             oWord.ScreenUpdating := 0
-            Send, % var . " "
+            ClipboardBackUp := Clipboard
+			Clipboard := var
+			Send, ^v
+			Sleep, 100
+			Clipboard := ClipboardBackUp
+			ClipboardBackUp := ""
+			Send, % " "
 			oWord.Selection.InsertCrossReference(var, 3, Index, 1, 0, 0, " ")
             oWord.Selection.MoveLeft(2,1,1)
             oWord.Selection.Fields.ToggleShowCodes

@@ -40,9 +40,11 @@ BarF(neutron,event,action){
 rWizard(neutron,event){
 Run, ConfigBuilder.ahk,%A_ScriptDir% 
 }
+
 }
-
-
+addLayer(neutron,event){
+   Run, AddLayerRmLayer.ahk,%A_ScriptDir%  
+}
 
 Reset(){
     global
