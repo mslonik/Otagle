@@ -328,3 +328,57 @@ CloneB(){
     Reset()
 }
 
+addLayer(){
+Gui, aLayer:Destroy
+Gui, aLayer: New, +LabelMyGui_On -DPIScale
+Gui, aLayer: Add, Text, xm, Specify key size width: `
+Gui, aLayer: Add, Edit, x+m yp r1 w50
+Gui, aLayer: Add, UpDown, vbtnWidth Range1-300, % btnWidth 
+Gui, aLayer: Add, Text, x+m yp, Specify key size height: `
+Gui, aLayer: Add, Edit, x+m yp r1 w50
+Gui, aLayer: Add, UpDown, vbtnHeight Range1-300, % btnHeight
+Gui, aLayer: Add, Button, xm Default w80 gBCalculate, C&alculate 
+Gui, aLayer: Add, Button, x50 y+20 w80 gPlotButtons2 hwndTestButtonHwnd,       &Test
+Gui, aLayer: Add, Text,  xm, % "Number of keys horizontally:`t" . (T_CalculateButton ? aLayer_AmountOfKeysHorizontally : "") 
+Gui, aLayer: Add, Text,  yp x+m, Write the title of the layer:
+Gui, aLayer: Add, Text, xm, % "Number of keys vertically:`t" . (T_CalculateButton ? aLayer_AmountOfKeysVertically : "") 
+Gui, aLayer: Add, Edit, yp x+m w120 vTitle, %Title%
+Gui, aLayer:Show
+}
+
+BCalculate(){
+Gui, aLayer: Submit
+T_CalculateButton :=1 
+global MonitorBoundingCoordinates_,
+SysGet, MonitorBoundingCoordinates_, Monitor, % WhichMonitor
+MonitorBoundingCoordinates_Left := Format("{:d}", MonitorBoundingCoordinates_Left/ (A_ScreenDPI/96))
+MonitorBoundingCoordinates_Right := Format("{:d}", MonitorBoundingCoordinates_Right/ (A_ScreenDPI/96))
+MonitorBoundingCoordinates_Top := Format("{:d}", MonitorBoundingCoordinates_Top/ (A_ScreenDPI/96))
+MonitorBoundingCoordinates_Bottom := Format("{:d}", MonitorBoundingCoordinates_Bottom/ (A_ScreenDPI/96))
+global aLayer_AmountOfKeysHorizontally := (Abs(MonitorBoundingCoordinates_Left - MonitorBoundingCoordinates_Right) -  ButtonHorizontalGap) // ( btnWidth + ButtonHorizontalGap)
+global aLayer_AmountOfKeysVertically := (Abs(MonitorBoundingCoordinates_Top - MonitorBoundingCoordinates_Bottom) - ButtonVerticalGap) // (btnHeight + ButtonVerticalGap)
+addLayer()
+
+}
+
+PlotButtons2(){
+     Gui, aLayer:    Submit, NoHide
+     Gui, aLayer:    Destroy
+     Gui, Template: New, +LabelMyGui_On -DPIScale
+     AmoountVBtn := aLayer_AmountOfKeysVertically
+     AmoountHBtn := aLayer_AmountOfKeysHorizontally
+     Bw := btnWidth
+     Bh := btnHeight
+    Loop, %AmoountVBtn% 
+    {
+    VarVertical := A_Index
+        Loop, %AmoountHBtn%
+        {
+           Gui, Template: Add, Button,% "xm Default" . " w" . Bw . " h" . Bh  . " x" . (bw + 10) * (A_Index - 1) . " y" . (bh + 10) * (VarVertical - 1) ,   Button 
+        }
+    }
+    Gui, Template:Show
+}
+
+
+
