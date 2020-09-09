@@ -19,21 +19,14 @@ SetWorkingDir %A_ScriptDir%
      global Title :=
      global btnWidth := 80
      global btnHeight := 80
-     global ButtonHorizontalGap := 10   
-     global ButtonVerticalGap   := 10
-     global MonitorBoundingCoordinates_Left  := 0
-     global MonitorBoundingCoordinates_Right := 0
-     global MonitorBoundingCoordinates_Top   := 0
-     global MonitorBoundingCoordinates_Bottom:= 0
-     global T_CalculateButton   := 0 
-     global WhichMonitor        := 0
-     global aLayer_AmountOfKeysHorizontally :=
-     global aLayer_AmountOfKeysVertically := 
-    
+
+     global HowManyLayers :=
+     global LayerToBeErased :=
 F_display_configurator() {
     Gui,AddLayers:Destroy
     Gui,DeleteLayers:Destroy
     Gui,SwapLayers:Destroy
+    Gui, EraseLayer:Destroy
     IniRead, VL , % A_ScriptDir . "\Config.ini",Main,HowManyLayers
     Loop, %VL%{
         Ln := A_Index
@@ -142,6 +135,7 @@ FdGuiDelete(){
     Gui,AddLayers:Destroy
     Gui,DeleteLayers:Destroy
     Gui,SwapLayers:Destroy
+    Gui, EraseLayer:Destroy
     IniRead, VL , % A_ScriptDir . "\Config.ini",Main,HowManyLayers
     Loop, %VL%{
     Ln := A_Index
@@ -189,6 +183,7 @@ AddBtn(){
     Gui,AddLayers:Destroy
     Gui,DeleteLayers:Destroy
     Gui,SwapLayers:Destroy
+    Gui, EraseLayer:Destroy
     IniRead, VL , % A_ScriptDir . "\Config.ini",Main,HowManyLayers
     Loop, %VL%{
         Ln := A_Index
@@ -258,6 +253,7 @@ Gui,AddLayers:Destroy
 Gui,DeleteLayers:Destroy
 Gui,SwapLayers:Destroy
 Gui,CloneLayers:Destroy
+Gui, EraseLayer:Destroy
 IniRead, VL , % A_ScriptDir . "\Config.ini",Main,HowManyLayers
     Loop, %VL%{
         Ln := A_Index
@@ -328,3 +324,156 @@ CloneB(){
     Reset()
 }
 
+ConfigureEraseLayer(){
+     Gui,AddLayers:Destroy
+     Gui,DeleteLayers:Destroy
+     Gui,SwapLayers:Destroy
+     Gui,CloneLayers:Destroy
+     Gui, EraseLayer:Destroy
+     Gui, EraseLayer: New, +LabelMyGui_On
+     Gui, EraseLayer: Font, bold
+     Gui, EraseLayer: Add, Text, , Erase layer
+     Gui, EraseLayer: Font
+     Gui, EraseLayer: Add, Text, , Select which layer should be erased:
+    IniRead, VL , % A_ScriptDir . "\Config.ini",Main,HowManyLayers
+    Loop, %VL%{
+        Ln := A_Index
+        loadedLayers := A_Index
+        SendMode Input  
+        SetWorkingDir %A_ScriptDir%
+        IniRead, AmoountHBtn,% A_ScriptDir . "\Config.ini",Layer%Ln%,Amount of buttons horizontally
+        IniRead, AmoountVBtn,% A_ScriptDir . "\Config.ini",Layer%Ln%,Amount of buttons vertically
+        IniRead, Title , % A_ScriptDir . "\Config.ini",Layer%Ln% ,Title
+        opt := % opt . "Layer" . Ln . " " . Title . "|"
+    }
+    Gui,EraseLayer:Add, ComboBox, w200 vLayerToBeErased, % opt
+
+    Gui, EraseLayer: Add, Button, xm+30 w80 gEraseLayer,     &Erase layer
+    Gui, EraseLayer: Show
+}
+
+
+EraseLayer(){
+     Gui, EraseLayer: Submit, NoHide
+     Gui, EraseLayer: Destroy
+    global l0 := SubStr(LayerToBeErased,1,InStr(LayerToBeErased, " ",,,1))  
+     IniDelete, % A_ScriptDir . "\Config.ini", % l0 
+     IniRead, HowManyLayers , % A_ScriptDir . "\Config.ini",Main,HowManyLayers
+     HowManyLayers--
+     
+     IniWrite, % "HowManyLayers=" . HowManyLayers,           % A_ScriptDir . "\Config.ini", Main,
+    Reset()
+}
+ConfigureEraseLayer()
+
+global flag := 0
+addLayers(){
+
+ Gui,DeleteLayers:Destroy
+ Gui,SwapLayers:Destroy
+ Gui,CloneLayers:Destroy
+ Gui, EraseLayer:Destroy
+ Gui, aLayers:Destroy
+ global widthButton :=
+ global heightButton :=
+
+ Gui, aLayers: New, +LabelMyGui_On -DPIScale
+ Gui, aLayers: Add, Text, xm, Specify key size width: `
+ Gui, aLayers: Add, Edit, x+m yp r1 w50
+ Gui, aLayers: Add, UpDown, vwidthButton Range1-300,80
+ Gui, aLayers: Add, Text, x+m yp, Specify key size height: `
+ Gui, aLayers: Add, Edit, x+m yp r1 w50
+ Gui, aLayers: Add, UpDown, vheightButton Range1-300,80
+ Gui, aLayers: Add, Button, xm Default w80 gCalculateButtons, C&alculate 
+ Gui, aLayers: Add, Text,  xm, % "Number of keys horizontally:`t" . (flag ? aLayer_AmountOfKeysHorizontally : "") 
+ Gui, aLayers: Add, Text,  yp x+m, Write the title of the layer:
+ Gui, aLayers: Add, Text, xm, % "Number of keys vertically:`t" . (flag ? aLayer_AmountOfKeysVertically : "") 
+ Gui, aLayers: Add, Edit, yp x+m w120 vTitle, %Title%
+ Gui, aLayers: Add, Button, x10  w80 gdrawButton hwndTestButtonHwnd, &Test
+ Gui, aLayers: Add, Button, xm w80 gSaveLayer hwndSaveLayerHwnd, &Add Layer
+    If (flag=""){
+    GuiControl,aLayers:Disable, % TestButtonHwnd
+    GuiControl,aLayers:Disable, % SaveLayerHwnd
+    }
+ Gui, aLayers:Show
+}
+Return
+CalculateButtons:
+  changeFlag()
+   Gui,aLayers:Submit
+   Gui, aLayers:Destroy
+    GuiControl,aLayers:Enable, % TestButtonHwnd
+    GuiControl,aLayers:Enable, % SaveLayerHwnd
+
+   global aLayer_AmountOfKeysHorizontally := (1920 - 10) // ( widthButton + 10)
+   global aLayer_AmountOfKeysVertically := (1080 - 10) // (heightButton + 10)
+    addLayers()
+Return
+changeFlag(){
+  flag := 1 
+}
+
+SaveLayer:
+      Gui,aLayers:Submit,NoHide
+      If (Title = ""){
+          MsgBox, Please enter a layer name 
+      }Else{
+                IniRead, HowManyLayers , % A_ScriptDir . "\Config.ini",Main,HowManyLayers
+      HowManyLayers++
+      IniWrite, % "HowManyLayers=" . HowManyLayers,% A_ScriptDir . "\Config.ini", Main,
+      IniWrite, % Title,                   % A_ScriptDir . "\Config.ini", % "Layer" . HowManyLayers,  Title
+      If (heightButton == widthButton){
+            IniWrite, % Floor(100/aLayer_AmountOfKeysHorizontally), % A_ScriptDir . "\Config.ini", % "Layer" . HowManyLayers,  ButtonWidth
+            IniWrite, % Floor(100/aLayer_AmountOfKeysHorizontally), % A_ScriptDir . "\Config.ini", % "Layer" . HowManyLayers,  ButtonHeight
+     }Else{
+            IniWrite, % Floor(widthButton/1920 * 100), % A_ScriptDir . "\Config.ini", % "Layer" . HowManyLayers,  ButtonWidth
+            IniWrite, % Floor(heightButton/1080 * 100), % A_ScriptDir . "\Config.ini", % "Layer" . HowManyLayers,  ButtonHeight
+        }
+     IniWrite,% aLayer_AmountOfKeysHorizontally ,% A_ScriptDir . "\Config.ini", % "Layer" . HowManyLayers,Amount of buttons horizontally
+     IniWrite,% aLayer_AmountOfKeysVertically ,% A_ScriptDir . "\Config.ini", % "Layer" . HowManyLayers,Amount of buttons vertically
+    Loop, % aLayer_AmountOfKeysVertically
+    {
+    ExternalLoopIndex := A_Index
+    Loop, % aLayer_AmountOfKeysHorizontally
+        {
+            IniWrite, % "", % A_ScriptDir . "\Config.ini", % "Layer" . HowManyLayers, % "Button_" . ExternalLoopIndex . "_" . A_Index . "_X"
+            IniWrite, % "", % A_ScriptDir . "\Config.ini", % "Layer" . HowManyLayers, % "Button_" . ExternalLoopIndex . "_" . A_Index . "_Y"
+            IniWrite, % "", % A_ScriptDir . "\Config.ini", % "Layer" . HowManyLayers, % "Button_" . ExternalLoopIndex . "_" . A_Index . "_W"
+            IniWrite, % "", % A_ScriptDir . "\Config.ini", % "Layer" . HowManyLayers, % "Button_" . ExternalLoopIndex . "_" . A_Index . "_H"
+            IniWrite, % "", % A_ScriptDir . "\Config.ini", % "Layer" . HowManyLayers, % "Button_" . ExternalLoopIndex . "_" . A_Index . "_Picture"
+            IniWrite, % "",  % A_ScriptDir . "\Config.ini", % "Layer" . HowManyLayers, % "Button_" . ExternalLoopIndex . "_" . A_Index . "_Action"
+            IniWrite, % "",  % A_ScriptDir . "\Config.ini", % "Layer" . HowManyLayers, % "Button_" . ExternalLoopIndex . "_" . A_Index . "_Path"
+        }
+    }
+    Gui, aLayers:Destroy
+    Reset()
+   }
+
+Return
+
+drawButton:
+   Gui,aLayers:Submit,NoHide
+   Gui, aLayers:Destroy
+   Gui, Template: New, +LabelMyGui_On -DPIScale
+     AVBtn := aLayer_AmountOfKeysVertically
+     AHBtn := aLayer_AmountOfKeysHorizontally
+     Bw := widthButton
+     Bh := heightButton
+     Loop, %AVBtn% 
+    {
+    VarVertical := A_Index
+        Loop, %AHBtn%
+        {
+           Gui, Template: Add, Button,% "xm Default" . " w" . Bw . " h" . Bh  . " x" . (bw + 10) * (A_Index - 1) . " y" . (bh + 10) * (VarVertical - 1) ,  Button 
+        }
+    }
+    SetTimer,CloseMatrix,4000,-1
+    Gui, Template:Show
+Return    
+
+CloseMatrix:
+Gui,Template:Submit
+Gui, Template:Destroy
+SetTimer,, Off
+addLayers()
+Return

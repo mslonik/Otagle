@@ -11,6 +11,7 @@ if !(FileExist("Config.ini")){
 #Include *i %A_ScriptDir%\GuiGenerator.ahk
 #Include *i %A_ScriptDir%\ConfigBuilder.ahk
 #Include *i %A_ScriptDir%\ArrangeBtn.ahk
+
 Menu, Tray,Icon, % A_ScriptDir . "\Assets\OtagleIcon.ico"
 ; Global variables
 
@@ -22,7 +23,6 @@ FileInstall, Assets/ikonySVG, *
 FileInstall, bootstrap.min.css, bootstrap.min.css
 FileInstall, bootstrap.min.js, bootstrap.min.js
 FileInstall, jquery.min.js, jquery.min.js
-
 
 ; Button handler
 ClickF(neutron,event,action){
@@ -40,12 +40,7 @@ BarF(neutron,event,action){
 rWizard(neutron,event){
 Run, ConfigBuilder.ahk,%A_ScriptDir% 
 }
-
 }
-addLayer(neutron,event){
-   Run, AddLayerRmLayer.ahk,%A_ScriptDir%  
-}
-
 Reset(){
     global
     neutron.Close("PlikiHtml/Layer1.html")
@@ -53,3 +48,4 @@ Reset(){
     FileCreateDir, PlikiHtml
     BuildHTMLFile()
 }
+

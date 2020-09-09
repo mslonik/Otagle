@@ -32,26 +32,100 @@ CheckingMacro()
     return
 
     GoNext:
-        if(Headings)
-            SetHeadersAndFooters()
-        if(Signs)
-            Wypunktowania()
-        if(MultiSpaces)
-            UsunWielokrotneSpacje()
-        if(HardSpace)
-            TwardaSpacja()
-        if(Refresh)
-            Refresh()
-        if(HyperLinks)
+        Gui, CheckMacro:Destroy
+        cntCheck := Headings + Signs + MultiSpaces + HardSpace + Refresh + HyperLinks + Failure + Size
+        Gui, CheckNext:New, -MinimizeBox -MaximizeBox AlwaysOnTop
+        Gui, CheckNext:Add, Text, vCheckText w300
+        Gui, CheckNext:Add, Button, gCheckNext w150 Disabled, % MsgText("Następny krok")
+        Gui, CheckNext:Add, Button, gCheckNextGuiClose yp x+m w150 Disabled, % MsgText("Zakończ")
+        Gui, CheckNext:Show
+    
+    CheckNext:
+
+        checkFlag := 1
+        if(Headings) and (CheckFlag)
         {
+            CheckFlag := 0
+            GuiControl, Disable, % MsgText("Następny krok")
+            GuiControl,, CheckText, % MsgText("Ustawianie nagłówków i stopek...")
+            SetHeadersAndFooters()
+            Gui, CheckNext:Default
+            GuiControl,, CheckText, % MsgText("Ustawiono nagłówki i stopki.")
+            GuiControl, Enable, % MsgText("Następny krok")
+            Headings := 0
+        }
+        if(Signs) and (CheckFlag)
+        {
+            CheckFlag := 0
+            GuiControl, Disable, % MsgText("Następny krok")
+            GuiControl,, CheckText, % MsgText("Sprawdzanie znaków interpunkcyjnych na końcach wypunktowań...")
+            Wypunktowania()
+            Gui, CheckNext:Default
+            GuiControl,, CheckText, % MsgText("Sprawdzono znaki interpunkcyjne na końcach wypunktowań.")
+            GuiControl, Enable, % MsgText("Następny krok")
+            Signs := 0
+        }            
+        if(MultiSpaces) and (CheckFlag)
+        {
+            CheckFlag := 0
+            GuiControl, Disable, % MsgText("Następny krok")
+            GuiControl,, CheckText, % MsgText("Usuwanie wielokrotnych spacji i enterów...")
+            UsunWielokrotneSpacje()
+            Gui, CheckNext:Default
+            GuiControl,, CheckText, % MsgText("Usunięto wielokrotne spacje i entery.")
+            GuiControl, Enable, % MsgText("Następny krok")
+            MultiSpaces := 0
+        }
+        if(HardSpace) and (CheckFlag)
+        {
+            CheckFlag := 0
+            GuiControl, Disable, % MsgText("Następny krok")
+            GuiControl,, CheckText, % MsgText("Zamiana spacji na twarde spacje...")
+            TwardaSpacja()
+            Gui, CheckNext:Default
+            GuiControl,, CheckText, % MsgText("Zamieniono spacje na twarde spacje.")
+            GuiControl, Enable, % MsgText("Następny krok")
+            HardSpace := 0
+        }
+        if(Refresh) and (CheckFlag)
+        {
+            CheckFlag := 0
+            GuiControl, Disable, % MsgText("Następny krok")
+            GuiControl,, CheckText, % MsgText("Odświeżanie dokumentu...")
+            Refresh()
+            Gui, CheckNext:Default
+            GuiControl,, CheckText, % MsgText("Odświeżono dokument.")
+            GuiControl, Enable, % MsgText("Następny krok")
+            Refresh := 0
+        }
+        if(HyperLinks) and (CheckFlag)
+        {
+            CheckFlag := 0
+            GuiControl, Disable, % MsgText("Następny krok")
+            GuiControl,, CheckText, % MsgText("Zamiana odsyłaczy na hiperłącza...")
             Hiperlacza()
             Refresh()
+            Gui, CheckNext:Default
+            GuiControl,, CheckText, % MsgText("Zamieniono odsyłacze na hiperłącza.")
+            GuiControl, Enable, % MsgText("Następny krok")
+            HyperLinks := 0
         }
-        if(Failure)
-            FindBlad()
-        if(Size)
+        if(Failure) and (CheckFlag)
         {
-
+            CheckFlag := 0
+            GuiControl, Disable, % MsgText("Następny krok")
+            GuiControl,, CheckText, % MsgText("Szukanie słowa 'błąd'...")
+            FindBlad()
+            Gui, CheckNext:Default
+            GuiControl,, CheckText, % MsgText("Ukończono szukanie słowa 'błąd'.")
+            GuiControl, Enable, % MsgText("Następny krok")
+            Failure := 0
+        }
+        if(Size) and (CheckFlag)
+        {
+            CheckFlag := 0
+            GuiControl, Disable, % MsgText("Następny krok")
+            GuiControl,, CheckText, % MsgText("Zmniejszanie rozmiaru obrazków w dokumencie...")
             MsgBox, 0x34, Uwaga!, % MsgText("Przed zmniejszeniem obrazków dokument zostanie zamknięty i zapisany. Czy chcesz kontynuować?")
             IfMsgBox, Yes
             {
@@ -62,8 +136,24 @@ CheckingMacro()
                 ResizeImages(DocName)
 
             }
-                
+            Gui, CheckNext:Default
+            GuiControl,, CheckText, % MsgText("Zmiejszono rozmiar obrazków w dokumencie.")
+            GuiControl, Enable, % MsgText("Następny krok")
+            Size := 0
         }
+        cntCheck := cntCheck - 1
+        if (cntCheck == 0)
+        {
+            GuiControl, Disable, % MsgText("Następny krok")
+            GuiControl, Enable, % MsgText("Zakończ")
+
+        }
+    return
+
+    CheckNextGuiEscape:
+    CheckNextGuiClose:
+        Gui, CheckNext:Destroy
+        return
 
     CheckMacroGuiEscape:
     CheckMacroGuiClose:

@@ -42,3 +42,8 @@ function changeOrder() {
     on.classList.toggle('active');
 
 }
+
+// const e1 = document.getElementById("E1");
+// e1.setAttribute("font-size", "9px")
+// e1.setAttribute("fill", "yellow")
+// console.log(e1);

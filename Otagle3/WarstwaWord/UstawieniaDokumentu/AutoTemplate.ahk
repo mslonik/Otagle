@@ -76,7 +76,8 @@ AddTemplate(){
 	IfMsgBox, Yes
 	{
 		oWord := ComObjActive("Word.Application")
-		oWord.Run("!Wydruk")
+		UstawMarginesy()
+		
 	}
 	MsgBox, 36,, Do you want to add some building blocks to your document?
 	IfMsgBox, Yes

@@ -110,18 +110,21 @@ BuildHTMLFile(){
                 IniRead, BtnX ,% A_ScriptDir . "\Config.ini", Layer%Ln%, % "Button_" . VarVertical . "_" . A_Index . "_X"
                 IniRead, BtnY ,% A_ScriptDir . "\Config.ini", Layer%Ln%, % "Button_" . VarVertical . "_" . A_Index . "_Y"
                 IniRead, PictureDef,% A_ScriptDir . "\Config.ini",Layer%Ln%,  % "Button_" . VarVertical . "_" . A_Index . "_Picture"
+                iconName:= SubStr(MsgText(PictureDef),20)
+                FileRead, Contents, % A_ScriptDir . "\Assets\ikonySVG\" . iconName
                 IniRead, ButtonA, % A_ScriptDir . "\Config.ini", Layer%Ln%, % "Button_" . VarVertical . "_" . A_Index . "_Action"
                 IniRead, Path ,% A_ScriptDir . "\Config.ini", Layer%Ln%, % "Button_" . VarVertical . "_" . A_Index . "_Path",#
                 IniRead, Name ,% A_ScriptDir . "\Config.ini", Layer%Ln%, % "Button_" . VarVertical . "_" . A_Index . "_Name",Tekst Testowy lalala
+
                 Bw := BtnWidth
                 Bh := BtnHeight
-                
+        
                 ; If !(PictureDef = ""){
                 If (Path == "#"){
-                    btn:= % "<a style=""max-width:300px; max-height:300px; height:" . Bh . "vw; width:" . Bw . "vw;   ""  id=""" . "drag" . "-" . A_Index . " " . ButtonA . """ class=""box_item draggable"" href=""#""  onclick=""ahk.ClickF(event,id)""><img class=""icon"" style=""font-size: 16px; font-family: 'Lato', sans-serif; display:block;width:" . 100 . "%;" .  "height:" . 100 . "%;" """ src=""" . PictureDef . """ ></a>"
+                    btn:= % "<a style=""max-width:300px; max-height:300px; height:" . Bh . "vw; width:" . Bw . "vw;   ""  id=""" . "drag" . "-" . A_Index . " " . ButtonA . """ class=""box_item draggable"" href=""#""  onclick=""ahk.ClickF(event,id)"">" . Contents . "</a>"
                 }
                 Else{
-                    btn:= % "<a style=""max-width:300px; max-height:300px; height:" . Bh . "vw; width:" . Bw . "vw;   "" id=""" . "drag" . "-" . A_Index . " " . ButtonA . """ class=""box_item draggable"" href=""" . "Layer" . Path . ".html" . """  onclick=""ahk.ClickF(event,id)""><img class=""icon"" style=""font-size: 16px; font-family: 'Lato', sans-serif;  display:block;width:" . 100 . "%;" .  "height:" . 100 . "%;" """ src=""" . PictureDef . """ ></a>"
+                    btn:= % "<a style=""max-width:300px; max-height:300px; height:" . Bh . "vw; width:" . Bw . "vw;   "" id=""" . "drag" . "-" . A_Index . " " . ButtonA . """ class=""box_item draggable"" href=""" . "Layer" . Path . ".html" . """  onclick=""ahk.ClickF(event,id)"">" . Contents . "</a>"
                 }
                 
                 btns[VarVertical,A_Index]:= btn
@@ -174,7 +177,7 @@ BuildHTMLFile(){
         <span class="title-btn__item" onclick="neutron.Maximize()">
         <i class="fa fa-window-maximize" aria-hidden="true"></i>
         </span>
-        <span class="title-btn__item title-btn__close" onclick="neutron.Close()"><i class="fa fa-times" aria-hidden="true"></i>
+        <span class="title-btn__item title-btn__close" onclick="neutron.CloseApp()"><i class="fa fa-times" aria-hidden="true"></i>
         </span>
         </header>
         <nav class="menu-bar">
@@ -182,23 +185,23 @@ BuildHTMLFile(){
         <li class="menu-bar__item">
         <a class="item__link" href="#">Configure</a>
         <ul class="sub-menu">
-        <li class="sub-menu__item"  onclick="ahk.addLayer(event)"><a class="item__link sub__link" href="#">Add layer</a></li>
-        <li class="sub-menu__item"><a class="item__link sub__link" href="#">Erase layer</a></li>
+        <li class="sub-menu__item"  id="addLayers" onclick="ahk.BarF(event,id)"><a class="item__link sub__link" href="#">Add layer</a></li>
+        <li class="sub-menu__item" id="ConfigureEraseLayer" onclick="ahk.BarF(event,id)"><a class="item__link sub__link" href="#">Erase layer</a></li>
         </ul>
         </li>
         <li class="menu-bar__item">
         <a class="item__link" href="#">Edit Buttons</a>
         <ul class="sub-menu">
-        <li class="sub-menu__item" id="AddBtn" onclick="ahk.BarF(event,id)"><a class="item__link sub__link" href="#">Add buttons</a></li>
-        <li class="sub-menu__item" id="F_display_configurator" onclick="ahk.BarF(event,id)" ><a class="item__link sub__link" href="#">Swap buttons</a></li>
+        <li class="sub-menu__item" id="AddBtn" onclick="ahk.BarF(event,id)"><a class="item__link sub__link" href="#">Add button</a></li>
+        <li class="sub-menu__item" id="F_display_configurator" onclick="ahk.BarF(event,id)" ><a class="item__link sub__link" href="#">Swap button</a></li>
         <li class="sub-menu__item" id="FdGuiDelete" onclick="ahk.BarF(event,id)"><a class="item__link sub__link" href="#">Delete button</a></li>
         <li class="sub-menu__item" id="Clone" onclick="ahk.BarF(event,id)"><a class="item__link sub__link" href="#">Clone button</a></li>
         </ul>
         </li>
         <li class="menu-bar__item"  onclick="ahk.rWizard(event)">
-        <a class="item__link" href="#" >Run Wizzard</a></li>
+        <a class="item__link" href="#" >Run Wizard</a></li>
         <li class="menu-bar__item">
-        <a class="item__link Order" href="#"><i class="fa fa-toggle-off" aria-hidden="true"></i><i class="fa fa-toggle-on" aria-hidden="true"> </i> Arrangement Buttosn</a>
+        <a class="item__link Order" href="#"><i class="fa fa-toggle-off" aria-hidden="true"></i><i class="fa fa-toggle-on" aria-hidden="true"> </i> Arrangement Buttons</a>
         </li>
         <li class="menu-bar__item">
         <a class="item__link About" href="#">About</a>

@@ -21,11 +21,11 @@ UsunWielokrotneSpacje()
         oWord.Selection.Find.Execute(" ,",0,0,0,0,0,-1,0,0,",",2) ; usuwanie spacji przed przecinkiem
         oWord.Selection.Find.Execute(" .",0,0,0,0,0,-1,0,0,".",2) ; usuwanie spacji przed kropką
         oWord.Selection.Find.Execute(" ?",0,0,0,0,0,-1,0,0,"?",2) ; usuwanie spacji przed znakiem zapytania
-        oWord.Selection.Find.Execute("(^13){2|}",0,0,-1,0,0,-1,0,0,"^p",2) ; usuwanie dwóch znaków akapitu z rzędu 
-        oWord.Selection.Find.Execute(".([A-Z]{1|})",0,0,-1,0,0,-1,0,0,". \1",2) ; dodanie spacji pomiędzy kropką a wielką literą
-        oWord.Selection.Find.Execute("(\?)([A-Z]{1|})",0,0,-1,0,0,-1,0,0,"\1 \2",2) ; dodanie spacji pomiędzy znakiem zapytania a wielką literą
-        oWord.Selection.Find.Execute("(\!)([A-Z]{1|})",0,0,-1,0,0,-1,0,0,"\1 \2",2) ; dodanie spacji pomiędzy wykrzyknikiem a wielką literą
-        oWord.Selection.Find.Execute(",([a-z]{1|})",0,0,-1,0,0,-1,0,0,", \1",2) ; dodanie spacji pomiędzy przecinkiem a małą literą
+        ; oWord.Selection.Find.Execute("(^13){2|}",0,0,-1,0,0,-1,0,0,"^p",2) ; usuwanie dwóch znaków akapitu z rzędu 
+        ; oWord.Selection.Find.Execute(".([A-Z]{1|})",0,0,-1,0,0,-1,0,0,". \1",2) ; dodanie spacji pomiędzy kropką a wielką literą
+        ; oWord.Selection.Find.Execute("(\?)([A-Z]{1|})",0,0,-1,0,0,-1,0,0,"\1 \2",2) ; dodanie spacji pomiędzy znakiem zapytania a wielką literą
+        ; oWord.Selection.Find.Execute("(\!)([A-Z]{1|})",0,0,-1,0,0,-1,0,0,"\1 \2",2) ; dodanie spacji pomiędzy wykrzyknikiem a wielką literą
+        ; oWord.Selection.Find.Execute(",([a-z]{1|})",0,0,-1,0,0,-1,0,0,", \1",2) ; dodanie spacji pomiędzy przecinkiem a małą literą
         oWord.Selection.Find.Execute(",,",0,0,0,0,0,-1,0,0,",",2) ; usuwanie dwóch przecinków z rzędu
         oWord.Selection.Find.Execute("..",0,0,0,0,0,-1,0,0,".",2) ; usuwanie dwóch kropek z rzędu
         oWord.ActiveWindow.View.Type := 3
