@@ -31,7 +31,7 @@
         <span class="title-btn__item" onclick="neutron.Maximize()">
         <i class="fa fa-window-maximize" aria-hidden="true"></i>
         </span>
-        <span class="title-btn__item title-btn__close" onclick="neutron.Close()"><i class="fa fa-times" aria-hidden="true"></i>
+        <span class="title-btn__item title-btn__close" onclick="neutron.CloseApp()"><i class="fa fa-times" aria-hidden="true"></i>
         </span>
         </header>
         <nav class="menu-bar">
@@ -39,15 +39,16 @@
         <li class="menu-bar__item">
         <a class="item__link" href="#">Configure</a>
         <ul class="sub-menu">
-        <li class="sub-menu__item"  onclick="ahk.addLayer(event)"><a class="item__link sub__link" href="#">Add layer</a></li>
-        <li class="sub-menu__item"><a class="item__link sub__link" href="#">Erase layer</a></li>
+        <li class="sub-menu__item"  id="selectMonitor" onclick="ahk.BarF(event,id)"><a class="item__link sub__link" href="#">Select Monitor</a></li>
+        <li class="sub-menu__item"  id="addLayers" onclick="ahk.BarF(event,id)"><a class="item__link sub__link" href="#">Add layer</a></li>
+        <li class="sub-menu__item" id="ConfigureEraseLayer" onclick="ahk.BarF(event,id)"><a class="item__link sub__link" href="#">Erase layer</a></li>
         </ul>
         </li>
         <li class="menu-bar__item">
         <a class="item__link" href="#">Edit Buttons</a>
         <ul class="sub-menu">
-        <li class="sub-menu__item" id="AddBtn" onclick="ahk.BarF(event,id)"><a class="item__link sub__link" href="#">Add buttons</a></li>
-        <li class="sub-menu__item" id="F_display_configurator" onclick="ahk.BarF(event,id)" ><a class="item__link sub__link" href="#">Swap buttons</a></li>
+        <li class="sub-menu__item" id="AddBtn" onclick="ahk.BarF(event,id)"><a class="item__link sub__link" href="#">Add button</a></li>
+        <li class="sub-menu__item" id="F_display_configurator" onclick="ahk.BarF(event,id)" ><a class="item__link sub__link" href="#">Swap button</a></li>
         <li class="sub-menu__item" id="FdGuiDelete" onclick="ahk.BarF(event,id)"><a class="item__link sub__link" href="#">Delete button</a></li>
         <li class="sub-menu__item" id="Clone" onclick="ahk.BarF(event,id)"><a class="item__link sub__link" href="#">Clone button</a></li>
         </ul>
@@ -62,7 +63,54 @@
         </li>
         </ul>
         </nav>
-        <div class="wrapper" style="position: relative;"><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   " id="drag-1 Layer1\ToSVNLayer.ahk" class="box_item draggable" href="Layer14.html"  onclick="ahk.ClickF(event,id)"><img class="icon" style="font-size: 16px; font-family: 'Lato', sans-serif;  display:block;width:100%;height:100%;" src="..\Assets\ikonySvG\WarstwaSVN_K.svg" ></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-2 " class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"><img class="icon" style="font-size: 16px; font-family: 'Lato', sans-serif; display:block;width:100%;height:100%;" src="" ></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-3 " class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"><img class="icon" style="font-size: 16px; font-family: 'Lato', sans-serif; display:block;width:100%;height:100%;" src="" ></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-4 " class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"><img class="icon" style="font-size: 16px; font-family: 'Lato', sans-serif; display:block;width:100%;height:100%;" src="" ></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-5 " class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"><img class="icon" style="font-size: 16px; font-family: 'Lato', sans-serif; display:block;width:100%;height:100%;" src="" ></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-6 " class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"><img class="icon" style="font-size: 16px; font-family: 'Lato', sans-serif; display:block;width:100%;height:100%;" src="" ></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-1 " class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"><img class="icon" style="font-size: 16px; font-family: 'Lato', sans-serif; display:block;width:100%;height:100%;" src="" ></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-2 " class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"><img class="icon" style="font-size: 16px; font-family: 'Lato', sans-serif; display:block;width:100%;height:100%;" src="" ></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-3 " class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"><img class="icon" style="font-size: 16px; font-family: 'Lato', sans-serif; display:block;width:100%;height:100%;" src="" ></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-4 " class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"><img class="icon" style="font-size: 16px; font-family: 'Lato', sans-serif; display:block;width:100%;height:100%;" src="" ></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-5 " class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"><img class="icon" style="font-size: 16px; font-family: 'Lato', sans-serif; display:block;width:100%;height:100%;" src="" ></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-6 " class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"><img class="icon" style="font-size: 16px; font-family: 'Lato', sans-serif; display:block;width:100%;height:100%;" src="" ></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   " id="drag-1 " class="box_item draggable" href="Layer1.html"  onclick="ahk.ClickF(event,id)"><img class="icon" style="font-size: 16px; font-family: 'Lato', sans-serif;  display:block;width:100%;height:100%;" src="..\Assets\ikonySvG\StronaGlowna.svg" ></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-2 " class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"><img class="icon" style="font-size: 16px; font-family: 'Lato', sans-serif; display:block;width:100%;height:100%;" src="" ></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-3 " class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"><img class="icon" style="font-size: 16px; font-family: 'Lato', sans-serif; display:block;width:100%;height:100%;" src="" ></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-4 " class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"><img class="icon" style="font-size: 16px; font-family: 'Lato', sans-serif; display:block;width:100%;height:100%;" src="" ></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-5 " class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"><img class="icon" style="font-size: 16px; font-family: 'Lato', sans-serif; display:block;width:100%;height:100%;" src="" ></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-6 " class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"><img class="icon" style="font-size: 16px; font-family: 'Lato', sans-serif; display:block;width:100%;height:100%;" src="" ></a></div>
+        <div class="wrapper" style="position: relative;"><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   " id="drag-1 Layer1\ToSVNLayer.ahk" class="box_item draggable" href="Layer14.html"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" width="206px" height="206px" version="1.1" viewBox="0 0 206 206" xmlns="http://www.w3.org/2000/svg">
+ <g transform="matrix(3.7795 0 0 3.7795 -4599.7 109.05)">
+  <rect x="1217.8" y="-27.585" width="52.396" height="52.396" fill="#0082b4" stroke="#000" stroke-linecap="round" stroke-width=".52068" style="paint-order:fill markers stroke"/>
+  <text x="1245.0255" y="12.464207" fill="#ffffff" font-family="sans-serif" class="svgT" letter-spacing=".5px" font-size="5.2px" stroke-width=".26458" text-align="center" text-anchor="middle" word-spacing="0px" style="line-height:1.04999995" xml:space="preserve"><tspan x="1245.8937" y="12.464207" text-align="center">Warstwa </tspan><tspan x="1245.0255" y="21.35421" text-align="center">SVN</tspan></text>
+  <text x="1240.2559" y="-8.5272741" fill="#0082b4" font-family="voestalpine" font-size="5.6444px" letter-spacing="0px" stroke-width=".26458" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><tspan x="1240.2559" y="-8.5272741" fill="#0082b4" stroke-width=".26458">EN</tspan></text>
+  <g transform="matrix(.34476 0 0 .34476 1226.8 -27.769)" fill="#fff">
+   <path d="m83.338 49.999c-2.464 0-4.591 1.351-5.745 3.333h-27.593v6.67h27.593c1.154 1.982 3.281 3.33 5.745 3.33 3.677 0 6.662-2.979 6.662-6.666 0-3.68-2.985-6.667-6.662-6.667z"/>
+   <path d="m83.338 23.332c-2.464 0-4.591 1.351-5.745 3.334h-27.593v6.665h27.593c1.154 1.986 3.281 3.334 5.745 3.334 3.677 0 6.662-2.982 6.662-6.665 0-3.68-2.985-6.668-6.662-6.668z"/>
+   <rect x="23.333" y="53.332" width="19.999" height="6.67"/>
+   <rect x="23.333" y="66.666" width="19.999" height="6.668"/>
+   <rect x="23.333" y="40" width="19.999" height="6.668"/>
+   <rect x="23.333" y="26.666" width="19.999" height="6.665"/>
+   <path d="m63.336 63.332c-2.464 0-4.588 1.354-5.745 3.334h-7.591v6.668h7.591c1.157 1.986 3.281 3.334 5.745 3.334 3.68 0 6.666-2.982 6.666-6.668 0-3.68-2.986-6.668-6.666-6.668z"/>
+   <path d="m70.004 36.665c-2.464 0-4.591 1.351-5.745 3.334h-14.259v6.668h14.259c1.154 1.983 3.281 3.331 5.745 3.331 3.678 0 6.663-2.979 6.663-6.665 0-3.679-2.985-6.668-6.663-6.668z"/>
+   <path d="m56.668 19.998c0-3.683-2.985-6.666-6.668-6.666h-33.335c-3.68 0-6.665 2.985-6.665 6.666v60.002c0 3.686 2.985 6.668 6.665 6.668h33.335c3.683 0 6.668-2.982 6.668-6.668h-40.003v-60.002z"/>
+  </g>
+ </g>
+</svg>
+</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-2 " class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-3 " class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-4 " class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-5 " class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-6 " class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-1 " class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-2 " class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-3 " class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-4 " class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-5 " class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-6 " class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   " id="drag-1 " class="box_item draggable" href="Layer1.html"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" width="205" height="203" version="1.1" viewBox="0 0 205 203" xmlns="http://www.w3.org/2000/svg">
+ <g transform="translate(0,2)">
+  <g transform="matrix(3.7795 0 0 3.7795 10.171 -6.7758)">
+   <g transform="translate(-1.0884 -121.69)">
+    <g transform="translate(1.6608 -59.209)">
+     <g transform="translate(-.6443 -59.335)">
+      <g transform="translate(-1396.8 269.89)">
+       <g transform="translate(-57.972 -.024822)">
+        <g transform="translate(1658.1 73.867)">
+         <g>
+          <rect x="-205.07" y="-101.86" width="52.917" height="52.917" fill="#0082b4" stroke="#000" stroke-linecap="round" stroke-width=".5" style="paint-order:fill markers stroke"/>
+          <text x="-178.87273" y="-60.77029" fill="#ffffff" font-family="sans-serif" class="svgT" letter-spacing=".5px" font-size="5.2px" stroke-width=".26458" text-anchor="middle" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><tspan x="-178.87273" y="-60.77029" text-align="center">STRONA</tspan><tspan x="-178.87273" y="-52.83279" text-align="center"> GŁÓWNA</tspan></text>
+          <g transform="matrix(1.8895 0 0 1.8895 -201.12 -104.9)" fill="#fff">
+           <g fill="#fff">
+            <path d="m6.934 12.202c-.341 0-.62.271-.62.612v6.025c0 .341.28.616.62.616h10.145c.34 0 .611-.275.611-.616v-6.025c0-.341-.271-.612-.611-.612-.341 0-.621.271-.621.612v5.409h-8.913v-5.409c0-.341-.279-.612-.611-.612z"/>
+            <path d="m4.181 12.98c.236.236.63.236.865 0l6.951-6.946 6.96 6.946c.236.236.629.236.865 0 .24-.236.24-.629 0-.865l-7.374-7.383-.013-.009c-.24-.236-.63-.236-.87 0l-7.383 7.392c-.245.236-.245.629-.001.865z"/>
+           </g>
+          </g>
+         </g>
+         <rect x="-131.95" y="-55.38" width="2.0774" height=".41548" stroke-width=".26458"/>
+        </g>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+ </g>
+</svg>
+</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-2 " class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-3 " class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-4 " class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-5 " class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-6 " class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"></a></div>
         <script src="https://code.jquery.com/jquery-3.5.1.min.js"integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="crossorigin="anonymous"></script>
         <script src="../index.js"></script>
         </body>

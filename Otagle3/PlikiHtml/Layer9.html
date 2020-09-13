@@ -31,7 +31,7 @@
         <span class="title-btn__item" onclick="neutron.Maximize()">
         <i class="fa fa-window-maximize" aria-hidden="true"></i>
         </span>
-        <span class="title-btn__item title-btn__close" onclick="neutron.Close()"><i class="fa fa-times" aria-hidden="true"></i>
+        <span class="title-btn__item title-btn__close" onclick="neutron.CloseApp()"><i class="fa fa-times" aria-hidden="true"></i>
         </span>
         </header>
         <nav class="menu-bar">
@@ -39,15 +39,16 @@
         <li class="menu-bar__item">
         <a class="item__link" href="#">Configure</a>
         <ul class="sub-menu">
-        <li class="sub-menu__item"  onclick="ahk.addLayer(event)"><a class="item__link sub__link" href="#">Add layer</a></li>
-        <li class="sub-menu__item"><a class="item__link sub__link" href="#">Erase layer</a></li>
+        <li class="sub-menu__item"  id="selectMonitor" onclick="ahk.BarF(event,id)"><a class="item__link sub__link" href="#">Select Monitor</a></li>
+        <li class="sub-menu__item"  id="addLayers" onclick="ahk.BarF(event,id)"><a class="item__link sub__link" href="#">Add layer</a></li>
+        <li class="sub-menu__item" id="ConfigureEraseLayer" onclick="ahk.BarF(event,id)"><a class="item__link sub__link" href="#">Erase layer</a></li>
         </ul>
         </li>
         <li class="menu-bar__item">
         <a class="item__link" href="#">Edit Buttons</a>
         <ul class="sub-menu">
-        <li class="sub-menu__item" id="AddBtn" onclick="ahk.BarF(event,id)"><a class="item__link sub__link" href="#">Add buttons</a></li>
-        <li class="sub-menu__item" id="F_display_configurator" onclick="ahk.BarF(event,id)" ><a class="item__link sub__link" href="#">Swap buttons</a></li>
+        <li class="sub-menu__item" id="AddBtn" onclick="ahk.BarF(event,id)"><a class="item__link sub__link" href="#">Add button</a></li>
+        <li class="sub-menu__item" id="F_display_configurator" onclick="ahk.BarF(event,id)" ><a class="item__link sub__link" href="#">Swap button</a></li>
         <li class="sub-menu__item" id="FdGuiDelete" onclick="ahk.BarF(event,id)"><a class="item__link sub__link" href="#">Delete button</a></li>
         <li class="sub-menu__item" id="Clone" onclick="ahk.BarF(event,id)"><a class="item__link sub__link" href="#">Clone button</a></li>
         </ul>
@@ -62,7 +63,496 @@
         </li>
         </ul>
         </nav>
-        <div class="wrapper" style="position: relative;"><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-1 WarstwaWord\Akapity\Lista1Poz.ahk" class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"><img class="icon" style="font-size: 16px; font-family: 'Lato', sans-serif; display:block;width:100%;height:100%;" src="..\Assets\ikonySvG\PoczatekListy1poziom.svg" ></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-2 WarstwaWord\Akapity\Lista1PozKont.ahk" class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"><img class="icon" style="font-size: 16px; font-family: 'Lato', sans-serif; display:block;width:100%;height:100%;" src="..\Assets\ikonySvG\PodpunkListy1Poziom.svg" ></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-3 WarstwaWord\Akapity\Lista2Poz.ahk" class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"><img class="icon" style="font-size: 16px; font-family: 'Lato', sans-serif; display:block;width:100%;height:100%;" src="..\Assets\ikonySvG\PoczątekListy2poziom.svg" ></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-4 WarstwaWord\Akapity\Lista2PozKont.ahk" class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"><img class="icon" style="font-size: 16px; font-family: 'Lato', sans-serif; display:block;width:100%;height:100%;" src="..\Assets\ikonySvG\PodpunkListy2Poziom.svg" ></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-5 WarstwaWord\Akapity\Lista3Poz.ahk" class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"><img class="icon" style="font-size: 16px; font-family: 'Lato', sans-serif; display:block;width:100%;height:100%;" src="..\Assets\ikonySvG\PoczatekListy3poziom.svg" ></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-6 WarstwaWord\Akapity\Lista3PozKont.ahk" class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"><img class="icon" style="font-size: 16px; font-family: 'Lato', sans-serif; display:block;width:100%;height:100%;" src="..\Assets\ikonySvG\PodpunkListy3Poziom.svg" ></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-7 WarstwaWord\Akapity\Lista4Poz.ahk" class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"><img class="icon" style="font-size: 16px; font-family: 'Lato', sans-serif; display:block;width:100%;height:100%;" src="..\Assets\ikonySvG\PoczatekListy4poziom.svg" ></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-8 WarstwaWord\Akapity\Lista4PozKont.ahk" class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"><img class="icon" style="font-size: 16px; font-family: 'Lato', sans-serif; display:block;width:100%;height:100%;" src="..\Assets\ikonySvG\PodpunkListy4Poziom.svg" ></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-9 WarstwaWord\Akapity\ChangeLanguage.ahk" class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"><img class="icon" style="font-size: 16px; font-family: 'Lato', sans-serif; display:block;width:100%;height:100%;" src="..\Assets\ikonySvG\ZmienJzykDokumentu.svg" ></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-1 WarstwaWord\Akapity\ParagraphPageBreakBefore.ahk" class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"><img class="icon" style="font-size: 16px; font-family: 'Lato', sans-serif; display:block;width:100%;height:100%;" src="..\Assets\ikonySvG\PodzialStronyPrzed.svg" ></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-2 WarstwaWord\Akapity\ParagraphFormatKeepWithNext.ahk" class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"><img class="icon" style="font-size: 16px; font-family: 'Lato', sans-serif; display:block;width:100%;height:100%;" src="..\Assets\ikonySvG\RazemZNastepnym.svg" ></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-3 WarstwaWord\Akapity\ParagraphLinesKeepTogether.ahk" class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"><img class="icon" style="font-size: 16px; font-family: 'Lato', sans-serif; display:block;width:100%;height:100%;" src="..\Assets\ikonySvG\ZachowajWierszeRazem.svg" ></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-4 WarstwaWord\Akapity\DeleteInterline.ahk" class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"><img class="icon" style="font-size: 16px; font-family: 'Lato', sans-serif; display:block;width:100%;height:100%;" src="..\Assets\ikonySvG\UsunInterlinie.svg" ></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-5 WarstwaWord\Akapity\ReapplyStyles.ahk" class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"><img class="icon" style="font-size: 16px; font-family: 'Lato', sans-serif; display:block;width:100%;height:100%;" src="..\Assets\ikonySvG\ZastosujStylPonownie.svg" ></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-6 " class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"><img class="icon" style="font-size: 16px; font-family: 'Lato', sans-serif; display:block;width:100%;height:100%;" src="" ></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-7 " class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"><img class="icon" style="font-size: 16px; font-family: 'Lato', sans-serif; display:block;width:100%;height:100%;" src="" ></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-8 " class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"><img class="icon" style="font-size: 16px; font-family: 'Lato', sans-serif; display:block;width:100%;height:100%;" src="" ></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-9 " class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"><img class="icon" style="font-size: 16px; font-family: 'Lato', sans-serif; display:block;width:100%;height:100%;" src="" ></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-1 " class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"><img class="icon" style="font-size: 16px; font-family: 'Lato', sans-serif; display:block;width:100%;height:100%;" src="" ></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-2 " class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"><img class="icon" style="font-size: 16px; font-family: 'Lato', sans-serif; display:block;width:100%;height:100%;" src="" ></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-3 " class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"><img class="icon" style="font-size: 16px; font-family: 'Lato', sans-serif; display:block;width:100%;height:100%;" src="" ></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-4 " class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"><img class="icon" style="font-size: 16px; font-family: 'Lato', sans-serif; display:block;width:100%;height:100%;" src="" ></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-5 " class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"><img class="icon" style="font-size: 16px; font-family: 'Lato', sans-serif; display:block;width:100%;height:100%;" src="" ></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-6 " class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"><img class="icon" style="font-size: 16px; font-family: 'Lato', sans-serif; display:block;width:100%;height:100%;" src="" ></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-7 " class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"><img class="icon" style="font-size: 16px; font-family: 'Lato', sans-serif; display:block;width:100%;height:100%;" src="" ></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-8 " class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"><img class="icon" style="font-size: 16px; font-family: 'Lato', sans-serif; display:block;width:100%;height:100%;" src="" ></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-9 " class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"><img class="icon" style="font-size: 16px; font-family: 'Lato', sans-serif; display:block;width:100%;height:100%;" src="" ></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   " id="drag-1 " class="box_item draggable" href="Layer1.html"  onclick="ahk.ClickF(event,id)"><img class="icon" style="font-size: 16px; font-family: 'Lato', sans-serif;  display:block;width:100%;height:100%;" src="..\Assets\ikonySvG\StronaGlowna.svg" ></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-2 " class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"><img class="icon" style="font-size: 16px; font-family: 'Lato', sans-serif; display:block;width:100%;height:100%;" src="" ></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-3 " class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"><img class="icon" style="font-size: 16px; font-family: 'Lato', sans-serif; display:block;width:100%;height:100%;" src="" ></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-4 " class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"><img class="icon" style="font-size: 16px; font-family: 'Lato', sans-serif; display:block;width:100%;height:100%;" src="" ></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-5 " class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"><img class="icon" style="font-size: 16px; font-family: 'Lato', sans-serif; display:block;width:100%;height:100%;" src="" ></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-6 " class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"><img class="icon" style="font-size: 16px; font-family: 'Lato', sans-serif; display:block;width:100%;height:100%;" src="" ></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-7 " class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"><img class="icon" style="font-size: 16px; font-family: 'Lato', sans-serif; display:block;width:100%;height:100%;" src="" ></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-8 " class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"><img class="icon" style="font-size: 16px; font-family: 'Lato', sans-serif; display:block;width:100%;height:100%;" src="" ></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   " id="drag-9 Layer1\ToWordLayer.ahk" class="box_item draggable" href="Layer2.html"  onclick="ahk.ClickF(event,id)"><img class="icon" style="font-size: 16px; font-family: 'Lato', sans-serif;  display:block;width:100%;height:100%;" src="..\Assets\ikonySvG\WarstwaWord.svg" ></a></div>
+        <div class="wrapper" style="position: relative;"><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-1 WarstwaWord\Akapity\Lista1Poz.ahk" class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" width="206px" height="206px" version="1.1" viewBox="0 0 206 206" xmlns="http://www.w3.org/2000/svg">
+ <g transform="matrix(3.7795 0 0 3.7795 -1795.2 2502.6)">
+  <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-392.69" y="-63.57" width="758.02" height="397.52"/></flowRegion><flowPara/></flowRoot>
+  <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-251.87" y="-84.492" width="624.44" height="455.45"/></flowRegion><flowPara/></flowRoot>
+  <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-202.78" y="-50.695" width="473.96" height="281.64"/></flowRegion><flowPara/></flowRoot>
+  <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-86.906" y="-78.859" width="516.61" height="410.39"/></flowRegion><flowPara/></flowRoot>
+  <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-81.273" y="-32.188" width="309" height="322.68"/></flowRegion><flowPara/></flowRoot>
+  <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-90.93" y="-68.398" width="392.69" height="252.67"/></flowRegion><flowPara/></flowRoot>
+  <g transform="translate(675.17 -.21291)">
+   <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-100.59" y="-53.109" width="462.7" height="369.35"/></flowRegion><flowPara/></flowRoot>
+   <g transform="translate(57.194 .21291)">
+    <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-329.12" y="-12.07" width="696.05" height="259.91"/></flowRegion><flowPara/></flowRoot>
+    <g transform="translate(-1495.1 -629.38)">
+     <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-306.59" y="-111.05" width="206" height="51.5"/></flowRegion><flowPara/></flowRoot>
+     <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-70.812" y="-36.211" width="362.91" height="283.25"/></flowRegion><flowPara/></flowRoot>
+     <g transform="translate(538.4 -400.97)">
+      <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-138.41" y="-65.18" width="448.21" height="363.72"/></flowRegion><flowPara/></flowRoot>
+      <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-67.578" y="-8.4531" width="327.73" height="260.94"/></flowRegion><flowPara/></flowRoot>
+      <g transform="translate(-380.28 455.78)">
+       <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-5.8594" y="-7.2813" width="339.45" height="326.95"/></flowRegion><flowPara/></flowRoot>
+       <flowRoot fill="black" font-family="sans-serif" font-size="18.667px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-133.2" y="-6.5" width="375.39" height="276.17"/></flowRegion><flowPara/></flowRoot>
+       <g transform="translate(937.97 -55.125)">
+        <g>
+         <rect x="142.27" y="-31.75" width="52.917" height="52.917" fill="#db3b3b" stroke="#000" stroke-linecap="round" stroke-width=".5" style="paint-order:fill markers stroke"/>
+         <path d="m142.27-31.75 52.917 52.917h-52.917z" fill="#ffec8e" stroke="#000" stroke-width=".26458px"/>
+         <text x="168.79077" y="8.8977623" fill="#000000" font-family="sans-serif" class="svgT" letter-spacing=".5px" font-size="5.2px" stroke-width=".26458" text-anchor="middle" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><tspan x="168.79077" y="8.8977623" text-align="center">Początek listy</tspan><tspan x="168.79077" y="16.835262" text-align="center">1 poziom</tspan></text>
+        </g>
+        <path d="m147.76-21.606h41.01" fill="none" stroke="#000" stroke-width="1.6"/>
+        <text x="147.72208" y="-22.806097" fill="#000000" font-family="voestalpine" font-size="6.8289px" letter-spacing="0px" stroke-width=".32011" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><tspan x="147.72208" y="-22.806097" fill="#000000" stroke-width=".32011">a</tspan></text>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+ </g>
+</svg>
+</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-2 WarstwaWord\Akapity\Lista1PozKont.ahk" class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" width="206px" height="206px" version="1.1" viewBox="0 0 206 206" xmlns="http://www.w3.org/2000/svg">
+ <g transform="matrix(3.7795 0 0 3.7795 -1795.2 2502.6)">
+  <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-392.69" y="-63.57" width="758.02" height="397.52"/></flowRegion><flowPara/></flowRoot>
+  <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-251.87" y="-84.492" width="624.44" height="455.45"/></flowRegion><flowPara/></flowRoot>
+  <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-202.78" y="-50.695" width="473.96" height="281.64"/></flowRegion><flowPara/></flowRoot>
+  <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-86.906" y="-78.859" width="516.61" height="410.39"/></flowRegion><flowPara/></flowRoot>
+  <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-81.273" y="-32.188" width="309" height="322.68"/></flowRegion><flowPara/></flowRoot>
+  <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-90.93" y="-68.398" width="392.69" height="252.67"/></flowRegion><flowPara/></flowRoot>
+  <g transform="translate(675.17 -.21291)">
+   <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-100.59" y="-53.109" width="462.7" height="369.35"/></flowRegion><flowPara/></flowRoot>
+   <g transform="translate(57.194 .21291)">
+    <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-329.12" y="-12.07" width="696.05" height="259.91"/></flowRegion><flowPara/></flowRoot>
+    <g transform="translate(-1495.1 -629.38)">
+     <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-306.59" y="-111.05" width="206" height="51.5"/></flowRegion><flowPara/></flowRoot>
+     <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-70.812" y="-36.211" width="362.91" height="283.25"/></flowRegion><flowPara/></flowRoot>
+     <g transform="translate(538.4 -400.97)">
+      <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-138.41" y="-65.18" width="448.21" height="363.72"/></flowRegion><flowPara/></flowRoot>
+      <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-67.578" y="-8.4531" width="327.73" height="260.94"/></flowRegion><flowPara/></flowRoot>
+      <g transform="translate(-380.28 455.78)">
+       <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-5.8594" y="-7.2813" width="339.45" height="326.95"/></flowRegion><flowPara/></flowRoot>
+       <flowRoot fill="black" font-family="sans-serif" font-size="18.667px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-133.2" y="-6.5" width="375.39" height="276.17"/></flowRegion><flowPara/></flowRoot>
+       <g transform="translate(937.97 -55.125)">
+        <g transform="translate(-229.5 .31005)">
+         <rect x="372.08" y="-31.75" width="52.917" height="52.917" fill="#db3b3b" stroke="#000" stroke-linecap="round" stroke-width=".5" style="paint-order:fill markers stroke"/>
+         <path d="m372.08-31.75 52.917 52.917h-52.917z" fill="#ffec8e" stroke="#000" stroke-width=".26458px"/>
+         <text x="398.60034" y="8.5877104" fill="#000000" font-family="sans-serif" class="svgT" letter-spacing=".5px" font-size="5.2px" stroke-width=".26458" text-anchor="middle" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><tspan x="398.60034" y="8.5877104" text-align="center">Podpunkt listy</tspan><tspan x="398.60034" y="16.525209" text-align="center">1 poziom</tspan></text>
+         <path d="m377.57-21.606h41.01" stroke="#000" stroke-width="1.6"/>
+         <text x="377.7294" y="-22.805483" fill="#000000" font-family="sans-serif" font-size="6.8289px" letter-spacing="0px" stroke-width=".32011" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><tspan x="377.7294" y="-22.805483" fill="#000000" font-family="sans-serif" stroke-width=".32011">b</tspan></text>
+        </g>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+ </g>
+</svg>
+</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-3 WarstwaWord\Akapity\Lista2Poz.ahk" class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" width="206px" height="206px" version="1.1" viewBox="0 0 206 206" xmlns="http://www.w3.org/2000/svg">
+ <g transform="matrix(3.7795 0 0 3.7795 -1795.2 2502.6)">
+  <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-392.69" y="-63.57" width="758.02" height="397.52"/></flowRegion><flowPara/></flowRoot>
+  <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-251.87" y="-84.492" width="624.44" height="455.45"/></flowRegion><flowPara/></flowRoot>
+  <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-202.78" y="-50.695" width="473.96" height="281.64"/></flowRegion><flowPara/></flowRoot>
+  <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-86.906" y="-78.859" width="516.61" height="410.39"/></flowRegion><flowPara/></flowRoot>
+  <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-81.273" y="-32.188" width="309" height="322.68"/></flowRegion><flowPara/></flowRoot>
+  <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-90.93" y="-68.398" width="392.69" height="252.67"/></flowRegion><flowPara/></flowRoot>
+  <g transform="translate(675.17 -.21291)">
+   <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-100.59" y="-53.109" width="462.7" height="369.35"/></flowRegion><flowPara/></flowRoot>
+   <g transform="translate(57.194 .21291)">
+    <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-329.12" y="-12.07" width="696.05" height="259.91"/></flowRegion><flowPara/></flowRoot>
+    <g transform="translate(-1495.1 -629.38)">
+     <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-306.59" y="-111.05" width="206" height="51.5"/></flowRegion><flowPara/></flowRoot>
+     <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-70.812" y="-36.211" width="362.91" height="283.25"/></flowRegion><flowPara/></flowRoot>
+     <g transform="translate(538.4 -400.97)">
+      <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-138.41" y="-65.18" width="448.21" height="363.72"/></flowRegion><flowPara/></flowRoot>
+      <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-67.578" y="-8.4531" width="327.73" height="260.94"/></flowRegion><flowPara/></flowRoot>
+      <g transform="translate(-380.28 455.78)">
+       <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-5.8594" y="-7.2813" width="339.45" height="326.95"/></flowRegion><flowPara/></flowRoot>
+       <flowRoot fill="black" font-family="sans-serif" font-size="18.667px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-133.2" y="-6.5" width="375.39" height="276.17"/></flowRegion><flowPara/></flowRoot>
+       <g transform="translate(937.97 -55.125)">
+        <g transform="translate(58.244 .10335)">
+         <g>
+          <rect x="84.441" y="-31.75" width="52.917" height="52.917" fill="#db3b3b" stroke="#000" stroke-linecap="round" stroke-width=".5" style="paint-order:fill markers stroke"/>
+          <path d="m84.441-31.75 52.917 52.917h-52.917z" fill="#ffec8e" stroke="#000" stroke-width=".26458px"/>
+          <text x="110.9604" y="8.7944088" fill="#000000" font-family="sans-serif" class="svgT" letter-spacing=".5px" font-size="5.2px" stroke-width=".26458" text-anchor="middle" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><tspan x="110.9604" y="8.7944088" text-align="center">Początek listy</tspan><tspan x="110.9604" y="16.731909" text-align="center">2 poziom</tspan></text>
+         </g>
+         <path d="m89.929-21.606h41.01" fill="none" stroke="#000" stroke-width="1.6"/>
+         <path d="m93.709-13.797h37.231" fill="none" stroke="#000" stroke-width="1.6"/>
+         <text x="93.576996" y="-15.057585" fill="#000000" font-family="sans-serif" font-size="6.8289px" letter-spacing="0px" stroke-width=".32011" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><tspan x="93.576996" y="-15.057585" fill="#000000" font-family="sans-serif" stroke-width=".32011">i</tspan></text>
+        </g>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+ </g>
+</svg>
+</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-4 WarstwaWord\Akapity\Lista2PozKont.ahk" class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" width="206px" height="206px" version="1.1" viewBox="0 0 206 206" xmlns="http://www.w3.org/2000/svg">
+ <g transform="matrix(3.7795 0 0 3.7795 -1795.2 2502.6)">
+  <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-392.69" y="-63.57" width="758.02" height="397.52"/></flowRegion><flowPara/></flowRoot>
+  <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-251.87" y="-84.492" width="624.44" height="455.45"/></flowRegion><flowPara/></flowRoot>
+  <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-202.78" y="-50.695" width="473.96" height="281.64"/></flowRegion><flowPara/></flowRoot>
+  <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-86.906" y="-78.859" width="516.61" height="410.39"/></flowRegion><flowPara/></flowRoot>
+  <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-81.273" y="-32.188" width="309" height="322.68"/></flowRegion><flowPara/></flowRoot>
+  <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-90.93" y="-68.398" width="392.69" height="252.67"/></flowRegion><flowPara/></flowRoot>
+  <g transform="translate(675.17 -.21291)">
+   <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-100.59" y="-53.109" width="462.7" height="369.35"/></flowRegion><flowPara/></flowRoot>
+   <g transform="translate(57.194 .21291)">
+    <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-329.12" y="-12.07" width="696.05" height="259.91"/></flowRegion><flowPara/></flowRoot>
+    <g transform="translate(-1495.1 -629.38)">
+     <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-306.59" y="-111.05" width="206" height="51.5"/></flowRegion><flowPara/></flowRoot>
+     <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-70.812" y="-36.211" width="362.91" height="283.25"/></flowRegion><flowPara/></flowRoot>
+     <g transform="translate(538.4 -400.97)">
+      <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-138.41" y="-65.18" width="448.21" height="363.72"/></flowRegion><flowPara/></flowRoot>
+      <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-67.578" y="-8.4531" width="327.73" height="260.94"/></flowRegion><flowPara/></flowRoot>
+      <g transform="translate(-380.28 455.78)">
+       <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-5.8594" y="-7.2813" width="339.45" height="326.95"/></flowRegion><flowPara/></flowRoot>
+       <flowRoot fill="black" font-family="sans-serif" font-size="18.667px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-133.2" y="-6.5" width="375.39" height="276.17"/></flowRegion><flowPara/></flowRoot>
+       <g transform="translate(937.97 -55.125)">
+        <g transform="translate(-172.32 .31005)">
+         <rect x="315.01" y="-31.75" width="52.917" height="52.917" fill="#db3b3b" stroke="#000" stroke-linecap="round" stroke-width=".5" style="paint-order:fill markers stroke"/>
+         <path d="m315.01-31.75 52.917 52.917h-52.917z" fill="#ffec8e" stroke="#000" stroke-width=".26458px"/>
+         <text x="341.52594" y="8.5877094" fill="#000000" font-family="sans-serif" class="svgT" letter-spacing=".5px" font-size="5.2px" stroke-width=".26458" text-anchor="middle" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><tspan x="341.52594" y="8.5877094" text-align="center">Podpunkt listy</tspan><tspan x="341.52594" y="16.525209" text-align="center">2 poziom</tspan></text>
+         <path d="m320.49-21.606h41.01" stroke="#000" stroke-width="1.6"/>
+         <path d="m324.27-13.797h37.231" stroke="#000" stroke-width="1.6"/>
+         <text x="324.81274" y="-15.056971" fill="#000000" font-family="sans-serif" font-size="6.8289px" letter-spacing="0px" stroke-width=".32011" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><tspan x="324.81274" y="-15.056971" fill="#000000" font-family="sans-serif" stroke-width=".32011">ii</tspan></text>
+        </g>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+ </g>
+</svg>
+</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-5 WarstwaWord\Akapity\Lista3Poz.ahk" class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" width="206px" height="206px" version="1.1" viewBox="0 0 206 206" xmlns="http://www.w3.org/2000/svg">
+ <g transform="matrix(3.7795 0 0 3.7795 -1795.2 2502.6)">
+  <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-392.69" y="-63.57" width="758.02" height="397.52"/></flowRegion><flowPara/></flowRoot>
+  <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-251.87" y="-84.492" width="624.44" height="455.45"/></flowRegion><flowPara/></flowRoot>
+  <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-202.78" y="-50.695" width="473.96" height="281.64"/></flowRegion><flowPara/></flowRoot>
+  <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-86.906" y="-78.859" width="516.61" height="410.39"/></flowRegion><flowPara/></flowRoot>
+  <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-81.273" y="-32.188" width="309" height="322.68"/></flowRegion><flowPara/></flowRoot>
+  <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-90.93" y="-68.398" width="392.69" height="252.67"/></flowRegion><flowPara/></flowRoot>
+  <g transform="translate(675.17 -.21291)">
+   <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-100.59" y="-53.109" width="462.7" height="369.35"/></flowRegion><flowPara/></flowRoot>
+   <g transform="translate(57.194 .21291)">
+    <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-329.12" y="-12.07" width="696.05" height="259.91"/></flowRegion><flowPara/></flowRoot>
+    <g transform="translate(-1495.1 -629.38)">
+     <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-306.59" y="-111.05" width="206" height="51.5"/></flowRegion><flowPara/></flowRoot>
+     <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-70.812" y="-36.211" width="362.91" height="283.25"/></flowRegion><flowPara/></flowRoot>
+     <g transform="translate(538.4 -400.97)">
+      <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-138.41" y="-65.18" width="448.21" height="363.72"/></flowRegion><flowPara/></flowRoot>
+      <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-67.578" y="-8.4531" width="327.73" height="260.94"/></flowRegion><flowPara/></flowRoot>
+      <g transform="translate(-380.28 455.78)">
+       <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-5.8594" y="-7.2813" width="339.45" height="326.95"/></flowRegion><flowPara/></flowRoot>
+       <flowRoot fill="black" font-family="sans-serif" font-size="18.667px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-133.2" y="-6.5" width="375.39" height="276.17"/></flowRegion><flowPara/></flowRoot>
+       <g transform="translate(937.97 -55.125)">
+        <g transform="translate(117.23 .20671)">
+         <g>
+          <rect x="25.244" y="-31.75" width="52.917" height="52.917" fill="#db3b3b" stroke="#000" stroke-linecap="round" stroke-width=".5" style="paint-order:fill markers stroke"/>
+          <path d="m25.244-31.75 52.917 52.917h-52.917z" fill="#ffec8e" stroke="#000" stroke-width=".26458px"/>
+          <text x="51.762901" y="8.6910553" fill="#000000" font-family="sans-serif" class="svgT" letter-spacing=".5px" font-size="5.2px" stroke-width=".26458" text-anchor="middle" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><tspan x="51.762901" y="8.6910553" text-align="center">Początek listy</tspan><tspan x="51.762901" y="16.628555" text-align="center">3 poziom</tspan></text>
+         </g>
+         <g stroke="#000" stroke-width="1.6">
+          <path d="m30.732-21.606h41.01" fill="none"/>
+          <path d="m34.512-13.797h37.231" fill="none"/>
+          <path d="m39.047-5.9871h32.695" fill="url(#meshgradient12330)"/>
+         </g>
+         <text x="39.249748" y="-7.1599483" fill="#000000" font-family="sans-serif" font-size="6.8289px" letter-spacing="0px" stroke-width=".32011" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><tspan x="39.249748" y="-7.1599483" fill="#000000" font-family="sans-serif" stroke-width=".32011">01</tspan></text>
+        </g>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+ </g>
+</svg>
+</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-6 WarstwaWord\Akapity\Lista3PozKont.ahk" class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" width="206px" height="206px" version="1.1" viewBox="0 0 206 206" xmlns="http://www.w3.org/2000/svg">
+ <g transform="matrix(3.7795 0 0 3.7795 -1795.2 2502.6)">
+  <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-392.69" y="-63.57" width="758.02" height="397.52"/></flowRegion><flowPara/></flowRoot>
+  <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-251.87" y="-84.492" width="624.44" height="455.45"/></flowRegion><flowPara/></flowRoot>
+  <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-202.78" y="-50.695" width="473.96" height="281.64"/></flowRegion><flowPara/></flowRoot>
+  <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-86.906" y="-78.859" width="516.61" height="410.39"/></flowRegion><flowPara/></flowRoot>
+  <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-81.273" y="-32.188" width="309" height="322.68"/></flowRegion><flowPara/></flowRoot>
+  <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-90.93" y="-68.398" width="392.69" height="252.67"/></flowRegion><flowPara/></flowRoot>
+  <g transform="translate(675.17 -.21291)">
+   <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-100.59" y="-53.109" width="462.7" height="369.35"/></flowRegion><flowPara/></flowRoot>
+   <g transform="translate(57.194 .21291)">
+    <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-329.12" y="-12.07" width="696.05" height="259.91"/></flowRegion><flowPara/></flowRoot>
+    <g transform="translate(-1495.1 -629.38)">
+     <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-306.59" y="-111.05" width="206" height="51.5"/></flowRegion><flowPara/></flowRoot>
+     <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-70.812" y="-36.211" width="362.91" height="283.25"/></flowRegion><flowPara/></flowRoot>
+     <g transform="translate(538.4 -400.97)">
+      <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-138.41" y="-65.18" width="448.21" height="363.72"/></flowRegion><flowPara/></flowRoot>
+      <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-67.578" y="-8.4531" width="327.73" height="260.94"/></flowRegion><flowPara/></flowRoot>
+      <g transform="translate(-380.28 455.78)">
+       <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-5.8594" y="-7.2813" width="339.45" height="326.95"/></flowRegion><flowPara/></flowRoot>
+       <flowRoot fill="black" font-family="sans-serif" font-size="18.667px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-133.2" y="-6.5" width="375.39" height="276.17"/></flowRegion><flowPara/></flowRoot>
+       <g transform="translate(937.97 -55.125)">
+        <g transform="translate(-115.16 .31005)">
+         <rect x="257.74" y="-31.75" width="52.917" height="52.917" fill="#db3b3b" stroke="#000" stroke-linecap="round" stroke-width=".5" style="paint-order:fill markers stroke"/>
+         <path d="m257.74-31.75 52.917 52.917h-52.917z" fill="#ffec8e" stroke="#000" stroke-width=".26458px"/>
+         <text x="271.70703" y="-7.4974475" fill="#000000" font-family="sans-serif" font-size="6.8289px" letter-spacing="0px" stroke-width=".32011" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><tspan x="271.70703" y="-7.4974475" fill="#000000" font-family="sans-serif" stroke-width=".32011">02</tspan></text>
+         <text x="284.26251" y="8.5877075" fill="#000000" font-family="sans-serif" class="svgT" letter-spacing=".5px" font-size="5.2px" stroke-width=".26458" text-anchor="middle" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><tspan x="284.26251" y="8.5877075" text-align="center">Podpunkt listy</tspan><tspan x="284.26251" y="16.525208" text-align="center">3 poziom</tspan></text>
+         <g stroke="#000" stroke-width="1.6">
+          <path d="m263.23-21.606h41.01"/>
+          <path d="m267.01-13.797h37.231"/>
+          <path d="m271.55-5.9871h32.695"/>
+         </g>
+        </g>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+ </g>
+</svg>
+</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-7 WarstwaWord\Akapity\Lista4Poz.ahk" class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" width="206px" height="206px" version="1.1" viewBox="0 0 206 206" xmlns="http://www.w3.org/2000/svg" xmlns:osb="http://www.openswatchbook.org/uri/2009/osb" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <linearGradient id="linearGradient12428" x1="19.364" x2="-32.659" y1="21.167" y2="-31.517" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#db3b3b" offset="0"/>
+  </linearGradient>
+  <linearGradient id="linearGradient12426" x1="-33.553" x2="19.364" y1="21.167" y2="-31.75" gradientUnits="userSpaceOnUse">
+   <stop offset="0"/>
+   <stop stop-opacity="0" offset="1"/>
+  </linearGradient>
+ </defs>
+ <g transform="matrix(3.7795 0 0 3.7795 -1795.2 2502.6)">
+  <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-392.69" y="-63.57" width="758.02" height="397.52"/></flowRegion><flowPara/></flowRoot>
+  <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-251.87" y="-84.492" width="624.44" height="455.45"/></flowRegion><flowPara/></flowRoot>
+  <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-202.78" y="-50.695" width="473.96" height="281.64"/></flowRegion><flowPara/></flowRoot>
+  <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-86.906" y="-78.859" width="516.61" height="410.39"/></flowRegion><flowPara/></flowRoot>
+  <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-81.273" y="-32.188" width="309" height="322.68"/></flowRegion><flowPara/></flowRoot>
+  <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-90.93" y="-68.398" width="392.69" height="252.67"/></flowRegion><flowPara/></flowRoot>
+  <g transform="translate(675.17 -.21291)">
+   <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-100.59" y="-53.109" width="462.7" height="369.35"/></flowRegion><flowPara/></flowRoot>
+   <g transform="translate(57.194 .21291)">
+    <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-329.12" y="-12.07" width="696.05" height="259.91"/></flowRegion><flowPara/></flowRoot>
+    <g transform="translate(-1495.1 -629.38)">
+     <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-306.59" y="-111.05" width="206" height="51.5"/></flowRegion><flowPara/></flowRoot>
+     <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-70.812" y="-36.211" width="362.91" height="283.25"/></flowRegion><flowPara/></flowRoot>
+     <g transform="translate(538.4 -400.97)">
+      <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-138.41" y="-65.18" width="448.21" height="363.72"/></flowRegion><flowPara/></flowRoot>
+      <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-67.578" y="-8.4531" width="327.73" height="260.94"/></flowRegion><flowPara/></flowRoot>
+      <g transform="translate(-380.28 455.78)">
+       <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-5.8594" y="-7.2813" width="339.45" height="326.95"/></flowRegion><flowPara/></flowRoot>
+       <flowRoot fill="black" font-family="sans-serif" font-size="18.667px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-133.2" y="-6.5" width="375.39" height="276.17"/></flowRegion><flowPara/></flowRoot>
+       <g transform="translate(937.97 -55.125)">
+        <g transform="translate(176.13 .31006)">
+         <g>
+          <rect x="-33.553" y="-31.75" width="52.917" height="52.917" fill="url(#linearGradient12428)" fill-rule="evenodd" stroke="url(#linearGradient12426)" stroke-linecap="round" stroke-width=".5" style="mix-blend-mode:color;paint-order:fill markers stroke"/>
+          <path d="m-33.553-31.75 52.917 52.917h-52.917z" fill="#ffec8e" stroke="#000" stroke-width=".26458px"/>
+          <text x="-7.0336947" y="8.5877028" fill="#000000" font-family="sans-serif" class="svgT" letter-spacing=".5px" font-size="5.2px" stroke-width=".26458" text-anchor="middle" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><tspan x="-7.0336943" y="8.5877028" text-align="center">Początek listy</tspan><tspan x="-7.0336943" y="16.525202" text-align="center">4 poziom</tspan></text>
+         </g>
+         <g fill="none" stroke="#000" stroke-width="1.6">
+          <path d="m-28.065-21.606h41.01"/>
+          <path d="m-24.285-13.797h37.231"/>
+          <path d="m-19.749-5.9871h32.695"/>
+          <path d="m-15.214 1.8222h27.97"/>
+         </g>
+         <text x="-14.486464" y="0.62903321" fill="#000000" font-family="sans-serif" font-size="6.8289px" letter-spacing="0px" stroke-width=".3201" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><tspan x="-14.486464" y="0.62903321" fill="#000000" font-family="sans-serif" stroke-width=".3201">001</tspan></text>
+        </g>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+ </g>
+</svg>
+</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-8 WarstwaWord\Akapity\Lista4PozKont.ahk" class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" width="206px" height="206px" version="1.1" viewBox="0 0 206 206" xmlns="http://www.w3.org/2000/svg" xmlns:osb="http://www.openswatchbook.org/uri/2009/osb">
+ <g transform="matrix(3.7795 0 0 3.7795 -1795.2 2502.6)">
+  <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-392.69" y="-63.57" width="758.02" height="397.52"/></flowRegion><flowPara/></flowRoot>
+  <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-251.87" y="-84.492" width="624.44" height="455.45"/></flowRegion><flowPara/></flowRoot>
+  <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-202.78" y="-50.695" width="473.96" height="281.64"/></flowRegion><flowPara/></flowRoot>
+  <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-86.906" y="-78.859" width="516.61" height="410.39"/></flowRegion><flowPara/></flowRoot>
+  <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-81.273" y="-32.188" width="309" height="322.68"/></flowRegion><flowPara/></flowRoot>
+  <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-90.93" y="-68.398" width="392.69" height="252.67"/></flowRegion><flowPara/></flowRoot>
+  <g transform="translate(675.17 -.21291)">
+   <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-100.59" y="-53.109" width="462.7" height="369.35"/></flowRegion><flowPara/></flowRoot>
+   <g transform="translate(57.194 .21291)">
+    <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-329.12" y="-12.07" width="696.05" height="259.91"/></flowRegion><flowPara/></flowRoot>
+    <g transform="translate(-1495.1 -629.38)">
+     <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-306.59" y="-111.05" width="206" height="51.5"/></flowRegion><flowPara/></flowRoot>
+     <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-70.812" y="-36.211" width="362.91" height="283.25"/></flowRegion><flowPara/></flowRoot>
+     <g transform="translate(538.4 -400.97)">
+      <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-138.41" y="-65.18" width="448.21" height="363.72"/></flowRegion><flowPara/></flowRoot>
+      <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-67.578" y="-8.4531" width="327.73" height="260.94"/></flowRegion><flowPara/></flowRoot>
+      <g transform="translate(-380.28 455.78)">
+       <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-5.8594" y="-7.2813" width="339.45" height="326.95"/></flowRegion><flowPara/></flowRoot>
+       <flowRoot fill="black" font-family="sans-serif" font-size="18.667px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-133.2" y="-6.5" width="375.39" height="276.17"/></flowRegion><flowPara/></flowRoot>
+       <g transform="translate(937.97 -55.125)">
+        <g transform="translate(-57.057 .31006)">
+         <rect x="199.53" y="-31.75" width="52.917" height="52.917" fill="#db3b3b" stroke="#000" stroke-linecap="round" stroke-width=".5" style="paint-order:fill markers stroke"/>
+         <path d="m199.64-31.853 52.917 52.917h-52.917z" fill="#ffec8e" stroke="#000" stroke-width=".26458px"/>
+         <text x="226.05418" y="9.8913288" fill="#000000" font-family="sans-serif" class="svgT" letter-spacing=".5px" font-size="5.2px" stroke-width=".26458" text-anchor="middle" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><tspan x="226.05418" y="9.8913288" text-align="center">Podpunkt listy</tspan><tspan x="226.05418" y="17.828829" text-align="center">4 poziom</tspan></text>
+         <g stroke="#000" stroke-width="1.6">
+          <path d="m205.02-21.606h41.01"/>
+          <path d="m208.8-13.797h37.231"/>
+          <path d="m217.87 1.8223h27.97"/>
+         </g>
+         <text x="218.60141" y="0.62903881" fill="#000000" font-family="sans-serif" font-size="6.8289px" letter-spacing="0px" stroke-width=".32011" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><tspan x="218.60141" y="0.62903881" fill="#000000" font-family="sans-serif" stroke-width=".32011">002</tspan></text>
+         <path d="m213.34-5.9871h32.695" stroke="#000" stroke-width="1.6"/>
+        </g>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+ </g>
+</svg>
+</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-9 WarstwaWord\Akapity\ChangeLanguage.ahk" class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" width="206px" height="206px" version="1.1" viewBox="0 0 206 206" xmlns="http://www.w3.org/2000/svg">
+ <g transform="matrix(3.7795 0 0 3.7795 -5036 -1391.7)">
+  <rect x="1333.6" y="369.54" width="52.258" height="52.258" fill="#fff" stroke="#000" stroke-linecap="round" stroke-width=".5" style="paint-order:fill markers stroke"/>
+  <text x="1359.6356" y="412.37195" font-family="sans-serif" class="svgT" letter-spacing=".5px" font-size="5.2px" stroke-width=".26458" text-align="center" text-anchor="middle" word-spacing="0px" style="line-height:0.94999999" xml:space="preserve"><tspan x="1359.6356" y="412.37195" text-align="center">Zmień język</tspan><tspan x="1359.6356" y="418.40445" text-align="center">dokumentu</tspan></text>
+  <g transform="matrix(.50755 0 0 .50755 1343.4 372.53)">
+   <path d="m55.63 22.75h-16.69v-11.69a6.32 6.32 0 00-6.31-6.31h-24.26a6.32 6.32 0 00-6.31 6.31v15.17a6.17 6.17 0 001.08 3.52c2.31 4.5 13.31 11.25 13.42 11.35a1 1 0 00.52.15 1 1 0 00.64-.24 1 1 0 00.28-1.13 43.82 43.82 0 01-2-7.35h9.06v11.7a6.31 6.31 0 006.31 6.3h16.63a43.82 43.82 0 01-2 7.35 1 1 0 00.28 1.12 1 1 0 00.64.24 1 1 0 00.52-.15c.11-.07 11.11-6.85 13.42-11.35a6.17 6.17 0 001.08-3.52v-15.16a6.32 6.32 0 00-6.31-6.31zm-34.14 7.78h-6.68a1 1 0 00-.76.35 1 1 0 00-.23.81 54.29 54.29 0 001.39 6.14c-3.46-2.34-8.91-6.36-10.27-8.95a1.28 1.28 0 00-.11-.2 4.24 4.24 0 01-.77-2.45v-15.17a4.32 4.32 0 014.31-4.31h24.26a4.32 4.32 0 014.31 4.31v11.69h-5.57a6.31 6.31 0 00-4.91 2.35 8.83 8.83 0 01-4.1-1 12.53 12.53 0 003.12-7.61h1.26a1 1 0 100-2h-5.2v-3.16a1 1 0 10-2 0v3.13h-5.21a1 1 0 100 2h9.14a10.47 10.47 0 01-2.59 6.26l-.16.15a10.39 10.39 0 01-2.5-3.87 1.0019 1.0019 0 00-1.87.72 12.46 12.46 0 002.72 4.34 9.81 9.81 0 01-4.71 1.05 1 1 0 100 2 11.5 11.5 0 006.37-1.69 10.34 10.34 0 004.67 1.58 6.12 6.12 0 00-.34 2v1.47zm38.45 13.7a4.24 4.24 0 01-.77 2.45.69.69 0 00-.1.19c-1.36 2.59-6.82 6.62-10.28 9a54.29 54.29 0 001.39-6.14 1 1 0 00-.23-.81 1 1 0 00-.76-.35h-17.82a4.31 4.31 0 01-4.31-4.3v-15.21a4.32 4.32 0 014.31-4.31h24.26a4.32 4.32 0 014.31 4.31zm-15.47-15.38a.91.91 0 00-.15-.23s0-.07-.07-.1a1.05 1.05 0 00-.11-.07 1 1 0 00-.21-.14.9.9 0 00-.16 0 1.55 1.55 0 00-.21 0 1.19 1.19 0 00-.26.05h-.11a1.13 1.13 0 00-.26.16l-.07.05-.08.12a1.53 1.53 0 00-.14.21l-6 15a1 1 0 00.56 1.3.94.94 0 00.37.07 1 1 0 00.93-.63l1.74-4.37h6.65l1.75 4.37a1 1 0 00.93.63 1 1 0 00.37-.07 1 1 0 00.56-1.3zm-3.47 9.37 2.53-6.31 2.52 6.31z"/>
+  </g>
+ </g>
+</svg>
+</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-1 WarstwaWord\Akapity\ParagraphPageBreakBefore.ahk" class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" width="206px" height="206px" version="1.1" viewBox="0 0 206 206" xmlns="http://www.w3.org/2000/svg">
+ <g transform="matrix(3.7795 0 0 3.7795 -1460.4 331.89)">
+  <rect x="387.75" y="-86.664" width="52.632" height="52.632" fill="#b9d4ff" stroke="#000" stroke-linecap="round" stroke-width=".28429" style="paint-order:fill markers stroke"/>
+  <text x="413.77182" y="-45.203438" font-family="sans-serif" class="svgT" letter-spacing=".5px" font-size="5.2px" stroke-width=".26458" text-align="end" text-anchor="middle" word-spacing="0px" style="line-height:1.04999995" xml:space="preserve"><tspan x="413.77182" y="-45.203438" text-align="center">Podział strony</tspan><tspan x="413.77182" y="-38.535938" text-align="center">przed</tspan></text>
+  <g stroke-width=".25369">
+   <path d="m410.01-57.165v-1.0147h-10.147a1.0147 1.0147 0 01-1.0147-1.0147v-22.832a1.0147 1.0147 0 011.0147-1.0147h15.221a1.0147 1.0147 0 011.0148 1.0147v2.5369h1.0148v-2.5369a2.0318 2.0318 0 00-2.0295-2.0295h-15.221a2.0318 2.0318 0 00-2.0295 2.0295v22.832a2.0318 2.0318 0 002.0295 2.0295z"/>
+   <path d="m426.24-64.775h-11.162a.50737.50737 0 000 1.0147h11.162a.50737.50737 0 000-1.0147z"/>
+   <path d="m415.08-61.224h3.5516a.50737.50737 0 000-1.0147h-3.5516a.50737.50737 0 000 1.0147z"/>
+   <path d="m419.14-60.209h-4.059a.5074.5074 0 00-.50737.50737v5.5811a.5074.5074 0 00.50737.50737h4.059a.5074.5074 0 00.50737-.50737v-5.5811a.5074.5074 0 00-.50737-.50737zm-.50737 5.5811h-3.0442v-4.5664h3.0442z"/>
+   <path d="m428.27-78.474h-15.221a2.0318 2.0318 0 00-2.0295 2.0295v22.832a2.0318 2.0318 0 002.0295 2.0295h11.162l.00026 3.1e-5a1.0153 1.0153 0 00.1977-.01958c.0265-.0053.0513-.01583.0772-.02316a1.0075 1.0075 0 00.11209-.03406c.0308-.01269.0588-.03106.0882-.04675.029-.01545.0593-.02804.0869-.04641a1.014 1.014 0 00.15564-.12731l5.0737-5.0737a1.0102 1.0102 0 00.11472-.13991c.01-.01431.0185-.02917.0276-.04394a1.0072 1.0072 0 00.0625-.11707c.007-.01593.0146-.03148.021-.04777a1.0155 1.0155 0 00.0509-.16746l.00076-.0029a1.0142 1.0142 0 00.0176-.17837c.00014-.0068.002-.01329.002-.02012v-18.773a2.0318 2.0318 0 00-2.0294-2.0295zm-4.059 25.876v-5.0737h5.0737zm5.0737-6.0885h-5.0737a1.0147 1.0147 0 00-1.0147 1.0147v5.0737h-10.147a1.0147 1.0147 0 01-1.0148-1.0147v-22.832a1.0147 1.0147 0 011.0148-1.0147h15.221a1.0147 1.0147 0 011.0148 1.0147z"/>
+   <path d="m415.08-73.908h6.0885a.50737.50737 0 000-1.0147h-6.0885a.50737.50737 0 000 1.0147z"/>
+   <path d="m415.08-71.371h8.6254a.50737.50737 0 000-1.0147h-8.6254a.50737.50737 0 000 1.0147z"/>
+   <path d="m426.24-69.849h-11.162a.50737.50737 0 000 1.0147h11.162a.50737.50737 0 000-1.0147z"/>
+   <path d="m415.08-66.298h6.0885a.50737.50737 0 000-1.0147h-6.0885a.50737.50737 0 000 1.0147z"/>
+  </g>
+ </g>
+</svg>
+</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-2 WarstwaWord\Akapity\ParagraphFormatKeepWithNext.ahk" class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" width="206px" height="206px" version="1.1" viewBox="0 0 206 206" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <marker id="Arrow1Mend" overflow="visible" orient="auto">
+   <path transform="matrix(-.4 0 0 -.4 -4 0)" d="m0 0 5-5-17.5 5 17.5 5z" fill-rule="evenodd" stroke="#000" stroke-width="1pt"/>
+  </marker>
+ </defs>
+ <g transform="matrix(3.7795 0 0 3.7795 -575.57 331.89)">
+  <rect x="153.65" y="-86.664" width="52.632" height="52.632" fill="#b9d4ff" stroke="#000" stroke-linecap="round" stroke-width=".28429" style="paint-order:fill markers stroke"/>
+  <text x="179.95107" y="-45.215492" font-family="sans-serif" class="svgT" letter-spacing=".5px" font-size="5.2px" stroke-width=".26458" text-align="end" text-anchor="middle" word-spacing="0px" style="line-height:1.04999995" xml:space="preserve"><tspan x="179.95107" y="-45.215492" text-align="center">Razem z</tspan><tspan x="179.95107" y="-38.547993" text-align="center">następnym</tspan></text>
+  <g fill="none" stroke="#000">
+   <path d="m163.52-78.715h32.884" stroke-width="1.765"/>
+   <path d="m163.52-58.557h32.884" stroke-width="1.765"/>
+   <path d="m179.96-77.239v14.306" marker-end="url(#Arrow1Mend)" stroke-width="1.3071"/>
+  </g>
+ </g>
+</svg>
+</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-3 WarstwaWord\Akapity\ParagraphLinesKeepTogether.ahk" class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" width="206px" height="206px" version="1.1" viewBox="0 0 206 206" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <marker id="Arrow1Mstart" overflow="visible" orient="auto">
+   <path transform="matrix(.4 0 0 .4 4 0)" d="m0 0 5-5-17.5 5 17.5 5z" fill-rule="evenodd" stroke="#000" stroke-width="1pt"/>
+  </marker>
+  <marker id="Arrow2Mend" overflow="visible" orient="auto">
+   <path transform="scale(-.6)" d="m8.7186 4.0337-10.926-4.0177 10.926-4.0177c-1.7455 2.3721-1.7354 5.6175-6e-7 8.0354z" fill-rule="evenodd" stroke="#000" stroke-linejoin="round" stroke-width=".625"/>
+  </marker>
+ </defs>
+ <g transform="matrix(3.7795 0 0 3.7795 -800.74 332.7)">
+  <rect x="213.23" y="-86.664" width="52.632" height="52.632" fill="#b9d4ff" stroke="#000" stroke-linecap="round" stroke-width=".28429" style="paint-order:fill markers stroke"/>
+  <text x="239.71074" y="-44.497536" font-family="sans-serif" class="svgT" letter-spacing=".5px" font-size="5.2px" stroke-width=".26458" text-align="end" text-anchor="middle" word-spacing="0px" style="line-height:1.04999995" xml:space="preserve"><tspan x="239.71074" y="-44.497536" text-align="center">Zachowaj</tspan><tspan x="239.71074" y="-37.830036" text-align="center">wiersze razem</tspan></text>
+  <g fill="none" stroke="#000">
+   <path d="m218.16-77.056h32.884" stroke-width="1.765"/>
+   <path d="m218.16-60.505h32.884" stroke-width="1.765"/>
+   <path d="m253.78-77.228c1.9819.5339 3.7714 1.7561 4.9897 3.408 1.2184 1.6519 1.8575 3.7225 1.7823 5.7737-.067 1.8274-.69685 3.6302-1.7823 5.1019-1.0854 1.4716-2.6218 2.6058-4.3479 3.2096" marker-end="url(#Arrow2Mend)" marker-start="url(#Arrow1Mstart)" stroke-width=".729"/>
+  </g>
+ </g>
+</svg>
+</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-4 WarstwaWord\Akapity\DeleteInterline.ahk" class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" width="206px" height="206px" version="1.1" viewBox="0 0 206 206" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <marker id="Arrow1Lend" overflow="visible" orient="auto">
+   <path transform="matrix(-.8 0 0 -.8 -10 0)" d="m0 0 5-5-17.5 5 17.5 5z" fill-rule="evenodd" stroke="#000" stroke-width="1pt"/>
+  </marker>
+  <marker id="Arrow1Lstart" overflow="visible" orient="auto">
+   <path transform="matrix(.8 0 0 .8 10 0)" d="m0 0 5-5-17.5 5 17.5 5z" fill-rule="evenodd" stroke="#000" stroke-width="1pt"/>
+  </marker>
+ </defs>
+ <g transform="matrix(3.7795 0 0 3.7795 -1026.9 331.89)">
+  <rect x="272.85" y="-86.664" width="52.632" height="52.632" fill="#b9d4ff" stroke="#000" stroke-linecap="round" stroke-width=".28429" style="paint-order:fill markers stroke"/>
+  <text x="298.9975" y="-38.547997" font-family="sans-serif" font-size="6.35px" letter-spacing="0px" stroke-width=".26458" text-align="end" text-anchor="end" word-spacing="0px" style="line-height:1.04999995" xml:space="preserve"><tspan x="298.9975" y="-38.547997" font-family="sans-serif" class="svgT" letter-spacing=".5px" font-size="5.2px" stroke-width=".26458" text-align="center" text-anchor="middle">Usuń interlinię</tspan></text>
+  <g fill="none" stroke="#000">
+   <g stroke-width="1.765">
+    <path d="m278.92-74.599h32.884"/>
+    <path d="m278.92-58.048h32.884"/>
+    <path d="m278.92-66.323h32.884"/>
+   </g>
+   <path d="m316.56-75.028v18.048" marker-end="url(#Arrow1Lstart)" marker-start="url(#Arrow1Lend)" stroke-width=".565"/>
+  </g>
+ </g>
+</svg>
+</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-5 WarstwaWord\Akapity\ReapplyStyles.ahk" class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" width="206px" height="206px" version="1.1" viewBox="0 0 206 206" xmlns="http://www.w3.org/2000/svg">
+ <g transform="matrix(3.7795 0 0 3.7795 -3421.1 332.7)">
+  <rect x="906.3" y="-86.664" width="52.632" height="52.632" fill="#b9d4ff" stroke="#000" stroke-linecap="round" stroke-width=".28429" style="paint-order:fill markers stroke"/>
+  <text x="932.83087" y="-45.41634" font-family="sans-serif" class="svgT" letter-spacing=".5px" font-size="5.2px" stroke-width=".26458" text-align="end" text-anchor="middle" word-spacing="0px" style="line-height:1.04999995" xml:space="preserve"><tspan x="932.83087" y="-45.41634" text-align="center">Zastosuj styl</tspan><tspan x="932.83087" y="-38.74884" text-align="center">ponownie</tspan></text>
+  <g transform="matrix(.39449 0 0 .39449 912.89 -86.872)" clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.4142">
+   <path d="m32.889 56.474c7.805 1.377 15.345 2.479 20.487 6.281 1.329.982 2.329 2.081 3.111 3.581.205.392.364 1.08.704 1.467.727.825 2.804.991 4.345 1.174 9.065 1.075 18.511-.676 24.067-4.227.821 5.064-1.723 8.659-4.226 11.036-5.329 5.058-14.35 6.525-24.244 6.986-.907.042-1.886-.101-2.759.058-.727.133-1.502.532-2.172.822-2.088.905-4.223 1.75-7.162 1.82-3.86.093-7.367-.431-10.977-.939-3.329-.469-6.615-1.382-9.862-2.113-3.242-.731-6.449-1.508-9.568-2.348-.336-2.738 1.274-4.266 3.816-4.286 1.828-.013 4.281.731 6.456 1.233.95.219 1.944.486 3.053.764 1.04.259 3.624 1.357 3.698-.236.048-1.017-1.45-1.215-2.524-1.467-1.209-.283-2.249-.519-3.229-.764-1.925-.48-4.453-1.25-6.515-1.408-1.745-.134-3.005.158-3.933.645-.576.303-1.183 1.222-1.702 1.291-.359.048-1.65-.401-2.114-.528-.729-.199-1.431-.388-1.937-.645-.42-2.746 1.272-4.559 4.109-4.344 1.476.111 3.045.6 4.638.94 3.789.806 7.604 1.621 11.564 2.406 1.216.241 2.935.828 2.935-.587 0-.898-1.152-1.014-2.172-1.233-4.693-1.006-9.25-1.871-13.971-2.876-1.852-.394-4.008-.874-5.753-.177-.62.249-1.076.783-1.702.823-.573-1.586.734-2.723 1.82-3.229 4.774 1.085 11.776 1.201 17.199 2.289.746.15 1.687.396 2.642.588 1.096.219 3.276.984 3.346-.471.071-1.501-2.237-1.032-3.112-1.467-.193-1.078-.373-2.169-.528-3.287 3.063.648 6.518 1.354 9.92 2.055 1.179.242 3.9 1.355 3.816-.411-.044-.926-1.245-.957-2.289-1.175-2.085-.433-3.523-.793-5.635-1.232-.914-.19-2.169-.257-2.818-.587-.998-.506-1.901-3.315-1.526-4.813.145-.584.391-1.01.704-1.409zm-13.149-12.269c.615-2.809 1.704-5.145 3.052-7.22 1.937 4.306 2.875 9.305 3.933 14.381 1.054 5.054 2.016 10.311 2.818 15.498-6.922-.644-15.478-1.506-21.566-3.122 1.014-4.471 1.933-6.434 4.19-9.206-1.626-2.84-3.629-6.786-3.639-11.27-.003-1.492.205-3.301.763-4.638.42-1.007 1.262-1.973 1.996-2.759.761-.816 1.667-1.546 2.583-2.172.014-.064.117-.04.117-.117 1.285 4.174 3.31 7.608 5.753 10.625zm-8.277-10.684c2.049-4.292 3.335-9.85 6.633-12.914 3.376-3.136 7.921-4.96 13.678-5.753 6.031-.83 12.412-.085 17.727 1.057 5.435 1.167 10.135 2.861 14.558 4.873 8.623 3.918 16.659 9.685 22.131 16.788 2.64 3.426 5.62 7.916 5.87 13.618.143 3.236-.772 5.494-1.82 7.926-.96 2.227-1.833 4.399-2.876 6.808-1.017-8.717-5.534-14.397-10.566-19.43-4.906-4.905-11.258-9.017-17.846-12.092-6.592-3.077-14.418-5.78-23.422-6.516-9.902-.81-18.706 1.062-24.008 5.577.031.122-.229.124-.059.058z"/>
+  </g>
+ </g>
+</svg>
+</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-6 " class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-7 " class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-8 " class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-9 " class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-1 " class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-2 " class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-3 " class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-4 " class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-5 " class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-6 " class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-7 " class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-8 " class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-9 " class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   " id="drag-1 " class="box_item draggable" href="Layer1.html"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" width="205" height="203" version="1.1" viewBox="0 0 205 203" xmlns="http://www.w3.org/2000/svg">
+ <g transform="translate(0,2)">
+  <g transform="matrix(3.7795 0 0 3.7795 10.171 -6.7758)">
+   <g transform="translate(-1.0884 -121.69)">
+    <g transform="translate(1.6608 -59.209)">
+     <g transform="translate(-.6443 -59.335)">
+      <g transform="translate(-1396.8 269.89)">
+       <g transform="translate(-57.972 -.024822)">
+        <g transform="translate(1658.1 73.867)">
+         <g>
+          <rect x="-205.07" y="-101.86" width="52.917" height="52.917" fill="#0082b4" stroke="#000" stroke-linecap="round" stroke-width=".5" style="paint-order:fill markers stroke"/>
+          <text x="-178.87273" y="-60.77029" fill="#ffffff" font-family="sans-serif" class="svgT" letter-spacing=".5px" font-size="5.2px" stroke-width=".26458" text-anchor="middle" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><tspan x="-178.87273" y="-60.77029" text-align="center">STRONA</tspan><tspan x="-178.87273" y="-52.83279" text-align="center"> GŁÓWNA</tspan></text>
+          <g transform="matrix(1.8895 0 0 1.8895 -201.12 -104.9)" fill="#fff">
+           <g fill="#fff">
+            <path d="m6.934 12.202c-.341 0-.62.271-.62.612v6.025c0 .341.28.616.62.616h10.145c.34 0 .611-.275.611-.616v-6.025c0-.341-.271-.612-.611-.612-.341 0-.621.271-.621.612v5.409h-8.913v-5.409c0-.341-.279-.612-.611-.612z"/>
+            <path d="m4.181 12.98c.236.236.63.236.865 0l6.951-6.946 6.96 6.946c.236.236.629.236.865 0 .24-.236.24-.629 0-.865l-7.374-7.383-.013-.009c-.24-.236-.63-.236-.87 0l-7.383 7.392c-.245.236-.245.629-.001.865z"/>
+           </g>
+          </g>
+         </g>
+         <rect x="-131.95" y="-55.38" width="2.0774" height=".41548" stroke-width=".26458"/>
+        </g>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+ </g>
+</svg>
+</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-2 " class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-3 " class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-4 " class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-5 " class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-6 " class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-7 " class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-8 " class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   " id="drag-9 Layer1\ToWordLayer.ahk" class="box_item draggable" href="Layer2.html"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" width="206px" height="206px" version="1.1" viewBox="0 0 206 206" xmlns="http://www.w3.org/2000/svg">
+ <g transform="matrix(3.7795 0 0 3.7795 -1795.2 2502.6)">
+  <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-392.69" y="-63.57" width="758.02" height="397.52"/></flowRegion><flowPara/></flowRoot>
+  <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-251.87" y="-84.492" width="624.44" height="455.45"/></flowRegion><flowPara/></flowRoot>
+  <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-202.78" y="-50.695" width="473.96" height="281.64"/></flowRegion><flowPara/></flowRoot>
+  <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-86.906" y="-78.859" width="516.61" height="410.39"/></flowRegion><flowPara/></flowRoot>
+  <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-81.273" y="-32.188" width="309" height="322.68"/></flowRegion><flowPara/></flowRoot>
+  <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-90.93" y="-68.398" width="392.69" height="252.67"/></flowRegion><flowPara/></flowRoot>
+  <g transform="translate(675.17 -.21291)">
+   <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-100.59" y="-53.109" width="462.7" height="369.35"/></flowRegion><flowPara/></flowRoot>
+   <g transform="translate(57.194 .21291)">
+    <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-329.12" y="-12.07" width="696.05" height="259.91"/></flowRegion><flowPara/></flowRoot>
+    <g transform="translate(-1495.1 -629.38)">
+     <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-306.59" y="-111.05" width="206" height="51.5"/></flowRegion><flowPara/></flowRoot>
+     <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-70.812" y="-36.211" width="362.91" height="283.25"/></flowRegion><flowPara/></flowRoot>
+     <g transform="translate(538.4 -400.97)">
+      <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-138.41" y="-65.18" width="448.21" height="363.72"/></flowRegion><flowPara/></flowRoot>
+      <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-67.578" y="-8.4531" width="327.73" height="260.94"/></flowRegion><flowPara/></flowRoot>
+      <g transform="translate(-380.28 455.78)">
+       <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-5.8594" y="-7.2813" width="339.45" height="326.95"/></flowRegion><flowPara/></flowRoot>
+       <g transform="translate(40.18 -58.755)">
+        <rect x="1040.5" y="-27.585" width="52.396" height="52.396" fill="#0082b4" stroke="#000" stroke-linecap="round" stroke-width=".52068" style="paint-order:fill markers stroke"/>
+        <text x="1067.644" y="12.493833" fill="#ffffff" font-family="sans-serif" class="svgT" letter-spacing=".5px" font-size="5.2px" stroke-width=".26458" text-align="center" text-anchor="middle" word-spacing="0px" style="line-height:1.04999995" xml:space="preserve"><tspan x="1068.5122" y="12.493833" text-align="center">Warstwa </tspan><tspan x="1067.644" y="21.383835" text-align="center">Word</tspan></text>
+        <g transform="matrix(.29428 0 0 .29428 1051.9 -25.245)" fill="#fff">
+         <g fill="#fff">
+          <rect x="70" y="20" width="20" height="60"/>
+          <path d="m10 80 56 15v-90l-56 15zm15.4-50 3.4 28.4 4.9-28.4h8.6l4.5 28.4 4-28.4h7.8l-5.8 34.6h-10.6l-4.3-26.4-4.5 26.4h-10.5l-5.7-34.6z"/>
+         </g>
+        </g>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+ </g>
+</svg>
+</a></div>
         <script src="https://code.jquery.com/jquery-3.5.1.min.js"integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="crossorigin="anonymous"></script>
         <script src="../index.js"></script>
         </body>

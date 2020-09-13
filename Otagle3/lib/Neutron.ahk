@@ -405,7 +405,11 @@ class NeutronWindow
 		
 	}
 	CloseApp(){
-	 ExitApp
+	MsgBox, 4,, You will close O T A G L E application. Are you sure? (press Yes or No)
+	IfMsgBox Yes
+		ExitApp
+	else
+		return
 	}
 	; Hides the Nuetron window.
 	Hide()
@@ -427,7 +431,8 @@ class NeutronWindow
 	{
 		w := RegExMatch(options, "w\s*\K\d+", match) ? match : this.w
 		h := RegExMatch(options, "h\s*\K\d+", match) ? match : this.h
-		
+		x := RegExMatch(options, "w\s*\K\d+", match) ? match : this.x
+		y := RegExMatch(options, "h\s*\K\d+", match) ? match : this.y
 
 		VarSetCapacity(rect, 16, 0)
 		DllCall("AdjustWindowRectEx"
@@ -438,8 +443,9 @@ class NeutronWindow
 		, "UInt") ; BOOL
 		w += NumGet(&rect, 0, "Int")-NumGet(&rect, 8, "Int")
 		h += NumGet(&rect, 4, "Int")-NumGet(&rect, 12, "Int")
-		
-		Gui, % this.hWnd ":Show", %options% w%w% h%h%
+		    IniRead, WhichMonitor , % A_ScriptDir . "\Config.ini",Main,WhichMonitor
+			SysGet, MonitorBoundingCoordinates_, Monitor, % WhichMonitor
+		Gui, % this.hWnd ":Show", % options . "w" . w . "h" . h
 	}
 	
 

@@ -19,7 +19,7 @@ SetWorkingDir %A_ScriptDir%
      global Title :=
      global btnWidth := 80
      global btnHeight := 80
-
+     global WhichMonitor := 0
      global HowManyLayers :=
      global LayerToBeErased :=
 F_display_configurator() {
@@ -365,8 +365,10 @@ EraseLayer(){
     Reset()
 }
 ConfigureEraseLayer()
-
+global widthButton :=
+global heightButton :=
 global flag := 0
+global flag2 := 0
 addLayers(){
 
  Gui,DeleteLayers:Destroy
@@ -374,34 +376,37 @@ addLayers(){
  Gui,CloneLayers:Destroy
  Gui, EraseLayer:Destroy
  Gui, aLayers:Destroy
- global widthButton :=
- global heightButton :=
 
  Gui, aLayers: New, +LabelMyGui_On -DPIScale
  Gui, aLayers: Add, Text, xm, Specify key size width: `
- Gui, aLayers: Add, Edit, x+m yp r1 w50
- Gui, aLayers: Add, UpDown, vwidthButton Range1-300,80
+ Gui, aLayers: Add, Edit, x+m yp r1 w80
+ Gui, aLayers: Add, UpDown, vwidthButton Range80-300, % widthButton
  Gui, aLayers: Add, Text, x+m yp, Specify key size height: `
- Gui, aLayers: Add, Edit, x+m yp r1 w50
- Gui, aLayers: Add, UpDown, vheightButton Range1-300,80
+ Gui, aLayers: Add, Edit, x+m yp r1 w80
+ Gui, aLayers: Add, UpDown, vheightButton Range80-300,% heightButton
  Gui, aLayers: Add, Button, xm Default w80 gCalculateButtons, C&alculate 
  Gui, aLayers: Add, Text,  xm, % "Number of keys horizontally:`t" . (flag ? aLayer_AmountOfKeysHorizontally : "") 
- Gui, aLayers: Add, Text,  yp x+m, Write the title of the layer:
  Gui, aLayers: Add, Text, xm, % "Number of keys vertically:`t" . (flag ? aLayer_AmountOfKeysVertically : "") 
+ Gui, aLayers: Add, Text, yp x+m,Layer title: 
  Gui, aLayers: Add, Edit, yp x+m w120 vTitle, %Title%
  Gui, aLayers: Add, Button, x10  w80 gdrawButton hwndTestButtonHwnd, &Test
+ Gui, aLayers: Add, Text, xm, Write the title of the layer:
  Gui, aLayers: Add, Button, xm w80 gSaveLayer hwndSaveLayerHwnd, &Add Layer
+
     If (flag=""){
-    GuiControl,aLayers:Disable, % TestButtonHwnd
-    GuiControl,aLayers:Disable, % SaveLayerHwnd
+     GuiControl,aLayers:Disable, % TestButtonHwnd
     }
+    If (flag2=""){
+      GuiControl,aLayers:Disable, % SaveLayerHwnd
+    }
+   
  Gui, aLayers:Show
 }
 Return
 CalculateButtons:
-  changeFlag()
-   Gui,aLayers:Submit
-   Gui, aLayers:Destroy
+    flag := 1
+    Gui,aLayers:Submit
+    Gui, aLayers:Destroy
     GuiControl,aLayers:Enable, % TestButtonHwnd
     GuiControl,aLayers:Enable, % SaveLayerHwnd
 
@@ -409,19 +414,19 @@ CalculateButtons:
    global aLayer_AmountOfKeysVertically := (1080 - 10) // (heightButton + 10)
     addLayers()
 Return
-changeFlag(){
-  flag := 1 
-}
 
 SaveLayer:
       Gui,aLayers:Submit,NoHide
       If (Title = ""){
-          MsgBox, Please enter a layer name 
+          MsgBox, Please write the title of the layer
       }Else{
-                IniRead, HowManyLayers , % A_ScriptDir . "\Config.ini",Main,HowManyLayers
-      HowManyLayers++
-      IniWrite, % "HowManyLayers=" . HowManyLayers,% A_ScriptDir . "\Config.ini", Main,
-      IniWrite, % Title,                   % A_ScriptDir . "\Config.ini", % "Layer" . HowManyLayers,  Title
+     IniRead, lVal , % A_ScriptDir . "\Config.ini",Main,HowManyLayers
+     IniRead, mVal , % A_ScriptDir . "\Config.ini",Main,WhichMonitor
+      layersVariable := lVal++
+      IniDelete, % A_ScriptDir . "\Config.ini", Main,HowManyLayers
+      IniWrite, % lVal,% A_ScriptDir . "\Config.ini", Main,HowManyLayers
+      IniWrite, % mVal,% A_ScriptDir . "\Config.ini", Main,WhichMonitor
+      IniWrite, % Title,% A_ScriptDir . "\Config.ini", % "Layer" . HowManyLayers,  Title
       If (heightButton == widthButton){
             IniWrite, % Floor(100/aLayer_AmountOfKeysHorizontally), % A_ScriptDir . "\Config.ini", % "Layer" . HowManyLayers,  ButtonWidth
             IniWrite, % Floor(100/aLayer_AmountOfKeysHorizontally), % A_ScriptDir . "\Config.ini", % "Layer" . HowManyLayers,  ButtonHeight
@@ -445,6 +450,7 @@ SaveLayer:
             IniWrite, % "",  % A_ScriptDir . "\Config.ini", % "Layer" . HowManyLayers, % "Button_" . ExternalLoopIndex . "_" . A_Index . "_Path"
         }
     }
+    MsgBox, Config.ini has been modified. Now O T A G L E will restart in order to apply changes.
     Gui, aLayers:Destroy
     Reset()
    }
@@ -452,6 +458,8 @@ SaveLayer:
 Return
 
 drawButton:
+   flag2 := 1
+
    Gui,aLayers:Submit,NoHide
    Gui, aLayers:Destroy
    Gui, Template: New, +LabelMyGui_On -DPIScale
@@ -477,3 +485,95 @@ Gui, Template:Destroy
 SetTimer,, Off
 addLayers()
 Return
+
+global W :=
+
+selectMonitor(){
+    global
+
+     Gui,AddLayers:Destroy
+     Gui,DeleteLayers:Destroy
+     Gui,SwapLayers:Destroy
+     Gui,CloneLayers:Destroy
+     Gui, EraseLayer:Destroy
+     Gui, WizardStep1:Destroy
+     Gui, WizardStep1: New, +LabelMyGui_On
+     Gui, WizardStep1: Font, bold
+     Gui, WizardStep1: Font
+     Gui, WizardStep1: Add, Text, w500, Specify one out of the available Monitor No.
+     SysGet, HowManyMonitors,       MonitorCount
+     SysGet, WhichIsPrimary,        MonitorPrimary
+    if (WhichMonitor = 0) {
+        WhichMonitor := WhichIsPrimary
+    }
+     MsgBox, % HowManyMonitors . "...." . WhichIsPrimary . "  w . m  " .  WhichMonitor
+    Loop, % HowManyMonitors
+        {
+        if (A_Index = WhichMonitor){
+            Gui, WizardStep1: Add, Radio, xm+50 vW%A_Index% gSlectOptions   , % "Monitor #" . A_Index . (A_Index = WhichIsPrimary ? " (primary)" : "")
+        
+        }else
+            Gui, WizardStep1: Add, Radio, xm+50 vW%A_Index%  gSlectOptions   , % "Monitor #" . A_Index . (A_Index = WhichIsPrimary ? " (primary)" : "")
+          
+        } 
+    Gui, WizardStep1: Add, Button, Default xm+30 y+20 gCheckMonitorNumbering,  &Check Monitor Numbering
+    Gui, WizardStep1: Add, Button, Default xm+30 y+20 gChangeMonitorReloadApp,  &Ok
+    Gui, WizardStep1:Show
+    return
+}
+
+return
+
+SlectOptions:
+ Gui, WizardStep1: Submit, NoHide
+ W := ""
+ Loop, % HowManyMonitors
+ {
+     Wtemp := W%A_Index%
+     W := % Wtemp + 1
+ }
+Return
+
+CheckMonitorNumbering:
+     F_ShowMonitorNumbers()
+     SetTimer, DestroyGuis, -3000
+return
+DestroyGuis:
+ Gui, WizardStep1: Submit, NoHide
+     Loop, %HowManyMonitors%
+          {
+          Gui, %A_Index%:Destroy
+          }
+     Gui, Font ; restore the font to the system's default GUI typeface, zize and color.
+return
+
+
+F_ShowMonitorNumbers()
+{
+     global
+
+     Loop, %HowManyMonitors%
+          {
+          SysGet, MonitorBoundingCoordinates_, Monitor, %A_Index%
+          MonitorBoundingCoordinates_Left := Format("{:d}", MonitorBoundingCoordinates_Left/ (A_ScreenDPI/96))
+          MonitorBoundingCoordinates_Right := Format("{:d}", MonitorBoundingCoordinates_Right/ (A_ScreenDPI/96))
+          MonitorBoundingCoordinates_Top := Format("{:d}", MonitorBoundingCoordinates_Top/ (A_ScreenDPI/96))
+          MonitorBoundingCoordinates_Bottom := Format("{:d}", MonitorBoundingCoordinates_Bottom/ (A_ScreenDPI/96))
+          Gui, %A_Index%:-SysMenu -Caption +Border
+          Gui, %A_Index%:Color, Black ; WindowColor, ControlColor
+          Gui, %A_Index%:Font, cWhite s26 bold, Calibri
+          Gui, %A_Index%:Add, Text, x138 y130 w130 h130, % A_Index
+          Gui, % A_Index . ":Show", % "x" .  MonitorBoundingCoordinates_Left + (Abs(MonitorBoundingCoordinates_Left - MonitorBoundingCoordinates_Right) / 2) - (300 / 2) . "y" 
+          . MonitorBoundingCoordinates_Top + (Abs(MonitorBoundingCoordinates_Top - MonitorBoundingCoordinates_Bottom) / 2) - (300 / 2) . "w300" . "h300"
+          }
+return
+}
+
+ChangeMonitorReloadApp(){
+    Gui, WizardStep1: Submit, NoHide
+    IniDelete, % A_ScriptDir . "\Config.ini", Main,WhichMonitor
+    IniWrite, % W,% A_ScriptDir . "\Config.ini", Main,WhichMonitor
+    MsgBox, Config.ini has been modified. Now O T A G L E will restart in order to apply changes.
+    Gui, WizardStep1:Destroy
+    Reset()
+}

@@ -12,5 +12,9 @@ DeleteCurrentComment() ; usu� aktualnie wybrany komentarz
 		MsgBox, 48, Usuwanie komentarza, % MsgText("By usunąć komentarz musisz go najpierw wyedytować (Edytuj komentarz).")
 		}
 	WinActivate, ahk_class OpusApp
+	WinGetPos, WinX, WinY,WinW,WinH,A
+    mouseX := Round(WinX+WinW/2)
+    mouseY := Round(WinY+WinH/2)
+    DllCall("SetCursorPos", "int", mouseX, "int", mouseY)
 	return
 	}

@@ -185,6 +185,7 @@ BuildHTMLFile(){
         <li class="menu-bar__item">
         <a class="item__link" href="#">Configure</a>
         <ul class="sub-menu">
+        <li class="sub-menu__item"  id="selectMonitor" onclick="ahk.BarF(event,id)"><a class="item__link sub__link" href="#">Select Monitor</a></li>
         <li class="sub-menu__item"  id="addLayers" onclick="ahk.BarF(event,id)"><a class="item__link sub__link" href="#">Add layer</a></li>
         <li class="sub-menu__item" id="ConfigureEraseLayer" onclick="ahk.BarF(event,id)"><a class="item__link sub__link" href="#">Erase layer</a></li>
         </ul>
@@ -238,9 +239,13 @@ BuildHTMLFile(){
 }
 
 ;Display GUI
-
+IniRead, WhichMonitor , % A_ScriptDir . "\Config.ini",Main,WhichMonitor
+SysGet, MonitorBoundingCoordinates_, Monitor, % WhichMonitor
+X := MonitorBoundingCoordinates_Left + (Abs(MonitorBoundingCoordinates_Left - MonitorBoundingCoordinates_Right) / 2) - (WizardWindow_Width / 2) 
+Y := MonitorBoundingCoordinates_Top + (Abs(MonitorBoundingCoordinates_Top - MonitorBoundingCoordinates_Bottom) / 2) - (WizardWindow_Height / 2)
 DisplayLoader(){
     global
+
     neutron := new NeutronWindow()
     neutron.Load("PlikiHtml/a_Welcome.html")
     neutron.Gui("+LabelNeutron")
