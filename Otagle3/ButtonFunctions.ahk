@@ -317,3 +317,4 @@
 #Include *i WarstwaWord\UstawieniaDokumentu\Refresh.ahk
 #Include *i WarstwaWord\UstawieniaDokumentu\FindBlad.ahk
 #Include *i WarstwaWord\MakraOgolne\CapNoLabels.ahk 
+#Include *i WarstwaWord\UstawieniaDokumentu\FindDeadLinks.ahk

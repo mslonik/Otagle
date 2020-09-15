@@ -12,6 +12,9 @@ if !(FileExist("Config.ini")){
 #Include *i %A_ScriptDir%\ConfigBuilder.ahk
 #Include *i %A_ScriptDir%\ArrangeBtn.ahk
 
+
+
+
 Menu, Tray,Icon, % A_ScriptDir . "\Assets\OtagleIcon.ico"
 ; Global variables
 
@@ -47,5 +50,6 @@ Reset(){
     RemoveFolder()
     FileCreateDir, PlikiHtml
     BuildHTMLFile()
+    
 }
 

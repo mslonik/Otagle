@@ -73,6 +73,7 @@ BuildHTMLFile(){
     <body>
     <div class="loader-wrapper">
     <img class="logo"  src="../Assets/logo.svg" alt="">
+    <h1 class="slogan">Let's make your PC personal again.</h1>
     </div>
     ), PlikiHtml/a_Welcome.html
     ; FileAppend,% "<div class=""loader""><span> loaded files " . loadedLayers . "/15 </span></div>", PlikiHtml/a_Welcome.html
@@ -121,14 +122,13 @@ BuildHTMLFile(){
         
                 ; If !(PictureDef = ""){
                 If (Path == "#"){
-                    btn:= % "<a style=""max-width:300px; max-height:300px; height:" . Bh . "vw; width:" . Bw . "vw;   ""  id=""" . "drag" . "-" . A_Index . " " . ButtonA . """ class=""box_item draggable"" href=""#""  onclick=""ahk.ClickF(event,id)"">" . Contents . "</a>"
+                    btn:= % "<a style=""max-width:300px; max-height:300px; height:" . Bh . "vw; width:" . Bw . "vw;   ""  id=""" .  " " . ButtonA . """ class=""box_item draggable"" href=""#""  onclick=""ahk.ClickF(event,id)"">" . Contents . "</a>"
                 }
                 Else{
-                    btn:= % "<a style=""max-width:300px; max-height:300px; height:" . Bh . "vw; width:" . Bw . "vw;   "" id=""" . "drag" . "-" . A_Index . " " . ButtonA . """ class=""box_item draggable"" href=""" . "Layer" . Path . ".html" . """  onclick=""ahk.ClickF(event,id)"">" . Contents . "</a>"
+                    btn:= % "<a style=""max-width:300px; max-height:300px; height:" . Bh . "vw; width:" . Bw . "vw;   "" id=""" .  "" . ButtonA . """ class=""box_item draggable"" href=""" . "Layer" . Path . ".html" . """  onclick=""ahk.ClickF(event,id)"">" . Contents . "</a>"
                 }
                 
                 btns[VarVertical,A_Index]:= btn
-                ; }
                 
             }
         }
@@ -229,8 +229,6 @@ BuildHTMLFile(){
         ), PlikiHtml/Layer%Ln%.html
         
         pages:=1
-            
-   
         
     }
     If (pages == 1){
@@ -239,17 +237,20 @@ BuildHTMLFile(){
 }
 
 ;Display GUI
-IniRead, WhichMonitor , % A_ScriptDir . "\Config.ini",Main,WhichMonitor
-SysGet, MonitorBoundingCoordinates_, Monitor, % WhichMonitor
-X := MonitorBoundingCoordinates_Left + (Abs(MonitorBoundingCoordinates_Left - MonitorBoundingCoordinates_Right) / 2) - (WizardWindow_Width / 2) 
-Y := MonitorBoundingCoordinates_Top + (Abs(MonitorBoundingCoordinates_Top - MonitorBoundingCoordinates_Bottom) / 2) - (WizardWindow_Height / 2)
+; f10::
+; IniRead, WhichMonitor , % A_ScriptDir . "\Config.ini",Main,WhichMonitor
+; SysGet, MonitorBoundingCoordinates_, Monitor, % WhichMonitor
+; VarWidth:= Abs(MonitorBoundingCoordinates_Left - MonitorBoundingCoordinates_Right)
+; VarHeight:= Abs(MonitorBoundingCoordinates_Top - MonitorBoundingCoordinates_Bottom)
+; MsgBox, % VarWidth . " X " . VarHeight
+; windowSize:= % " w" . VarWidth . " h" . VarHeight
+; return
 DisplayLoader(){
     global
-
     neutron := new NeutronWindow()
     neutron.Load("PlikiHtml/a_Welcome.html")
     neutron.Gui("+LabelNeutron")
-    neutron.Show("w800 h400")
+    neutron.Show("w620 h350")
 }
 DisplayMainGui(){
     global
@@ -257,5 +258,6 @@ DisplayMainGui(){
     neutron := new NeutronWindow()
     neutron.Load("PlikiHtml/Layer1.html")
     neutron.Gui("+LabelNeutron")
-    neutron.Show("w1024 h768")
+    neutron.Show("w1300 h800")
+    neutron.Maximize()
 }

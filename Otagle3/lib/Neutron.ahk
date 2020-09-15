@@ -431,9 +431,6 @@ class NeutronWindow
 	{
 		w := RegExMatch(options, "w\s*\K\d+", match) ? match : this.w
 		h := RegExMatch(options, "h\s*\K\d+", match) ? match : this.h
-		x := RegExMatch(options, "w\s*\K\d+", match) ? match : this.x
-		y := RegExMatch(options, "h\s*\K\d+", match) ? match : this.y
-
 		VarSetCapacity(rect, 16, 0)
 		DllCall("AdjustWindowRectEx"
 		, "Ptr", &rect ;  LPRECT lpRect
@@ -443,9 +440,15 @@ class NeutronWindow
 		, "UInt") ; BOOL
 		w += NumGet(&rect, 0, "Int")-NumGet(&rect, 8, "Int")
 		h += NumGet(&rect, 4, "Int")-NumGet(&rect, 12, "Int")
-		    IniRead, WhichMonitor , % A_ScriptDir . "\Config.ini",Main,WhichMonitor
-			SysGet, MonitorBoundingCoordinates_, Monitor, % WhichMonitor
-		Gui, % this.hWnd ":Show", % options . "w" . w . "h" . h
+		IniRead, WhichMonitor , % A_ScriptDir . "\Config.ini",Main,WhichMonitor
+		SysGet, MonitorBoundingCoordinates_, Monitor, % WhichMonitor
+		; w:= Abs(MonitorBoundingCoordinates_Left - MonitorBoundingCoordinates_Right)
+		; h:= Abs(MonitorBoundingCoordinates_Top - MonitorBoundingCoordinates_Bottom)
+		X := MonitorBoundingCoordinates_Left + (Abs(MonitorBoundingCoordinates_Left - MonitorBoundingCoordinates_Right) / 2) - (1024 / 2) 
+		Y := MonitorBoundingCoordinates_Top + (Abs(MonitorBoundingCoordinates_Top - MonitorBoundingCoordinates_Bottom) / 2) - (768 / 2)
+		var2 := % " x" . X . " y" . Y
+
+		Gui, % this.hWnd ":Show", % options . "x" x . " y" . y . " w" . w . " h" . h
 	}
 	
 

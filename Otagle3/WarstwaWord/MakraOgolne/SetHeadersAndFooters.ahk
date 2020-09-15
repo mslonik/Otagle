@@ -4,9 +4,9 @@ SetHeadersAndFooters()
     oWord := ComObjActive("Word.Application")
     OurTempPL := "S:\OrgFirma\Szablony\Word\OgolneZmakrami\TQ-S402-pl_OgolnyTechDok.dotm"
 	OurTempEN := "S:\OrgFirma\Szablony\Word\OgolneZmakrami\TQ-S402-en_OgolnyTechDok.dotm"
-	LocTempPL := % A_ScriptDir . "\Templates\TQ-S402-pl_OgolnyTechDok.dotm"
-	LocTempEN := % A_ScriptDir . "\Templates\TQ-S402-en_OgolnyTechDok.dotm"
-	SzabPath := SubStr(A_ScriptDir, 1, InStr(A_ScriptDir, "Otagle")-1)
+	LocTempPL := % A_WorkingDir . "\Templates\TQ-S402-pl_OgolnyTechDok.dotm"
+	LocTempEN := % A_WorkingDir . "\Templates\TQ-S402-en_OgolnyTechDok.dotm"
+	SzabPath := SubStr(A_WorkingDir, 1, InStr(A_WorkingDir, "Otagle")-1)
 	SzabTempPL := % SzabPath . "OgolneZmakrami\szab_TQ-S402-pl_OgolnyTechDok.dotm"
 	SzabTempEN := % SzabPath . "OgolneZmakrami\szab_TQ-S402-en_OgolnyTechDok.dotm"
 

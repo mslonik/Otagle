@@ -3,25 +3,25 @@
 SendMode Input  				; Recommended for new scripts due to its superior speed and reliability.
 #SingleInstance, Force
 SetWorkingDir %A_ScriptDir%	
-     global actionPath :=
-     global imgPath :=
-     global x1 :=
-     global x2 :=
-     global y1 :=
-     global y2 :=
-     global Pd :=
-     global pd2:=
-     global A  := 
-     global A2 :=
-     global P  := 
-     global P2 :=
-     global NrLayer,NrRow,NrElement,NrLayer2,NrRow2,NrElement2
-     global Title :=
-     global btnWidth := 80
-     global btnHeight := 80
-     global WhichMonitor := 0
-     global HowManyLayers :=
-     global LayerToBeErased :=
+global actionPath :=
+global imgPath :=
+global x1 :=
+global x2 :=
+global y1 :=
+global y2 :=
+global Pd :=
+global pd2:=
+global A  := 
+global A2 :=
+global P  := 
+global P2 :=
+global NrLayer,NrRow,NrElement,NrLayer2,NrRow2,NrElement2
+global Title :=
+global btnWidth := 80
+global btnHeight := 80
+global WhichMonitor := 0
+global HowManyLayers :=
+global LayerToBeErased :=
 F_display_configurator() {
     Gui,AddLayers:Destroy
     Gui,DeleteLayers:Destroy
@@ -129,8 +129,6 @@ Swap(){
         Gui,SwapLayers:Destroy
         Reset()
 }
-
-
 FdGuiDelete(){
     Gui,AddLayers:Destroy
     Gui,DeleteLayers:Destroy
@@ -238,11 +236,11 @@ fM := % ".." . actionPath
         If (calc == l1){
             SendMode Input 
             SetWorkingDir %A_ScriptDir% 
-                IniWrite,% "",% A_ScriptDir . "\Config.ini", Layer%calc%,% v1 . "_X"
-                IniWrite,% "",% A_ScriptDir . "\Config.ini", Layer%calc%,% v1 . "_Y"
-                IniWrite,% fP,% A_ScriptDir . "\Config.ini",Layer%calc%, % v1 . "_Picture"
-                IniWrite,% fM, % A_ScriptDir . "\Config.ini", Layer%calc%,% v1 . "_Action"
-                IniWrite,% l2,% A_ScriptDir . "\Config.ini", Layer%calc%,% v1 . "_Path",#
+            IniWrite,% "",% A_ScriptDir . "\Config.ini", Layer%calc%,% v1 . "_X"
+            IniWrite,% "",% A_ScriptDir . "\Config.ini", Layer%calc%,% v1 . "_Y"
+            IniWrite,% fP,% A_ScriptDir . "\Config.ini",Layer%calc%, % v1 . "_Picture"
+            IniWrite,% fM, % A_ScriptDir . "\Config.ini", Layer%calc%,% v1 . "_Action"
+            IniWrite,% l2,% A_ScriptDir . "\Config.ini", Layer%calc%,% v1 . "_Path",#
         }
     }
     Gui,AddLayers:Destroy
@@ -281,7 +279,6 @@ Gui,CloneLayers:Add, Edit, vNrElement2 w200
 Gui,CloneLayers:Add, Button, Default gCloneB, Clone
 Gui,CloneLayers:Show
 }
-
 CloneB(){
  Gui,CloneLayers:Submit,NoHide
     IniRead, Layers , % A_ScriptDir . "\Config.ini",Main,HowManyLayers
@@ -306,7 +303,7 @@ CloneB(){
             pd := PictureDef
             A  := ButtonA
             P  := Path
-    }
+        }
     }
     Loop, %Layers%{
         index := A_Index
@@ -323,7 +320,6 @@ CloneB(){
     Gui,CloneLayers:Destroy
     Reset()
 }
-
 ConfigureEraseLayer(){
      Gui,AddLayers:Destroy
      Gui,DeleteLayers:Destroy
@@ -351,14 +347,15 @@ ConfigureEraseLayer(){
     Gui, EraseLayer: Add, Button, xm+30 w80 gEraseLayer,     &Erase layer
     Gui, EraseLayer: Show
 }
-
-
 EraseLayer(){
-     Gui, EraseLayer: Submit, NoHide
-     Gui, EraseLayer: Destroy
+    Gui, EraseLayer: Submit, NoHide
+    Gui, EraseLayer: Destroy
+    IniRead, HowManyLayers , % A_ScriptDir . "\Config.ini",Main,HowManyLayers
+    IniRead, mVal , % A_ScriptDir . "\Config.ini",Main,WhichMonitor
+    IniWrite, % mVal,% A_ScriptDir . "\Config.ini", Main,WhichMonitor
     global l0 := SubStr(LayerToBeErased,1,InStr(LayerToBeErased, " ",,,1))  
      IniDelete, % A_ScriptDir . "\Config.ini", % l0 
-     IniRead, HowManyLayers , % A_ScriptDir . "\Config.ini",Main,HowManyLayers
+
      HowManyLayers--
      
      IniWrite, % "HowManyLayers=" . HowManyLayers,           % A_ScriptDir . "\Config.ini", Main,
@@ -370,13 +367,11 @@ global heightButton :=
 global flag := 0
 global flag2 := 0
 addLayers(){
-
  Gui,DeleteLayers:Destroy
  Gui,SwapLayers:Destroy
  Gui,CloneLayers:Destroy
  Gui, EraseLayer:Destroy
  Gui, aLayers:Destroy
-
  Gui, aLayers: New, +LabelMyGui_On -DPIScale
  Gui, aLayers: Add, Text, xm, Specify key size width: `
  Gui, aLayers: Add, Edit, x+m yp r1 w80
@@ -392,7 +387,6 @@ addLayers(){
  Gui, aLayers: Add, Button, x10  w80 gdrawButton hwndTestButtonHwnd, &Test
  Gui, aLayers: Add, Text, xm, Write the title of the layer:
  Gui, aLayers: Add, Button, xm w80 gSaveLayer hwndSaveLayerHwnd, &Add Layer
-
     If (flag=""){
      GuiControl,aLayers:Disable, % TestButtonHwnd
     }
@@ -414,17 +408,16 @@ CalculateButtons:
    global aLayer_AmountOfKeysVertically := (1080 - 10) // (heightButton + 10)
     addLayers()
 Return
-
 SaveLayer:
       Gui,aLayers:Submit,NoHide
       If (Title = ""){
           MsgBox, Please write the title of the layer
       }Else{
-     IniRead, lVal , % A_ScriptDir . "\Config.ini",Main,HowManyLayers
+     IniRead, HowManyLayers , % A_ScriptDir . "\Config.ini",Main,HowManyLayers
      IniRead, mVal , % A_ScriptDir . "\Config.ini",Main,WhichMonitor
-      layersVariable := lVal++
+      HowManyLayers++
       IniDelete, % A_ScriptDir . "\Config.ini", Main,HowManyLayers
-      IniWrite, % lVal,% A_ScriptDir . "\Config.ini", Main,HowManyLayers
+      IniWrite, % HowManyLayers,% A_ScriptDir . "\Config.ini", Main, HowManyLayers
       IniWrite, % mVal,% A_ScriptDir . "\Config.ini", Main,WhichMonitor
       IniWrite, % Title,% A_ScriptDir . "\Config.ini", % "Layer" . HowManyLayers,  Title
       If (heightButton == widthButton){
@@ -441,10 +434,10 @@ SaveLayer:
     ExternalLoopIndex := A_Index
     Loop, % aLayer_AmountOfKeysHorizontally
         {
-            IniWrite, % "", % A_ScriptDir . "\Config.ini", % "Layer" . HowManyLayers, % "Button_" . ExternalLoopIndex . "_" . A_Index . "_X"
-            IniWrite, % "", % A_ScriptDir . "\Config.ini", % "Layer" . HowManyLayers, % "Button_" . ExternalLoopIndex . "_" . A_Index . "_Y"
-            IniWrite, % "", % A_ScriptDir . "\Config.ini", % "Layer" . HowManyLayers, % "Button_" . ExternalLoopIndex . "_" . A_Index . "_W"
-            IniWrite, % "", % A_ScriptDir . "\Config.ini", % "Layer" . HowManyLayers, % "Button_" . ExternalLoopIndex . "_" . A_Index . "_H"
+            ; IniWrite, % "", % A_ScriptDir . "\Config.ini", % "Layer" . HowManyLayers, % "Button_" . ExternalLoopIndex . "_" . A_Index . "_X"
+            ; IniWrite, % "", % A_ScriptDir . "\Config.ini", % "Layer" . HowManyLayers, % "Button_" . ExternalLoopIndex . "_" . A_Index . "_Y"
+            ; IniWrite, % "", % A_ScriptDir . "\Config.ini", % "Layer" . HowManyLayers, % "Button_" . ExternalLoopIndex . "_" . A_Index . "_W"
+            ; IniWrite, % "", % A_ScriptDir . "\Config.ini", % "Layer" . HowManyLayers, % "Button_" . ExternalLoopIndex . "_" . A_Index . "_H"
             IniWrite, % "", % A_ScriptDir . "\Config.ini", % "Layer" . HowManyLayers, % "Button_" . ExternalLoopIndex . "_" . A_Index . "_Picture"
             IniWrite, % "",  % A_ScriptDir . "\Config.ini", % "Layer" . HowManyLayers, % "Button_" . ExternalLoopIndex . "_" . A_Index . "_Action"
             IniWrite, % "",  % A_ScriptDir . "\Config.ini", % "Layer" . HowManyLayers, % "Button_" . ExternalLoopIndex . "_" . A_Index . "_Path"
@@ -454,12 +447,9 @@ SaveLayer:
     Gui, aLayers:Destroy
     Reset()
    }
-
 Return
-
 drawButton:
    flag2 := 1
-
    Gui,aLayers:Submit,NoHide
    Gui, aLayers:Destroy
    Gui, Template: New, +LabelMyGui_On -DPIScale
@@ -478,19 +468,15 @@ drawButton:
     SetTimer,CloseMatrix,4000,-1
     Gui, Template:Show
 Return    
-
 CloseMatrix:
 Gui,Template:Submit
 Gui, Template:Destroy
 SetTimer,, Off
 addLayers()
 Return
-
 global W :=
-
 selectMonitor(){
     global
-
      Gui,AddLayers:Destroy
      Gui,DeleteLayers:Destroy
      Gui,SwapLayers:Destroy
@@ -506,34 +492,32 @@ selectMonitor(){
     if (WhichMonitor = 0) {
         WhichMonitor := WhichIsPrimary
     }
-     MsgBox, % HowManyMonitors . "...." . WhichIsPrimary . "  w . m  " .  WhichMonitor
     Loop, % HowManyMonitors
         {
         if (A_Index = WhichMonitor){
             Gui, WizardStep1: Add, Radio, xm+50 vW%A_Index% gSlectOptions   , % "Monitor #" . A_Index . (A_Index = WhichIsPrimary ? " (primary)" : "")
-        
         }else
             Gui, WizardStep1: Add, Radio, xm+50 vW%A_Index%  gSlectOptions   , % "Monitor #" . A_Index . (A_Index = WhichIsPrimary ? " (primary)" : "")
-          
         } 
     Gui, WizardStep1: Add, Button, Default xm+30 y+20 gCheckMonitorNumbering,  &Check Monitor Numbering
     Gui, WizardStep1: Add, Button, Default xm+30 y+20 gChangeMonitorReloadApp,  &Ok
     Gui, WizardStep1:Show
     return
 }
-
 return
-
 SlectOptions:
  Gui, WizardStep1: Submit, NoHide
  W := ""
  Loop, % HowManyMonitors
  {
      Wtemp := W%A_Index%
-     W := % Wtemp + 1
+
+    if (Wtemp){
+      res := A_Index
+      W := % res
+    }
  }
 Return
-
 CheckMonitorNumbering:
      F_ShowMonitorNumbers()
      SetTimer, DestroyGuis, -3000
@@ -546,12 +530,9 @@ DestroyGuis:
           }
      Gui, Font ; restore the font to the system's default GUI typeface, zize and color.
 return
-
-
 F_ShowMonitorNumbers()
 {
      global
-
      Loop, %HowManyMonitors%
           {
           SysGet, MonitorBoundingCoordinates_, Monitor, %A_Index%
@@ -568,7 +549,6 @@ F_ShowMonitorNumbers()
           }
 return
 }
-
 ChangeMonitorReloadApp(){
     Gui, WizardStep1: Submit, NoHide
     IniDelete, % A_ScriptDir . "\Config.ini", Main,WhichMonitor

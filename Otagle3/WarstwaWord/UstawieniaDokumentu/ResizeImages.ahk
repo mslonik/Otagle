@@ -22,7 +22,7 @@ ResizeImages(SelectedFile:=0)
     }
     if (SelectedFile == 0)
     {
-        FileSelectFile, SelectedFile,,%A_ScriptDir%,Select document to change size, Documents( *.docx)
+        FileSelectFile, SelectedFile,,%A_WorkingDir%,Select document to change size, Documents( *.docx)
         If (SelectedFile == "")
             return
     }

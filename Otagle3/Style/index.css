@@ -138,10 +138,6 @@ header {
 }
 
 
-
-
-
-
 /* 
     Menu Bar
 */
@@ -259,10 +255,6 @@ header {
 }
 
 
-
-
-
-
 /* 
     Welcome screen
 */
@@ -272,11 +264,16 @@ header {
     height: 70vh;
 
 }
+.slogan{
+ text-align: center;
+font-size: 27px;
+color: #0082b4;
+}
 .logo{
     position: absolute;
     display: block;
     width: 80%;
-    top: 50%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%,-50%);
 }

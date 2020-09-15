@@ -198,14 +198,14 @@ F_SavePositionOfButtons()
           ExternalLoopIndex := A_Index
           Loop, % WizardStep2_AmountOfKeysHorizontally
                {
-               GuiControlGet, Guzior, Pos, % %ExternalLoopIndex%_%A_Index%hwnd
+               ; GuiControlGet, Guzior, Pos, % %ExternalLoopIndex%_%A_Index%hwnd
                ; IniWrite, % GuziorX,         % A_ScriptDir . "\Config.ini", % "Layer" . HowManyLayers, % "Button_" . ExternalLoopIndex . "_" . A_Index . "_X"
-               GuiControl, WizardStep2:, ProgressBarVar, % Round((++ProgressBarTemp / ProgressBarVarMax) * 100)
-               IniWrite, % GuziorY,         % A_ScriptDir . "\Config.ini", % "Layer" . HowManyLayers, % "Button_" . ExternalLoopIndex . "_" . A_Index . "_Y"
-               GuiControl, WizardStep2:, ProgressBarVar, % Round((++ProgressBarTemp / ProgressBarVarMax) * 100)
+               ; GuiControl, WizardStep2:, ProgressBarVar, % Round((++ProgressBarTemp / ProgressBarVarMax) * 100)
+               ; IniWrite, % GuziorY,         % A_ScriptDir . "\Config.ini", % "Layer" . HowManyLayers, % "Button_" . ExternalLoopIndex . "_" . A_Index . "_Y"
+               ; GuiControl, WizardStep2:, ProgressBarVar, % Round((++ProgressBarTemp / ProgressBarVarMax) * 100)
                ; IniWrite, % GuziorW,         % A_ScriptDir . "\Config.ini", % "Layer" . HowManyLayers, % "Button_" . ExternalLoopIndex . "_" . A_Index . "_W"
-               GuiControl, WizardStep2:, ProgressBarVar, % Round((++ProgressBarTemp / ProgressBarVarMax) * 100)
-               IniWrite, % GuziorH,         % A_ScriptDir . "\Config.ini", % "Layer" . HowManyLayers, % "Button_" . ExternalLoopIndex . "_" . A_Index . "_H"
+               ; GuiControl, WizardStep2:, ProgressBarVar, % Round((++ProgressBarTemp / ProgressBarVarMax) * 100)
+               ; IniWrite, % GuziorH,         % A_ScriptDir . "\Config.ini", % "Layer" . HowManyLayers, % "Button_" . ExternalLoopIndex . "_" . A_Index . "_H"
                GuiControl, WizardStep2:, ProgressBarVar, % Round((++ProgressBarTemp / ProgressBarVarMax) * 100)
                IniWrite, % PictureFilePath, % A_ScriptDir . "\Config.ini", % "Layer" . HowManyLayers, % "Button_" . ExternalLoopIndex . "_" . A_Index . "_Picture"
                GuiControl, WizardStep2:, ProgressBarVar, % Round((++ProgressBarTemp / ProgressBarVarMax) * 100)
@@ -474,9 +474,6 @@ return
 ; .................... BUTTONS ARRANGE (SWAP, DELETE, ADD)................................
 
 
-
-
-
 MsgText(string)
 {
     vSize := StrPut(string, "CP0")
@@ -485,8 +482,6 @@ MsgText(string)
     Return StrGet(&vUtf8, "UTF-8") 
 }
 
-
 ExitWizard:
-
 ExitApp
 
