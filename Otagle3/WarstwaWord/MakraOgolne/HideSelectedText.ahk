@@ -5,7 +5,7 @@ HideSelectedText() ; 2019-10-22 2019-11-08
 	OurTempEN := "S:\OrgFirma\Szablony\Word\OgolneZmakrami\TQ-S402-en_OgolnyTechDok.dotm"
 	LocTempPL := % A_ScriptDir . "\Templates\TQ-S402-pl_OgolnyTechDok.dotm"
 	LocTempEN := % A_ScriptDir . "\Templates\TQ-S402-en_OgolnyTechDok.dotm"
-	SzabPath := SubStr(A_ScriptDir, 1, InStr(A_ScriptDir, "Otagle")-1)
+	SzabPath := SubStr(A_ScriptDir, 1, InStr(A_ScriptDir, "AutoHotkeyScripts\Otagle")-1)
 	SzabTempPL := % SzabPath . "OgolneZmakrami\szab_TQ-S402-pl_OgolnyTechDok.dotm"
 	SzabTempEN := % SzabPath . "OgolneZmakrami\szab_TQ-S402-en_OgolnyTechDok.dotm"
 	OurTemplate := oWord.ActiveDocument.AttachedTemplate.FullName

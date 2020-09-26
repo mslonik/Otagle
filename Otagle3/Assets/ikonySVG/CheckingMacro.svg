@@ -1,4 +1,4 @@
-<svg id="SVGRoot" version="1.1" viewBox="0 0 205 205" xmlns="http://www.w3.org/2000/svg">
+<svg id="SVGRoot" class="CheckingMacro" name="Checking macro" version="1.1" viewBox="0 0 205 205" xmlns="http://www.w3.org/2000/svg">
  <rect y=".90617" width="205" height="203.19" fill="none" stroke="#000" stroke-width="1.8898"/>
  <g transform="translate(0,-2)" fill="none">
   <g stroke="#000">
@@ -25,6 +25,6 @@
  <g font-family="sans-serif" letter-spacing="0px" word-spacing="0px">
   <text transform="scale(1.1024 .90714)" x="4.4165492" y="149.19798" fill="#000000" font-size="23.517px" stroke-width="1.1024" style="line-height:1.25" xml:space="preserve"><tspan x="0" y="0" stroke-width="1.1024"><tspan x="4.4165492" stroke-width="1.1024"/></tspan></text>
   <flowRoot fill="black" font-size="21.333px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="1.6886" y="140.83" width="118.2" height="54.035"/></flowRegion><flowPara/></flowRoot>
-  <text x="181.08333" y="135.34375" fill="#000000" font-size="21.333px" text-align="center" text-anchor="middle" style="line-height:1.25" xml:space="preserve"><tspan x="105.77084" y="135.34375"><tspan x="102.02083" y="135.34375" text-align="center" text-anchor="middle">Wykonaj przed </tspan></tspan><tspan x="105.77084" y="162.01042"><tspan x="102.02083" text-align="center" text-anchor="middle">zapisem lub </tspan></tspan><tspan x="102.02083" y="188.67708"><tspan x="102.02083" text-align="center" text-anchor="middle">drukiem</tspan></tspan></text>
+  <text x="181.08333" y="135.34375" fill="#000000" font-size="21.333px" text-align="center" text-anchor="middle" style="line-height:1.25" xml:space="preserve"><tspan x="105.77084" y="135.34375"><tspan class="iTxt" x="102.02083" y="135.34375" text-align="center" text-anchor="middle">Wykonaj przed </tspan></tspan><tspan class="iTxt" x="105.77084" y="162.01042"><tspan x="102.02083" text-align="center" text-anchor="middle">zapisem lub </tspan></tspan><tspan class="iTxt" x="102.02083" y="188.67708"><tspan x="102.02083" text-align="center" text-anchor="middle">drukiem</tspan></tspan></text>
  </g>
 </svg>

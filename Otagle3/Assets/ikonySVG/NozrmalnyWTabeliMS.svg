@@ -1,4 +1,4 @@
-<svg id="SVGRoot" width="208" height="208" version="1.1" viewBox="0 0 208 208" xmlns="http://www.w3.org/2000/svg">
+<svg id="SVGRoot" class="NozrmalnyWTabeliMS" name="Nozrmalny w tabeli MS" width="208" height="208" version="1.1" viewBox="0 0 208 208" xmlns="http://www.w3.org/2000/svg">
  <g transform="translate(0,7)">
   <g transform="matrix(3.7795 0 0 3.7795 10.171 -6.7758)">
    <g transform="translate(-1.0884 -121.69)">
@@ -34,7 +34,7 @@
                             <g transform="translate(66.026 -.30592)">
                              <g transform="translate(-264.69 -.093008)">
                               <rect x="838.66" y="-317.37" width="52.917" height="52.917" fill="#ffec8e" stroke="#000" stroke-linecap="round" stroke-width=".5" style="paint-order:fill markers stroke"/>
-                              <text x="865.23083" y="-275.54611" fill="#000000" font-family="sans-serif" class="svgT" letter-spacing=".5px" font-size="5.2px" stroke-width=".26458" text-align="center" text-anchor="middle" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><tspan x="865.23083" y="-275.54611" text-align="center">Normalny</tspan><tspan x="865.23083" y="-267.60861" text-align="center"> w tabeli ms</tspan></text>
+                              <text x="865.23083" y="-275.54611" fill="#000000" font-family="sans-serif" class="svgT" letter-spacing=".5px" font-size="5.2px" stroke-width=".26458" text-align="center" text-anchor="middle" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><tspan class="iTxt" x="865.23083" y="-275.54611" text-align="center">Normalny</tspan><tspan class="iTxt" x="865.23083" y="-267.60861" text-align="center"> w tabeli ms</tspan></text>
                               <g transform="matrix(1.2169 0 0 1.2169 846.25 -317.65)">
                                <g fill="none" fill-rule="evenodd">
                                 <g transform="translate(-225,-135)" fill="#000">

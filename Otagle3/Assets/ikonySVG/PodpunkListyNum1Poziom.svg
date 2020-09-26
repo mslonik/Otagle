@@ -1,4 +1,4 @@
-<svg id="SVGRoot" version="1.1" viewBox="0 0 206 206" xmlns="http://www.w3.org/2000/svg">
+<svg id="SVGRoot" class="PodpunkListyNum1Poziom" name="Podpunk listy numerowaniej 1 poziom" version="1.1" viewBox="0 0 206 206" xmlns="http://www.w3.org/2000/svg">
  <g transform="matrix(3.7795 0 0 3.7795 -1795.2 2502.6)">
   <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-392.69" y="-63.57" width="758.02" height="397.52"/></flowRegion><flowPara/></flowRoot>
   <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-251.87" y="-84.492" width="624.44" height="455.45"/></flowRegion><flowPara/></flowRoot>
@@ -21,7 +21,7 @@
       <g transform="translate(557.69 400.66)">
        <rect x="142.58" y="-31.44" width="52.917" height="52.917" fill="#db3b3b" stroke="#000" stroke-linecap="round" stroke-width=".5" style="paint-order:fill markers stroke"/>
        <path d="m142.58-31.44 52.917 52.917h-52.917z" fill="#ffec8e" stroke="#000" stroke-width=".26458px"/>
-       <text class="svgT" x="169.10034" y="8.8977604" fill="#000000" font-family="sans-serif" font-size="5.2px" letter-spacing=".5px" stroke-width=".26458" text-anchor="middle" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><tspan x="169.10034" y="8.8977604" text-align="center">Podpunkt listy</tspan><tspan x="169.10034" y="16.835258" text-align="center">1 poziom</tspan></text>
+       <text class="svgT" x="169.10034" y="8.8977604" fill="#000000" font-family="sans-serif" font-size="5.2px" letter-spacing=".5px" stroke-width=".26458" text-anchor="middle" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><tspan class="iTxt" x="169.10034" y="8.8977604" text-align="center">Podpunkt listy</tspan><tspan class="iTxt" x="169.10034" y="16.835258" text-align="center">1 poziom</tspan></text>
        <path d="m148.07-21.296h41.01" stroke="#000" stroke-width="1.6"/>
        <text x="148.2294" y="-22.495434" fill="#000000" font-family="sans-serif" font-size="6.8289px" letter-spacing="0px" stroke-width=".32011" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><tspan x="148.2294" y="-22.495434" fill="#000000" font-family="sans-serif" stroke-width=".32011">2.</tspan></text>
       </g>

@@ -1,4 +1,4 @@
-<svg id="SVGRoot" version="1.1" viewBox="0 0 208 208" xmlns="http://www.w3.org/2000/svg">
+<svg id="SVGRoot" class="WstawOdwolanieBezEtykiety" name="Wstaw odwolanie bez etykiety" version="1.1" viewBox="0 0 208 208" xmlns="http://www.w3.org/2000/svg">
  <g transform="translate(0,7)">
   <g transform="matrix(3.7795 0 0 3.7795 12.334 -690.48)">
    <flowRoot transform="matrix(.26458 0 0 .26458 -3.2213 182.16)" fill="#000000" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-85.582" y="-60.812" width="342.33" height="293.65"/></flowRegion><flowPara/></flowRoot>
@@ -39,7 +39,7 @@
        </g>
       </g>
      </g>
-     <text x="690.36255" y="-276.12204" fill="#000000" font-family="sans-serif" font-size="5.6445px" letter-spacing="0px" stroke-width=".26459" text-align="center" text-anchor="middle" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><tspan x="666.87506" y="-276.12204" text-align="center"><tspan x="665.88287" y="-276.12204" stroke-width=".26459" text-align="center" text-anchor="middle">Wstaw odwołanie </tspan></tspan><tspan x="665.88287" y="-269.06644" text-align="center"><tspan x="665.88287" y="-269.06644" stroke-width=".26459" text-align="center" text-anchor="middle">bez etykiety</tspan></tspan></text>
+     <text x="690.36255" y="-276.12204" fill="#000000" font-family="sans-serif" font-size="5.6445px" letter-spacing="0px" stroke-width=".26459" text-align="center" text-anchor="middle" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><tspan x="666.87506" y="-276.12204" text-align="center"><tspan class="iTxt" x="665.88287" y="-276.12204" stroke-width=".26459" text-align="center" text-anchor="middle">Wstaw odwołanie </tspan></tspan><tspan x="665.88287" y="-269.06644" text-align="center"><tspan class="iTxt" x="665.88287" y="-269.06644" stroke-width=".26459" text-align="center" text-anchor="middle">bez etykiety</tspan></tspan></text>
     </g>
    </g>
   </g>

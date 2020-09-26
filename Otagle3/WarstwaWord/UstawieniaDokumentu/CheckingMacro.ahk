@@ -14,9 +14,11 @@
     Gui, CheckMacro:Add, CheckBox, gState vFailure, Poszukaj słowa "błąd"
     Gui, CheckMacro:Add, CheckBox, gState vDeadLinks, Poszukaj martwych łączy
     Gui, CheckMacro:Add, CheckBox, gState vSize, Zmniejsz rozmiar obrazków w dokumencie
+    Gui, CheckMacro:Font, cRed bold
     Gui, CheckMacro:Add, Text, xm+15, Zaktualizuj Change Log
+    Gui, CheckMacro:Font, cBlack norm
     Gui, CheckMacro:Add, Button, gGoNext vGoNext Disabled, Dalej
-    Gui, CheckMacro:Add, Button, yp x+m gCheckMacroGuiClose, Anuluj
+    Gui, CheckMacro:Add, Button, yp x+m gCheckMacroGuiClose Default, Anuluj
     Gui, CheckMacro:Show, xCenter yCenter, Checklist
     return
 

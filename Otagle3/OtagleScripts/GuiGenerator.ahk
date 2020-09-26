@@ -122,10 +122,10 @@ BuildHTMLFile(){
         
                 ; If !(PictureDef = ""){
                 If (Path == "#"){
-                    btn:= % "<a style=""max-width:300px; max-height:300px; height:" . Bh . "vw; width:" . Bw . "vw;   ""  id=""" .  " " . ButtonA . """ class=""box_item draggable"" href=""#""  onclick=""ahk.ClickF(event,id)"">" . Contents . "</a>"
+                    btn:= % "<a style=""max-width:300px; max-height:300px; height:" . Bh . "vw; width:" . Bw . "vw;   ""  id=""" . ButtonA . """ class=""box_item"" href=""#""  onclick=""ahk.ClickF(event,id)"">" . Contents . "</a>"
                 }
                 Else{
-                    btn:= % "<a style=""max-width:300px; max-height:300px; height:" . Bh . "vw; width:" . Bw . "vw;   "" id=""" .  "" . ButtonA . """ class=""box_item draggable"" href=""" . "Layer" . Path . ".html" . """  onclick=""ahk.ClickF(event,id)"">" . Contents . "</a>"
+                    btn:= % "<a style=""max-width:300px; max-height:300px; height:" . Bh . "vw; width:" . Bw . "vw;   "" id=""" . ButtonA . """ class=""box_item"" href=""" . "Layer" . Path . ".html" . """  onclick=""ahk.ClickF(event,id)"">" . Contents . "</a>"
                 }
                 
                 btns[VarVertical,A_Index]:= btn
@@ -143,6 +143,9 @@ BuildHTMLFile(){
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="../Assets/font-awesome-4.7.0/css/font-awesome.min.css">
         <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+        <link href="../Style/Bootstrap/bootstrap.min.css" rel="stylesheet">
+        <script src="../Style/Bootstrap/jquery.min.js"></script>
+        <script src="../Style/Bootstrap/bootstrap.min.js"></script>
         <link rel="stylesheet" href="../Style/index.css" />
         <title>Otagle</title>
         </head>
@@ -153,9 +156,11 @@ BuildHTMLFile(){
         <p class="AboutBox__introdution-p"> Make your computer Personal a g a i n...</p>
         <p class="AboutBox__introdution-p">Open source release of Stream Deck concept. Works at its best with touch screens.</p>
         <p class="AboutBox__introdution-p">For project description visit the following webpages:</p>
-            <a class="AboutBox__introdution-a"  href="#">http://mslonik.pl/biuro/1095-o-t-a-g-l-e-q-a</a>
-        <a class="AboutBox__introdution-a" href="#">https://www.autohotkey.com/boards/viewtopic.php?t=69690&p=300713</a>
-        <a class="AboutBox__introdution-a" href="#">https://github.com/mslonik/Autohotkey-scripts/tree/master/Otagle2</a>
+        <ul>
+        <l1><a class="AboutBox__introdution-a"  href="#">http://mslonik.pl/biuro/1095-o-t-a-g-l-e-q-a</a></li>
+        <l1><a class="AboutBox__introdution-a" href="#">https://www.autohotkey.com/boards/viewtopic.php?t=69690&p=300713</a></li>
+        <l1><a class="AboutBox__introdution-a" href="#">https://github.com/mslonik/Autohotkey-scripts/tree/master/Otagle2</a></li>
+        </ul>
         </div>
         <button class="btnOk">ok</button>
         </div>
@@ -168,7 +173,7 @@ BuildHTMLFile(){
         FileAppend,% "<span class=""title-bar""  onmousedown=""neutron.DragTitleBar()"" >" . "Otagle: " . "Layer" . Ln . " - " . Title . "</span>",PlikiHtml/Layer%Ln%.html
         FileAppend,
         (  
-        <span class="title-btn__item Options"">
+        <span class="title-btn__item Options">
         <i class="fa fa-wrench" aria-hidden="true"></i>
         </span>
         <span class="title-btn__item" onclick="neutron.Minimize()">
@@ -182,27 +187,32 @@ BuildHTMLFile(){
         </header>
         <nav class="menu-bar">
         <ul class="menu-bar__list">
-        <li class="menu-bar__item">
-        <a class="item__link" href="#">Configure</a>
+        <li class="menu-bar__item dropD">
+            <a class="item__link">Configure</a>
         <ul class="sub-menu">
-        <li class="sub-menu__item"  id="selectMonitor" onclick="ahk.BarF(event,id)"><a class="item__link sub__link" href="#">Select Monitor</a></li>
-        <li class="sub-menu__item"  id="addLayers" onclick="ahk.BarF(event,id)"><a class="item__link sub__link" href="#">Add layer</a></li>
-        <li class="sub-menu__item" id="ConfigureEraseLayer" onclick="ahk.BarF(event,id)"><a class="item__link sub__link" href="#">Erase layer</a></li>
+        <li class="sub-menu__item"  id="selectMonitor" onclick="ahk.BarF(event,id)"><a class="item__link sub__link" href="#"><i class="fa fa-arrow-down" aria-hidden="true"></i> +
+ <span class="flag">S</span>elect Monitor</a></li>
+        <li class="sub-menu__item"  id="addLayers" onclick="ahk.BarF(event,id)"><a class="item__link sub__link" href="#"><i class="fa fa-arrow-down" aria-hidden="true"></i> +<span class="flag">A</span>dd layer</a></li>
+        <li class="sub-menu__item" id="ConfigureEraseLayer" onclick="ahk.BarF(event,id)"><a class="item__link sub__link" href="#"><i class="fa fa-arrow-down" aria-hidden="true"></i> +<span class="flag">E</span>rase layer</a></li>
         </ul>
         </li>
-        <li class="menu-bar__item">
-        <a class="item__link" href="#">Edit Buttons</a>
+        <li class="menu-bar__item dropD">
+        <a class="item__link"  href="#">Edit Buttons</a>
         <ul class="sub-menu">
-        <li class="sub-menu__item" id="AddBtn" onclick="ahk.BarF(event,id)"><a class="item__link sub__link" href="#">Add button</a></li>
-        <li class="sub-menu__item" id="F_display_configurator" onclick="ahk.BarF(event,id)" ><a class="item__link sub__link" href="#">Swap button</a></li>
-        <li class="sub-menu__item" id="FdGuiDelete" onclick="ahk.BarF(event,id)"><a class="item__link sub__link" href="#">Delete button</a></li>
-        <li class="sub-menu__item" id="Clone" onclick="ahk.BarF(event,id)"><a class="item__link sub__link" href="#">Clone button</a></li>
+        <li class="sub-menu__item" id="AddBtn" onclick="ahk.BarF(event,id)"><a class="item__link sub__link" href="#"><i class="fa fa-arrow-up" aria-hidden="true"></i>
++<span class="flag">A</span>dd button</a></li>
+        <li class="sub-menu__item" id="F_display_configurator" onclick="ahk.BarF(event,id)" ><a class="item__link sub__link" href="#"><i class="fa fa-arrow-up" aria-hidden="true"></i>
++<span class="flag">S</span>wap button</a></li>
+        <li class="sub-menu__item" id="FdGuiDelete" onclick="ahk.BarF(event,id)"><a class="item__link sub__link" href="#"><i class="fa fa-arrow-up" aria-hidden="true"></i>
++<span class="flag">D</span>elete button</a></li>
+        <li class="sub-menu__item" id="Clone" onclick="ahk.BarF(event,id)"><a class="item__link sub__link" href="#"><i class="fa fa-arrow-up" aria-hidden="true"></i>
++<span class="flag">C</span>lone button</a></li>
         </ul>
         </li>
         <li class="menu-bar__item"  onclick="ahk.rWizard(event)">
-        <a class="item__link" href="#" >Run Wizard</a></li>
+        <a class="item__link" href="#" ><i class="fa fa-arrow-right" aria-hidden="true"></i>+<span class="flag">R</span>un Wizard</a></li>
         <li class="menu-bar__item">
-        <a class="item__link Order" href="#"><i class="fa fa-toggle-off" aria-hidden="true"></i><i class="fa fa-toggle-on" aria-hidden="true"> </i> Arrangement Buttons</a>
+        <a class="item__link Order" href="#"><i class="fa fa-toggle-off" aria-hidden="true"></i><i class="fa fa-toggle-on" aria-hidden="true"> </i> <i class="fa fa-arrow-right" aria-hidden="true"></i>+<span class="flag">A</span>rrangement Buttons</a>
         </li>
         <li class="menu-bar__item">
         <a class="item__link About" href="#">About</a>
@@ -221,9 +231,8 @@ BuildHTMLFile(){
         
         FileAppend,
         (
-        </div>
         <script src="https://code.jquery.com/jquery-3.5.1.min.js"integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="crossorigin="anonymous"></script>
-        <script src="../index.js"></script>
+        <script src="../OtagleScripts/index.js"></script>
         </body> 
         </html>   
         ), PlikiHtml/Layer%Ln%.html

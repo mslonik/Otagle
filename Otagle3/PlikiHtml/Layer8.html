@@ -6,6 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="../Assets/font-awesome-4.7.0/css/font-awesome.min.css">
         <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+        <link href="../Style/Bootstrap/bootstrap.min.css" rel="stylesheet">
+        <script src="../Style/Bootstrap/jquery.min.js"></script>
+        <script src="../Style/Bootstrap/bootstrap.min.js"></script>
         <link rel="stylesheet" href="../Style/index.css" />
         <title>Otagle</title>
         </head>
@@ -36,34 +39,39 @@
         </header>
         <nav class="menu-bar">
         <ul class="menu-bar__list">
-        <li class="menu-bar__item">
-        <a class="item__link" href="#">Configure</a>
+        <li class="menu-bar__item dropD">
+            <a class="item__link">Configure</a>
         <ul class="sub-menu">
-        <li class="sub-menu__item"  id="selectMonitor" onclick="ahk.BarF(event,id)"><a class="item__link sub__link" href="#">Select Monitor</a></li>
-        <li class="sub-menu__item"  id="addLayers" onclick="ahk.BarF(event,id)"><a class="item__link sub__link" href="#">Add layer</a></li>
-        <li class="sub-menu__item" id="ConfigureEraseLayer" onclick="ahk.BarF(event,id)"><a class="item__link sub__link" href="#">Erase layer</a></li>
+        <li class="sub-menu__item"  id="selectMonitor" onclick="ahk.BarF(event,id)"><a class="item__link sub__link" href="#"><i class="fa fa-arrow-down" aria-hidden="true"></i> +
+ <span class="flag">S</span>elect Monitor</a></li>
+        <li class="sub-menu__item"  id="addLayers" onclick="ahk.BarF(event,id)"><a class="item__link sub__link" href="#"><i class="fa fa-arrow-down" aria-hidden="true"></i> +<span class="flag">A</span>dd layer</a></li>
+        <li class="sub-menu__item" id="ConfigureEraseLayer" onclick="ahk.BarF(event,id)"><a class="item__link sub__link" href="#"><i class="fa fa-arrow-down" aria-hidden="true"></i> +<span class="flag">E</span>rase layer</a></li>
         </ul>
         </li>
-        <li class="menu-bar__item">
-        <a class="item__link" href="#">Edit Buttons</a>
+        <li class="menu-bar__item dropD">
+        <a class="item__link"  href="#">Edit Buttons</a>
         <ul class="sub-menu">
-        <li class="sub-menu__item" id="AddBtn" onclick="ahk.BarF(event,id)"><a class="item__link sub__link" href="#">Add button</a></li>
-        <li class="sub-menu__item" id="F_display_configurator" onclick="ahk.BarF(event,id)" ><a class="item__link sub__link" href="#">Swap button</a></li>
-        <li class="sub-menu__item" id="FdGuiDelete" onclick="ahk.BarF(event,id)"><a class="item__link sub__link" href="#">Delete button</a></li>
-        <li class="sub-menu__item" id="Clone" onclick="ahk.BarF(event,id)"><a class="item__link sub__link" href="#">Clone button</a></li>
+        <li class="sub-menu__item" id="AddBtn" onclick="ahk.BarF(event,id)"><a class="item__link sub__link" href="#"><i class="fa fa-arrow-up" aria-hidden="true"></i>
++<span class="flag">A</span>dd button</a></li>
+        <li class="sub-menu__item" id="F_display_configurator" onclick="ahk.BarF(event,id)" ><a class="item__link sub__link" href="#"><i class="fa fa-arrow-up" aria-hidden="true"></i>
++<span class="flag">S</span>wap button</a></li>
+        <li class="sub-menu__item" id="FdGuiDelete" onclick="ahk.BarF(event,id)"><a class="item__link sub__link" href="#"><i class="fa fa-arrow-up" aria-hidden="true"></i>
++<span class="flag">D</span>elete button</a></li>
+        <li class="sub-menu__item" id="Clone" onclick="ahk.BarF(event,id)"><a class="item__link sub__link" href="#"><i class="fa fa-arrow-up" aria-hidden="true"></i>
++<span class="flag">C</span>lone button</a></li>
         </ul>
         </li>
         <li class="menu-bar__item"  onclick="ahk.rWizard(event)">
-        <a class="item__link" href="#" >Run Wizard</a></li>
+        <a class="item__link" href="#" ><i class="fa fa-arrow-right" aria-hidden="true"></i>+<span class="flag">R</span>un Wizard</a></li>
         <li class="menu-bar__item">
-        <a class="item__link Order" href="#"><i class="fa fa-toggle-off" aria-hidden="true"></i><i class="fa fa-toggle-on" aria-hidden="true"> </i> Arrangement Buttons</a>
+        <a class="item__link Order" href="#"><i class="fa fa-toggle-off" aria-hidden="true"></i><i class="fa fa-toggle-on" aria-hidden="true"> </i> <i class="fa fa-arrow-right" aria-hidden="true"></i>+<span class="flag">A</span>rrangement Buttons</a>
         </li>
         <li class="menu-bar__item">
         <a class="item__link About" href="#">About</a>
         </li>
         </ul>
         </nav>
-        <div class="wrapper" style="position: relative;"><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-1 WarstwaWord\Obrazki\HorizontalLine.ahk" class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" width="206px" height="206px" version="1.1" viewBox="0 0 206 206" xmlns="http://www.w3.org/2000/svg">
+        <div class="wrapper" style="position: relative;"><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="WarstwaWord\Obrazki\HorizontalLine.ahk" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" class="PoziomaLiniaProstaNaKanwie" name="Pozioma linia prosta na kanwie" width="206px" height="206px" version="1.1" viewBox="0 0 206 206" xmlns="http://www.w3.org/2000/svg">
  <g transform="matrix(3.7795 0 0 3.7795 -1795.2 2502.6)">
   <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-392.69" y="-63.57" width="758.02" height="397.52"/></flowRegion><flowPara/></flowRoot>
   <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-251.87" y="-84.492" width="624.44" height="455.45"/></flowRegion><flowPara/></flowRoot>
@@ -83,7 +91,7 @@
       <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-67.578" y="-8.4531" width="327.73" height="260.94"/></flowRegion><flowPara/></flowRoot>
       <g transform="translate(-1254.1 .2536)">
        <rect x="1954.7" y="369.25" width="52.258" height="52.258" fill="#fff" stroke="#000" stroke-linecap="round" stroke-width=".5" style="paint-order:fill markers stroke"/>
-       <text x="1980.6652" y="411.19955" font-family="sans-serif" fclass="svgT" letter-spacing=".5px" font-size="5.2px" stroke-width=".26458" text-align="center" text-anchor="middle" word-spacing="0px" style="line-height:0.94999999" xml:space="preserve"><tspan x="1980.6652" y="411.19955" text-align="center">Pozioma linia</tspan><tspan x="1980.6652" y="417.23206" text-align="center">prosta na kanwie</tspan></text>
+       <text x="1980.6652" y="411.19955" font-family="sans-serif" fclass="svgT" letter-spacing=".5px" font-size="5.2px" stroke-width=".26458" text-align="center" text-anchor="middle" word-spacing="0px" style="line-height:0.94999999" xml:space="preserve"><tspan class="iTxt" x="1980.6652" y="411.19955" text-align="center">Pozioma linia</tspan><tspan class="iTxt" x="1980.6652" y="417.23206" text-align="center">prosta na kanwie</tspan></text>
        <g transform="matrix(.26458 0 0 .26458 1967.6 374.34)">
         <path d="m15.812 6a2.0002 2.0002 0 00-1.8125 2v60a2.0002 2.0002 0 002 2h22.75l-10.531 21.094a2.0002 2.0002 0 103.5625 1.8125l11.469-22.906h4.75v16a2.0002 2.0002 0 104 0v-16h4.75l11.469 22.906a2.0002 2.0002 0 103.5625-1.8125l-10.531-21.094h22.75a2.0002 2.0002 0 002-2v-60a2.0002 2.0002 0 00-2-2h-68a2.0002 2.0002 0 00-.1875 0zm2.1875 4h64v56h-31.625a2.0002 2.0002 0 00-.40625-.03125 2.0002 2.0002 0 00-.40625.03125h-31.562z" color="#000000" style="text-decoration-line:none;text-indent:0;text-transform:none"/>
        </g>
@@ -95,7 +103,7 @@
   </g>
  </g>
 </svg>
-</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-2 WarstwaWord\Obrazki\PolaTekstowe.ahk" class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" width="206px" height="206px" version="1.1" viewBox="0 0 206 206" xmlns="http://www.w3.org/2000/svg">
+</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="WarstwaWord\Obrazki\PolaTekstowe.ahk" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" width="206px" height="206px" version="1.1" viewBox="0 0 206 206" xmlns="http://www.w3.org/2000/svg">
  <g transform="matrix(3.7795 0 0 3.7795 -1795.2 2502.6)">
   <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-392.69" y="-63.57" width="758.02" height="397.52"/></flowRegion><flowPara/></flowRoot>
   <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-251.87" y="-84.492" width="624.44" height="455.45"/></flowRegion><flowPara/></flowRoot>
@@ -134,7 +142,7 @@
   </g>
  </g>
 </svg>
-</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-3 WarstwaWord\Obrazki\Group.ahk" class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" width="206px" height="206px" version="1.1" viewBox="0 0 206 206" xmlns="http://www.w3.org/2000/svg">
+</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="WarstwaWord\Obrazki\Group.ahk" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" class="GrupujObiektyGraficzne" name="Grupuj obiekty graficzne" width="206px" height="206px" version="1.1" viewBox="0 0 206 206" xmlns="http://www.w3.org/2000/svg">
  <g transform="matrix(3.7795 0 0 3.7795 -1795.2 2502.6)">
   <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-392.69" y="-63.57" width="758.02" height="397.52"/></flowRegion><flowPara/></flowRoot>
   <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-251.87" y="-84.492" width="624.44" height="455.45"/></flowRegion><flowPara/></flowRoot>
@@ -164,7 +172,7 @@
         <path d="m1117.6-74.907 5.4972-5.4972-.5156-.51562-5.4972 5.4972v-3.2278h-.7294l7e-4 4.1085c-4e-4.19284.1708.36403.3654.3654l4.1081-.000343v-.72943z"/>
         <circle transform="rotate(45)" cx="736.9" cy="-836.07" r="3.6241"/>
        </g>
-       <text x="1106.7699" y="-44.983978" font-family="sans-serif" class="svgT" letter-spacing=".5px" font-size="5.2px" stroke-width=".26458" text-align="end" text-anchor="middle" word-spacing="0px" style="line-height:1.04999995" xml:space="preserve"><tspan x="1106.7699" y="-44.983978" text-align="center">Grupuj obiekty</tspan><tspan x="1106.7699" y="-38.316479" text-align="center">graficzne</tspan></text>
+       <text x="1106.7699" y="-44.983978" font-family="sans-serif" class="svgT" letter-spacing=".5px" font-size="5.2px" stroke-width=".26458" text-align="end" text-anchor="middle" word-spacing="0px" style="line-height:1.04999995" xml:space="preserve"><tspan class="iTxt" x="1106.7699" y="-44.983978" text-align="center">Grupuj obiekty</tspan><tspan class="iTxt" x="1106.7699" y="-38.316479" text-align="center">graficzne</tspan></text>
       </g>
      </g>
     </g>
@@ -172,7 +180,7 @@
   </g>
  </g>
 </svg>
-</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-4 WarstwaWord\Obrazki\Ungroup.ahk" class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" width="206px" height="206px" version="1.1" viewBox="0 0 206 206" xmlns="http://www.w3.org/2000/svg">
+</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="WarstwaWord\Obrazki\Ungroup.ahk" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" class="RozgrupujObiektyGraficzne" name="Rozgrupuj obiekty graficzne" width="206px" height="206px" version="1.1" viewBox="0 0 206 206" xmlns="http://www.w3.org/2000/svg">
  <g transform="matrix(3.7795 0 0 3.7795 -1795.2 2502.6)">
   <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-392.69" y="-63.57" width="758.02" height="397.52"/></flowRegion><flowPara/></flowRoot>
   <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-251.87" y="-84.492" width="624.44" height="455.45"/></flowRegion><flowPara/></flowRoot>
@@ -193,7 +201,7 @@
       <g transform="translate(-380.28 455.78)">
        <g transform="translate(116.53 4.9644e-6)">
         <rect x="963.92" y="-86.664" width="52.632" height="52.632" fill="#b9d4ff" stroke="#000" stroke-linecap="round" stroke-width=".28429" style="paint-order:fill markers stroke"/>
-        <text x="990.20056" y="-44.983982" font-family="sans-serif" class="svgT" letter-spacing=".5px" font-size="5.2px" stroke-width=".26458" text-align="end" text-anchor="middle" word-spacing="0px" style="line-height:1.04999995" xml:space="preserve"><tspan x="990.20056" y="-44.983982" text-align="center">Rozgrupuj</tspan><tspan x="990.20056" y="-38.316483" text-align="center">obiekty graficzne</tspan></text>
+        <text x="990.20056" y="-44.983982" font-family="sans-serif" class="svgT" letter-spacing=".5px" font-size="5.2px" stroke-width=".26458" text-align="end" text-anchor="middle" word-spacing="0px" style="line-height:1.04999995" xml:space="preserve"><tspan class="iTxt" x="990.20056" y="-44.983982" text-align="center">Rozgrupuj</tspan><tspan class="iTxt" x="990.20056" y="-38.316483" text-align="center">obiekty graficzne</tspan></text>
         <g transform="matrix(.34375 .34375 -.34375 .34375 990.23 -102.13)">
          <path d="m11.506 44.551-1.061-1.061-5.975 5.975c-.141.141-.22.332-.22.53s.079.39.22.53l5.976 5.976 1.061-1.062-4.695-4.694h15.992v-1.5h-15.993z"/>
          <circle cx="35.333" cy="49.996" r="7.455"/>
@@ -212,7 +220,7 @@
   </g>
  </g>
 </svg>
-</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-5 WarstwaWord\Obrazki\RotateLeft90.ahk" class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" width="206px" height="206px" version="1.1" viewBox="0 0 206 206" xmlns="http://www.w3.org/2000/svg">
+</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="WarstwaWord\Obrazki\RotateLeft90.ahk" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" class="ObróźObiektWPrawoO90" name="Obróź obiekt w prawo o 90" width="206px" height="206px" version="1.1" viewBox="0 0 206 206" xmlns="http://www.w3.org/2000/svg">
  <g transform="matrix(3.7795 0 0 3.7795 -1795.2 2502.6)">
   <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-392.69" y="-63.57" width="758.02" height="397.52"/></flowRegion><flowPara/></flowRoot>
   <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-251.87" y="-84.492" width="624.44" height="455.45"/></flowRegion><flowPara/></flowRoot>
@@ -233,7 +241,7 @@
       <g transform="translate(-380.28 455.78)">
        <g transform="translate(404.3 .10336)">
         <rect x="676.12" y="-86.664" width="52.632" height="52.632" fill="#b9d4ff" stroke="#000" stroke-linecap="round" stroke-width=".28429" style="paint-order:fill markers stroke"/>
-        <text x="702.534" y="-45.06081" font-family="sans-serif" class="svgT" letter-spacing=".5px" font-size="5.2px" stroke-width=".26458" text-align="end" text-anchor="middle" word-spacing="0px" style="line-height:1.04999995" xml:space="preserve"><tspan x="702.534" y="-45.06081" text-align="center">Obróć obiekt</tspan><tspan x="702.534" y="-38.393311" text-align="center">w prawo o 90°</tspan></text>
+        <text x="702.534" y="-45.06081" font-family="sans-serif" class="svgT" letter-spacing=".5px" font-size="5.2px" stroke-width=".26458" text-align="end" text-anchor="middle" word-spacing="0px" style="line-height:1.04999995" xml:space="preserve"><tspan class="iTxt" x="702.534" y="-45.06081" text-align="center">Obróć obiekt</tspan><tspan class="iTxt" x="702.534" y="-38.393311" text-align="center">w prawo o 90°</tspan></text>
         <g transform="translate(-4.009)">
          <g transform="matrix(.26458 0 0 .26458 686.4 -83.571)">
           <path d="m61.8 18.1-11.3-11.3-11.3 11.3 4.1 4.1-21.1 21.1-4.1-4.1-11.3 11.3 11.3 11.3 4.6-4.6 20.1 20.1-4.6 4.6 11.3 11.3 11.3-11.3-3.6-3.6 21.1-21.1 3.6 3.6 11.3-11.3-11.3-11.3-4.1 4.1-20.1-20.1zm8.8 31.4 4.6 4.6-21.1 21.1-4.6-4.6-3.6 3.6-20.1-20.1 3.6-3.6-4.1-4.1 21.1-21.1 4.1 4.1 4.1-4.1 20.1 20.1z"/>
@@ -250,7 +258,7 @@
   </g>
  </g>
 </svg>
-</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-6 WarstwaWord\Obrazki\RotateRight90.ahk" class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" width="206px" height="206px" version="1.1" viewBox="0 0 206 206" xmlns="http://www.w3.org/2000/svg">
+</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="WarstwaWord\Obrazki\RotateRight90.ahk" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" class="ObrotObiektWLewoO90" name="Obrot obiekt w lewo o 90" width="206px" height="206px" version="1.1" viewBox="0 0 206 206" xmlns="http://www.w3.org/2000/svg">
  <g transform="matrix(3.7795 0 0 3.7795 -1795.2 2502.6)">
   <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-392.69" y="-63.57" width="758.02" height="397.52"/></flowRegion><flowPara/></flowRoot>
   <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-251.87" y="-84.492" width="624.44" height="455.45"/></flowRegion><flowPara/></flowRoot>
@@ -271,7 +279,7 @@
       <g transform="translate(-380.28 455.78)">
        <g transform="translate(347.04 -.2067)">
         <rect x="733.59" y="-86.664" width="52.632" height="52.632" fill="#b9d4ff" stroke="#000" stroke-linecap="round" stroke-width=".28429" style="paint-order:fill markers stroke"/>
-        <text transform="scale(1 1)" x="760.00208" y="-43.832012" font-family="sans-serif" class="svgT" letter-spacing=".5px" font-size="5.2px" stroke-width=".26458" text-align="end" text-anchor="middle" word-spacing="0px" style="line-height:1.04999995" xml:space="preserve"><tspan x="760.00208" y="-43.832012" text-align="center">Obróć obiekt</tspan><tspan x="760.00208" y="-37.164501" text-align="center">w lewo o 90°</tspan></text>
+        <text transform="scale(1 1)" x="760.00208" y="-43.832012" font-family="sans-serif" class="svgT" letter-spacing=".5px" font-size="5.2px" stroke-width=".26458" text-align="end" text-anchor="middle" word-spacing="0px" style="line-height:1.04999995" xml:space="preserve"><tspan class="iTxt" x="760.00208" y="-43.832012" text-align="center">Obróć obiekt</tspan><tspan class="iTxt" x="760.00208" y="-37.164501" text-align="center">w lewo o 90°</tspan></text>
         <g transform="translate(3.0736)">
          <g transform="matrix(.26458 0 0 .26458 749.86 -83.571)">
           <path d="m61.8 18.1-11.3-11.3-11.3 11.3 4.1 4.1-21.1 21.1-4.1-4.1-11.3 11.3 11.3 11.3 4.6-4.6 20.1 20.1-4.6 4.6 11.3 11.3 11.3-11.3-3.6-3.6 21.1-21.1 3.6 3.6 11.3-11.3-11.3-11.3-4.1 4.1-20.1-20.1zm8.8 31.4 4.6 4.6-21.1 21.1-4.6-4.6-3.6 3.6-20.1-20.1 3.6-3.6-4.1-4.1 21.1-21.1 4.1 4.1 4.1-4.1 20.1 20.1z"/>
@@ -288,7 +296,7 @@
   </g>
  </g>
 </svg>
-</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-7 WarstwaWord\Obrazki\TextBoxWithStyleVerticallyAlignedTrue.ahk" class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" width="206px" height="206px" version="1.1" viewBox="0 0 206 206" xmlns="http://www.w3.org/2000/svg">
+</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="WarstwaWord\Obrazki\TextBoxWithStyleVerticallyAlignedTrue.ahk" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" class="PoleTekstoweWyrownaneWPionie" name="Pole tekstowe wyrownane w pionie" width="206px" height="206px" version="1.1" viewBox="0 0 206 206" xmlns="http://www.w3.org/2000/svg">
  <g transform="matrix(3.7795 0 0 3.7795 -1795.2 2502.6)">
   <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-392.69" y="-63.57" width="758.02" height="397.52"/></flowRegion><flowPara/></flowRoot>
   <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-251.87" y="-84.492" width="624.44" height="455.45"/></flowRegion><flowPara/></flowRoot>
@@ -309,7 +317,7 @@
       <g transform="translate(-380.28 455.78)">
        <g transform="translate(1044.5 5.3813e-6)">
         <rect x="36.05" y="-86.664" width="52.632" height="52.632" fill="#b9d4ff" stroke="#000" stroke-linecap="round" stroke-width=".28429" style="paint-order:fill markers stroke"/>
-        <text x="62.165749" y="-49.883572" font-family="sans-serif" class="svgT" letter-spacing=".5px" font-size="5.2px" stroke-width=".26458" text-align="end" text-anchor="middle" word-spacing="0px" style="line-height:1.04999995" xml:space="preserve"><tspan x="62.165749" y="-49.883572" text-align="center">Pole tekstowe</tspan><tspan x="63.28196" y="-43.216072" text-align="center">wyrównane </tspan><tspan x="62.165749" y="-36.548573" text-align="center">w pionie</tspan></text>
+        <text x="62.165749" y="-49.883572" font-family="sans-serif" class="svgT" letter-spacing=".5px" font-size="5.2px" stroke-width=".26458" text-align="end" text-anchor="middle" word-spacing="0px" style="line-height:1.04999995" xml:space="preserve"><tspan class="iTxt" x="62.165749" y="-49.883572" text-align="center">Pole tekstowe</tspan><tspan class="iTxt" x="63.28196" y="-43.216072" text-align="center">wyrównane </tspan><tspan class="iTxt" x="62.165749" y="-36.548573" text-align="center">w pionie</tspan></text>
         <rect x="40.821" y="-80.603" width="43.089" height="23.246" fill="#b9d4ff" stroke="#000" stroke-linecap="round" stroke-width=".5" style="paint-order:fill markers stroke"/>
         <g transform="translate(0 2.6458)" fill="none" stroke="#000" stroke-width="1.765">
          <path d="m45.924-76.729h32.884"/>
@@ -324,7 +332,7 @@
   </g>
  </g>
 </svg>
-</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-8 WarstwaWord\Obrazki\TextBoxWithStyleVerticallyAlignedFalse.ahk" class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" width="206px" height="206px" version="1.1" viewBox="0 0 206 206" xmlns="http://www.w3.org/2000/svg">
+</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="WarstwaWord\Obrazki\TextBoxWithStyleVerticallyAlignedFalse.ahk" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" class="PoleTekstoweNieWyrównaneWPionie" name="Pole tekstowe nie wyrównane w pionie" width="206px" height="206px" version="1.1" viewBox="0 0 206 206" xmlns="http://www.w3.org/2000/svg">
  <g transform="matrix(3.7795 0 0 3.7795 -1795.2 2502.6)">
   <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-392.69" y="-63.57" width="758.02" height="397.52"/></flowRegion><flowPara/></flowRoot>
   <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-251.87" y="-84.492" width="624.44" height="455.45"/></flowRegion><flowPara/></flowRoot>
@@ -345,7 +353,7 @@
       <g transform="translate(-380.28 455.78)">
        <g transform="translate(986.55 5.5529e-6)">
         <rect x="93.974" y="-86.664" width="52.632" height="52.632" fill="#b9d4ff" stroke="#000" stroke-linecap="round" stroke-width=".28429" style="paint-order:fill markers stroke"/>
-        <text x="120.11205" y="-49.883572" font-family="sans-serif" class="svgT" letter-spacing=".5px" font-size="5.2px" stroke-width=".26458" text-align="end" text-anchor="middle" word-spacing="0px" style="line-height:1.04999995" xml:space="preserve"><tspan x="120.11205" y="-49.883572" text-align="center">Pole tekstowe</tspan><tspan x="121.22826" y="-43.216072" text-align="center">niewyrównane </tspan><tspan x="120.11205" y="-36.548573" text-align="center">w pionie</tspan></text>
+        <text x="120.11205" y="-49.883572" font-family="sans-serif" class="svgT" letter-spacing=".5px" font-size="5.2px" stroke-width=".26458" text-align="end" text-anchor="middle" word-spacing="0px" style="line-height:1.04999995" xml:space="preserve"><tspan class="iTxt" x="120.11205" y="-49.883572" text-align="center">Pole tekstowe</tspan><tspan class="iTxt" x="121.22826" y="-43.216072" text-align="center">niewyrównane </tspan><tspan class="iTxt" x="120.11205" y="-36.548573" text-align="center">w pionie</tspan></text>
         <rect x="98.745" y="-80.603" width="43.089" height="23.246" fill="#b9d4ff" stroke="#000" stroke-linecap="round" stroke-width=".5" style="paint-order:fill markers stroke"/>
         <g transform="translate(57.924 -.37798)" fill="none" stroke="#000" stroke-width="1.765">
          <path d="m45.924-76.729h32.884"/>
@@ -360,7 +368,7 @@
   </g>
  </g>
 </svg>
-</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-9 " class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-1 WarstwaWord\Obrazki\MoveVectorObjectLeft.ahk" class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" width="206px" height="206px" version="1.1" viewBox="0 0 206 206" xmlns="http://www.w3.org/2000/svg">
+</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="WarstwaWord\Obrazki\MoveVectorObjectLeft.ahk" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" class="PrzeniesObiektWektorowyWLewo" name="Przenies obiekt wektorowy w lewo" width="206px" height="206px" version="1.1" viewBox="0 0 206 206" xmlns="http://www.w3.org/2000/svg">
  <g transform="matrix(3.7795 0 0 3.7795 -1795.2 2502.6)">
   <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-392.69" y="-63.57" width="758.02" height="397.52"/></flowRegion><flowPara/></flowRoot>
   <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-251.87" y="-84.492" width="624.44" height="455.45"/></flowRegion><flowPara/></flowRoot>
@@ -381,7 +389,7 @@
       <g transform="translate(-380.28 455.78)">
        <g transform="translate(576.25 .51677)">
         <rect x="504.72" y="-86.664" width="52.632" height="52.632" fill="#b9d4ff" stroke="#000" stroke-linecap="round" stroke-width=".28429" style="paint-order:fill markers stroke"/>
-        <text x="531.13727" y="-45.47422" font-family="sans-serif" class="svgT" letter-spacing=".5px" font-size="5.2px" stroke-width=".26458" text-align="end" text-anchor="middle" word-spacing="0px" style="line-height:1.04999995" xml:space="preserve"><tspan x="531.13727" y="-45.47422" text-align="center">Przenieś obiekt</tspan><tspan x="531.13727" y="-38.806721" text-align="center">wektorowy w lewo</tspan></text>
+        <text x="531.13727" y="-45.47422" font-family="sans-serif" class="svgT" letter-spacing=".5px" font-size="5.2px" stroke-width=".26458" text-align="end" text-anchor="middle" word-spacing="0px" style="line-height:1.04999995" xml:space="preserve"><tspan class="iTxt" x="531.13727" y="-45.47422" text-align="center">Przenieś obiekt</tspan><tspan class="iTxt" x="531.13727" y="-38.806721" text-align="center">wektorowy w lewo</tspan></text>
         <g transform="translate(7.0826)">
          <g transform="matrix(.26458 0 0 .26458 516.08 -83.571)">
           <path d="m61.8 18.1-11.3-11.3-11.3 11.3 4.1 4.1-21.1 21.1-4.1-4.1-11.3 11.3 11.3 11.3 4.6-4.6 20.1 20.1-4.6 4.6 11.3 11.3 11.3-11.3-3.6-3.6 21.1-21.1 3.6 3.6 11.3-11.3-11.3-11.3-4.1 4.1-20.1-20.1zm8.8 31.4 4.6 4.6-21.1 21.1-4.6-4.6-3.6 3.6-20.1-20.1 3.6-3.6-4.1-4.1 21.1-21.1 4.1 4.1 4.1-4.1 20.1 20.1z"/>
@@ -399,7 +407,7 @@
   </g>
  </g>
 </svg>
-</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-2 WarstwaWord\Obrazki\MoveVectorObjectUp.ahk" class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" width="206px" height="206px" version="1.1" viewBox="0 0 206 206" xmlns="http://www.w3.org/2000/svg">
+</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="WarstwaWord\Obrazki\MoveVectorObjectUp.ahk" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" class="PrzeniesObiektWektorowyWGore" name="Przenies obiekt wektorowy w gore" width="206px" height="206px" version="1.1" viewBox="0 0 206 206" xmlns="http://www.w3.org/2000/svg">
  <g transform="matrix(3.7795 0 0 3.7795 -1795.2 2502.6)">
   <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-392.69" y="-63.57" width="758.02" height="397.52"/></flowRegion><flowPara/></flowRoot>
   <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-251.87" y="-84.492" width="624.44" height="455.45"/></flowRegion><flowPara/></flowRoot>
@@ -420,7 +428,7 @@
       <g transform="translate(-380.28 455.78)">
        <g transform="translate(462.25 .10336)">
         <rect x="618.4" y="-86.664" width="52.632" height="52.632" fill="#b9d4ff" stroke="#000" stroke-linecap="round" stroke-width=".28429" style="paint-order:fill markers stroke"/>
-        <text x="644.82104" y="-45.087337" font-family="sans-serif" class="svgT" letter-spacing=".5px" font-size="5.2px" stroke-width=".26458" text-align="end" text-anchor="middle" word-spacing="0px" style="line-height:1.04999995" xml:space="preserve"><tspan x="644.82104" y="-45.087337" text-align="center">Przenieś obiekt</tspan><tspan x="644.82104" y="-38.419838" text-align="center">wektorowy w górę</tspan></text>
+        <text x="644.82104" y="-45.087337" font-family="sans-serif" class="svgT" letter-spacing=".5px" font-size="5.2px" stroke-width=".26458" text-align="end" text-anchor="middle" word-spacing="0px" style="line-height:1.04999995" xml:space="preserve"><tspan class="iTxt" x="644.82104" y="-45.087337" text-align="center">Przenieś obiekt</tspan><tspan class="iTxt" x="644.82104" y="-38.419838" text-align="center">wektorowy w górę</tspan></text>
         <g transform="rotate(90 583 -8.6223)">
          <g transform="matrix(.26458 0 0 .26458 516.08 -83.571)">
           <path d="m61.8 18.1-11.3-11.3-11.3 11.3 4.1 4.1-21.1 21.1-4.1-4.1-11.3 11.3 11.3 11.3 4.6-4.6 20.1 20.1-4.6 4.6 11.3 11.3 11.3-11.3-3.6-3.6 21.1-21.1 3.6 3.6 11.3-11.3-11.3-11.3-4.1 4.1-20.1-20.1zm8.8 31.4 4.6 4.6-21.1 21.1-4.6-4.6-3.6 3.6-20.1-20.1 3.6-3.6-4.1-4.1 21.1-21.1 4.1 4.1 4.1-4.1 20.1 20.1z"/>
@@ -438,7 +446,7 @@
   </g>
  </g>
 </svg>
-</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-3 WarstwaWord\Obrazki\MoveVectorObjectDown.ahk" class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" width="206px" height="206px" version="1.1" viewBox="0 0 206 206" xmlns="http://www.w3.org/2000/svg">
+</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="WarstwaWord\Obrazki\MoveVectorObjectDown.ahk" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" class="PrzeniesObiektWektorowyWDol" name="Przenies obiekt wektorowy w dol" width="206px" height="206px" version="1.1" viewBox="0 0 206 206" xmlns="http://www.w3.org/2000/svg">
  <g transform="matrix(3.7795 0 0 3.7795 -1795.2 2502.6)">
   <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-392.69" y="-63.57" width="758.02" height="397.52"/></flowRegion><flowPara/></flowRoot>
   <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-251.87" y="-84.492" width="624.44" height="455.45"/></flowRegion><flowPara/></flowRoot>
@@ -459,7 +467,7 @@
       <g transform="translate(-380.28 455.78)">
        <g transform="translate(635.42 .20671)">
         <rect x="445.01" y="-86.664" width="52.632" height="52.632" fill="#b9d4ff" stroke="#000" stroke-linecap="round" stroke-width=".28429" style="paint-order:fill markers stroke"/>
-        <text x="471.31964" y="-43.216072" font-family="sans-serif" class="svgT" letter-spacing=".5px" font-size="5.2px" stroke-width=".26458" text-align="end" text-anchor="middle" word-spacing="0px" style="line-height:1.04999995" xml:space="preserve"><tspan x="471.31964" y="-43.216072" text-align="center">Przenieś obiekt</tspan><tspan x="471.31964" y="-36.548573" text-align="center">wektorowy w dół</tspan></text>
+        <text x="471.31964" y="-43.216072" font-family="sans-serif" class="svgT" letter-spacing=".5px" font-size="5.2px" stroke-width=".26458" text-align="end" text-anchor="middle" word-spacing="0px" style="line-height:1.04999995" xml:space="preserve"><tspan class="iTxt" x="471.31964" y="-43.216072" text-align="center">Przenieś obiekt</tspan><tspan class="iTxt" x="471.31964" y="-36.548573" text-align="center">wektorowy w dół</tspan></text>
         <g transform="matrix(.26458 0 0 .26458 458.1 -84.323)">
          <path d="m61.8 18.1-11.3-11.3-11.3 11.3 4.1 4.1-21.1 21.1-4.1-4.1-11.3 11.3 11.3 11.3 4.6-4.6 20.1 20.1-4.6 4.6 11.3 11.3 11.3-11.3-3.6-3.6 21.1-21.1 3.6 3.6 11.3-11.3-11.3-11.3-4.1 4.1-20.1-20.1zm8.8 31.4 4.6 4.6-21.1 21.1-4.6-4.6-3.6 3.6-20.1-20.1 3.6-3.6-4.1-4.1 21.1-21.1 4.1 4.1 4.1-4.1 20.1 20.1z"/>
         </g>
@@ -475,7 +483,7 @@
   </g>
  </g>
 </svg>
-</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-4 WarstwaWord\Obrazki\MoveVectorObjectRight.ahk" class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" width="206px" height="206px" version="1.1" viewBox="0 0 206 206" xmlns="http://www.w3.org/2000/svg">
+</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="WarstwaWord\Obrazki\MoveVectorObjectRight.ahk" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" class="PrzeniesObiektWektorowyWPrawo" name="Przenies obiekt wektorowy w prawo" width="206px" height="206px" version="1.1" viewBox="0 0 206 206" xmlns="http://www.w3.org/2000/svg">
  <g transform="matrix(3.7795 0 0 3.7795 -1795.2 2502.6)">
   <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-392.69" y="-63.57" width="758.02" height="397.52"/></flowRegion><flowPara/></flowRoot>
   <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-251.87" y="-84.492" width="624.44" height="455.45"/></flowRegion><flowPara/></flowRoot>
@@ -496,7 +504,7 @@
       <g transform="translate(-380.28 455.78)">
        <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-5.8594" y="-7.2813" width="339.45" height="326.95"/></flowRegion><flowPara/></flowRoot>
        <rect x="1080.7" y="-86.561" width="52.632" height="52.632" fill="#b9d4ff" stroke="#000" stroke-linecap="round" stroke-width=".28429" style="paint-order:fill markers stroke"/>
-       <text x="1107.1488" y="-49.780209" font-family="sans-serif" class="svgT" letter-spacing=".5px" font-size="5.2px" stroke-width=".26458" text-align="end" text-anchor="middle" word-spacing="0px" style="line-height:1.04999995" xml:space="preserve"><tspan x="1107.1488" y="-49.780209" text-align="center">Przenieś obiekt</tspan><tspan x="1107.1488" y="-43.112709" text-align="center">wektorowy</tspan><tspan x="1107.1488" y="-36.44521" text-align="center">w prawo</tspan></text>
+       <text x="1107.1488" y="-49.780209" font-family="sans-serif" class="svgT" letter-spacing=".5px" font-size="5.2px" stroke-width=".26458" text-align="end" text-anchor="middle" word-spacing="0px" style="line-height:1.04999995" xml:space="preserve"><tspan class="iTxt" x="1107.1488" y="-49.780209" text-align="center">Przenieś obiekt</tspan><tspan class="iTxt" x="1107.1488" y="-43.112709" text-align="center">wektorowy</tspan><tspan class="iTxt" x="1107.1488" y="-36.44521" text-align="center">w prawo</tspan></text>
        <g transform="rotate(180 815.5 -70.29)">
         <g transform="matrix(.26458 0 0 .26458 516.08 -83.571)">
          <path d="m61.8 18.1-11.3-11.3-11.3 11.3 4.1 4.1-21.1 21.1-4.1-4.1-11.3 11.3 11.3 11.3 4.6-4.6 20.1 20.1-4.6 4.6 11.3 11.3 11.3-11.3-3.6-3.6 21.1-21.1 3.6 3.6 11.3-11.3-11.3-11.3-4.1 4.1-20.1-20.1zm8.8 31.4 4.6 4.6-21.1 21.1-4.6-4.6-3.6 3.6-20.1-20.1 3.6-3.6-4.1-4.1 21.1-21.1 4.1 4.1 4.1-4.1 20.1 20.1z"/>
@@ -513,7 +521,7 @@
   </g>
  </g>
 </svg>
-</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-5 WarstwaWord\Obrazki\FlipVertically.ahk" class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" width="206px" height="206px" version="1.1" viewBox="0 0 206 206" xmlns="http://www.w3.org/2000/svg">
+</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="WarstwaWord\Obrazki\FlipVertically.ahk" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" class="PrzerzycWPionie" name="Przerzyc w pionie" width="206px" height="206px" version="1.1" viewBox="0 0 206 206" xmlns="http://www.w3.org/2000/svg">
  <g transform="matrix(3.7795 0 0 3.7795 -1795.2 2502.6)">
   <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-392.69" y="-63.57" width="758.02" height="397.52"/></flowRegion><flowPara/></flowRoot>
   <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-251.87" y="-84.492" width="624.44" height="455.45"/></flowRegion><flowPara/></flowRoot>
@@ -535,7 +543,7 @@
        <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-5.8594" y="-7.2813" width="339.45" height="326.95"/></flowRegion><flowPara/></flowRoot>
        <g transform="translate(288.56 .41342)">
         <rect x="792.06" y="-86.664" width="52.632" height="52.632" fill="#b9d4ff" stroke="#000" stroke-linecap="round" stroke-width=".28429" style="paint-order:fill markers stroke"/>
-        <text x="818.24902" y="-45.370869" font-family="sans-serif" class="svgT" letter-spacing=".5px" font-size="5.2px" stroke-width=".26458" text-align="end" text-anchor="middle" word-spacing="0px" style="line-height:1.04999995" xml:space="preserve"><tspan x="818.24902" y="-45.370869" text-align="center">Przerzuć</tspan><tspan x="818.24902" y="-38.703369" text-align="center">w pionie</tspan></text>
+        <text x="818.24902" y="-45.370869" font-family="sans-serif" class="svgT" letter-spacing=".5px" font-size="5.2px" stroke-width=".26458" text-align="end" text-anchor="middle" word-spacing="0px" style="line-height:1.04999995" xml:space="preserve"><tspan class="iTxt" x="818.24902" y="-45.370869" text-align="center">Przerzuć</tspan><tspan class="iTxt" x="818.24902" y="-38.703369" text-align="center">w pionie</tspan></text>
         <g transform="matrix(1.2525 0 0 1.2525 801.81 -84.323)">
          <path d="m1.5877 15.891c.00635.21365.14081.40241.34055.4785l22.225 8.4662c.34644.1321.71781-.12375.71779-.49451v-8.4662c-2.7e-5-.29221-.23693-.52912-.52917-.52914h-22.225c-.2984.00018-.53763.2469-.52864.54514zm0-2.654c.00423.29204.24434.52538.53639.52139h1.6154c.71514.01.71514-1.0679 0-1.0583h-1.6154c-.29811-.004-.54076.23882-.53639.5369zm0-2.6571c-.00265.29345.23519.53247.52864.53279h22.225c.29223-3e-5.52914-.23693.52917-.52917v-8.4662c2.6e-5-.37079-.37134-.62662-.71779-.49454l-22.225 8.4662c-.20386.0778-.33909.2727-.34055.49088zm3.4044-.52552 18.82-7.1692v7.1692zm.92186 3.1826c.00423.29226.24466.52567.53692.52139h2.7109c.71514.01.71514-1.0679 0-1.0583h-2.7109c-.29832-.004-.54128.23861-.53692.5369zm5.4229 0c.0042.29204.24437.52538.53642.52139h2.7114c.71514.01.71514-1.0679 0-1.0583h-2.7114c-.29813-.004-.54078.23879-.53642.5369zm5.4224 0c.0042.29204.24434.52538.53639.52139h2.7114c.71514.01.71514-1.0679 0-1.0583h-2.7114c-.29811-.004-.54076.23882-.53639.5369zm5.4223 0c.0042.29226.24466.52567.53692.52139h1.6154c.71514.01.71514-1.0679 0-1.0583h-1.6154c-.29832-.004-.54128.23861-.53692.5369z" color="#000000" color-rendering="auto" dominant-baseline="auto" fill-rule="evenodd" image-rendering="auto" shape-rendering="auto" solid-color="#000000" style="font-feature-settings:normal;font-variant-alternates:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;font-variant-position:normal;isolation:auto;mix-blend-mode:normal;paint-order:normal;shape-padding:0;text-decoration-color:#000000;text-decoration-line:none;text-decoration-style:solid;text-indent:0;text-orientation:mixed;text-transform:none;white-space:normal"/>
         </g>
@@ -547,7 +555,7 @@
   </g>
  </g>
 </svg>
-</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-6 WarstwaWord\Obrazki\FlipHorizontally.ahk" class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" width="206px" height="206px" version="1.1" viewBox="0 0 206 206" xmlns="http://www.w3.org/2000/svg">
+</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="WarstwaWord\Obrazki\FlipHorizontally.ahk" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" class="PrzerzucWPoziomie" name="Przerzuc w poziomie" width="206px" height="206px" version="1.1" viewBox="0 0 206 206" xmlns="http://www.w3.org/2000/svg">
  <g transform="matrix(3.7795 0 0 3.7795 -1795.2 2502.6)">
   <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-392.69" y="-63.57" width="758.02" height="397.52"/></flowRegion><flowPara/></flowRoot>
   <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-251.87" y="-84.492" width="624.44" height="455.45"/></flowRegion><flowPara/></flowRoot>
@@ -569,7 +577,7 @@
        <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-5.8594" y="-7.2813" width="339.45" height="326.95"/></flowRegion><flowPara/></flowRoot>
        <g transform="translate(231.66 .31006)">
         <rect x="848.97" y="-86.664" width="52.632" height="52.632" fill="#b9d4ff" stroke="#000" stroke-linecap="round" stroke-width=".28429" style="paint-order:fill markers stroke"/>
-        <text x="875.15771" y="-45.267513" font-family="sans-serif" class="svgT" letter-spacing=".5px" font-size="5.2px" stroke-width=".26458" text-align="end" text-anchor="middle" word-spacing="0px" style="line-height:1.04999995" xml:space="preserve"><tspan x="875.15771" y="-45.267513" text-align="center">Przerzuć</tspan><tspan x="875.15771" y="-38.600014" text-align="center">w poziomie</tspan></text>
+        <text x="875.15771" y="-45.267513" font-family="sans-serif" class="svgT" letter-spacing=".5px" font-size="5.2px" stroke-width=".26458" text-align="end" text-anchor="middle" word-spacing="0px" style="line-height:1.04999995" xml:space="preserve"><tspan class="iTxt" x="875.15771" y="-45.267513" text-align="center">Przerzuć</tspan><tspan class="iTxt" x="875.15771" y="-38.600014" text-align="center">w poziomie</tspan></text>
         <g transform="matrix(1.2985 0 0 1.2985 857.19 -85.732)">
          <path d="m10.567 1.5877c-.21364.006-.40242.14081-.47851.34054l-8.4662 22.225c-.1321.34645.12374.71782.49451.71779h8.4662c.29222-3e-5.52912-.23693.52914-.52917v-22.225c-.000185-.29839-.2469-.53763-.54515-.52863zm2.654 0c-.29204.004-.52539.24434-.52139.53639v1.6154c-.0098.71514 1.0679.71514 1.0583 0v-1.6154c.004-.29811-.2388-.54076-.5369-.53639zm2.6571 0c-.29344-.003-.53245.23518-.53277.52863v22.225c2.7e-5.29224.23692.52914.52914.52917h8.4662c.37077 3e-5.62661-.37134.49451-.71779l-8.4662-22.225c-.07779-.20386-.2727-.33909-.49089-.34054zm.52552 3.4044 7.1692 18.82h-7.1692zm-3.1826.92186c-.29225.004-.52568.24466-.52139.53692v2.7109c-.0098.71514 1.0679.71514 1.0583 0v-2.7109c.0042-.29832-.23859-.54129-.5369-.53692zm0 5.4229c-.29204.004-.52539.24437-.52139.53642v2.7114c-.0098.71514 1.0679.71514 1.0583 0v-2.7114c.004-.29814-.23878-.54079-.5369-.53642zm0 5.4224c-.29204.004-.52539.24434-.52139.53639v2.7114c-.0098.71514 1.0679.71514 1.0583 0v-2.7114c.004-.2981-.2388-.54075-.5369-.53639zm0 5.4224c-.29225.004-.52568.24466-.52139.53691v1.6154c-.0098.71514 1.0679.71514 1.0583 0v-1.6154c.0042-.29831-.23859-.54128-.5369-.53691z" color="#000000" color-rendering="auto" dominant-baseline="auto" fill-rule="evenodd" image-rendering="auto" shape-rendering="auto" solid-color="#000000" style="font-feature-settings:normal;font-variant-alternates:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;font-variant-position:normal;isolation:auto;mix-blend-mode:normal;paint-order:normal;shape-padding:0;text-decoration-color:#000000;text-decoration-line:none;text-decoration-style:solid;text-indent:0;text-orientation:mixed;text-transform:none;white-space:normal"/>
         </g>
@@ -581,7 +589,7 @@
   </g>
  </g>
 </svg>
-</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-7 " class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-8 " class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-9 " class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-1 " class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-2 " class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-3 " class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-4 " class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-5 " class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-6 " class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-7 " class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-8 " class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-9 " class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   " id="drag-1 " class="box_item draggable" href="Layer1.html"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" width="205" height="203" version="1.1" viewBox="0 0 205 203" xmlns="http://www.w3.org/2000/svg">
+</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   " id="" class="box_item" href="Layer1.html"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" class="StronaGlowna" name="Strona glowna" width="205" height="203" version="1.1" viewBox="0 0 205 203" xmlns="http://www.w3.org/2000/svg">
  <g transform="translate(0,2)">
   <g transform="matrix(3.7795 0 0 3.7795 10.171 -6.7758)">
    <g transform="translate(-1.0884 -121.69)">
@@ -592,7 +600,7 @@
         <g transform="translate(1658.1 73.867)">
          <g>
           <rect x="-205.07" y="-101.86" width="52.917" height="52.917" fill="#0082b4" stroke="#000" stroke-linecap="round" stroke-width=".5" style="paint-order:fill markers stroke"/>
-          <text x="-178.87273" y="-60.77029" fill="#ffffff" font-family="sans-serif" class="svgT" letter-spacing=".5px" font-size="5.2px" stroke-width=".26458" text-anchor="middle" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><tspan x="-178.87273" y="-60.77029" text-align="center">STRONA</tspan><tspan x="-178.87273" y="-52.83279" text-align="center"> GŁÓWNA</tspan></text>
+          <text x="-178.87273" y="-60.77029" fill="#ffffff" font-family="sans-serif" class="svgT" letter-spacing=".5px" font-size="5.2px" stroke-width=".26458" text-anchor="middle" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><tspan class="iTxt" x="-178.87273" y="-60.77029" text-align="center">STRONA</tspan><tspan class="iTxt" x="-178.87273" y="-52.83279" text-align="center"> GŁÓWNA</tspan></text>
           <g transform="matrix(1.8895 0 0 1.8895 -201.12 -104.9)" fill="#fff">
            <g fill="#fff">
             <path d="m6.934 12.202c-.341 0-.62.271-.62.612v6.025c0 .341.28.616.62.616h10.145c.34 0 .611-.275.611-.616v-6.025c0-.341-.271-.612-.611-.612-.341 0-.621.271-.621.612v5.409h-8.913v-5.409c0-.341-.279-.612-.611-.612z"/>
@@ -610,7 +618,7 @@
   </g>
  </g>
 </svg>
-</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-2 " class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-3 " class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-4 " class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-5 " class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-6 " class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-7 " class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-8 " class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   " id="drag-9 Layer1\ToWordLayer.ahk" class="box_item draggable" href="Layer2.html"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" width="206px" height="206px" version="1.1" viewBox="0 0 206 206" xmlns="http://www.w3.org/2000/svg">
+</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   " id="Layer1\ToWordLayer.ahk" class="box_item" href="Layer2.html"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" width="206px" height="206px" version="1.1" viewBox="0 0 206 206" xmlns="http://www.w3.org/2000/svg">
  <g transform="matrix(3.7795 0 0 3.7795 -1795.2 2502.6)">
   <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-392.69" y="-63.57" width="758.02" height="397.52"/></flowRegion><flowPara/></flowRoot>
   <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-251.87" y="-84.492" width="624.44" height="455.45"/></flowRegion><flowPara/></flowRoot>
@@ -632,7 +640,7 @@
        <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-5.8594" y="-7.2813" width="339.45" height="326.95"/></flowRegion><flowPara/></flowRoot>
        <g transform="translate(40.18 -58.755)">
         <rect x="1040.5" y="-27.585" width="52.396" height="52.396" fill="#0082b4" stroke="#000" stroke-linecap="round" stroke-width=".52068" style="paint-order:fill markers stroke"/>
-        <text x="1067.644" y="12.493833" fill="#ffffff" font-family="sans-serif" class="svgT" letter-spacing=".5px" font-size="5.2px" stroke-width=".26458" text-align="center" text-anchor="middle" word-spacing="0px" style="line-height:1.04999995" xml:space="preserve"><tspan x="1068.5122" y="12.493833" text-align="center">Warstwa </tspan><tspan x="1067.644" y="21.383835" text-align="center">Word</tspan></text>
+        <text x="1067.644" y="12.493833" fill="#ffffff" font-family="sans-serif" class="svgT" letter-spacing=".5px" font-size="5.2px" stroke-width=".26458" text-align="center" text-anchor="middle" word-spacing="0px" style="line-height:1.04999995" xml:space="preserve"><tspan class="iTxt" x="1068.5122" y="12.493833" text-align="center">Warstwa </tspan><tspan class="iTxt" x="1067.644" y="21.383835" text-align="center">Word</tspan></text>
         <g transform="matrix(.29428 0 0 .29428 1051.9 -25.245)" fill="#fff">
          <g fill="#fff">
           <rect x="70" y="20" width="20" height="60"/>
@@ -647,8 +655,7 @@
   </g>
  </g>
 </svg>
-</a></div>
-        <script src="https://code.jquery.com/jquery-3.5.1.min.js"integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="crossorigin="anonymous"></script>
-        <script src="../index.js"></script>
+</a><script src="https://code.jquery.com/jquery-3.5.1.min.js"integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="crossorigin="anonymous"></script>
+        <script src="../OtagleScripts/index.js"></script>
         </body>
         </html>

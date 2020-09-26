@@ -1,4 +1,4 @@
-<svg id="SVGRoot" width="53.417mm" height="53.417mm" version="1.1" viewBox="0 0 53.417 53.417" xmlns="http://www.w3.org/2000/svg">
+<svg id="SVGRoot" class="ResizeImages" name="Resize images" width="53.417mm" height="53.417mm" version="1.1" viewBox="0 0 53.417 53.417" xmlns="http://www.w3.org/2000/svg">
  <defs>
   <marker id="Arrow1Mstart" overflow="visible" orient="auto">
    <path transform="matrix(.4 0 0 .4 4 0)" d="m0 0 5-5-17.5 5 17.5 5z" fill-rule="evenodd" stroke="#000" stroke-width="1pt"/>
@@ -23,7 +23,7 @@
    <rect x="81.381" y="95.81" width="13.451" height="19.807" stroke-width=".50001"/>
    <path d="m71.494 89.966 7.7478 4.6414" marker-end="url(#Arrow1Mend)" marker-start="url(#Arrow1Mstart)" stroke-width=".32573"/>
   </g>
-  <text x="103.23048" y="118.481" fill="#000000" font-family="sans-serif" font-size="5.6445px" letter-spacing="0px" stroke-width=".26459" text-anchor="middle" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><tspan x="83.612518" y="118.481" text-align="center"><tspan x="82.620323" y="118.481" stroke-width=".26459" text-align="center" text-anchor="middle">Zmień rozmiar </tspan></tspan><tspan x="83.612518" y="125.53663" text-align="center"><tspan x="82.620323" y="125.53663" stroke-width=".26459" text-align="center" text-anchor="middle">obrazków w </tspan></tspan><tspan x="82.620323" y="132.59225" text-align="center"><tspan x="82.620323" y="132.59225" stroke-width=".26459" text-align="center" text-anchor="middle">dokumencie</tspan></tspan></text>
+  <text x="103.23048" y="118.481" fill="#000000" font-family="sans-serif" font-size="5.6445px" letter-spacing="0px" stroke-width=".26459" text-anchor="middle" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><tspan x="83.612518" y="118.481" text-align="center"><tspan class="iTxt" x="82.620323" y="118.481" stroke-width=".26459" text-align="center" text-anchor="middle">Zmień rozmiar </tspan></tspan><tspan x="83.612518" y="125.53663" text-align="center"><tspan class="iTxt" x="82.620323" y="125.53663" stroke-width=".26459" text-align="center" text-anchor="middle">obrazków w </tspan></tspan><tspan x="82.620323" y="132.59225" text-align="center"><tspan class="iTxt" x="82.620323" y="132.59225" stroke-width=".26459" text-align="center" text-anchor="middle">dokumencie</tspan></tspan></text>
  </g>
  <flowRoot fill="black" font-family="sans-serif" font-size="21.333px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="11.977" y="118.91" width="150.56" height="73.143"/></flowRegion><flowPara/></flowRoot>
 </svg>

@@ -1,4 +1,4 @@
-<svg id="SVGRoot" width="53.417mm" height="53.417mm" version="1.1" viewBox="0 0 53.417 53.417" xmlns="http://www.w3.org/2000/svg">
+<svg id="SVGRoot" class="Wypunktowania" name="Wypunktowania" width="53.417mm" height="53.417mm" version="1.1" viewBox="0 0 53.417 53.417" xmlns="http://www.w3.org/2000/svg">
  <g transform="translate(-1.2619 -2.5167)">
   <g transform="matrix(.99999 0 0 .99999 -54.831 -80.976)">
    <g fill="#000000" font-family="sans-serif" letter-spacing="0px" word-spacing="0px">
@@ -11,7 +11,7 @@
    </g>
    <rect x="56.343" y="83.743" width="52.917" height="52.917" fill="#b9d4ff" stroke="#000" stroke-linecap="round" stroke-width=".5" style="paint-order:fill markers stroke"/>
    <text transform="scale(1.0125 .98768)" x="81.487617" y="125.43761" fill="#000000" font-family="sans-serif" font-size="5.6444px" letter-spacing="0px" stroke-width=".26132" text-align="center" text-anchor="middle" word-spacing="0px" style="line-height:1.04999995" xml:space="preserve"><tspan x="82.479805" y="125.43761" text-align="center"> </tspan></text>
-   <text x="60.791294" y="119.09373" fill="#000000" font-family="sans-serif" font-size="5.6445px" letter-spacing="0px" stroke-width=".26459" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><tspan x="60.918808" y="119.09373"><tspan x="60.918808" y="119.09373" font-size="5.6445px" stroke-width=".26459"> Sprawdź znaki</tspan></tspan><tspan x="62.048809" y="126.14935"><tspan x="62.048809" y="126.14935" font-size="5.6445px" stroke-width=".26459">interpunkcyjne </tspan></tspan><tspan x="69.010704" y="133.20496"><tspan x="69.010704" y="133.20496" font-size="5.6445px" stroke-width=".26459">w listach</tspan></tspan></text>
+   <text x="60.791294" y="119.09373" fill="#000000" font-family="sans-serif" font-size="5.6445px" letter-spacing="0px" stroke-width=".26459" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><tspan x="60.918808" y="119.09373"><tspan class="iTxt" x="60.918808" y="119.09373" font-size="5.6445px" stroke-width=".26459"> Sprawdź znaki</tspan></tspan><tspan x="62.048809" y="126.14935"><tspan class="iTxt" x="62.048809" y="126.14935" font-size="5.6445px" stroke-width=".26459">interpunkcyjne </tspan></tspan><tspan x="69.010704" y="133.20496"><tspan class="iTxt" x="69.010704" y="133.20496" font-size="5.6445px" stroke-width=".26459">w listach</tspan></tspan></text>
    <g transform="matrix(.27561 0 0 .27561 66.926 85.653)">
     <path d="m83.344 17.968h-52c-1.104 0-2-0.9-2-2s0.896-2 2-2h52c1.1 0 2 0.9 2 2s-0.9 2-2 2z"/>
     <path d="m83.344 41.968h-52c-1.104 0-2-0.9-2-2s0.896-2 2-2h52c1.1 0 2 0.9 2 2s-0.9 2-2 2z"/>

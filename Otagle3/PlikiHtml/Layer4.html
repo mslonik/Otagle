@@ -6,6 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="../Assets/font-awesome-4.7.0/css/font-awesome.min.css">
         <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+        <link href="../Style/Bootstrap/bootstrap.min.css" rel="stylesheet">
+        <script src="../Style/Bootstrap/jquery.min.js"></script>
+        <script src="../Style/Bootstrap/bootstrap.min.js"></script>
         <link rel="stylesheet" href="../Style/index.css" />
         <title>Otagle</title>
         </head>
@@ -36,34 +39,39 @@
         </header>
         <nav class="menu-bar">
         <ul class="menu-bar__list">
-        <li class="menu-bar__item">
-        <a class="item__link" href="#">Configure</a>
+        <li class="menu-bar__item dropD">
+            <a class="item__link">Configure</a>
         <ul class="sub-menu">
-        <li class="sub-menu__item"  id="selectMonitor" onclick="ahk.BarF(event,id)"><a class="item__link sub__link" href="#">Select Monitor</a></li>
-        <li class="sub-menu__item"  id="addLayers" onclick="ahk.BarF(event,id)"><a class="item__link sub__link" href="#">Add layer</a></li>
-        <li class="sub-menu__item" id="ConfigureEraseLayer" onclick="ahk.BarF(event,id)"><a class="item__link sub__link" href="#">Erase layer</a></li>
+        <li class="sub-menu__item"  id="selectMonitor" onclick="ahk.BarF(event,id)"><a class="item__link sub__link" href="#"><i class="fa fa-arrow-down" aria-hidden="true"></i> +
+ <span class="flag">S</span>elect Monitor</a></li>
+        <li class="sub-menu__item"  id="addLayers" onclick="ahk.BarF(event,id)"><a class="item__link sub__link" href="#"><i class="fa fa-arrow-down" aria-hidden="true"></i> +<span class="flag">A</span>dd layer</a></li>
+        <li class="sub-menu__item" id="ConfigureEraseLayer" onclick="ahk.BarF(event,id)"><a class="item__link sub__link" href="#"><i class="fa fa-arrow-down" aria-hidden="true"></i> +<span class="flag">E</span>rase layer</a></li>
         </ul>
         </li>
-        <li class="menu-bar__item">
-        <a class="item__link" href="#">Edit Buttons</a>
+        <li class="menu-bar__item dropD">
+        <a class="item__link"  href="#">Edit Buttons</a>
         <ul class="sub-menu">
-        <li class="sub-menu__item" id="AddBtn" onclick="ahk.BarF(event,id)"><a class="item__link sub__link" href="#">Add button</a></li>
-        <li class="sub-menu__item" id="F_display_configurator" onclick="ahk.BarF(event,id)" ><a class="item__link sub__link" href="#">Swap button</a></li>
-        <li class="sub-menu__item" id="FdGuiDelete" onclick="ahk.BarF(event,id)"><a class="item__link sub__link" href="#">Delete button</a></li>
-        <li class="sub-menu__item" id="Clone" onclick="ahk.BarF(event,id)"><a class="item__link sub__link" href="#">Clone button</a></li>
+        <li class="sub-menu__item" id="AddBtn" onclick="ahk.BarF(event,id)"><a class="item__link sub__link" href="#"><i class="fa fa-arrow-up" aria-hidden="true"></i>
++<span class="flag">A</span>dd button</a></li>
+        <li class="sub-menu__item" id="F_display_configurator" onclick="ahk.BarF(event,id)" ><a class="item__link sub__link" href="#"><i class="fa fa-arrow-up" aria-hidden="true"></i>
++<span class="flag">S</span>wap button</a></li>
+        <li class="sub-menu__item" id="FdGuiDelete" onclick="ahk.BarF(event,id)"><a class="item__link sub__link" href="#"><i class="fa fa-arrow-up" aria-hidden="true"></i>
++<span class="flag">D</span>elete button</a></li>
+        <li class="sub-menu__item" id="Clone" onclick="ahk.BarF(event,id)"><a class="item__link sub__link" href="#"><i class="fa fa-arrow-up" aria-hidden="true"></i>
++<span class="flag">C</span>lone button</a></li>
         </ul>
         </li>
         <li class="menu-bar__item"  onclick="ahk.rWizard(event)">
-        <a class="item__link" href="#" >Run Wizard</a></li>
+        <a class="item__link" href="#" ><i class="fa fa-arrow-right" aria-hidden="true"></i>+<span class="flag">R</span>un Wizard</a></li>
         <li class="menu-bar__item">
-        <a class="item__link Order" href="#"><i class="fa fa-toggle-off" aria-hidden="true"></i><i class="fa fa-toggle-on" aria-hidden="true"> </i> Arrangement Buttons</a>
+        <a class="item__link Order" href="#"><i class="fa fa-toggle-off" aria-hidden="true"></i><i class="fa fa-toggle-on" aria-hidden="true"> </i> <i class="fa fa-arrow-right" aria-hidden="true"></i>+<span class="flag">A</span>rrangement Buttons</a>
         </li>
         <li class="menu-bar__item">
         <a class="item__link About" href="#">About</a>
         </li>
         </ul>
         </nav>
-        <div class="wrapper" style="position: relative;"><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-1 WarstwaWord\MakraOgolne\ShowHiddenText.ahk" class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" width="208" height="208" version="1.1" viewBox="0 0 208 208" xmlns="http://www.w3.org/2000/svg">
+        <div class="wrapper" style="position: relative;"><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="WarstwaWord\MakraOgolne\ShowHiddenText.ahk" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" class="PokazUkrytyTekst" name="Pokaz ukryty tekst" width="208" height="208" version="1.1" viewBox="0 0 208 208" xmlns="http://www.w3.org/2000/svg">
  <g transform="translate(0,7)">
   <g transform="matrix(3.7795 0 0 3.7795 10.171 -6.7758)">
    <g transform="translate(-1.0884 -121.69)">
@@ -102,7 +110,7 @@
                                <g transform="translate(-205.07 -178.97)">
                                 <g transform="translate(-1081.1 -686.85)">
                                  <rect x="1390.1" y="369.54" width="52.258" height="52.258" fill="#fff" stroke="#000" stroke-linecap="round" stroke-width=".5" style="paint-order:fill markers stroke"/>
-                                 <text x="1415.939" y="412.8591" font-family="sans-serif" class="svgT" letter-spacing=".5px" font-size="5.2px" stroke-width=".26458" text-align="center" text-anchor="middle" word-spacing="0px" style="line-height:0.94999999" xml:space="preserve"><tspan x="1415.939" y="412.8591" text-align="center">Pokaż ukryty</tspan><tspan x="1415.939" y="418.8916" text-align="center">tekst</tspan></text>
+                                 <text x="1415.939" y="412.8591" font-family="sans-serif" class="svgT" letter-spacing=".5px" font-size="5.2px" stroke-width=".26458" text-align="center" text-anchor="middle" word-spacing="0px" style="line-height:0.94999999" xml:space="preserve"><tspan class="iTxt" x="1415.939" y="412.8591" text-align="center">Pokaż ukryty</tspan><tspan class="iTxt" x="1415.939" y="418.8916" text-align="center">tekst</tspan></text>
                                  <text x="1392.4391" y="392.02319" font-family="sans-serif" font-size="9.2831px" letter-spacing="0px" stroke-width=".43515" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><tspan x="1392.4391" y="392.02319" font-family="sans-serif" stroke-width=".43515">Ukryty ms</tspan></text>
                                  <path d="m1396.6 396.16h39.34" fill="none" stroke="#000" stroke-dasharray="1.97605, 1.97605" stroke-width="1.9761"/>
                                 </g>
@@ -138,7 +146,7 @@
   </g>
  </g>
 </svg>
-</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-2 WarstwaWord\MakraOgolne\StrikeThroughText.ahk" class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" width="208" height="208" version="1.1" viewBox="0 0 208 208" xmlns="http://www.w3.org/2000/svg">
+</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="WarstwaWord\MakraOgolne\StrikeThroughText.ahk" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" class="PrzekreslZaznaczonyTekst" name="Przekresl zaznaczony tekst" width="208" height="208" version="1.1" viewBox="0 0 208 208" xmlns="http://www.w3.org/2000/svg">
  <g transform="translate(0,7)">
   <g transform="matrix(3.7795 0 0 3.7795 10.171 -6.7758)">
    <g transform="translate(-1.0884 -121.69)">
@@ -179,7 +187,7 @@
                                  <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="21" y="-71" width="223" height="308"/></flowRegion><flowPara/></flowRoot>
                                  <g transform="translate(-112.28 .55746)">
                                   <rect x="1502.6" y="369.25" width="52.258" height="52.258" fill="#fff" stroke="#000" stroke-linecap="round" stroke-width=".5" style="paint-order:fill markers stroke"/>
-                                  <text x="1528.6995" y="411.37317" font-family="sans-serif" class="svgT" letter-spacing=".5px" font-size="5.2px" stroke-width=".26458" text-align="center" text-anchor="middle" word-spacing="0px" style="line-height:0.94999999" xml:space="preserve"><tspan x="1528.6995" y="411.37317" text-align="center">Przekreśl</tspan><tspan x="1528.6995" y="417.40567" text-align="center">zaznaczony tekst</tspan></text>
+                                  <text x="1528.6995" y="411.37317" font-family="sans-serif" class="svgT" letter-spacing=".5px" font-size="5.2px" stroke-width=".26458" text-align="center" text-anchor="middle" word-spacing="0px" style="line-height:0.94999999" xml:space="preserve"><tspan class="iTxt" x="1528.6995" y="411.37317" text-align="center">Przekreśl</tspan><tspan class="iTxt" x="1528.6995" y="417.40567" text-align="center">zaznaczony tekst</tspan></text>
                                   <text x="1506.5234" y="390.84433" font-family="sans-serif" font-size="7.3587px" letter-spacing="0px" stroke-width=".34494" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><tspan x="1506.5234" y="390.84433" font-family="sans-serif" stroke-width=".34494">lorem ipsum</tspan></text>
                                   <path transform="translate(.52917 -.13229)" d="m1507.1 388.77h43.253" fill="none" stroke="#000"/>
                                  </g>
@@ -216,7 +224,7 @@
   </g>
  </g>
 </svg>
-</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-3 WarstwaWord\MakraOgolne\Header.ahk" class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" width="208" height="208" version="1.1" viewBox="0 0 208 208" xmlns="http://www.w3.org/2000/svg">
+</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="WarstwaWord\MakraOgolne\Header.ahk" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" class="PokazNaglowek" name="Pokaz naglowek" width="208" height="208" version="1.1" viewBox="0 0 208 208" xmlns="http://www.w3.org/2000/svg">
  <g transform="translate(0,7)">
   <g transform="matrix(3.7795 0 0 3.7795 10.171 -6.7758)">
    <g transform="translate(-1.0884 -121.69)">
@@ -258,7 +266,7 @@
                                  <g transform="translate(-112.28 .55746)">
                                   <g transform="translate(-396.77 -.26462)">
                                    <rect x="1899.4" y="369.25" width="52.258" height="52.258" fill="#fff" stroke="#000" stroke-linecap="round" stroke-width=".5" style="paint-order:fill markers stroke"/>
-                                   <text x="1925.9036" y="417.64377" font-family="sans-serif" font-size="6.35px" letter-spacing="0px" stroke-width=".26458" text-align="center" text-anchor="middle" word-spacing="0px" style="line-height:0.94999999" xml:space="preserve"><tspan x="1925.9036" y="417.64377" font-family="sans-serif" class="svgT" letter-spacing=".5px" font-size="5.2px" stroke-width=".26458" text-align="center" text-anchor="middle">Pokaż nagłówek</tspan></text>
+                                   <text x="1925.9036" y="417.64377" font-family="sans-serif" font-size="6.35px" letter-spacing="0px" stroke-width=".26458" text-align="center" text-anchor="middle" word-spacing="0px" style="line-height:0.94999999" xml:space="preserve"><tspan x="1925.9036" y="417.64377" font-family="sans-serif" class="iTxt" letter-spacing=".5px" font-size="5.2px" stroke-width=".26458" text-align="center" text-anchor="middle">Pokaż nagłówek</tspan></text>
                                    <g transform="matrix(.43424 0 0 -.43424 1903.9 409.54)" stroke="#000">
                                     <rect x="17.409" y="68.667" width="13.89" height="2"/>
                                     <path d="m85.235 77.833h-71.129c-2.998 0-5.436-2.438-5.436-5.436v-49.127c0-2.998 2.438-5.436 5.436-5.436h71.129c2.998 0 5.436 2.438 5.436 5.436v49.128c-.001 2.998-2.438 5.435-5.436 5.435zm-71.129-58c-1.895 0-3.436 1.541-3.436 3.437v49.128c0 1.895 1.541 3.436 3.436 3.436h71.129c1.895 0 3.436-1.541 3.436-3.436v-49.128c0-1.896-1.541-3.437-3.436-3.437z"/>
@@ -304,7 +312,7 @@
   </g>
  </g>
 </svg>
-</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-4 WarstwaWord\MakraOgolne\Footer.ahk" class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" width="208" height="208" version="1.1" viewBox="0 0 208 208" xmlns="http://www.w3.org/2000/svg">
+</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="WarstwaWord\MakraOgolne\Footer.ahk" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" class="PokazStopke" name="Pokaz stopke" width="208" height="208" version="1.1" viewBox="0 0 208 208" xmlns="http://www.w3.org/2000/svg">
  <g transform="translate(0,7)">
   <g transform="matrix(3.7795 0 0 3.7795 10.171 -6.7758)">
    <g transform="translate(-1.0884 -121.69)">
@@ -346,7 +354,7 @@
                                  <g transform="translate(-112.28 .55746)">
                                   <g transform="translate(-396.77 -.26462)">
                                    <rect x="1899.2" y="369.52" width="52.258" height="52.258" fill="#fff" stroke="#000" stroke-linecap="round" stroke-width=".5" style="paint-order:fill markers stroke"/>
-                                   <text x="1925.6395" y="417.65823" font-family="sans-serif" font-size="6.35px" letter-spacing="0px" stroke-width=".26458" text-align="center" text-anchor="middle" word-spacing="0px" style="line-height:0.94999999" xml:space="preserve"><tspan x="1925.6395" y="417.65823" font-family="sans-serif" class="svgT" letter-spacing=".5px" font-size="5.2px" stroke-width=".26458" text-align="center" text-anchor="middle">Pokaż stopkę</tspan></text>
+                                   <text x="1925.6395" y="417.65823" font-family="sans-serif" font-size="6.35px" letter-spacing="0px" stroke-width=".26458" text-align="center" text-anchor="middle" word-spacing="0px" style="line-height:0.94999999" xml:space="preserve"><tspan x="1925.6395" y="417.65823" font-family="sans-serif" class="iTxt" letter-spacing=".5px" font-size="5.2px" stroke-width=".26458" text-align="center" text-anchor="middle">Pokaż stopkę</tspan></text>
                                    <g transform="matrix(.43424 0 0 .43424 1903.6 367.87)" stroke="#000">
                                     <rect x="17.409" y="68.667" width="13.89" height="2"/>
                                     <path d="m85.235 77.833h-71.129c-2.998 0-5.436-2.438-5.436-5.436v-49.127c0-2.998 2.438-5.436 5.436-5.436h71.129c2.998 0 5.436 2.438 5.436 5.436v49.128c-.001 2.998-2.438 5.435-5.436 5.435zm-71.129-58c-1.895 0-3.436 1.541-3.436 3.437v49.128c0 1.895 1.541 3.436 3.436 3.436h71.129c1.895 0 3.436-1.541 3.436-3.436v-49.128c0-1.896-1.541-3.437-3.436-3.437z"/>
@@ -392,7 +400,7 @@
   </g>
  </g>
 </svg>
-</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-5 WarstwaWord\MakraOgolne\FullPath.ahk" class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" width="208" height="208" version="1.1" viewBox="0 0 208 208" xmlns="http://www.w3.org/2000/svg">
+</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="WarstwaWord\MakraOgolne\FullPath.ahk" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" class="PokazPelnaSciezkeWTytuleOkna" name="Pokaz pelna pciezke w tytule okna" width="208" height="208" version="1.1" viewBox="0 0 208 208" xmlns="http://www.w3.org/2000/svg">
  <g transform="translate(0,7)">
   <g transform="matrix(3.7795 0 0 3.7795 10.171 -6.7758)">
    <g transform="translate(-1.0884 -121.69)">
@@ -435,7 +443,7 @@
                                   <g transform="translate(-396.77 -.26462)">
                                    <g transform="translate(167.68 .26462)">
                                     <rect x="1731.2" y="369.25" width="52.258" height="52.258" fill="#fff" stroke="#000" stroke-linecap="round" stroke-width=".5" style="paint-order:fill markers stroke"/>
-                                    <text x="1757.6919" y="406.25949" font-family="sans-serif" class="svgT" letter-spacing=".5px" font-size="5.2px" stroke-width=".26458" text-align="center" text-anchor="middle" word-spacing="0px" style="line-height:0.94999999" xml:space="preserve"><tspan x="1757.6919" y="406.25949" text-align="center">Pokaż pełną</tspan><tspan x="1757.6919" y="412.29199" text-align="center">ścieżkę w tytule</tspan><tspan x="1757.6919" y="418.32449" text-align="center">okna</tspan></text>
+                                    <text x="1757.6919" y="406.25949" font-family="sans-serif" class="svgT" letter-spacing=".5px" font-size="5.2px" stroke-width=".26458" text-align="center" text-anchor="middle" word-spacing="0px" style="line-height:0.94999999" xml:space="preserve"><tspan class="iTxt" x="1757.6919" y="406.25949" text-align="center">Pokaż pełną</tspan><tspan class="iTxt" x="1757.6919" y="412.29199" text-align="center">ścieżkę w tytule</tspan><tspan class="iTxt" x="1757.6919" y="418.32449" text-align="center">okna</tspan></text>
                                     <rect x="1738.4" y="375.07" width="37.901" height="24.228" fill="#fff" stroke="#000" stroke-linecap="round" stroke-width=".52917" style="paint-order:fill markers stroke"/>
                                     <path d="m1738.4 379.84h37.721" fill="none" stroke="#000" stroke-width=".52917"/>
                                     <text x="1739.3004" y="378.52835" font-family="sans-serif" font-size="2.0498px" letter-spacing="0px" stroke-width=".096084" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><tspan x="1739.3004" y="378.52835" font-family="sans-serif" stroke-width=".096084">S:\OrgFirma\Szablony</tspan></text>
@@ -475,7 +483,7 @@
   </g>
  </g>
 </svg>
-</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-6 WarstwaWord\MakraOgolne\ZielenKolor.ahk" class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" width="208" height="208" version="1.1" viewBox="0 0 208 208" xmlns="http://www.w3.org/2000/svg">
+</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="WarstwaWord\MakraOgolne\ZielenKolor.ahk" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" width="208" height="208" version="1.1" viewBox="0 0 208 208" xmlns="http://www.w3.org/2000/svg">
  <g transform="translate(0,7)">
   <g transform="matrix(3.7795 0 0 3.7795 10.171 -6.7758)">
    <g transform="translate(-1.0884 -121.69)">
@@ -576,7 +584,7 @@
   </g>
  </g>
 </svg>
-</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-7 WarstwaWord\MakraOgolne\UsunKolor.ahk" class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" width="208" height="208" version="1.1" viewBox="0 0 208 208" xmlns="http://www.w3.org/2000/svg">
+</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="WarstwaWord\MakraOgolne\UsunKolor.ahk" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" class="PrzywrocBialyKolorTlaStylow" name="Przywroc bialy kolor tla stylow" width="208" height="208" version="1.1" viewBox="0 0 208 208" xmlns="http://www.w3.org/2000/svg">
  <g transform="translate(0,7)">
   <g transform="matrix(3.7795 0 0 3.7795 10.171 -6.7758)">
    <g transform="translate(-1.0884 -121.69)">
@@ -644,7 +652,7 @@
                                         <path d="m48.3 32c-.9-.5-2-.3-2.6.6-.2.3-5 8.1-1 14.2.4.5.9.8 1.5.8.4 0 .7-.1 1-.3.8-.6 1.1-1.7.5-2.6-2.7-4.1 1-10.1 1-10.1.8-1 .5-2.1-.4-2.6z"/>
                                        </g>
                                       </g>
-                                      <text x="1586.3579" y="411.90234" font-family="voestalpine" class="svgT" letter-spacing=".5px" font-size="5.2px" stroke-width=".26458" text-align="center" text-anchor="middle" word-spacing="0px" style="line-height:0.94999999" xml:space="preserve"><tspan x="1586.3579" y="411.90234" text-align="center">Przywróć biały</tspan><tspan x="1586.3579" y="417.93484" font-family="sans-serif" text-align="center">kolor tła stylów</tspan></text>
+                                      <text x="1586.3579" y="411.90234" font-family="voestalpine" class="svgT" letter-spacing=".5px" font-size="5.2px" stroke-width=".26458" text-align="center" text-anchor="middle" word-spacing="0px" style="line-height:0.94999999" xml:space="preserve"><tspan class="iTxt" x="1586.3579" y="411.90234" text-align="center">Przywróć biały</tspan><tspan class="iTxt"  x="1586.3579" y="417.93484" font-family="sans-serif" text-align="center">kolor tła stylów</tspan></text>
                                      </g>
                                     </g>
                                    </g>
@@ -683,7 +691,7 @@
   </g>
  </g>
 </svg>
-</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-8 WarstwaWord\MakraOgolne\GranicePol.ahk" class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" width="208" height="208" version="1.1" viewBox="0 0 208 208" xmlns="http://www.w3.org/2000/svg">
+</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="WarstwaWord\MakraOgolne\GranicePol.ahk" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" class="GraniceTekstuPodswietleniePol" name="Granice tekstu podswietlenie pól" width="208" height="208" version="1.1" viewBox="0 0 208 208" xmlns="http://www.w3.org/2000/svg">
  <g transform="translate(0,7)">
   <g transform="matrix(3.7795 0 0 3.7795 10.171 -6.7758)">
    <g transform="translate(-1.0884 -121.69)">
@@ -726,7 +734,7 @@
                                   <flowRoot transform="matrix(.26458 0 0 .26458 1500.7 367.6)" fill="#000000" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-6.364" y="-2.0107" width="231.22" height="230.87"/></flowRegion><flowPara/></flowRoot>
                                   <g transform="translate(1386.8 133.57)">
                                    <rect x="115.37" y="235.25" width="52.258" height="52.258" fill="#fff" stroke="#000" stroke-linecap="round" stroke-width=".5" style="paint-order:fill markers stroke"/>
-                                   <text x="141.49791" y="277.80698" font-family="sans-serif" class="svgT" letter-spacing=".5px" font-size="5.2px" stroke-width=".26458" text-align="center" text-anchor="middle" word-spacing="0px" style="line-height:0.94999999" xml:space="preserve"><tspan x="141.49791" y="277.80698" text-align="center">Granice tekstu i</tspan><tspan x="141.49791" y="283.83948" text-align="center">podświetlanie pól</tspan></text>
+                                   <text x="141.49791" y="277.80698" font-family="sans-serif" class="svgT" letter-spacing=".5px" font-size="5.2px" stroke-width=".26458" text-align="center" text-anchor="middle" word-spacing="0px" style="line-height:0.94999999" xml:space="preserve"><tspan class="iTxt" x="141.49791" y="277.80698" text-align="center">Granice tekstu i</tspan><tspan class="iTxt" x="141.49791" y="283.83948" text-align="center">podświetlanie pól</tspan></text>
                                    <text x="141.49687" y="286.57382" font-family="sans-serif" font-size="5.6444px" letter-spacing="0px" stroke-width=".26458" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><tspan x="141.49687" y="286.57382" font-family="sans-serif" stroke-width=".26458"> </tspan></text>
                                    <text x="121.66621" y="268.36874" font-family="voestalpine" font-size="37.049px" letter-spacing="0px" stroke-width="1.7367" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><tspan x="121.66621" y="268.36874" stroke-width="1.7367">A</tspan></text>
                                    <g transform="matrix(-.76256 0 0 .82682 166.16 241.74)">
@@ -767,7 +775,7 @@
   </g>
  </g>
 </svg>
-</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-9 WarstwaWord\MakraOgolne\PrintToPdf.ahk" class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" width="208" height="208" version="1.1" viewBox="0 0 208 208" xmlns="http://www.w3.org/2000/svg">
+</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="WarstwaWord\MakraOgolne\PrintToPdf.ahk" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" class="DrukujDoPdf" name="Drukuj do PDF" width="208" height="208" version="1.1" viewBox="0 0 208 208" xmlns="http://www.w3.org/2000/svg">
  <g transform="translate(0,7)">
   <g transform="matrix(3.7795 0 0 3.7795 10.171 -6.7758)">
    <g transform="translate(-1.0884 -121.69)">
@@ -812,7 +820,7 @@
                                     <g transform="translate(457.35 -.55746)">
                                      <path d="m1304.4 397.59h-9.3925a.67914.67914 0 000 1.3583h9.3925a.67914.67914 0 000-1.3583z" stroke-width=".33957"/>
                                      <rect x="1273.9" y="369.54" width="52.258" height="52.258" fill="#fff" stroke="#000" stroke-linecap="round" stroke-width=".5" style="paint-order:fill markers stroke"/>
-                                     <text x="1300.3376" y="417.93661" font-family="sans-serif" font-size="6.35px" letter-spacing="0px" stroke-width=".26458" text-align="center" text-anchor="middle" word-spacing="0px" style="line-height:0.94999999" xml:space="preserve"><tspan x="1300.3376" y="417.93661" font-family="sans-serif" class="svgT" letter-spacing=".5px" font-size="5.2px" stroke-width=".26458" text-align="center" text-anchor="middle">Drukuj do PDF</tspan></text>
+                                     <text x="1300.3376" y="417.93661" font-family="sans-serif" font-size="6.35px" letter-spacing="0px" stroke-width=".26458" text-align="center" text-anchor="middle" word-spacing="0px" style="line-height:0.94999999" xml:space="preserve"><tspan x="1300.3376" y="417.93661" font-family="sans-serif" class="iTxt" letter-spacing=".5px" font-size="5.2px" stroke-width=".26458" text-align="center" text-anchor="middle">Drukuj do PDF</tspan></text>
                                      <path d="m1307.2 374.66h-15.002a1.6978 1.6978 0 00-1.6979 1.6978v4.5027h-2.5739a3.3957 3.3957 0 00-3.3957 3.3957v9.3857a3.3957 3.3957 0 003.3957 3.3957h2.9033v4.1292a1.6978 1.6978 0 001.6978 1.6978h14.347a1.6978 1.6978 0 001.6979-1.6978v-4.1292h2.9033a3.3957 3.3957 0 003.3956-3.3957v-9.3857a3.3957 3.3957 0 00-3.3956-3.3957h-2.5774v-4.5027a1.6978 1.6978 0 00-1.6978-1.6978zm-15.345 1.6978a.33957.33957 0 01.3396-.33957h15.006a.33957.33957 0 01.3396.33957v4.5027h-15.681zm15.359 24.809a.33957.33957 0 01-.3396.33957h-14.35a.33957.33957 0 01-.3395-.33957v-9.5419h15.029zm6.299-16.911v9.3857a2.0374 2.0374 0 01-2.0374 2.0374h-2.9033v-4.7336a.67914.67914 0 00-.6792-.67913h-16.388a.67914.67914 0 00-.6791.67913v4.7336h-2.8999a2.0374 2.0374 0 01-2.0374-2.0374v-9.3857a2.0374 2.0374 0 012.0374-2.0374h23.549a2.0374 2.0374 0 012.0374 2.0374z" stroke-width=".33957"/>
                                      <path d="m1307.2 386.22a2.3226 2.3226 0 102.3226-2.3226 2.326 2.326 0 00-2.3226 2.3226zm2.3226-.96437a.96437.96437 0 11-.9643.96437.96437.96437 0 01.9643-.96437z" stroke-width=".33957"/>
                                      <text x="1292.5479" y="399.24042" font-family="sans-serif" font-size="7.7364px" letter-spacing="0px" stroke-width=".36264" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><tspan x="1292.5479" y="399.24042" font-family="sans-serif" stroke-width=".36264">PDF</tspan></text>
@@ -853,7 +861,7 @@
   </g>
  </g>
 </svg>
-</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-1 WarstwaWord\MakraOgolne\ChangeZoom.ahk" class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" width="208" height="208" version="1.1" viewBox="0 0 208 208" xmlns="http://www.w3.org/2000/svg">
+</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="WarstwaWord\MakraOgolne\ChangeZoom.ahk" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" width="208" height="208" version="1.1" viewBox="0 0 208 208" xmlns="http://www.w3.org/2000/svg">
  <g transform="translate(0,7)">
   <g transform="matrix(3.7795 0 0 3.7795 10.171 -6.7758)">
    <g transform="translate(-1.0884 -121.69)">
@@ -942,7 +950,7 @@
   </g>
  </g>
 </svg>
-</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-2 WarstwaWord\MakraOgolne\ToggleRuler.ahk" class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" width="208" height="208" version="1.1" viewBox="0 0 208 208" xmlns="http://www.w3.org/2000/svg">
+</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="WarstwaWord\MakraOgolne\ToggleRuler.ahk" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" class="Linijka" name="Linijka" width="208" height="208" version="1.1" viewBox="0 0 208 208" xmlns="http://www.w3.org/2000/svg">
  <g transform="translate(0,7)">
   <g transform="matrix(3.7795 0 0 3.7795 10.171 -6.7758)">
    <g transform="translate(-1.0884 -121.69)">
@@ -987,7 +995,7 @@
                                     <g transform="translate(457.35 -.55746)">
                                      <g transform="translate(-285.78 .028294)">
                                       <rect x="1559.9" y="369.25" width="52.258" height="52.258" fill="#fff" stroke="#000" stroke-linecap="round" stroke-width=".5" style="paint-order:fill markers stroke"/>
-                                      <text x="1586.3859" y="417.90833" font-family="sans-serif" font-size="6.35px" letter-spacing="0px" stroke-width=".26458" text-align="center" text-anchor="middle" word-spacing="0px" style="line-height:0.94999999" xml:space="preserve"><tspan x="1586.3859" y="417.90833" font-family="sans-serif" class="svgT" letter-spacing=".5px" font-size="5.2px"  stroke-width=".26458" text-align="center" text-anchor="middle">Wyświetl linijkę</tspan></text>
+                                      <text x="1586.3859" y="417.90833" font-family="sans-serif" font-size="6.35px" letter-spacing="0px" stroke-width=".26458" text-align="center" text-anchor="middle" word-spacing="0px" style="line-height:0.94999999" xml:space="preserve"><tspan class="iTxt" x="1586.3859" y="417.90833" font-family="sans-serif" letter-spacing=".5px" font-size="5.2px"  stroke-width=".26458" text-align="center" text-anchor="middle">Wyświetl linijkę</tspan></text>
                                       <g transform="matrix(.28622 -.28622 -.28622 -.28622 1585.8 417.17)">
                                        <path d="m94.3 20.5-14.8-14.8c-.5-.5-1.3-.5-1.8 0l-72 72c-.5.5-.5 1.3 0 1.8l11.3 11.2 3.5 3.5c.2.2.6.4.9.4s.6-.1.9-.4l72-72c.4-.4.4-1.2 0-1.7zm-80.9 53.1 1.9 1.9c.2.2.6.4.9.4s.6-.1.9-.4c.5-.5.5-1.3 0-1.8l-1.9-1.9 3.1-3.1 3.9 3.9c.2.2.6.4.9.4s.6-.1.9-.4c.5-.5.5-1.3 0-1.8l-3.9-3.9 3.1-3.1 1.9 1.9c.2.2.6.4.9.4s.6-.1.9-.4c.5-.5.5-1.3 0-1.8l-1.9-1.9 3-3 3.9 3.9c.2.2.6.4.9.4s.6-.1.9-.4c.5-.5.5-1.3 0-1.8l-3.9-3.9 3.1-3.1 1.9 1.9c.2.2.6.4.9.4s.6-.1.9-.4c.5-.5.5-1.3 0-1.8l-1.9-1.9 3.1-3.1 3.9 3.9c.2.2.6.4.9.4s.6-.1.9-.4c.5-.5.5-1.3 0-1.8l-3.9-3.9 3.1-3.1 1.9 1.9c.2.2.6.4.9.4s.6-.1.9-.4c.5-.5.5-1.3 0-1.8l-1.9-1.9 3.1-3.1 3.9 3.9c.2.2.6.4.9.4s.6-.1.9-.4c.5-.5.5-1.3 0-1.8l-3.9-3.9 3.1-3.1 1.9 1.9c.2.2.6.4.9.4s.6-.1.9-.4c.5-.5.5-1.3 0-1.8l-1.9-1.9 3.1-3.1 3.9 3.9c.2.2.6.4.9.4s.6-.1.9-.4c.5-.5.5-1.3 0-1.8l-4.1-3.7 3.1-3.1 1.9 1.9c.2.2.6.4.9.4s.6-.1.9-.4c.5-.5.5-1.3 0-1.8l-1.9-1.9 3.1-3.1 3.9 3.9c.2.2.6.4.9.4s.6-.1.9-.4c.5-.5.5-1.3 0-1.8l-3.9-3.9 3.1-3.1 1.9 1.9c.2.2.6.4.9.4s.6-.1.9-.4c.5-.5.5-1.3 0-1.8l-1.9-1.9 5-5 9.5 9.5-70.3 70.3-9.5-9.5zm8 18-1.8-1.8 70.2-70.2 1.8 1.8z"/>
                                       </g>
@@ -1029,7 +1037,7 @@
   </g>
  </g>
 </svg>
-</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-3 WarstwaWord\MakraOgolne\DisplayGridLines.ahk" class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" width="208" height="208" version="1.1" viewBox="0 0 208 208" xmlns="http://www.w3.org/2000/svg">
+</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="WarstwaWord\MakraOgolne\DisplayGridLines.ahk" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" width="208" height="208" version="1.1" viewBox="0 0 208 208" xmlns="http://www.w3.org/2000/svg">
  <g transform="translate(0,7)">
   <g transform="matrix(3.7795 0 0 3.7795 10.171 -6.7758)">
    <g transform="translate(-1.0884 -121.69)">
@@ -1136,7 +1144,7 @@
   </g>
  </g>
 </svg>
-</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-4 WarstwaWord\MakraOgolne\HideSelectedText.ahk" class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" width="208" height="208" version="1.1" viewBox="0 0 208 208" xmlns="http://www.w3.org/2000/svg">
+</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="WarstwaWord\MakraOgolne\HideSelectedText.ahk" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" width="208" height="208" version="1.1" viewBox="0 0 208 208" xmlns="http://www.w3.org/2000/svg">
  <g transform="translate(0,7)">
   <g transform="matrix(3.7795 0 0 3.7795 10.171 -6.7758)">
    <g transform="translate(-1.0884 -121.69)">
@@ -1225,7 +1233,7 @@
   </g>
  </g>
 </svg>
-</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-5 WarstwaWord\MakraOgolne\DeleteLineOfText.ahk" class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" width="208" height="208" version="1.1" viewBox="0 0 208 208" xmlns="http://www.w3.org/2000/svg">
+</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="WarstwaWord\MakraOgolne\DeleteLineOfText.ahk" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" width="208" height="208" version="1.1" viewBox="0 0 208 208" xmlns="http://www.w3.org/2000/svg">
  <g transform="translate(0,7)">
   <g transform="matrix(3.7795 0 0 3.7795 10.171 -6.7758)">
    <g transform="translate(-1.0884 -121.69)">
@@ -1315,10 +1323,10 @@
   </g>
  </g>
 </svg>
-</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-6 WarstwaWord\MakraOgolne\SetHeadersAndFooters.ahk" class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" version="1.1" viewBox="0 0 205 205" xmlns="http://www.w3.org/2000/svg">
+</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="WarstwaWord\MakraOgolne\SetHeadersAndFooters.ahk" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" class="NaglowekIStopka" name="Naglowek i stopka" version="1.1" viewBox="0 0 205 205" xmlns="http://www.w3.org/2000/svg">
  <g transform="matrix(3.7795 0 0 3.7795 -209.65 -308.13)">
   <rect x="56.343" y="82.399" width="52.917" height="52.917" fill="#b9d4ff" stroke="#000" stroke-linecap="round" stroke-width=".5" style="paint-order:fill markers stroke"/>
-  <text transform="scale(1.0125 .98768)" x="81.487617" y="125.43761" fill="#000000" font-family="sans-serif" font-size="5.6444px" letter-spacing="0px" stroke-width=".26132" text-align="center" text-anchor="middle" word-spacing="0px" style="line-height:1.04999995" xml:space="preserve"><tspan x="82.479805" y="125.43761" text-align="center">Ustaw nagłówek </tspan><tspan x="81.487617" y="132.02299" text-align="center">i stopkę</tspan></text>
+  <text transform="scale(1.0125 .98768)" x="81.487617" y="125.43761" fill="#000000" font-family="sans-serif" font-size="5.6444px" letter-spacing="0px" stroke-width=".26132" text-align="center" text-anchor="middle" word-spacing="0px" style="line-height:1.04999995" xml:space="preserve"><tspan class="iTxt" x="82.479805" y="125.43761" text-align="center">Ustaw nagłówek </tspan><tspan class="iTxt" x="81.487617" y="132.02299" text-align="center">i stopkę</tspan></text>
   <g transform="matrix(.36102 0 0 .37768 64.938 85.433)">
    <g>
     <path d="m25.6 82.4c-0.9 0-1.7-0.2-2.5-0.5-1.5-0.7-2.7-2-3.3-3.6-0.5-1.6-0.4-3.4 0.4-4.9l7.7-14c1.8-3.3 5.3-5.3 9-5.3 1.4 0 2.8 0.3 4.1 0.8l15.2 6.6 10-23.8c-5.3-2.9-8.2-8.9-7-15.1 1.1-5.5 5.5-9.9 11-11 0.9-0.2 1.9-0.3 2.8-0.3 7.7 0 14 6.3 14 14 0 5.3-2.9 10-7.5 12.4 1.7 4.9 1.6 10.2-0.4 15l-7.3 17.3c-1.7 4.1-5.7 6.7-10.1 6.7-1.5 0-2.9-0.3-4.2-0.9l-20.2-8.5-6.3 11.8c-1 2-3.1 3.3-5.4 3.3zm11.4-23.9c-2.1 0-4 1.1-5.1 3l-7.7 14c-0.2 0.4-0.3 0.8-0.1 1.3 0.1 0.4 0.4 0.8 0.9 0.9 0.7 0.3 1.7 0 2.1-0.7l8.2-15.4 24 10.1c0.8 0.3 1.6 0.5 2.5 0.5 2.6 0 4.9-1.5 5.9-3.9l7.2-17.3c1.8-4.3 1.7-9.2-0.4-13.5l-1.1-2.3 2.5-0.8c4-1.3 6.6-4.9 6.6-9.1 0-5.3-4.3-9.5-9.5-9.5-0.6 0-1.3 0.1-1.9 0.2-3.7 0.7-6.7 3.7-7.4 7.4-0.9 4.8 1.7 9.4 6.2 10.9l2.3 0.8-13.5 32.3-19.4-8.4c-0.8-0.3-1.5-0.5-2.3-0.5z"/>
@@ -1328,7 +1336,7 @@
   </g>
  </g>
 </svg>
-</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-7 WarstwaWord\MakraOgolne\ShowClipboard.ahk" class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" width="208" height="208" version="1.1" viewBox="0 0 208 208" xmlns="http://www.w3.org/2000/svg">
+</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="WarstwaWord\MakraOgolne\ShowClipboard.ahk" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" class="PokazSchowek_K" name="Pokaz schowek" width="208" height="208" version="1.1" viewBox="0 0 208 208" xmlns="http://www.w3.org/2000/svg">
  <g transform="translate(0,7)">
   <g transform="matrix(3.7795 0 0 3.7795 10.171 -6.7758)">
    <g transform="translate(-1.0884 -121.69)">
@@ -1375,7 +1383,7 @@
                                       <g transform="translate(-200.71 456.02)">
                                        <g transform="translate(750.88 -278.99)">
                                         <rect x="271.1" y="192.33" width="52.632" height="52.632" fill="#87deaa" stroke="#000" stroke-linecap="round" stroke-width=".28429" style="paint-order:fill markers stroke"/>
-                                        <text x="297.09879" y="241.58571" font-family="sans-serif" font-size="6.35px" letter-spacing="0px" stroke-width=".26458" text-align="end" text-anchor="end" word-spacing="0px" style="line-height:1.04999995" xml:space="preserve"><tspan x="297.09879" y="241.58571" font-family="sans-serif" class="svgT" letter-spacing=".5px" font-size="5.2px" stroke-width=".26458" text-align="center" text-anchor="middle">Pokaż schowek</tspan></text>
+                                        <text x="297.09879" y="241.58571" font-family="sans-serif" font-size="6.35px" letter-spacing="0px" stroke-width=".26458" text-align="end" text-anchor="end" word-spacing="0px" style="line-height:1.04999995" xml:space="preserve"><tspan x="297.09879" y="241.58571" font-family="sans-serif" class="iTxt" letter-spacing=".5px" font-size="5.2px" stroke-width=".26458" text-align="center" text-anchor="middle">Pokaż schowek</tspan></text>
                                         <g transform="matrix(.30925 0 0 .30925 283.87 195.79)">
                                          <path d="m31.7 61.6c-1-11.3 12.5-18.5 13-18.8l2.8 5.2c-.1.1-10.5 5.7-9.9 13.1z"/>
                                          <path d="m38.1 73.8 10.6 5.9c-3 1.9-6.7 3-8.5 3.3l1 5.8c.4-.1 7.9-1.4 13.2-6l14.1 7.8 2.9-5.2-13.2-7.3c.5-1 .9-2 1.2-3.2l-5.8-1.3c-.1.6-.4 1.1-.6 1.7l-4.9-2.7 24.3-22.3-32-19.8-3.1 5 25.3 15.7z"/>
@@ -1421,7 +1429,7 @@
   </g>
  </g>
 </svg>
-</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-8 WarstwaWord\MakraOgolne\ToggleApplyStylesPane.ahk" class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" width="208" height="208" version="1.1" viewBox="0 0 208 208" xmlns="http://www.w3.org/2000/svg">
+</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="WarstwaWord\MakraOgolne\ToggleApplyStylesPane.ahk" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" width="208" height="208" version="1.1" viewBox="0 0 208 208" xmlns="http://www.w3.org/2000/svg">
  <g transform="translate(0,7)">
   <g transform="matrix(3.7795 0 0 3.7795 10.171 -6.7758)">
    <g transform="translate(-1.0884 -121.69)">
@@ -1514,7 +1522,7 @@
   </g>
  </g>
 </svg>
-</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-9 WarstwaWord\MakraOgolne\ToggleStylePane.ahk" class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" width="208" height="208" version="1.1" viewBox="0 0 208 208" xmlns="http://www.w3.org/2000/svg">
+</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="WarstwaWord\MakraOgolne\ToggleStylePane.ahk" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" width="208" height="208" version="1.1" viewBox="0 0 208 208" xmlns="http://www.w3.org/2000/svg">
  <g transform="translate(0,7)">
   <g transform="matrix(3.7795 0 0 3.7795 10.171 -6.7758)">
    <g transform="translate(-1.0884 -121.69)">
@@ -1609,7 +1617,7 @@
   </g>
  </g>
 </svg>
-</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-1 WarstwaWord\MakraOgolne\NavigationPaneVisibility.ahk" class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" width="208" height="208" version="1.1" viewBox="0 0 208 208" xmlns="http://www.w3.org/2000/svg">
+</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="WarstwaWord\MakraOgolne\NavigationPaneVisibility.ahk" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" width="208" height="208" version="1.1" viewBox="0 0 208 208" xmlns="http://www.w3.org/2000/svg">
  <g transform="translate(0,7)">
   <g transform="matrix(3.7795 0 0 3.7795 10.171 -6.7758)">
    <g transform="translate(-1.0884 -121.69)">
@@ -1705,7 +1713,7 @@
   </g>
  </g>
 </svg>
-</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-2 WarstwaWord\MakraOgolne\ToggleFormattingPane.ahk" class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" width="208" height="208" version="1.1" viewBox="0 0 208 208" xmlns="http://www.w3.org/2000/svg">
+</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="WarstwaWord\MakraOgolne\ToggleFormattingPane.ahk" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" width="208" height="208" version="1.1" viewBox="0 0 208 208" xmlns="http://www.w3.org/2000/svg">
  <g transform="translate(0,7)">
   <g transform="matrix(3.7795 0 0 3.7795 10.171 -6.7758)">
    <g transform="translate(-1.0884 -121.69)">
@@ -1812,7 +1820,7 @@
   </g>
  </g>
 </svg>
-</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-3 WarstwaWord\MakraOgolne\ToggleSelectionAndVisibilityPane.ahk" class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" width="208" height="208" version="1.1" viewBox="0 0 208 208" xmlns="http://www.w3.org/2000/svg">
+</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="WarstwaWord\MakraOgolne\ToggleSelectionAndVisibilityPane.ahk" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" width="208" height="208" version="1.1" viewBox="0 0 208 208" xmlns="http://www.w3.org/2000/svg">
  <g transform="translate(0,7)">
   <g transform="matrix(3.7795 0 0 3.7795 10.171 -6.7758)">
    <g transform="translate(-1.0884 -121.69)">
@@ -1917,7 +1925,7 @@
   </g>
  </g>
 </svg>
-</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-4 WarstwaWord\MakraOgolne\FormatObjectPane.ahk" class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" width="208" height="208" version="1.1" viewBox="0 0 208 208" xmlns="http://www.w3.org/2000/svg">
+</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="WarstwaWord\MakraOgolne\FormatObjectPane.ahk" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" width="208" height="208" version="1.1" viewBox="0 0 208 208" xmlns="http://www.w3.org/2000/svg">
  <g transform="translate(0,7)">
   <g transform="matrix(3.7795 0 0 3.7795 10.171 -6.7758)">
    <g transform="translate(-1.0884 -121.69)">
@@ -2022,7 +2030,7 @@
   </g>
  </g>
 </svg>
-</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-5 WarstwaWord\MakraOgolne\Captions.ahk" class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" width="208" height="208" version="1.1" viewBox="0 0 208 208" xmlns="http://www.w3.org/2000/svg">
+</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="WarstwaWord\MakraOgolne\Captions.ahk" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" width="208" height="208" version="1.1" viewBox="0 0 208 208" xmlns="http://www.w3.org/2000/svg">
  <g transform="translate(0,7)">
   <g transform="matrix(3.7795 0 0 3.7795 10.171 -6.7758)">
    <g transform="translate(-1.0884 -121.69)">
@@ -2132,7 +2140,7 @@
   </g>
  </g>
 </svg>
-</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-6 WarstwaWord\MakraOgolne\InsertHeadingNumber.ahk" class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" width="208" height="208" version="1.1" viewBox="0 0 208 208" xmlns="http://www.w3.org/2000/svg">
+</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="WarstwaWord\MakraOgolne\InsertHeadingNumber.ahk" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" width="208" height="208" version="1.1" viewBox="0 0 208 208" xmlns="http://www.w3.org/2000/svg">
  <g transform="translate(0,7)">
   <g transform="matrix(3.7795 0 0 3.7795 10.171 -6.7758)">
    <g transform="translate(-1.0884 -121.69)">
@@ -2240,7 +2248,7 @@
   </g>
  </g>
 </svg>
-</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-7 WarstwaWord\MakraOgolne\InsertHeadingText.ahk" class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" width="208" height="208" version="1.1" viewBox="0 0 208 208" xmlns="http://www.w3.org/2000/svg">
+</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="WarstwaWord\MakraOgolne\InsertHeadingText.ahk" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" width="208" height="208" version="1.1" viewBox="0 0 208 208" xmlns="http://www.w3.org/2000/svg">
  <g transform="translate(0,7)">
   <g transform="matrix(3.7795 0 0 3.7795 10.171 -6.7758)">
    <g transform="translate(-1.0884 -121.69)">
@@ -2352,7 +2360,7 @@
   </g>
  </g>
 </svg>
-</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-8 WarstwaWord\MakraOgolne\InsertEnumNumber.ahk" class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" version="1.1" viewBox="0 0 208 208" xmlns="http://www.w3.org/2000/svg">
+</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="WarstwaWord\MakraOgolne\InsertEnumNumber.ahk" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" version="1.1" viewBox="0 0 208 208" xmlns="http://www.w3.org/2000/svg">
  <g transform="translate(0,7)">
   <g transform="matrix(3.7795 0 0 3.7795 10.171 -6.7758)">
    <g transform="translate(-1.0884 -121.69)">
@@ -2467,7 +2475,7 @@
   </g>
  </g>
 </svg>
-</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-9 WarstwaWord\MakraOgolne\InsertBookmarkText.ahk" class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" width="208" height="208" version="1.1" viewBox="0 0 208 208" xmlns="http://www.w3.org/2000/svg">
+</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="WarstwaWord\MakraOgolne\InsertBookmarkText.ahk" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" width="208" height="208" version="1.1" viewBox="0 0 208 208" xmlns="http://www.w3.org/2000/svg">
  <g transform="translate(0,7)">
   <g transform="matrix(3.7795 0 0 3.7795 10.171 -6.7758)">
    <g transform="translate(-1.0884 -121.69)">
@@ -2582,7 +2590,7 @@
   </g>
  </g>
 </svg>
-</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   " id="drag-1 " class="box_item draggable" href="Layer1.html"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" width="205" height="203" version="1.1" viewBox="0 0 205 203" xmlns="http://www.w3.org/2000/svg">
+</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   " id="" class="box_item" href="Layer1.html"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" class="StronaGlowna" name="Strona glowna" width="205" height="203" version="1.1" viewBox="0 0 205 203" xmlns="http://www.w3.org/2000/svg">
  <g transform="translate(0,2)">
   <g transform="matrix(3.7795 0 0 3.7795 10.171 -6.7758)">
    <g transform="translate(-1.0884 -121.69)">
@@ -2593,7 +2601,7 @@
         <g transform="translate(1658.1 73.867)">
          <g>
           <rect x="-205.07" y="-101.86" width="52.917" height="52.917" fill="#0082b4" stroke="#000" stroke-linecap="round" stroke-width=".5" style="paint-order:fill markers stroke"/>
-          <text x="-178.87273" y="-60.77029" fill="#ffffff" font-family="sans-serif" class="svgT" letter-spacing=".5px" font-size="5.2px" stroke-width=".26458" text-anchor="middle" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><tspan x="-178.87273" y="-60.77029" text-align="center">STRONA</tspan><tspan x="-178.87273" y="-52.83279" text-align="center"> GŁÓWNA</tspan></text>
+          <text x="-178.87273" y="-60.77029" fill="#ffffff" font-family="sans-serif" class="svgT" letter-spacing=".5px" font-size="5.2px" stroke-width=".26458" text-anchor="middle" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><tspan class="iTxt" x="-178.87273" y="-60.77029" text-align="center">STRONA</tspan><tspan class="iTxt" x="-178.87273" y="-52.83279" text-align="center"> GŁÓWNA</tspan></text>
           <g transform="matrix(1.8895 0 0 1.8895 -201.12 -104.9)" fill="#fff">
            <g fill="#fff">
             <path d="m6.934 12.202c-.341 0-.62.271-.62.612v6.025c0 .341.28.616.62.616h10.145c.34 0 .611-.275.611-.616v-6.025c0-.341-.271-.612-.611-.612-.341 0-.621.271-.621.612v5.409h-8.913v-5.409c0-.341-.279-.612-.611-.612z"/>
@@ -2611,7 +2619,7 @@
   </g>
  </g>
 </svg>
-</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-2 WarstwaWord\MakraOgolne\CapNoLabels.ahk" class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" version="1.1" viewBox="0 0 208 208" xmlns="http://www.w3.org/2000/svg">
+</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="WarstwaWord\MakraOgolne\CapNoLabels.ahk" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" version="1.1" viewBox="0 0 208 208" xmlns="http://www.w3.org/2000/svg">
  <g transform="translate(0,7)">
   <g transform="matrix(3.7795 0 0 3.7795 12.334 -690.48)">
    <flowRoot transform="matrix(.26458 0 0 .26458 -3.2213 182.16)" fill="#000000" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-85.582" y="-60.812" width="342.33" height="293.65"/></flowRegion><flowPara/></flowRoot>
@@ -2658,7 +2666,7 @@
   </g>
  </g>
 </svg>
-</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-3 " class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-4 " class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-5 " class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-6 " class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-7 " class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="drag-8 " class="box_item draggable" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   " id="drag-9 Layer1\ToWordLayer.ahk" class="box_item draggable" href="Layer2.html"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" width="206px" height="206px" version="1.1" viewBox="0 0 206 206" xmlns="http://www.w3.org/2000/svg">
+</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   " id="Layer1\ToWordLayer.ahk" class="box_item" href="Layer2.html"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" width="206px" height="206px" version="1.1" viewBox="0 0 206 206" xmlns="http://www.w3.org/2000/svg">
  <g transform="matrix(3.7795 0 0 3.7795 -1795.2 2502.6)">
   <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-392.69" y="-63.57" width="758.02" height="397.52"/></flowRegion><flowPara/></flowRoot>
   <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-251.87" y="-84.492" width="624.44" height="455.45"/></flowRegion><flowPara/></flowRoot>
@@ -2680,7 +2688,7 @@
        <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-5.8594" y="-7.2813" width="339.45" height="326.95"/></flowRegion><flowPara/></flowRoot>
        <g transform="translate(40.18 -58.755)">
         <rect x="1040.5" y="-27.585" width="52.396" height="52.396" fill="#0082b4" stroke="#000" stroke-linecap="round" stroke-width=".52068" style="paint-order:fill markers stroke"/>
-        <text x="1067.644" y="12.493833" fill="#ffffff" font-family="sans-serif" class="svgT" letter-spacing=".5px" font-size="5.2px" stroke-width=".26458" text-align="center" text-anchor="middle" word-spacing="0px" style="line-height:1.04999995" xml:space="preserve"><tspan x="1068.5122" y="12.493833" text-align="center">Warstwa </tspan><tspan x="1067.644" y="21.383835" text-align="center">Word</tspan></text>
+        <text x="1067.644" y="12.493833" fill="#ffffff" font-family="sans-serif" class="svgT" letter-spacing=".5px" font-size="5.2px" stroke-width=".26458" text-align="center" text-anchor="middle" word-spacing="0px" style="line-height:1.04999995" xml:space="preserve"><tspan class="iTxt" x="1068.5122" y="12.493833" text-align="center">Warstwa </tspan><tspan class="iTxt" x="1067.644" y="21.383835" text-align="center">Word</tspan></text>
         <g transform="matrix(.29428 0 0 .29428 1051.9 -25.245)" fill="#fff">
          <g fill="#fff">
           <rect x="70" y="20" width="20" height="60"/>
@@ -2695,8 +2703,7 @@
   </g>
  </g>
 </svg>
-</a></div>
-        <script src="https://code.jquery.com/jquery-3.5.1.min.js"integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="crossorigin="anonymous"></script>
-        <script src="../index.js"></script>
+</a><script src="https://code.jquery.com/jquery-3.5.1.min.js"integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="crossorigin="anonymous"></script>
+        <script src="../OtagleScripts/index.js"></script>
         </body>
         </html>

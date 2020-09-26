@@ -1,23 +1,25 @@
+
 ZielenKolor()
 {
-	oWord := ComObjActive("Word.Application")
-	OurTempPL := "S:\OrgFirma\Szablony\Word\OgolneZmakrami\TQ-S402-pl_OgolnyTechDok.dotm"
-	OurTempEN := "S:\OrgFirma\Szablony\Word\OgolneZmakrami\TQ-S402-en_OgolnyTechDok.dotm"
-	LocTempPL := % A_ScriptDir . "\Templates\TQ-S402-pl_OgolnyTechDok.dotm"
-	LocTempEN := % A_ScriptDir . "\Templates\TQ-S402-en_OgolnyTechDok.dotm"
-	SzabPath := SubStr(A_ScriptDir, 1, InStr(A_ScriptDir, "Otagle")-1)
-	SzabTempPL := % SzabPath . "OgolneZmakrami\szab_TQ-S402-pl_OgolnyTechDok.dotm"
-	SzabTempEN := % SzabPath . "OgolneZmakrami\szab_TQ-S402-en_OgolnyTechDok.dotm"
-	OurTemplate := oWord.ActiveDocument.AttachedTemplate.FullName
-	if  ((OurTemplate != OurTempPL) and (OurTemplate != OurTempEN) and (OurTemplate != LocTempPL) and (OurTemplate != LocTempEN) and (OurTemplate != SzabTempPL) and (OurTemplate != SzabTempEN))
-	{
-		MsgBox, 16, % MsgText("Próba wywołania makra"), % MsgText("Próbujesz wywołać makro przypisane do szablonu, ale szablon nie został jeszcze dołączony do tego pliku.`r`nNajpierw dołącz szablon, a następnie wywołaj ponownie tę funkcję.")
-	}
-	else
-	{
-		oWord.Run("!ZielenKolor")
-	}
-	oWord :=  "" ; Clear global COM objects when done with them
-	WinActivate, ahk_class OpusApp
-	return
+oWord := ComObjActive("Word.Application")
+Loop, % oWord.ActiveDocument.Styles.Count{
+ 
+testCheck := (oWord.ActiveDocument.Styles(A_Index).Type == 1) And (InStr(oWord.ActiveDocument.Styles(A_Index).NameLocal, "ms"))
+    oWord.ActiveDocument.ActiveWindow.view.DisplayBackgrounds := True
+    oWord.ActiveDocument.Background.Fill.Visible := -1
+    oWord.ActiveDocument.Background.Fill.ForeColor.RGB := 0xa8d08d
+    oWord.ActiveDocument.Background.Fill.Solid
+
+If (testCheck){
+    var := oWord.ActiveDocument.Styles(A_Index).ParagraphFormat
+    var.Shading.Texture := 0
+    var.Shading.ForegroundPatternColor := -16777216
+    var.Shading.BackgroundPatternColor := 13434828
+}
+
+}
+MsgBox, The color has been added.
+oWord :=  "" ; Clear global COM objects when done with them
+WinActivate, ahk_class OpusApp
+Return
 }

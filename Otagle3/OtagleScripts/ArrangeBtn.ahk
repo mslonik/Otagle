@@ -557,3 +557,4 @@ ChangeMonitorReloadApp(){
     Gui, WizardStep1:Destroy
     Reset()
 }
+

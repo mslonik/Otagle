@@ -6,6 +6,7 @@
     global noBlad
     oWord := ComObjActive("Word.Application")
     cntField := oWord.ActiveDocument.Fields.Count
+    WinActivate, ahk_class OpusApp
     oWord.ActiveDocument.Bookmarks.Add("bladBook")
     oWord.ScreenUpdating := 0
     Gui, BladSearch:New, -Border +AlwaysOnTop
@@ -44,7 +45,7 @@
     }
     else
     {
-        oWord.Selection.GoTo(-1,,"bladBook")
+        oWord.Selection.GoTo(-1,,,"bladBook")
         MsgBox, Nie znaleziono słowa "błąd".
     }
     oWord.ActiveDocument.Bookmarks("bladBook").Delete

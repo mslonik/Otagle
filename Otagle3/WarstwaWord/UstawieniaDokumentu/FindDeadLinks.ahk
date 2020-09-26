@@ -6,6 +6,7 @@
     global noDeadLink
     oWord := ComObjActive("Word.Application")
     cntField := oWord.ActiveDocument.Fields.Count
+    WinActivate, ahk_class OpusApp
     oWord.ActiveDocument.Bookmarks.Add("DeadLinkBook")
     oWord.ScreenUpdating := 0
     Gui, DeadLinkSearch:New, -Border +AlwaysOnTop

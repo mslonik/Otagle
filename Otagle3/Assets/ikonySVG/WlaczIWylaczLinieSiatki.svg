@@ -1,4 +1,4 @@
-<svg id="SVGRoot" width="208" height="208" version="1.1" viewBox="0 0 208 208" xmlns="http://www.w3.org/2000/svg">
+<svg id="SVGRoot" class="WlaczIWylaczLinieSiatki" name="Wlacz i wylacz linie siatki" width="208" height="208" version="1.1" viewBox="0 0 208 208" xmlns="http://www.w3.org/2000/svg">
  <g transform="translate(0,7)">
   <g transform="matrix(3.7795 0 0 3.7795 10.171 -6.7758)">
    <g transform="translate(-1.0884 -121.69)">
@@ -44,7 +44,7 @@
                                      <g transform="translate(452.66 .26458)">
                                       <g transform="translate(-797.14 .29285)">
                                        <rect x="1618.8" y="369.25" width="52.258" height="52.258" fill="#fff" stroke="#000" stroke-linecap="round" stroke-width=".5" style="paint-order:fill markers stroke"/>
-                                       <text x="1645.2593" y="412.29202" font-family="sans-serif" class="svgT" letter-spacing=".5px" font-size="5.2px" stroke-width=".26458" text-align="center" text-anchor="middle" word-spacing="0px" style="line-height:0.94999999" xml:space="preserve"><tspan x="1645.2593" y="412.29202" text-align="center">Włącz lub wyłącz</tspan><tspan x="1645.2593" y="418.32452" text-align="center">linie siatki</tspan></text>
+                                       <text x="1645.2593" y="412.29202" font-family="sans-serif" class="svgT" letter-spacing=".5px" font-size="5.2px" stroke-width=".26458" text-align="center" text-anchor="middle" word-spacing="0px" style="line-height:0.94999999" xml:space="preserve"><tspan class="iTxt" x="1645.2593" y="412.29202" text-align="center">Włącz lub wyłącz</tspan><tspan class="iTxt" x="1645.2593" y="418.32452" text-align="center">linie siatki</tspan></text>
                                        <g transform="matrix(.35903 0 0 .35903 1626.5 370.71)">
                                         <g>
                                          <path d="m23 23v65h65v-65zm-1-1h67v67h-67z"/>

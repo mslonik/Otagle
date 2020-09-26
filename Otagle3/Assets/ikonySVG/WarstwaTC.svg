@@ -1,4 +1,4 @@
-<svg id="SVGRoot" width="206px" height="206px" version="1.1" viewBox="0 0 206 206" xmlns="http://www.w3.org/2000/svg">
+<svg id="SVGRoot" class="WarstwaTC" name="Warstwa TC" width="206px" height="206px" version="1.1" viewBox="0 0 206 206" xmlns="http://www.w3.org/2000/svg">
  <g transform="matrix(3.7795 0 0 3.7795 -1795.2 2502.6)">
   <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-392.69" y="-63.57" width="758.02" height="397.52"/></flowRegion><flowPara/></flowRoot>
   <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-251.87" y="-84.492" width="624.44" height="455.45"/></flowRegion><flowPara/></flowRoot>
@@ -31,7 +31,7 @@
           <path d="m17.511 20.062h-11.014c-.276 0-.5-.224-.5-.5s.224-.5.5-.5h11.014c.276 0 .5.224.5.5s-.223.5-.5.5z"/>
          </g>
         </g>
-        <text x="1126.0963" y="12.493834" fill="#ffffff" font-family="sans-serif" class="svgT" letter-spacing=".5px" font-size="5.2px" stroke-width=".26458" text-align="center" text-anchor="middle" word-spacing="0px" style="line-height:1.04999995" xml:space="preserve"><tspan x="1126.9645" y="12.493834" text-align="center">Warstwa </tspan><tspan x="1126.0963" y="21.383835" text-align="center">Total Commander</tspan></text>
+        <text x="1126.0963" y="12.493834" fill="#ffffff" font-family="sans-serif" class="svgT" letter-spacing=".5px" font-size="5.2px" stroke-width=".26458" text-align="center" text-anchor="middle" word-spacing="0px" style="line-height:1.04999995" xml:space="preserve"><tspan class="iTxt" x="1126.9645" y="12.493834" text-align="center">Warstwa </tspan><tspan class="iTxt" x="1126.0963" y="21.383835" text-align="center">Total Commander</tspan></text>
        </g>
       </g>
      </g>

@@ -2,20 +2,17 @@
 #SingleInstance, Force
 SetBatchLines, -1
 SetWorkingDir %A_ScriptDir%
+Menu, Tray,Icon, % A_ScriptDir . "\Assets\OtagleIcon.ico"
 if !(FileExist("Config.ini")){
     Run, ConfigBuilder.ahk,%A_ScriptDir% 
 }Else{
-#Include *i %A_ScriptDir%\CopyTemplate.ahk
+#Include *i %A_ScriptDir%\OtagleScripts\CopyTemplate.ahk
 #Include *i %A_ScriptDir%\lib\Neutron.ahk
 #Include *i %A_ScriptDir%\ButtonFunctions.ahk 
-#Include *i %A_ScriptDir%\GuiGenerator.ahk
-#Include *i %A_ScriptDir%\ConfigBuilder.ahk
-#Include *i %A_ScriptDir%\ArrangeBtn.ahk
+#Include *i %A_ScriptDir%\OtagleScripts\GuiGenerator.ahk
+#Include *i %A_ScriptDir%\OtagleScripts\ConfigBuilder.ahk
+#Include *i %A_ScriptDir%\OtagleScripts\ArrangeBtn.ahk
 
-
-
-
-Menu, Tray,Icon, % A_ScriptDir . "\Assets\OtagleIcon.ico"
 ; Global variables
 
 ;Install filles
@@ -41,7 +38,7 @@ BarF(neutron,event,action){
     return
 }
 rWizard(neutron,event){
-Run, ConfigBuilder.ahk,%A_ScriptDir% 
+Run, % A_ScriptDir . "\OtagleScripts\ConfigBuilder.ahk" 
 }
 }
 Reset(){
@@ -53,3 +50,12 @@ Reset(){
     
 }
 
+F1::
+Send class="iTxt"
+return
+F3::
+Send class=""
+return
+F4::
+Send name=""
+return

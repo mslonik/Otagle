@@ -1,4 +1,4 @@
-<svg id="SVGRoot" width="208" height="208" version="1.1" viewBox="0 0 208 208" xmlns="http://www.w3.org/2000/svg">
+<svg id="SVGRoot" class="TabelaBezKrawedziMS" name="Tabela bez krawedzi MS" width="208" height="208" version="1.1" viewBox="0 0 208 208" xmlns="http://www.w3.org/2000/svg">
  <g transform="translate(0,7)">
   <g transform="matrix(3.7795 0 0 3.7795 10.171 -6.7758)">
    <g transform="translate(-1.0884 -121.69)">
@@ -33,7 +33,7 @@
                            <g transform="translate(-397.36 .059959)">
                             <g transform="translate(66.026 -.30592)">
                              <rect x="573.68" y="-317.37" width="52.917" height="52.917" fill="#ffec8e" stroke="#000" stroke-linecap="round" stroke-width=".5" style="paint-order:fill markers stroke"/>
-                             <text x="600.0191" y="-276.57001" fill="#000000" font-family="sans-serif" class="svgT" letter-spacing=".5px" font-size="5.2px" stroke-width=".26458" text-align="center" text-anchor="middle" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><tspan x="600.0191" y="-276.57001" text-align="center">Tabela</tspan><tspan x="600.0191" y="-268.63251" text-align="center">bez krawędzi ms</tspan></text>
+                             <text x="600.0191" y="-276.57001" fill="#000000" font-family="sans-serif" class="svgT" letter-spacing=".5px" font-size="5.2px" stroke-width=".26458" text-align="center" text-anchor="middle" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><tspan class="iTxt" x="600.0191" y="-276.57001" text-align="center">Tabela</tspan><tspan class="iTxt" x="600.0191" y="-268.63251" text-align="center">bez krawędzi ms</tspan></text>
                              <g transform="matrix(.30638 0 0 .30638 585.59 -311.72)">
                               <circle cx="47.5" cy="7.5" r="2.5"/>
                               <circle cx="47.5" cy="17.5" r="2.5"/>
