@@ -1,4 +1,4 @@
-ParagraphLinesKeepTogether()
+﻿ParagraphLinesKeepTogether()
 {
 	oWord := ComObjActive("Word.Application")
 	StateOfParagraph_KeepTogether := oWord.Selection.ParagraphFormat.KeepTogether

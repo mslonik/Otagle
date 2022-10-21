@@ -1,4 +1,4 @@
-ToggleRuler()
+﻿ToggleRuler()
 {
 	oWord := ComObjActive("Word.Application")
 	StateOfRuler := oWord.ActiveWindow.ActivePane.DisplayRulers

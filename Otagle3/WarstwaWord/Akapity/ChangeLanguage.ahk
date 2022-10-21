@@ -1,4 +1,4 @@
-ChangeLanguage()
+﻿ChangeLanguage()
 ;~ by Jakub Masiak
 {
 	global oWord

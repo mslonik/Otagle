@@ -1,4 +1,4 @@
-InsertColumnToTheLeft() ; wstaw kolumn� tabeli z lewej
+﻿InsertColumnToTheLeft() ; wstaw kolumnę tabeli z lewej
 {
 	oWord := ComObjActive("Word.Application")
 	oWord.Selection.InsertColumns

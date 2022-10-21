@@ -1,4 +1,4 @@
-MarkAllTableCells()
+﻿MarkAllTableCells()
 {
 	oWord := ComObjActive("Word.Application")
 	oWord.Selection.Tables(1).Select

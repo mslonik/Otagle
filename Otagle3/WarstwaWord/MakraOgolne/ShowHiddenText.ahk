@@ -1,4 +1,4 @@
-ShowHiddenText()
+﻿ShowHiddenText()
 ;~ by Jakub Masiak
 {
 	oWord := ComObjActive("Word.Application")

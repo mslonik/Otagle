@@ -1,4 +1,4 @@
-Header() ; show footer
+﻿Header() ; show footer
 ;~ by Jakub Masiak
 	{
 	oWord := ComObjActive("Word.Application")

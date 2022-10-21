@@ -1,4 +1,4 @@
-ResizeImages(SelectedFile:=0)
+﻿ResizeImages(SelectedFile:=0)
 {
     static 
 

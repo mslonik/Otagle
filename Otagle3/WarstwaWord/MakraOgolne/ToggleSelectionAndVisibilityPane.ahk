@@ -1,4 +1,4 @@
-ToggleSelectionAndVisibilityPane() ; w³¹cz / wy³¹cz panel edycji obiektów graficznych
+ï»¿ToggleSelectionAndVisibilityPane() ; wÅ‚Ä…cz / wyÅ‚Ä…cz panel edycji obiektÃ³w graficznych
 {
 	oWord := ComObjActive("Word.Application")
 	

@@ -1,4 +1,4 @@
-DeleteLineOfText() ; 2019-10-03
+﻿DeleteLineOfText() ; 2019-10-03
 {
 	oWord := ComObjActive("Word.Application")
 	oWord.Selection.HomeKey(Unit := wdLine := 5)

@@ -1,4 +1,4 @@
-ToggleApplyStylesPane() ; 2019-10-03
+﻿ToggleApplyStylesPane() ; 2019-10-03
 {
 	oWord := ComObjActive("Word.Application")
 	ApplyStylesTaskPane := oWord.CommandBars("Apply styles").Visible
@@ -11,7 +11,7 @@ ToggleApplyStylesPane() ; 2019-10-03
 	}
 		catch
 	{
-		MsgBox,48,, % MsgText("Aby wywołać panel ""Stosowanie stylów"", zaznaczenie nie powinno zawierać kanwy rysunku.")
+		MsgBox,48,, % "Aby wywołać panel ""Stosowanie stylów"", zaznaczenie nie powinno zawierać kanwy rysunku."
 		return
 	}
 	

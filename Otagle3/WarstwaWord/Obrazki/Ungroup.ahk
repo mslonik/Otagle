@@ -1,4 +1,4 @@
-Ungroup()
+﻿Ungroup()
 {
 	oWord := ComObjActive("Word.Application")
 	oWord.Selection.ChildShapeRange.Ungroup

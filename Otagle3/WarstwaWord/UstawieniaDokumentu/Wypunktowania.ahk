@@ -1,4 +1,4 @@
-Wypunktowania()
+﻿Wypunktowania()
 {
     static numPara, numLists, EndLists
     global indEr, indWrong, NextPara, PrevPara, wrong, wrongLists
@@ -15,12 +15,12 @@ Wypunktowania()
     Gui, Lists:Add, Text, vnumPara w100, 0/%cntPara%
     Gui, Lists:Add, Text,, Znalezione akapity z wypunktowaniem:
     Gui, Lists:Add, Text, vnumLists w100, %indLists%
-    Gui, Lists:Add, Text,, % MsgText("Akapity z błędną interpunkcją:")
+    Gui, Lists:Add, Text,, % "Akapity z błędną interpunkcją:"
     Gui, Lists:Add, Text, vwrong w100, 0/%indWrong%   
-    Gui, Lists:Add, Button, vPrevPara gPrevPara w85 h25 Disabled, % MsgText("Poprzedni błąd")
-    Gui, Lists:Add, Button, vNextPara gNextPara yp x+m w85 h25 Disabled, % MsgText("Następny błąd")
-    Gui, Lists:Add, Button, gRepeatLists xm w85 h25, % MsgText("Ponów makro")
-    Gui, Lists:Add, Button, yp x+m gEndLists w85 h25, % MsgText("Zakończ")
+    Gui, Lists:Add, Button, vPrevPara gPrevPara w85 h25 Disabled, % "Poprzedni błąd"
+    Gui, Lists:Add, Button, vNextPara gNextPara yp x+m w85 h25 Disabled, % "Następny błąd"
+    Gui, Lists:Add, Button, gRepeatLists xm w85 h25, % "Ponów makro"
+    Gui, Lists:Add, Button, yp x+m gEndLists w85 h25, % "Zakończ"
     Gui, Lists:Show,, Wypunktowania
     oWord.ActiveDocument.Paragraphs(1).Range.Select
     Loop, %cntPara%

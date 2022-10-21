@@ -1,4 +1,4 @@
-ParagraphFormatKeepWithNext()
+﻿ParagraphFormatKeepWithNext()
 {
 	oWord := ComObjActive("Word.Application")
 	StateOfParagraph_KeepWithNext := oWord.Selection.ParagraphFormat.KeepWithNext

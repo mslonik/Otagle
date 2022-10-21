@@ -1,4 +1,4 @@
-DeleteTableColumn()
+﻿DeleteTableColumn()
 {
 	oWord := ComObjActive("Word.Application")
 	oWord.Selection.Columns.Delete 

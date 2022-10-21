@@ -1,4 +1,4 @@
-CapNoLabels()
+﻿CapNoLabels()
 {
 	global flag_cap, flag_cap2, H, W, X, Y, MyListBox4, CaptionList, fl, myLabels, Index
 	static oWord, Hcap, Wcap, e, Mon, MonTop, MonRight, MonLeft, MonBottom, Var, N

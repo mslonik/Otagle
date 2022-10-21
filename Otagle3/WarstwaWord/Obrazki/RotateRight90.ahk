@@ -1,4 +1,4 @@
-RotateRight90()
+﻿RotateRight90()
 {
 	oWord := ComObjActive("Word.Application")
 	oWord.Selection.ChildShapeRange.IncrementRotation(+90) 

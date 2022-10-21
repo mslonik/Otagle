@@ -1,4 +1,4 @@
-SetHeadersAndFooters()
+﻿SetHeadersAndFooters()
 {
     WinActivate, ahk_class OpusApp
     oWord := ComObjActive("Word.Application")
@@ -78,21 +78,21 @@ SetHeadersAndFooters()
         }
         if ((TitPage) and !(LastPage))
         {
-            oWord.ActiveDocument.AttachedTemplate.BuildingBlockEntries(MsgText("Stopka zwykła")).Insert(oWord.ActiveDocument.Sections(A_Index).Footers(1).Range,-1)
+            oWord.ActiveDocument.AttachedTemplate.BuildingBlockEntries("Stopka zwykła").Insert(oWord.ActiveDocument.Sections(A_Index).Footers(1).Range,-1)
         }
         else if (!(TitPage) and !(LastPage)) or ((TitPage) and (LastPage))
         {
-            oWord.ActiveDocument.AttachedTemplate.BuildingBlockEntries(MsgText("Stopka - 1")).Insert(oWord.ActiveDocument.Sections(A_Index).Footers(1).Range,-1)
+            oWord.ActiveDocument.AttachedTemplate.BuildingBlockEntries("Stopka - 1").Insert(oWord.ActiveDocument.Sections(A_Index).Footers(1).Range,-1)
         }
         else if (!(TitPage) and (LastPage))
         {
-            oWord.ActiveDocument.AttachedTemplate.BuildingBlockEntries(MsgText("Stopka - 2")).Insert(oWord.ActiveDocument.Sections(A_Index).Footers(1).Range,-1)
+            oWord.ActiveDocument.AttachedTemplate.BuildingBlockEntries("Stopka - 2").Insert(oWord.ActiveDocument.Sections(A_Index).Footers(1).Range,-1)
         }
-        oWord.ActiveDocument.AttachedTemplate.BuildingBlockEntries(MsgText("Nagłówek zwykły")).Insert(oWord.ActiveDocument.Sections(A_Index).Headers(1).Range,-1)
+        oWord.ActiveDocument.AttachedTemplate.BuildingBlockEntries("Nagłówek zwykły").Insert(oWord.ActiveDocument.Sections(A_Index).Headers(1).Range,-1)
     }
     if (LastPage)
     {
-        oWord.ActiveDocument.AttachedTemplate.BuildingBlockEntries(MsgText("OstatniaStrona")).Insert(oWord.ActiveDocument.Sections(cntSec).Footers(2).Range,-1)
+        oWord.ActiveDocument.AttachedTemplate.BuildingBlockEntries("OstatniaStrona").Insert(oWord.ActiveDocument.Sections(cntSec).Footers(2).Range,-1)
     }
     oWord.Selection.GoTo(1,1)
     Loop,

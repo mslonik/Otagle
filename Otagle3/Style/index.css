@@ -1,14 +1,23 @@
 /* font-family: 'Open Sans', sans-serif;
 font-family: 'Roboto', sans-serif; */
 
+
+/* Wczytanie czcionki */
+
 @font-face {
     font-family: 'lato';
     src: url('../Assets/Lato/Lato-Regular.ttf');
 }
 
+
+/* Ustaniwnie czcionki jako dominującej */
+
 :root {
     font-family: 'Lato', sans-serif;
 }
+
+
+/* Zrobienie wstepnego resetu styli */
 
 *,
 *::after,
@@ -17,6 +26,9 @@ font-family: 'Roboto', sans-serif; */
     padding: 0;
     box-sizing: border-box;
 }
+
+
+/* ustawienie wartości startowej dla czcionki */
 
 html {
     font-size: 10px;
@@ -31,7 +43,7 @@ main {
 
 
 /*
-    Window Bar 
+    Pasek okna  header jest kontenerem trzymającym cały 
 */
 
 header {
@@ -46,6 +58,9 @@ header {
 .minimalize {
     flex-grow: 1;
 }
+
+
+/* deninicja miejca gdzie pokazana jest nazwa warstwy */
 
 .title-bar {
     padding: 1.1rem 0.2rem;
@@ -90,7 +105,7 @@ header {
 
 
 /* 
-    Boxes
+   Ustawienie warości dla kontenera trzymającego kafelki
 */
 
 .wrapper {
@@ -110,8 +125,8 @@ header {
 }
 
 .box_item.stopResize {
-    min-height: 100px;
-    min-width: 100px;
+    min-height: 120px;
+    min-width: 120px;
 }
 
 .fa-toggle-off {
@@ -213,12 +228,19 @@ header {
 }
 
 .item__link {
+    display: inline-block;
     font-size: 13px;
     padding: 5px 1px;
     margin: auto 5px;
     text-decoration: none;
     color: #333;
     transition: .3s;
+}
+
+.trigger {
+    background-color: transparent;
+    border: 1px solod #333;
+    outline: unset;
 }
 
 .item__link:hover {
@@ -399,9 +421,16 @@ ICON STYLE
 
 /* <img class=""icon"" style=""font-size: 16px; font-family: 'Lato', sans-serif; display:block;width:" . 100 . "%;" .  "height:" . 100 . "%;" """ src=""" . PictureDef . """ > */
 
+
+/* Ustawienie  ikony jej rozmiatu */
+
 #SVGRoot {
     display: block;
     width: 100%;
     height: 100%;
     font-family: sans-serif;
+}
+
+#mySelect {
+    min-width: 120px;
 }

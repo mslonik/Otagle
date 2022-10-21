@@ -1,4 +1,4 @@
-HorizontalLine()
+﻿HorizontalLine()
 	{ 
 	oWord := ComObjActive("Word.Application")
 	oWord.Selection.ShapeRange.CanvasItems.AddLine(BeginX := 50, BeginY := 50, EndX := 100, EndY:= 50).Select

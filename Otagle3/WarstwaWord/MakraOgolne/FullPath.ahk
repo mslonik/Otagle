@@ -1,4 +1,4 @@
-FullPath() ; display full path to a file in window title bar 
+﻿FullPath() ; display full path to a file in window title bar 
 ;~ by Jakub Masiak
 {
 	oWord := ComObjActive("Word.Application")

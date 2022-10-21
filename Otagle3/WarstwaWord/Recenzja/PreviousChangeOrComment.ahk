@@ -1,4 +1,4 @@
-PreviousChangeOrComment() ; poprzednia zmiana lub komentarz
+﻿PreviousChangeOrComment() ; poprzednia zmiana lub komentarz
 ;~ by Jakub Masiak
 {	
 	oWord := ComObjActive("Word.Application")

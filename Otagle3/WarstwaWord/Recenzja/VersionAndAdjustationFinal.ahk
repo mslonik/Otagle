@@ -1,4 +1,4 @@
-VersionAndAdjustationFinal() 
+﻿VersionAndAdjustationFinal() 
 {
 	oWord := ComObjActive("Word.Application")
 	StateOfOriginalAdjustation := oWord.ActiveWindow.View.ShowRevisionsAndComments

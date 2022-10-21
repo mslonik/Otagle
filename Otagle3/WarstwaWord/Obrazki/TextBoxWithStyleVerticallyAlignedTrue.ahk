@@ -1,4 +1,4 @@
-TextBoxWithStyleVerticallyAlignedTrue()
+﻿TextBoxWithStyleVerticallyAlignedTrue()
 	{
 	oWord := ComObjActive("Word.Application")
 	oWord.Selection.ShapeRange.CanvasItems.AddTextBox(Orientation := msoTextOrientationHorizontal := 1, Left := 50, Top := 50, Width := 75, Height := 25).Select

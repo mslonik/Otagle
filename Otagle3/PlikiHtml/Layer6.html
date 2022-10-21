@@ -6,26 +6,25 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="../Assets/font-awesome-4.7.0/css/font-awesome.min.css">
         <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
-        <link href="../Style/Bootstrap/bootstrap.min.css" rel="stylesheet">
-        <script src="../Style/Bootstrap/jquery.min.js"></script>
-        <script src="../Style/Bootstrap/bootstrap.min.js"></script>
         <link rel="stylesheet" href="../Style/index.css" />
         <title>Otagle</title>
         </head>
         <body>
         <div class="AboutBox">
-        <h2 class="AboutBox__title">O T A G L E v.2.0 by mslonik (🐘)</h2>
+        <h2 class="AboutBox__title">O T A G L E v.2.0 by mslonik (??)</h2>
         <div class="AboutBox__introdution">
         <p class="AboutBox__introdution-p"> Make your computer Personal a g a i n...</p>
         <p class="AboutBox__introdution-p">Open source release of Stream Deck concept. Works at its best with touch screens.</p>
         <p class="AboutBox__introdution-p">For project description visit the following webpages:</p>
-            <a class="AboutBox__introdution-a"  href="#">http://mslonik.pl/biuro/1095-o-t-a-g-l-e-q-a</a>
-        <a class="AboutBox__introdution-a" href="#">https://www.autohotkey.com/boards/viewtopic.php?t=69690&p=300713</a>
-        <a class="AboutBox__introdution-a" href="#">https://github.com/mslonik/Autohotkey-scripts/tree/master/Otagle2</a>
+        <ul>
+        <l1><a class="AboutBox__introdution-a"  href="#">http://mslonik.pl/biuro/1095-o-t-a-g-l-e-q-a</a></li>
+        <l1><a class="AboutBox__introdution-a" href="#">https://www.autohotkey.com/boards/viewtopic.php?t=69690&p=300713</a></li>
+        <l1><a class="AboutBox__introdution-a" href="#">https://github.com/mslonik/Autohotkey-scripts/tree/master/Otagle2</a></li>
+        </ul>
         </div>
         <button class="btnOk">ok</button>
         </div>
-        <header><img class="bar-icon" src="../Assets/OtagleIcon.ico" alt="icon"><span class="title-bar"  onmousedown="neutron.DragTitleBar()" >Otagle: Layer6 - Bloki konstrukcyjne cz. 2</span><span class="title-btn__item Options"">
+        <header><img class="bar-icon" src="../Assets/OtagleIcon.ico" alt="icon"><span class="title-bar"  onmousedown="neutron.DragTitleBar()" >Otagle: Layer6 - Bloki konstrukcyjne cz. 2</span><span class="title-btn__item Options">
         <i class="fa fa-wrench" aria-hidden="true"></i>
         </span>
         <span class="title-btn__item" onclick="neutron.Minimize()">
@@ -38,38 +37,37 @@
         </span>
         </header>
         <nav class="menu-bar">
-        <ul class="menu-bar__list">
-        <li class="menu-bar__item dropD">
-            <a class="item__link">Configure</a>
-        <ul class="sub-menu">
-        <li class="sub-menu__item"  id="selectMonitor" onclick="ahk.BarF(event,id)"><a class="item__link sub__link" href="#"><i class="fa fa-arrow-down" aria-hidden="true"></i> +
- <span class="flag">S</span>elect Monitor</a></li>
-        <li class="sub-menu__item"  id="addLayers" onclick="ahk.BarF(event,id)"><a class="item__link sub__link" href="#"><i class="fa fa-arrow-down" aria-hidden="true"></i> +<span class="flag">A</span>dd layer</a></li>
-        <li class="sub-menu__item" id="ConfigureEraseLayer" onclick="ahk.BarF(event,id)"><a class="item__link sub__link" href="#"><i class="fa fa-arrow-down" aria-hidden="true"></i> +<span class="flag">E</span>rase layer</a></li>
-        </ul>
-        </li>
-        <li class="menu-bar__item dropD">
-        <a class="item__link"  href="#">Edit Buttons</a>
-        <ul class="sub-menu">
-        <li class="sub-menu__item" id="AddBtn" onclick="ahk.BarF(event,id)"><a class="item__link sub__link" href="#"><i class="fa fa-arrow-up" aria-hidden="true"></i>
-+<span class="flag">A</span>dd button</a></li>
-        <li class="sub-menu__item" id="F_display_configurator" onclick="ahk.BarF(event,id)" ><a class="item__link sub__link" href="#"><i class="fa fa-arrow-up" aria-hidden="true"></i>
-+<span class="flag">S</span>wap button</a></li>
-        <li class="sub-menu__item" id="FdGuiDelete" onclick="ahk.BarF(event,id)"><a class="item__link sub__link" href="#"><i class="fa fa-arrow-up" aria-hidden="true"></i>
-+<span class="flag">D</span>elete button</a></li>
-        <li class="sub-menu__item" id="Clone" onclick="ahk.BarF(event,id)"><a class="item__link sub__link" href="#"><i class="fa fa-arrow-up" aria-hidden="true"></i>
-+<span class="flag">C</span>lone button</a></li>
-        </ul>
-        </li>
-        <li class="menu-bar__item"  onclick="ahk.rWizard(event)">
-        <a class="item__link" href="#" ><i class="fa fa-arrow-right" aria-hidden="true"></i>+<span class="flag">R</span>un Wizard</a></li>
-        <li class="menu-bar__item">
-        <a class="item__link Order" href="#"><i class="fa fa-toggle-off" aria-hidden="true"></i><i class="fa fa-toggle-on" aria-hidden="true"> </i> <i class="fa fa-arrow-right" aria-hidden="true"></i>+<span class="flag">A</span>rrangement Buttons</a>
-        </li>
-        <li class="menu-bar__item">
-        <a class="item__link About" href="#">About</a>
-        </li>
-        </ul>
+            <ul class="menu-bar__list">
+                <li class="menu-bar__item dropD1 ">
+                    <button class="item__link trigger">Configure</button>
+                    <ul class="sub-menu D1">
+                        <li class="sub-menu__item" id="selectMonitor" onclick="ahk.BarF(event,id)"><a class="item__link sub__link" href="#"><i class="fa fa-arrow-down" aria-hidden="true"></i> + <span class="flag">S</span>elect Monitor</a></li>
+                        <li class="sub-menu__item" id="addLayers" onclick="ahk.BarF(event,id)"><a class="item__link sub__link" href="#"><i class="fa fa-arrow-down" aria-hidden="true"></i> +<span class="flag">A</span>dd layer</a></li>
+                        <li class="sub-menu__item" id="ConfigureEraseLayer" onclick="ahk.BarF(event,id)"><a class="item__link sub__link" href="#"><i class="fa fa-arrow-down" aria-hidden="true"></i> +<span class="flag">E</span>rase layer</a></li>
+                    </ul>
+                </li>
+                <li class="menu-bar__item dropD2">
+                    <button class="item__link trigger" href="#">Edit Buttons</button>
+                    <ul class="sub-menu D2">
+                        <li class="sub-menu__item" id="AddBtn" onclick="ahk.BarF(event,id)"><a class="item__link sub__link" href="#"><i class="fa fa-arrow-up" aria-hidden="true"></i>
+                        +<span class="flag">A</span>dd button</a></li>
+                        <li class="sub-menu__item" id="F_display_configurator" onclick="ahk.BarF(event,id)"><a class="item__link sub__link" href="#"><i class="fa fa-arrow-up" aria-hidden="true"></i>
+                        +<span class="flag">S</span>wap button</a></li>
+                        <li class="sub-menu__item" id="FdGuiDelete" onclick="ahk.BarF(event,id)"><a class="item__link sub__link" href="#"><i class="fa fa-arrow-up" aria-hidden="true"></i>
+                        +<span class="flag">D</span>elete button</a></li>
+                        <li class="sub-menu__item" id="Clone" onclick="ahk.BarF(event,id)"><a class="item__link sub__link" href="#"><i class="fa fa-arrow-up" aria-hidden="true"></i>
+                        +<span class="flag">C</span>lone button</a></li>
+                    </ul>
+                </li>
+                <li class="menu-bar__item" onclick="ahk.rWizard(event)">
+                    <button class="item__link trigger" href="#"><i class="fa fa-arrow-right" aria-hidden="true"></i>+<span class="flag">R</span>un Wizard</button></li>
+                <li class="menu-bar__item" id="rBox" onclick="ahk.resizeBox(event,id)">
+                    <button class="item__link Order trigger" href="#"><span class="flag">A</span>utoscaling buttons</button>
+                </li>
+                <li class="menu-bar__item">
+                    <button class="item__link About trigger" href="#">About</button>
+                </li>
+            </ul>
         </nav>
         <div class="wrapper" style="position: relative;"><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="WarstwaWord\BlokiKonstrukcyjne2\BB_Ilustracje.ahk" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" class="SpisIlustracji" name="Spis ilustracji" width="206px" height="206px" version="1.1" viewBox="0 0 206 206" xmlns="http://www.w3.org/2000/svg">
  <g transform="matrix(3.7795 0 0 3.7795 -1795.2 2502.6)">
@@ -101,7 +99,7 @@
   </g>
  </g>
 </svg>
-</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="WarstwaWord\BlokiKonstrukcyjne2\BB_AXMCaly.ahk" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoo" class="AXMcaly" name="AXM" width="206px" height="206px" version="1.1" viewBox="0 0 206 206" xmlns="http://www.w3.org/2000/svg">
+</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="WarstwaWord\BlokiKonstrukcyjne2\BB_AXMCaly.ahk" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" class="AXMcaly" name="AXM" width="206px" height="206px" version="1.1" viewBox="0 0 206 206" xmlns="http://www.w3.org/2000/svg">
  <g transform="matrix(3.7795 0 0 3.7795 -1795.2 2502.6)">
   <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-392.69" y="-63.57" width="758.02" height="397.52"/></flowRegion><flowPara/></flowRoot>
   <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-251.87" y="-84.492" width="624.44" height="455.45"/></flowRegion><flowPara/></flowRoot>
@@ -243,7 +241,7 @@
   </g>
  </g>
 </svg>
-</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="WarstwaWord\BlokiKonstrukcyjne2\BB_ZakresDostawy.ahk" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" width="206px" height="206px" version="1.1" viewBox="0 0 206 206" xmlns="http://www.w3.org/2000/svg">
+</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="WarstwaWord\BlokiKonstrukcyjne2\BB_ZakresDostawy.ahk" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" class="ZakresDostawy" name="Zakres dostawy" width="206px" height="206px" version="1.1" viewBox="0 0 206 206" xmlns="http://www.w3.org/2000/svg">
  <g transform="matrix(3.7795 0 0 3.7795 -1795.2 2502.6)">
   <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-392.69" y="-63.57" width="758.02" height="397.52"/></flowRegion><flowPara/></flowRoot>
   <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-251.87" y="-84.492" width="624.44" height="455.45"/></flowRegion><flowPara/></flowRoot>
@@ -258,7 +256,7 @@
     <g transform="translate(-1495.1 -629.38)">
      <g transform="translate(-693.42 2.9187e-6)">
       <rect x="1932.3" y="-31.75" width="52.951" height="52.917" fill="#db3b3b" stroke="#000" stroke-linecap="round" stroke-width=".50016" style="paint-order:fill markers stroke"/>
-      <text transform="scale(1.0003 .99968)" x="1958.1321" y="16.526241" fill="#ffffff" font-family="voestalpine" font-size="6.352px" letter-spacing="0px" stroke-width=".26467" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><tspan x="1958.1321" y="16.526241" fill="#ffffff" font-family="sans-serif" class="svgT" letter-spacing=".5px" font-size="5.2px" stroke-width=".26467" text-align="center" text-anchor="middle">Zakres dostawy</tspan></text>
+      <text transform="scale(1.0003 .99968)" x="1958.1321" y="16.526241" fill="#ffffff" font-family="voestalpine" font-size="6.352px" letter-spacing="0px" stroke-width=".26467" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><tspan x="1958.1321" y="16.526241" fill="#ffffff" font-family="sans-serif" class="iTxt" letter-spacing=".5px" font-size="5.2px" stroke-width=".26467" text-align="center" text-anchor="middle">Zakres dostawy</tspan></text>
       <g transform="matrix(.38275 0 0 .38275 1939.6 -31.484)" fill="#fff">
        <g fill="#fff">
         <path d="m95.8 28.5-29.1-9.5c-.5-.2-1-.2-1.6 0l-29.1 9.5c-1 .3-1.7 1.3-1.7 2.4v38.2c0 1.1.7 2 1.7 2.4l29.1 9.5c.3.1.5.1.8.1s.5 0 .8-.1l29.1-9.6c1-.3 1.7-1.3 1.7-2.4v-38.1c0-1.1-.7-2-1.7-2.4zm-32.4 46.7-24.1-7.9v-33l9.6 3.1v18.7c0 1.4 1.1 2.5 2.5 2.5s2.5-1.1 2.5-2.5v-17l9.6 3.1v33zm2.5-37.4-6.8-2.2 4.8-1.7c1.3-.5 2-1.9 1.5-3.2s-1.9-1.9-3.2-1.5l-10.7 3.9-6.7-2.2 21.1-6.9 21.1 6.9zm26.6 29.5-9.6 3.1v-10.8c0-1.4-1.1-2.5-2.5-2.5s-2.4 1.1-2.4 2.5v12.5l-9.6 3.1v-33l24.1-7.9z"/>
@@ -447,7 +445,7 @@
   </g>
  </g>
 </svg>
-</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="WarstwaWord\BlokiKonstrukcyjne2\BB_TekstOryginalny.ahk" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" width="206px" height="206px" version="1.1" viewBox="0 0 206 206" xmlns="http://www.w3.org/2000/svg">
+</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="WarstwaWord\BlokiKonstrukcyjne2\BB_TekstOryginalny.ahk" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" class="TekstOrginalny" name="Tekst orginalny" width="206px" height="206px" version="1.1" viewBox="0 0 206 206" xmlns="http://www.w3.org/2000/svg">
  <g transform="matrix(3.7795 0 0 3.7795 -1795.2 2502.6)">
   <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-392.69" y="-63.57" width="758.02" height="397.52"/></flowRegion><flowPara/></flowRoot>
   <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-251.87" y="-84.492" width="624.44" height="455.45"/></flowRegion><flowPara/></flowRoot>
@@ -464,7 +462,7 @@
      <g transform="translate(174.63 .21291)">
       <g transform="translate(405.56 -.21291)">
        <rect x="658.71" y="-31.75" width="52.917" height="52.917" fill="#db3b3b" stroke="#000" stroke-linecap="round" stroke-width=".5" style="paint-order:fill markers stroke"/>
-       <text x="685.12207" y="16.494095" fill="#ffffff" font-family="sans-serif" font-size="6.35px" letter-spacing="0px" stroke-width=".26458" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><tspan x="685.12207" y="16.494095" fill="#ffffff" font-family="sans-serif" class="svgT" letter-spacing=".5px" font-size="5.2px" stroke-width=".26458" text-align="center" text-anchor="middle">Tekst oryginalny</tspan></text>
+       <text x="685.12207" y="16.494095" fill="#ffffff" font-family="sans-serif" font-size="6.35px" letter-spacing="0px" stroke-width=".26458" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><tspan class="iTxt" x="685.12207" y="16.494095" fill="#ffffff" font-family="sans-serif" class="svgT" letter-spacing=".5px" font-size="5.2px" stroke-width=".26458" text-align="center" text-anchor="middle">Tekst oryginalny</tspan></text>
        <g transform="matrix(.0367 0 0 .0367 669.63 -27.159)" clip-rule="evenodd" fill="#fff" fill-rule="evenodd" image-rendering="optimizeQuality" shape-rendering="geometricPrecision">
         <path class="fil0" d="m511.43 240.91v62.51h69.5v32.31h-69.5v46.02h69.5v32.31h-69.5v46.01h69.5v32.32h-69.5v52.89h120.06v-483.71h-337.1v162.71h94.19l58.04-151.31h28.68l68.38 167.94zm0 341.37v199.73h-411.11v-557.73h157.07v-199.72h411.11v557.72zm-92.23-358h85.37l-12.16-31.86h-61.82zm20.55-57.02h43.03c-7.5-19.62-15.26-39.21-21.93-59.13-5.62 20.08-13.61 39.64-21.1 59.13zm114.48 480.31c-34.44 43.48-27.41 115.69 17.56 151.3 46.54 36.86 114.45 28.98 151.31-17.56 31.78-40.13 30.79-97.04-1.85-136.02l14.49-18.31-89.44-7.96 28.24 85.25 14.19-17.93c11.34 20.16 9.45 45.37-5.08 63.72-19.74 24.93-55.69 29.1-80.62 9.37-24.9-19.73-29.07-55.73-9.36-80.62 9.83-12.42 23.8-19.68 38.37-21.38l-14.65-48.77c-22.22 2.57-44.71 15.59-63.16 38.91zm-203.96-331.54c-1.62 31.59-13.21 62.39-35.65 85.08 14.81 15.62 31.03 22.52 51.83 26.16l-4.56 26.12c-27.39-4.85-49.06-14.86-68.04-35.74-14.14 8.71-27.67 12.88-43.98 15.74l-4.55-26.11c12.25-2.14 22.09-4.84 33.02-11.22-12.07-21.5-16.51-43.4-17.1-67.89 8.81-.23 17.62-.43 26.42-.64.44 18.47 3.2 34.74 11.52 51.35 15.3-17.34 23.18-39.96 24.62-62.85h-81.34v-26.76h47.24v-16.57h32.36v16.57h47.23v26.76zm-162.39 343.77h235.98v32.31h-235.98zm0-78.33h235.98v32.32h-235.98zm0-78.33h235.98v32.31h-235.98zm286.55-241.85h-337.1v483.71h337.1z" fill="#fff"/>
        </g>
@@ -510,7 +508,7 @@
   </g>
  </g>
 </svg>
-</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="WarstwaWord\BlokiKonstrukcyjne2\BB_Utylizacja.ahk" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" width="206px" height="206px" version="1.1" viewBox="0 0 206 206" xmlns="http://www.w3.org/2000/svg">
+</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="WarstwaWord\BlokiKonstrukcyjne2\BB_Utylizacja.ahk" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" class="Utylizacja" name="Utylizacja" width="206px" height="206px" version="1.1" viewBox="0 0 206 206" xmlns="http://www.w3.org/2000/svg">
  <g transform="matrix(3.7795 0 0 3.7795 -1795.2 2502.6)">
   <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-392.69" y="-63.57" width="758.02" height="397.52"/></flowRegion><flowPara/></flowRoot>
   <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-251.87" y="-84.492" width="624.44" height="455.45"/></flowRegion><flowPara/></flowRoot>
@@ -527,7 +525,7 @@
      <g transform="translate(174.63 .21291)">
       <g transform="translate(-57.663 -4.3913e-6)">
        <rect x="1121.7" y="-31.75" width="52.917" height="52.917" fill="#db3b3b" stroke="#000" stroke-linecap="round" stroke-width=".5" style="paint-order:fill markers stroke"/>
-       <text x="1148.1432" y="16.494099" fill="#ffffff" font-family="sans-serif" font-size="6.35px" letter-spacing="0px" stroke-width=".26458" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><tspan x="1148.1432" y="16.494099" fill="#ffffff" font-family="sans-serif" class="svgT" letter-spacing=".5px" font-size="5.2px" stroke-width=".26458" text-align="center" text-anchor="middle">Utylizacja</tspan></text>
+       <text x="1148.1432" y="16.494099" fill="#ffffff" font-family="sans-serif" font-size="6.35px" letter-spacing="0px" stroke-width=".26458" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><tspan x="1148.1432" y="16.494099" fill="#ffffff" font-family="sans-serif" class="iTxt" letter-spacing=".5px" font-size="5.2px" stroke-width=".26458" text-align="center" text-anchor="middle">Utylizacja</tspan></text>
        <g transform="matrix(.29579 0 0 .29579 1133.4 -26.87)" fill="#fff">
         <g fill="#fff">
          <path d="m86.7 59.9h-.1l-15.7-1.8c-.5-.1-.9-.4-1-.9s.1-1 .5-1.2l3.8-2.2-4.6-7.2c-.8-1.3-1.5-2.4-2.3-3.3-.4-.5-.3-1.2.2-1.6s1.2-.3 1.6.2c.8 1 1.6 2.1 2.4 3.5l5.2 8.2c.2.3.2.6.1.9s-.3.6-.5.7l-1.9 1.1 11.6 1.3 4.5-10-1.5.8c-.5.3-1.2.1-1.5-.4-1.3-2.2-2.8-4.6-3.8-6.2-.5-.7-1.2-1.1-2.1-1.1h-16.6c-3.7 0-5.8.9-7.6 3.4l-3.6 5.3 6.8 4c1.8 1 4 .5 5.1-1.2.3-.5 1-.7 1.6-.4.5.3.7 1 .4 1.6-1.8 2.8-5.3 3.6-8.2 2l-7.8-4.6c-.3-.2-.5-.4-.5-.7-.1-.3 0-.6.2-.9l4.2-6.4c2.3-3.1 5-4.3 9.4-4.3h16.5c1.6 0 3.1.8 4 2.1.9 1.4 2.2 3.4 3.3 5.3l3.6-2c.4-.2 1-.2 1.3.2.4.3.5.9.3 1.3l-6.3 13.9c-.2.4-.6.6-1 .6z" fill="#fff"/>
@@ -546,7 +544,7 @@
   </g>
  </g>
 </svg>
-</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="WarstwaWord\BlokiKonstrukcyjne2\BB_UtylizacjaOpakowania.ahk" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" width="206px" height="206px" version="1.1" viewBox="0 0 206 206" xmlns="http://www.w3.org/2000/svg">
+</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="WarstwaWord\BlokiKonstrukcyjne2\BB_UtylizacjaOpakowania.ahk" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" class="UtylizacjaOpakowania" name="Utylizacja opakowania" width="206px" height="206px" version="1.1" viewBox="0 0 206 206" xmlns="http://www.w3.org/2000/svg">
  <g transform="matrix(3.7795 0 0 3.7795 -1795.2 2502.6)">
   <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-392.69" y="-63.57" width="758.02" height="397.52"/></flowRegion><flowPara/></flowRoot>
   <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-251.87" y="-84.492" width="624.44" height="455.45"/></flowRegion><flowPara/></flowRoot>
@@ -562,7 +560,7 @@
      <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-306.59" y="-111.05" width="206" height="51.5"/></flowRegion><flowPara/></flowRoot>
      <g transform="translate(346.92 4.8455e-6)">
       <rect x="891.77" y="-31.75" width="52.917" height="52.917" fill="#db3b3b" stroke="#000" stroke-linecap="round" stroke-width=".5" style="paint-order:fill markers stroke"/>
-      <text x="918.3335" y="8.5831251" fill="#ffffff" font-family="sans-serif" class="svgT" letter-spacing=".5px" font-size="5.2px" stroke-width=".26458" text-anchor="middle" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><tspan x="918.3335" y="8.5831251" text-align="center">Utylizacja</tspan><tspan x="918.3335" y="16.520624" text-align="center">opakowania</tspan></text>
+      <text x="918.3335" y="8.5831251" fill="#ffffff" font-family="sans-serif" class="svgT" letter-spacing=".5px" font-size="5.2px" stroke-width=".26458" text-anchor="middle" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><tspan class="iTxt" x="918.3335" y="8.5831251" text-align="center">Utylizacja</tspan><tspan class="iTxt" x="918.3335" y="16.520624" text-align="center">opakowania</tspan></text>
       <g transform="matrix(.31843 0 0 .31843 902.34 -28.69)" fill="#fff">
        <path d="m25.67 82-6.86-12h28.12v-6h-19.75l3.22-5.59 6.08 3.59-6.48-24.89-24.92 6.71 6.33 3.66-6 11.13 16.78 29.39h24.74v-6zm-6.81-35.67 6.88-1.85 1.8 6.91-7.29 12.61h-4.87l-3.15-5.5z"/>
        <path d="m24.19 34.47 10.6-18.47h13.91l-14.12 24.48 5.19 3 9.67-16.75 3.34 5.27-6 3.45 24.76 6.85 6.65-25.07-6.32 3.67-6.62-10.9h-34l-12.25 21.49zm45-6.52-1.84 7-6.82-1.95-7.7-12.16 2.8-4.84h6.25z"/>
@@ -574,31 +572,519 @@
   </g>
  </g>
 </svg>
-</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   " id="" class="box_item" href="Layer1.html"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" class="StronaGlowna" name="Strona glowna" width="205" height="203" version="1.1" viewBox="0 0 205 203" xmlns="http://www.w3.org/2000/svg">
- <g transform="translate(0,2)">
-  <g transform="matrix(3.7795 0 0 3.7795 10.171 -6.7758)">
-   <g transform="translate(-1.0884 -121.69)">
-    <g transform="translate(1.6608 -59.209)">
+</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="..WarstwaWord\BlokiKonstrukcyjne2\BB_Cewka.ahk" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" class="Cewka" name="Cewka" width="206px" height="206px" version="1.1" viewBox="0 0 206 206" xmlns="http://www.w3.org/2000/svg">
+ <g transform="translate(1.3911 6.8479)">
+  <g transform="matrix(3.7795,0,0,3.7795,10.171,-6.7758)">
+   <g transform="translate(-1.0884,-121.69)">
+    <g transform="translate(1.6608,-59.209)">
      <g transform="translate(-.6443 -59.335)">
-      <g transform="translate(-1396.8 269.89)">
+      <g transform="translate(-1396.8,269.89)">
        <g transform="translate(-57.972 -.024822)">
-        <g transform="translate(1658.1 73.867)">
-         <g>
-          <rect x="-205.07" y="-101.86" width="52.917" height="52.917" fill="#0082b4" stroke="#000" stroke-linecap="round" stroke-width=".5" style="paint-order:fill markers stroke"/>
-          <text x="-178.87273" y="-60.77029" fill="#ffffff" font-family="sans-serif" class="svgT" letter-spacing=".5px" font-size="5.2px" stroke-width=".26458" text-anchor="middle" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><tspan class="iTxt" x="-178.87273" y="-60.77029" text-align="center">STRONA</tspan><tspan class="iTxt" x="-178.87273" y="-52.83279" text-align="center"> GŁÓWNA</tspan></text>
-          <g transform="matrix(1.8895 0 0 1.8895 -201.12 -104.9)" fill="#fff">
-           <g fill="#fff">
-            <path d="m6.934 12.202c-.341 0-.62.271-.62.612v6.025c0 .341.28.616.62.616h10.145c.34 0 .611-.275.611-.616v-6.025c0-.341-.271-.612-.611-.612-.341 0-.621.271-.621.612v5.409h-8.913v-5.409c0-.341-.279-.612-.611-.612z"/>
-            <path d="m4.181 12.98c.236.236.63.236.865 0l6.951-6.946 6.96 6.946c.236.236.629.236.865 0 .24-.236.24-.629 0-.865l-7.374-7.383-.013-.009c-.24-.236-.63-.236-.87 0l-7.383 7.392c-.245.236-.245.629-.001.865z"/>
+        <g transform="translate(1657.6 73.867)" style="fill:#db3b3b">
+         <g transform="translate(-203.03,-103.33)" style="fill:#db3b3b">
+          <flowRoot transform="matrix(.26458 0 0 .26458 -2.875 1.091)" font-size="40px" letter-spacing="0px" word-spacing="0px" style="fill:#db3b3b;font-family:sans-serif;font-size:40px;letter-spacing:0px;line-height:1.25;word-spacing:0px" xml:space="preserve"><flowRegion style="fill:#db3b3b"><rect x="-85.582" y="-60.812" width="342.33" height="293.65" style="fill:#db3b3b"/></flowRegion><flowPara/></flowRoot>
+          <g transform="translate(-1144.8 309.94)" style="fill:#db3b3b">
+           <flowRoot transform="matrix(.26458 0 0 .26458 1036.5 -317.79)" font-size="40px" letter-spacing="0px" word-spacing="0px" style="fill:#db3b3b;font-family:sans-serif;font-size:40px;letter-spacing:0px;line-height:1.25;word-spacing:0px" xml:space="preserve"><flowRegion style="fill:#db3b3b"><rect x="-105.21" y="-13.703" width="562.17" height="513.49" style="fill:#db3b3b"/></flowRegion><flowPara/></flowRoot>
+           <g transform="translate(-66.134 .039287)" style="fill:#db3b3b">
+            <g transform="matrix(.26459 0 0 .26459 1207.6 -308.71)">
+             <g transform="matrix(3.7795,0,0,3.7795,10.171,-6.7758)">
+              <g transform="translate(.5724 -180.9)">
+               <g transform="translate(-.11514 -59.639)">
+                <g transform="translate(-1396.8,269.89)">
+                 <g transform="translate(-57.972 -.024822)">
+                  <g transform="translate(1663 71.099)">
+                   <g transform="translate(-208.46 -100.26)">
+                    <flowRoot transform="matrix(.26458 0 0 .26458 -2.875 1.091)" font-size="40px" letter-spacing="0px" word-spacing="0px" style="fill:#000000;font-family:sans-serif;font-size:40px;letter-spacing:0px;line-height:1.25;word-spacing:0px" xml:space="preserve"><flowRegion><rect x="-85.582" y="-60.812" width="342.33" height="293.65"/></flowRegion><flowPara/></flowRoot>
+                    <g transform="translate(-1039.4,318.88)">
+                     <flowRoot transform="matrix(.26458 0 0 .26458 1036.5 -317.79)" font-size="40px" letter-spacing="0px" word-spacing="0px" style="fill:#000000;font-family:sans-serif;font-size:40px;letter-spacing:0px;line-height:1.25;word-spacing:0px" xml:space="preserve"><flowRegion><rect x="-105.21" y="-13.703" width="562.17" height="513.49"/></flowRegion><flowPara/></flowRoot>
+                     <g transform="translate(-186.81 -6.3046)">
+                      <flowRoot transform="matrix(.26458 0 0 .26458 1168.8 -317.87)" font-size="40px" letter-spacing="0px" word-spacing="0px" style="fill:#000000;font-family:sans-serif;font-size:40px;letter-spacing:0px;line-height:1.25;word-spacing:0px" xml:space="preserve"><flowRegion><rect x="-114.63" y="-91.434" width="675.23" height="522.91"/></flowRegion><flowPara/></flowRoot>
+                      <g transform="translate(-66.2 -.040316)">
+                       <g transform="translate(-65.918 -.60254)">
+                        <g transform="translate(-138.35 -1.664)">
+                         <flowRoot font-size="40px" letter-spacing="0px" word-spacing="0px" style="fill:#000000;font-family:sans-serif;font-size:40px;letter-spacing:0px;line-height:1.25;word-spacing:0px" xml:space="preserve"><flowRegion><rect x="-24.34" y="-19.695" width="252.04" height="245.75"/></flowRegion><flowPara/></flowRoot>
+                         <g transform="translate(-69.207 .046241)">
+                          <flowRoot font-size="40px" letter-spacing="0px" word-spacing="0px" style="fill:#000000;font-family:sans-serif;font-size:40px;letter-spacing:0px;line-height:1.25;word-spacing:0px" xml:space="preserve"><flowRegion><rect x="-65.168" y="-26.762" width="382.37" height="335.26"/></flowRegion><flowPara/></flowRoot>
+                          <g transform="translate(-63.347 .4912)">
+                           <g transform="translate(529.82 -.18087)">
+                            <rect x="1098" y="-309.59" width="52.917" height="52.917" style="fill:#db3b3b;paint-order:fill markers stroke;stroke-linecap:round;stroke-width:.5;stroke:#000"/>
+                            <g transform="matrix(.74869 0 0 .86064 1101 -315.6)" style="fill:#fff">
+                             <g transform="translate(0 -988.36)" display="none" style="display:none;fill:#fff">
+                              <circle cx="32" cy="1020.4" r="29.257" style="fill:#fff;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:11.2;stroke-width:5.4857;stroke:#000"/>
+                             </g>
+                             <g style="fill:#fff">
+                              <path d="m17.314 37.547h5.5723" style="fill:#fff"/>
+                              <g transform="matrix(.96822 0 0 1.0013 .99471 2.4295)" style="fill:#fff">
+                               <g transform="matrix(.71637 0 0 .92011 7.6452 2.1498)" style="fill:#fff;stroke-width:1.2317;stroke:#000">
+                                <path d="m18.411 19.148a9.0574 13.909 0 0 0-9.0566 13.908 9.0574 13.909 0 0 0 0.023437 0.94336h3.293a6 9.4114 0 0 1-0.08594-0.58984 6 9.4114 0 0 1-0.07227-0.93359 6 9.4114 0 0 1-0.01367-0.66602 6 9.4114 0 0 1 0.0293-0.93945 6 9.4114 0 0 1 0.08984-0.92969 6 9.4114 0 0 1 0.14844-0.91211 6 9.4114 0 0 1 0.20508-0.88281 6 9.4114 0 0 1 0.26172-0.84766 6 9.4114 0 0 1 0.3125-0.80273 6 9.4114 0 0 1 0.36328-0.74805 6 9.4114 0 0 1 0.4082-0.6875 6 9.4114 0 0 1 0.45117-0.62109 6 9.4114 0 0 1 0.48828-0.54688 6 9.4114 0 0 1 0.51953-0.46875 6 9.4114 0 0 1 0.54883-0.38477 6 9.4114 0 0 1 0.56836-0.29687 6 9.4114 0 0 1 0.58594-0.20508 6 9.4114 0 0 1 0.59375-0.11328 6 9.4114 0 0 1 0.42578-0.02344 6 9.4114 0 0 1 0.59766 0.04687 6 9.4114 0 0 1 0.59375 0.14062 6 9.4114 0 0 1 0.58203 0.23242 6 9.4114 0 0 1 0.5625 0.32227 6 9.4114 0 0 1 0.53906 0.41016 6 9.4114 0 0 1 0.51172 0.49024 6 9.4114 0 0 1 0.47852 0.57031 6 9.4114 0 0 1 0.4375 0.64062 6 9.4114 0 0 1 0.39648 0.70703 6 9.4114 0 0 1 0.34961 0.76562 6 9.4114 0 0 1 0.29688 0.81641 6 9.4114 0 0 1 0.24609 0.85742 6 9.4114 0 0 1 0.18945 0.89258 6 9.4114 0 0 1 0.13086 0.91797 6 9.4114 0 0 1 0.07227 0.93359 6 9.4114 0 0 1 0.01563 0.66602 6 9.4114 0 0 1-0.03125 0.93945 6 9.4114 0 0 1-0.08984 0.93164 6 9.4114 0 0 1-0.05273 0.31836h3.1133a9.0574 13.909 0 0 0 0.03125-0.94336 9.0574 13.909 0 0 0-9.0586-13.908z" style="fill:#fff;stroke-linejoin:round;stroke-width:1.2317;stroke:#000"/>
+                                <path d="m33.923 19.148a9.0574 13.909 0 0 0-9.0566 13.908 9.0574 13.909 0 0 0 0.02344 0.94336h3.293a6 9.4114 0 0 1-0.08594-0.58984 6 9.4114 0 0 1-0.07227-0.93359 6 9.4114 0 0 1-0.01367-0.66602 6 9.4114 0 0 1 0.0293-0.93945 6 9.4114 0 0 1 0.08984-0.92969 6 9.4114 0 0 1 0.14844-0.91211 6 9.4114 0 0 1 0.20508-0.88281 6 9.4114 0 0 1 0.26172-0.84766 6 9.4114 0 0 1 0.3125-0.80273 6 9.4114 0 0 1 0.36328-0.74805 6 9.4114 0 0 1 0.4082-0.6875 6 9.4114 0 0 1 0.45117-0.62109 6 9.4114 0 0 1 0.48828-0.54688 6 9.4114 0 0 1 0.51953-0.46875 6 9.4114 0 0 1 0.54883-0.38477 6 9.4114 0 0 1 0.56836-0.29687 6 9.4114 0 0 1 0.58594-0.20508 6 9.4114 0 0 1 0.59375-0.11328 6 9.4114 0 0 1 0.42578-0.02344 6 9.4114 0 0 1 0.59766 0.04687 6 9.4114 0 0 1 0.59375 0.14062 6 9.4114 0 0 1 0.58203 0.23242 6 9.4114 0 0 1 0.5625 0.32227 6 9.4114 0 0 1 0.53906 0.41016 6 9.4114 0 0 1 0.51172 0.49024 6 9.4114 0 0 1 0.47852 0.57031 6 9.4114 0 0 1 0.4375 0.64062 6 9.4114 0 0 1 0.39648 0.70703 6 9.4114 0 0 1 0.34961 0.76562 6 9.4114 0 0 1 0.29688 0.81641 6 9.4114 0 0 1 0.24609 0.85742 6 9.4114 0 0 1 0.18945 0.89258 6 9.4114 0 0 1 0.13086 0.91797 6 9.4114 0 0 1 0.07227 0.93359 6 9.4114 0 0 1 0.01563 0.66602 6 9.4114 0 0 1-0.03125 0.93946 6 9.4114 0 0 1-0.08984 0.93164 6 9.4114 0 0 1-0.05273 0.31836h3.1133a9.0574 13.909 0 0 0 0.03124-0.94336 9.0574 13.909 0 0 0-9.0586-13.908z" style="fill:#fff;stroke-linejoin:round;stroke-width:1.2317;stroke:#000"/>
+                                <path d="m49.45 19.148a9.0574 13.909 0 0 0-9.0566 13.908 9.0574 13.909 0 0 0 0.02344 0.94336h3.293a6 9.4114 0 0 1-0.08594-0.58984 6 9.4114 0 0 1-0.07227-0.93359 6 9.4114 0 0 1-0.01367-0.66602 6 9.4114 0 0 1 0.0293-0.93945 6 9.4114 0 0 1 0.08984-0.92969 6 9.4114 0 0 1 0.14844-0.91211 6 9.4114 0 0 1 0.20508-0.88281 6 9.4114 0 0 1 0.26172-0.84766 6 9.4114 0 0 1 0.3125-0.80273 6 9.4114 0 0 1 0.36328-0.74805 6 9.4114 0 0 1 0.4082-0.6875 6 9.4114 0 0 1 0.45117-0.62109 6 9.4114 0 0 1 0.48828-0.54688 6 9.4114 0 0 1 0.51953-0.46875 6 9.4114 0 0 1 0.54883-0.38477 6 9.4114 0 0 1 0.56836-0.29687 6 9.4114 0 0 1 0.58594-0.20508 6 9.4114 0 0 1 0.59375-0.11328 6 9.4114 0 0 1 0.42578-0.02344 6 9.4114 0 0 1 0.59766 0.04687 6 9.4114 0 0 1 0.59375 0.14062 6 9.4114 0 0 1 0.58203 0.23242 6 9.4114 0 0 1 0.5625 0.32227 6 9.4114 0 0 1 0.53906 0.41016 6 9.4114 0 0 1 0.51172 0.49024 6 9.4114 0 0 1 0.47852 0.57031 6 9.4114 0 0 1 0.4375 0.64062 6 9.4114 0 0 1 0.39648 0.70703 6 9.4114 0 0 1 0.34961 0.76562 6 9.4114 0 0 1 0.29688 0.81641 6 9.4114 0 0 1 0.24609 0.85742 6 9.4114 0 0 1 0.18945 0.89258 6 9.4114 0 0 1 0.13086 0.91797 6 9.4114 0 0 1 0.07227 0.93359 6 9.4114 0 0 1 0.01563 0.66602 6 9.4114 0 0 1-0.03125 0.93946 6 9.4114 0 0 1-0.08984 0.93164 6 9.4114 0 0 1-0.05273 0.31836h3.1133a9.0574 13.909 0 0 0 0.03124-0.94336 9.0574 13.909 0 0 0-9.0586-13.908z" style="fill:#fff;stroke-linejoin:round;stroke-width:1.2317;stroke:#000"/>
+                               </g>
+                               <path d="m48.879 32.249h7.1282v0" style="fill-rule:evenodd;fill:#fff;stroke-linecap:round;stroke-width:3.5026;stroke:#000"/>
+                               <path d="m7.9786 32.249h7.1282v0" style="fill-rule:evenodd;fill:#fff;stroke-linecap:round;stroke-width:3.5026;stroke:#000"/>
+                              </g>
+                             </g>
+                            </g>
+                            <text x="1115.9927" y="-262.2645" style="fill:#000000;font-family:sans-serif;font-size:10.583px;letter-spacing:0px;line-height:1.25;stroke-width:.26459;word-spacing:0px" xml:space="preserve"><tspan x="1115.9927" y="-262.2645" style="font-size:5.6445px;stroke-width:.26459"><tspan class="iTxt" x="1115.9927" y="-262.2645" style="fill:#ffffff;font-size:5.6445px;stroke-width:.26459">Cewka</tspan></tspan></text>
+                           </g>
+                          </g>
+                         </g>
+                        </g>
+                       </g>
+                      </g>
+                     </g>
+                    </g>
+                   </g>
+                  </g>
+                 </g>
+                </g>
+               </g>
+              </g>
+             </g>
+             <text x="112.31046" y="151.41133" style="fill:#000000;font-family:sans-serif;font-size:40px;letter-spacing:0px;line-height:1.25;word-spacing:0px" xml:space="preserve"><tspan x="112.31046" y="187.90454"/></text>
+             <flowRoot transform="translate(2.0683 -5.5027)" style="fill:#000000;font-family:sans-serif;font-size:40px;letter-spacing:0px;line-height:1.25;word-spacing:0px" xml:space="preserve"><flowRegion><rect x="-719.39" y="-8.0469" width="328.31" height="82.883"/></flowRegion><flowPara/></flowRoot>
+             <flowRoot style="fill:black;font-family:sans-serif;font-size:40px;letter-spacing:0px;line-height:1.25;word-spacing:0px" xml:space="preserve"><flowRegion><rect x="-757.21" y="21.727" width="159.33" height="62.766"/></flowRegion><flowPara/></flowRoot>
+             <flowRoot style="fill:#ececec;font-family:sans-serif;font-size:40px;letter-spacing:0px;line-height:1.25;word-spacing:0px" xml:space="preserve"><flowRegion style="fill:#ececec"><rect x="-807.1" y="-16.898" width="280.03" height="115.88" style="fill:#ececec"/></flowRegion><flowPara/></flowRoot>
+             <text x="75.294853" y="163.39673" style="fill:#000000;font-family:sans-serif;font-size:40px;letter-spacing:0px;line-height:1.25;word-spacing:0px" xml:space="preserve"><tspan x="134.21153" y="163.39673"><tspan x="134.21153" y="163.39673" style="font-size:21.333px"> </tspan></tspan></text>
+             <text x="-848.48639" y="11.395708" style="fill:#000000;font-family:sans-serif;font-size:40px;letter-spacing:0px;line-height:1.25;word-spacing:0px" xml:space="preserve"><tspan x="-848.48639" y="47.88892"/><tspan x="-848.48639" y="97.888924"/></text>
+             <text x="58.279224" y="187.90456" style="fill:#ffffff;font-family:sans-serif;font-size:40px;letter-spacing:0px;line-height:1.25;word-spacing:0px" xml:space="preserve"><tspan x="58.279224" y="224.39777" style="font-size:21.333px"/></text>
+             <flowRoot style="fill:black;font-family:sans-serif;font-size:40px;letter-spacing:0px;line-height:1.25;word-spacing:0px" xml:space="preserve"><flowRegion><rect x="20.117" y="137.6" width="159.33" height="53.914"/></flowRegion><flowPara/></flowRoot>
+            </g>
            </g>
           </g>
          </g>
-         <rect x="-131.95" y="-55.38" width="2.0774" height=".41548" stroke-width=".26458"/>
         </g>
+        <path transform="matrix(.26459 0 0 .26459 1451.8 -29.65)" d="m5.6328 104.69v-98.574h197.15v89.723c0 59.279 0.27304 89.723 0.80469 89.723 0.44258 0 0.80469 0.54316 0.80469 1.207s-0.36211 1.207-0.80469 1.207c-0.47999 0-0.80469 3.0846-0.80469 7.6445v7.6445h-197.15z" style="fill-opacity:0;stroke-width:.80469"/>
+        <path transform="matrix(.26459 0 0 .26459 1451.8 -29.65)" d="m5.6328 104.69v-98.574h197.15v89.723c0 59.279 0.27304 89.723 0.80469 89.723 0.44258 0 0.80469 0.54316 0.80469 1.207s-0.36211 1.207-0.80469 1.207c-0.47999 0-0.80469 3.0846-0.80469 7.6445v7.6445h-197.15z" style="fill-opacity:0;stroke-width:.80469"/>
+        <path transform="matrix(.26459 0 0 .26459 1451.8 -29.65)" d="m5.6328 104.69v-98.574h197.15v89.723c0 59.279 0.27304 89.723 0.80469 89.723 0.44258 0 0.80469 0.54316 0.80469 1.207s-0.36211 1.207-0.80469 1.207c-0.47999 0-0.80469 3.0846-0.80469 7.6445v7.6445h-197.15z" style="fill-opacity:0;stroke-width:.80469"/>
+        <path transform="matrix(.26459 0 0 .26459 1451.8 -29.65)" d="m5.6328 104.69v-98.574h197.15v89.723c0 59.279 0.27304 89.723 0.80469 89.723 0.44258 0 0.80469 0.54316 0.80469 1.207s-0.36211 1.207-0.80469 1.207c-0.47999 0-0.80469 3.0846-0.80469 7.6445v7.6445h-197.15z" style="fill-opacity:0;stroke-width:.80469"/>
+        <path transform="matrix(.26459 0 0 .26459 1451.8 -29.65)" d="m5.6328 104.69v-98.574h197.15v89.723c0 59.279 0.27304 89.723 0.80469 89.723 0.44258 0 0.80469 0.54316 0.80469 1.207s-0.36211 1.207-0.80469 1.207c-0.47999 0-0.80469 3.0846-0.80469 7.6445v7.6445h-197.15z" style="fill-opacity:0;stroke-width:.80469"/>
+        <path transform="matrix(.26459 0 0 .26459 1451.8 -29.65)" d="m5.6328 104.69v-98.574h197.15v89.723c0 59.279 0.27304 89.723 0.80469 89.723 0.44258 0 0.80469 0.54316 0.80469 1.207s-0.36211 1.207-0.80469 1.207c-0.47999 0-0.80469 3.0846-0.80469 7.6445v7.6445h-197.15z" style="fill-opacity:0;stroke-width:.80469"/>
+        <path transform="matrix(.26459 0 0 .26459 1451.8 -29.65)" d="m5.6328 104.69v-98.574h197.15v89.723c0 59.279 0.27304 89.723 0.80469 89.723 0.44258 0 0.80469 0.54316 0.80469 1.207s-0.36211 1.207-0.80469 1.207c-0.47999 0-0.80469 3.0846-0.80469 7.6445v7.6445h-197.15z" style="fill-opacity:0;stroke-width:.80469"/>
+        <path transform="matrix(.26459 0 0 .26459 1451.8 -29.65)" d="m5.6328 104.69v-98.574h197.15v89.723c0 59.279 0.27304 89.723 0.80469 89.723 0.44258 0 0.80469 0.54316 0.80469 1.207s-0.36211 1.207-0.80469 1.207c-0.47999 0-0.80469 3.0846-0.80469 7.6445v7.6445h-197.15z" style="fill-opacity:0;stroke-width:.80469"/>
+        <path transform="matrix(.26459 0 0 .26459 1451.8 -29.65)" d="m5.6328 104.69v-98.574h197.15v89.723c0 59.279 0.27304 89.723 0.80469 89.723 0.44258 0 0.80469 0.54316 0.80469 1.207s-0.36211 1.207-0.80469 1.207c-0.47999 0-0.80469 3.0846-0.80469 7.6445v7.6445h-197.15z" style="fill-opacity:0;stroke-width:.80469"/>
+        <path transform="matrix(.26459 0 0 .26459 1451.8 -29.65)" d="m5.6328 104.69v-98.574h197.15v89.723c0 59.279 0.27304 89.723 0.80469 89.723 0.44258 0 0.80469 0.54316 0.80469 1.207s-0.36211 1.207-0.80469 1.207c-0.47999 0-0.80469 3.0846-0.80469 7.6445v7.6445h-197.15z" style="fill-opacity:0;stroke-width:.80469"/>
+        <path transform="matrix(.26459 0 0 .26459 1451.8 -29.65)" d="m5.6328 104.69v-98.574h197.15v89.723c0 59.279 0.27304 89.723 0.80469 89.723 0.44258 0 0.80469 0.54316 0.80469 1.207s-0.36211 1.207-0.80469 1.207c-0.47999 0-0.80469 3.0846-0.80469 7.6445v7.6445h-197.15z" style="fill-opacity:0;stroke-width:.80469"/>
+        <path transform="matrix(.26459 0 0 .26459 1451.8 -29.65)" d="m5.6328 104.69v-98.574h197.15v89.723c0 59.279 0.27304 89.723 0.80469 89.723 0.44258 0 0.80469 0.54316 0.80469 1.207s-0.36211 1.207-0.80469 1.207c-0.47999 0-0.80469 3.0846-0.80469 7.6445v7.6445h-197.15z" style="fill-opacity:0;stroke-width:.80469"/>
+        <path transform="matrix(.26459 0 0 .26459 1451.8 -29.65)" d="m5.6328 104.69v-98.574h197.15v89.723c0 59.279 0.27304 89.723 0.80469 89.723 0.44258 0 0.80469 0.54316 0.80469 1.207s-0.36211 1.207-0.80469 1.207c-0.47999 0-0.80469 3.0846-0.80469 7.6445v7.6445h-197.15z" style="fill-opacity:0;stroke-width:.80469"/>
        </g>
       </g>
      </g>
     </g>
+   </g>
+  </g>
+ </g>
+</svg>
+</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="..WarstwaWord\BlokiKonstrukcyjne2\BB_Symbole_elektryczne.ahk" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" class="SymboleElektryczne" name="Symbole elektryczne" width="206px" height="206px" version="1.1" viewBox="0 0 206 206" xmlns="http://www.w3.org/2000/svg">
+ <g transform="translate(1.3911 6.8479)">
+  <g transform="matrix(3.7795,0,0,3.7795,10.171,-6.7758)">
+   <g transform="translate(-1.0884,-121.69)">
+    <g transform="translate(1.6608,-59.209)">
+     <g transform="translate(-.6443 -59.335)">
+      <g transform="translate(-1396.8,269.89)">
+       <g transform="translate(-57.972 -.024822)">
+        <g transform="translate(1657.6 73.867)" style="fill:#db3b3b">
+         <g transform="translate(-203.03,-103.33)" style="fill:#db3b3b">
+          <flowRoot transform="matrix(.26458 0 0 .26458 -2.875 1.091)" font-size="40px" letter-spacing="0px" word-spacing="0px" style="fill:#db3b3b;font-family:sans-serif;font-size:40px;letter-spacing:0px;line-height:1.25;word-spacing:0px" xml:space="preserve"><flowRegion style="fill:#db3b3b"><rect x="-85.582" y="-60.812" width="342.33" height="293.65" style="fill:#db3b3b"/></flowRegion><flowPara/></flowRoot>
+          <g transform="translate(-1144.8 309.94)" style="fill:#db3b3b">
+           <flowRoot transform="matrix(.26458 0 0 .26458 1036.5 -317.79)" font-size="40px" letter-spacing="0px" word-spacing="0px" style="fill:#db3b3b;font-family:sans-serif;font-size:40px;letter-spacing:0px;line-height:1.25;word-spacing:0px" xml:space="preserve"><flowRegion style="fill:#db3b3b"><rect x="-105.21" y="-13.703" width="562.17" height="513.49" style="fill:#db3b3b"/></flowRegion><flowPara/></flowRoot>
+           <g transform="translate(-66.134 .039287)" style="fill:#db3b3b">
+            <g transform="matrix(.26459 0 0 .26459 1207.6 -308.71)">
+             <g transform="matrix(3.7795,0,0,3.7795,10.171,-6.7758)">
+              <g transform="translate(.5724 -180.9)">
+               <g transform="translate(-.11514 -59.639)">
+                <g transform="translate(-1396.8,269.89)">
+                 <g transform="translate(-57.972 -.024822)">
+                  <g transform="translate(1663 71.099)">
+                   <g transform="translate(-208.46 -100.26)">
+                    <flowRoot transform="matrix(.26458 0 0 .26458 -2.875 1.091)" font-size="40px" letter-spacing="0px" word-spacing="0px" style="fill:#000000;font-family:sans-serif;font-size:40px;letter-spacing:0px;line-height:1.25;word-spacing:0px" xml:space="preserve"><flowRegion><rect x="-85.582" y="-60.812" width="342.33" height="293.65"/></flowRegion><flowPara/></flowRoot>
+                    <g transform="translate(-1039.4,318.88)">
+                     <flowRoot transform="matrix(.26458 0 0 .26458 1036.5 -317.79)" font-size="40px" letter-spacing="0px" word-spacing="0px" style="fill:#000000;font-family:sans-serif;font-size:40px;letter-spacing:0px;line-height:1.25;word-spacing:0px" xml:space="preserve"><flowRegion><rect x="-105.21" y="-13.703" width="562.17" height="513.49"/></flowRegion><flowPara/></flowRoot>
+                     <g transform="translate(-186.81 -6.3046)">
+                      <flowRoot transform="matrix(.26458 0 0 .26458 1168.8 -317.87)" font-size="40px" letter-spacing="0px" word-spacing="0px" style="fill:#000000;font-family:sans-serif;font-size:40px;letter-spacing:0px;line-height:1.25;word-spacing:0px" xml:space="preserve"><flowRegion><rect x="-114.63" y="-91.434" width="675.23" height="522.91"/></flowRegion><flowPara/></flowRoot>
+                      <g transform="translate(-66.2 -.040316)">
+                       <g transform="translate(-65.918 -.60254)">
+                        <g transform="translate(-138.35 -1.664)">
+                         <flowRoot font-size="40px" letter-spacing="0px" word-spacing="0px" style="fill:#000000;font-family:sans-serif;font-size:40px;letter-spacing:0px;line-height:1.25;word-spacing:0px" xml:space="preserve"><flowRegion><rect x="-24.34" y="-19.695" width="252.04" height="245.75"/></flowRegion><flowPara/></flowRoot>
+                         <g transform="translate(-69.207 .046241)">
+                          <flowRoot font-size="40px" letter-spacing="0px" word-spacing="0px" style="fill:#000000;font-family:sans-serif;font-size:40px;letter-spacing:0px;line-height:1.25;word-spacing:0px" xml:space="preserve"><flowRegion><rect x="-65.168" y="-26.762" width="382.37" height="335.26"/></flowRegion><flowPara/></flowRoot>
+                          <g transform="translate(-63.347 .4912)">
+                           <g transform="translate(529.82 -.18087)">
+                            <rect x="1098" y="-309.59" width="52.917" height="52.917" style="fill:#db3b3b;paint-order:fill markers stroke;stroke-linecap:round;stroke-width:.5;stroke:#000"/>
+                            <g transform="matrix(.82114 0 0 .72959 1108.7 -304.61)" style="fill:#fff">
+                             <polygon points="15.1 32.5 28 17.5 22.6 17.5 24.9 7.5 12 20.5 18.2 20.5" style="clip-rule:evenodd;fill-rule:evenodd;fill:#fff"/>
+                            </g>
+                            <text x="1109.1797" y="-261.8038" style="fill:#000000;font-family:sans-serif;font-size:10.583px;letter-spacing:0px;line-height:1.25;stroke-width:.26459;word-spacing:0px" xml:space="preserve"><tspan class="iTxt" x="1109.1797" y="-261.8038" style="fill:#ffffff;font-size:5.6445px;stroke-width:.26459">elektryczne</tspan></text>
+                           </g>
+                           <text x="1642.4062" y="-269.89716" style="fill:#000000;font-family:sans-serif;font-size:10.583px;letter-spacing:0px;line-height:1.25;stroke-width:.26459;word-spacing:0px" xml:space="preserve"><tspan x="1642.4062" y="-269.89716" style="stroke-width:.26459"><tspan class="iTxt" x="1642.4062" y="-269.89716" style="fill:#ffffff;font-size:5.6445px;stroke-width:.26459">Symbole</tspan></tspan></text>
+                          </g>
+                         </g>
+                        </g>
+                       </g>
+                      </g>
+                     </g>
+                    </g>
+                   </g>
+                  </g>
+                 </g>
+                </g>
+               </g>
+              </g>
+             </g>
+             <text x="112.31046" y="151.41133" style="fill:#000000;font-family:sans-serif;font-size:40px;letter-spacing:0px;line-height:1.25;word-spacing:0px" xml:space="preserve"><tspan x="112.31046" y="187.90454"/></text>
+             <flowRoot transform="translate(2.0683 -5.5027)" style="fill:#000000;font-family:sans-serif;font-size:40px;letter-spacing:0px;line-height:1.25;word-spacing:0px" xml:space="preserve"><flowRegion><rect x="-719.39" y="-8.0469" width="328.31" height="82.883"/></flowRegion><flowPara/></flowRoot>
+             <flowRoot style="fill:black;font-family:sans-serif;font-size:40px;letter-spacing:0px;line-height:1.25;word-spacing:0px" xml:space="preserve"><flowRegion><rect x="-757.21" y="21.727" width="159.33" height="62.766"/></flowRegion><flowPara/></flowRoot>
+             <flowRoot style="fill:#ececec;font-family:sans-serif;font-size:40px;letter-spacing:0px;line-height:1.25;word-spacing:0px" xml:space="preserve"><flowRegion style="fill:#ececec"><rect x="-807.1" y="-16.898" width="280.03" height="115.88" style="fill:#ececec"/></flowRegion><flowPara/></flowRoot>
+             <text x="75.294853" y="163.39673" style="fill:#000000;font-family:sans-serif;font-size:40px;letter-spacing:0px;line-height:1.25;word-spacing:0px" xml:space="preserve"><tspan x="134.21153" y="163.39673"><tspan x="134.21153" y="163.39673" style="font-size:21.333px"> </tspan></tspan></text>
+             <text x="-848.48639" y="11.395708" style="fill:#000000;font-family:sans-serif;font-size:40px;letter-spacing:0px;line-height:1.25;word-spacing:0px" xml:space="preserve"><tspan x="-848.48639" y="47.88892"/><tspan x="-848.48639" y="97.888924"/></text>
+             <text x="58.279224" y="187.90456" style="fill:#ffffff;font-family:sans-serif;font-size:40px;letter-spacing:0px;line-height:1.25;word-spacing:0px" xml:space="preserve"><tspan x="58.279224" y="224.39777" style="font-size:21.333px"/></text>
+             <flowRoot style="fill:black;font-family:sans-serif;font-size:40px;letter-spacing:0px;line-height:1.25;word-spacing:0px" xml:space="preserve"><flowRegion><rect x="20.117" y="137.6" width="159.33" height="53.914"/></flowRegion><flowPara/></flowRoot>
+            </g>
+           </g>
+          </g>
+         </g>
+        </g>
+        <path transform="matrix(.26459 0 0 .26459 1451.8 -29.65)" d="m5.6328 104.69v-98.574h197.15v89.723c0 59.279 0.27304 89.723 0.80469 89.723 0.44258 0 0.80469 0.54316 0.80469 1.207s-0.36211 1.207-0.80469 1.207c-0.47999 0-0.80469 3.0846-0.80469 7.6445v7.6445h-197.15z" style="fill-opacity:0;stroke-width:.80469"/>
+        <path transform="matrix(.26459 0 0 .26459 1451.8 -29.65)" d="m5.6328 104.69v-98.574h197.15v89.723c0 59.279 0.27304 89.723 0.80469 89.723 0.44258 0 0.80469 0.54316 0.80469 1.207s-0.36211 1.207-0.80469 1.207c-0.47999 0-0.80469 3.0846-0.80469 7.6445v7.6445h-197.15z" style="fill-opacity:0;stroke-width:.80469"/>
+        <path transform="matrix(.26459 0 0 .26459 1451.8 -29.65)" d="m5.6328 104.69v-98.574h197.15v89.723c0 59.279 0.27304 89.723 0.80469 89.723 0.44258 0 0.80469 0.54316 0.80469 1.207s-0.36211 1.207-0.80469 1.207c-0.47999 0-0.80469 3.0846-0.80469 7.6445v7.6445h-197.15z" style="fill-opacity:0;stroke-width:.80469"/>
+        <path transform="matrix(.26459 0 0 .26459 1451.8 -29.65)" d="m5.6328 104.69v-98.574h197.15v89.723c0 59.279 0.27304 89.723 0.80469 89.723 0.44258 0 0.80469 0.54316 0.80469 1.207s-0.36211 1.207-0.80469 1.207c-0.47999 0-0.80469 3.0846-0.80469 7.6445v7.6445h-197.15z" style="fill-opacity:0;stroke-width:.80469"/>
+        <path transform="matrix(.26459 0 0 .26459 1451.8 -29.65)" d="m5.6328 104.69v-98.574h197.15v89.723c0 59.279 0.27304 89.723 0.80469 89.723 0.44258 0 0.80469 0.54316 0.80469 1.207s-0.36211 1.207-0.80469 1.207c-0.47999 0-0.80469 3.0846-0.80469 7.6445v7.6445h-197.15z" style="fill-opacity:0;stroke-width:.80469"/>
+        <path transform="matrix(.26459 0 0 .26459 1451.8 -29.65)" d="m5.6328 104.69v-98.574h197.15v89.723c0 59.279 0.27304 89.723 0.80469 89.723 0.44258 0 0.80469 0.54316 0.80469 1.207s-0.36211 1.207-0.80469 1.207c-0.47999 0-0.80469 3.0846-0.80469 7.6445v7.6445h-197.15z" style="fill-opacity:0;stroke-width:.80469"/>
+        <path transform="matrix(.26459 0 0 .26459 1451.8 -29.65)" d="m5.6328 104.69v-98.574h197.15v89.723c0 59.279 0.27304 89.723 0.80469 89.723 0.44258 0 0.80469 0.54316 0.80469 1.207s-0.36211 1.207-0.80469 1.207c-0.47999 0-0.80469 3.0846-0.80469 7.6445v7.6445h-197.15z" style="fill-opacity:0;stroke-width:.80469"/>
+        <path transform="matrix(.26459 0 0 .26459 1451.8 -29.65)" d="m5.6328 104.69v-98.574h197.15v89.723c0 59.279 0.27304 89.723 0.80469 89.723 0.44258 0 0.80469 0.54316 0.80469 1.207s-0.36211 1.207-0.80469 1.207c-0.47999 0-0.80469 3.0846-0.80469 7.6445v7.6445h-197.15z" style="fill-opacity:0;stroke-width:.80469"/>
+        <path transform="matrix(.26459 0 0 .26459 1451.8 -29.65)" d="m5.6328 104.69v-98.574h197.15v89.723c0 59.279 0.27304 89.723 0.80469 89.723 0.44258 0 0.80469 0.54316 0.80469 1.207s-0.36211 1.207-0.80469 1.207c-0.47999 0-0.80469 3.0846-0.80469 7.6445v7.6445h-197.15z" style="fill-opacity:0;stroke-width:.80469"/>
+        <path transform="matrix(.26459 0 0 .26459 1451.8 -29.65)" d="m5.6328 104.69v-98.574h197.15v89.723c0 59.279 0.27304 89.723 0.80469 89.723 0.44258 0 0.80469 0.54316 0.80469 1.207s-0.36211 1.207-0.80469 1.207c-0.47999 0-0.80469 3.0846-0.80469 7.6445v7.6445h-197.15z" style="fill-opacity:0;stroke-width:.80469"/>
+        <path transform="matrix(.26459 0 0 .26459 1451.8 -29.65)" d="m5.6328 104.69v-98.574h197.15v89.723c0 59.279 0.27304 89.723 0.80469 89.723 0.44258 0 0.80469 0.54316 0.80469 1.207s-0.36211 1.207-0.80469 1.207c-0.47999 0-0.80469 3.0846-0.80469 7.6445v7.6445h-197.15z" style="fill-opacity:0;stroke-width:.80469"/>
+        <path transform="matrix(.26459 0 0 .26459 1451.8 -29.65)" d="m5.6328 104.69v-98.574h197.15v89.723c0 59.279 0.27304 89.723 0.80469 89.723 0.44258 0 0.80469 0.54316 0.80469 1.207s-0.36211 1.207-0.80469 1.207c-0.47999 0-0.80469 3.0846-0.80469 7.6445v7.6445h-197.15z" style="fill-opacity:0;stroke-width:.80469"/>
+        <path transform="matrix(.26459 0 0 .26459 1451.8 -29.65)" d="m5.6328 104.69v-98.574h197.15v89.723c0 59.279 0.27304 89.723 0.80469 89.723 0.44258 0 0.80469 0.54316 0.80469 1.207s-0.36211 1.207-0.80469 1.207c-0.47999 0-0.80469 3.0846-0.80469 7.6445v7.6445h-197.15z" style="fill-opacity:0;stroke-width:.80469"/>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+ </g>
+</svg>
+</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="..WarstwaWord\BlokiKonstrukcyjne2\BB_NowyDokument.ahk" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="SVGRoot"
+   width="205px"
+   height="205px"
+   version="1.1"
+   viewBox="0 0 205 205"
+   sodipodi:docname="NowyDokumentUzupełniony.svg"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)">
+  <metadata
+     id="metadata105">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs103" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1366"
+     inkscape:window-height="705"
+     id="namedview101"
+     showgrid="false"
+     inkscape:zoom="1.1512195"
+     inkscape:cx="102.5"
+     inkscape:cy="81.696308"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="SVGRoot" />
+  <rect
+     x="3.3008"
+     y="2.5"
+     width="200"
+     height="200"
+     style="fill:#db3b3b;paint-order:fill markers stroke;stroke-linecap:round;stroke-width:1.8898;stroke:#000"
+     id="rect2" />
+  <g
+     transform="matrix(1.9231 0 0 1.9231 50.098 23.66)"
+     style="fill:#fff"
+     id="g70">
+    <g
+       style="fill:#fff"
+       id="g68">
+      <g
+         style="fill:#fff"
+         id="g6">
+        <path
+           d="m7 50c-2.7568 0-5-2.2432-5-5v-23h10v23c0 2.7568-2.2431 5-5 5zm-3-26v21c0 1.6543 1.3457 3 3 3s3-1.3457 3-3v-21z"
+           style="fill:#fff"
+           id="path4" />
+      </g>
+      <g
+         style="fill:#fff"
+         id="g10">
+        <path
+           d="m45 50h-38v-2h38c1.6543 0 3-1.3457 3-3v-41h-36v18.999h-2v-20.999h40v43c1e-6 2.7568-2.2432 5-5 5z"
+           style="fill:#fff"
+           id="path8" />
+      </g>
+      <g
+         style="fill:#fff"
+         id="g14">
+        <path
+           d="m46 16h-32v-10h32v10zm-30-2h28v-6h-28z"
+           style="fill:#fff"
+           id="path12" />
+      </g>
+      <g
+         style="fill:#fff"
+         id="g18">
+        <rect
+           x="6"
+           y="23"
+           width="2"
+           height="22"
+           style="fill:#fff"
+           id="rect16" />
+      </g>
+      <g
+         style="fill:#fff"
+         id="g22">
+        <rect
+           x="14"
+           y="19"
+           width="14"
+           height="2"
+           style="fill:#fff"
+           id="rect20" />
+      </g>
+      <g
+         style="fill:#fff"
+         id="g26">
+        <rect
+           x="32"
+           y="19"
+           width="14"
+           height="2"
+           style="fill:#fff"
+           id="rect24" />
+      </g>
+      <g
+         style="fill:#fff"
+         id="g30">
+        <rect
+           x="14"
+           y="24"
+           width="14"
+           height="2"
+           style="fill:#fff"
+           id="rect28" />
+      </g>
+      <g
+         style="fill:#fff"
+         id="g34">
+        <rect
+           x="32"
+           y="24"
+           width="14"
+           height="2"
+           style="fill:#fff"
+           id="rect32" />
+      </g>
+      <g
+         style="fill:#fff"
+         id="g38">
+        <rect
+           x="14"
+           y="29"
+           width="14"
+           height="2"
+           style="fill:#fff"
+           id="rect36" />
+      </g>
+      <g
+         style="fill:#fff"
+         id="g42">
+        <rect
+           x="32"
+           y="29"
+           width="14"
+           height="2"
+           style="fill:#fff"
+           id="rect40" />
+      </g>
+      <g
+         style="fill:#fff"
+         id="g46">
+        <rect
+           x="14"
+           y="34"
+           width="14"
+           height="2"
+           style="fill:#fff"
+           id="rect44" />
+      </g>
+      <g
+         style="fill:#fff"
+         id="g50">
+        <rect
+           x="32"
+           y="34"
+           width="14"
+           height="2"
+           style="fill:#fff"
+           id="rect48" />
+      </g>
+      <g
+         style="fill:#fff"
+         id="g54">
+        <rect
+           x="14"
+           y="39"
+           width="14"
+           height="2"
+           style="fill:#fff"
+           id="rect52" />
+      </g>
+      <g
+         style="fill:#fff"
+         id="g58">
+        <rect
+           x="32"
+           y="39"
+           width="14"
+           height="2"
+           style="fill:#fff"
+           id="rect56" />
+      </g>
+      <g
+         style="fill:#fff"
+         id="g62">
+        <rect
+           x="14"
+           y="44"
+           width="14"
+           height="2"
+           style="fill:#fff"
+           id="rect60" />
+      </g>
+      <g
+         style="fill:#fff"
+         id="g66">
+        <rect
+           x="32"
+           y="44"
+           width="14"
+           height="2"
+           style="fill:#fff"
+           id="rect64" />
+      </g>
+    </g>
+  </g>
+  <text
+     x="73.671875"
+     y="154.20805"
+     style="fill:#000000;font-family:sans-serif;font-size:40px;letter-spacing:0px;line-height:1.25;word-spacing:0px"
+     xml:space="preserve"
+     id="text76"><tspan
+       x="73.671875"
+       y="154.20805"
+       id="tspan74"><tspan
+         x="73.671875"
+         y="154.20805"
+         style="fill:#ffffff;font-size:21.333px"
+         id="tspan72">Nowy</tspan></tspan></text>
+  <flowRoot
+     style="fill:#000000;font-family:sans-serif;font-size:40px;letter-spacing:0px;line-height:1.25;word-spacing:0px"
+     xml:space="preserve"
+     id="flowRoot84"><flowRegion
+       id="flowRegion80"><rect
+         x="-306.7"
+         y="16.016"
+         width="230.62"
+         height="40.039"
+         id="rect78" /></flowRegion><flowPara
+       id="flowPara82">Dokument</flowPara></flowRoot>  <flowRoot
+     style="fill:black;font-family:sans-serif;font-size:40px;letter-spacing:0px;line-height:1.25;word-spacing:0px"
+     xml:space="preserve"
+     id="flowRoot92"><flowRegion
+       id="flowRegion88"><rect
+         x="-308.3"
+         y="-28.027"
+         width="136.13"
+         height="70.469"
+         id="rect86" /></flowRegion><flowPara
+       id="flowPara90" /></flowRoot>  <text
+     x="48.445312"
+     y="187.04008"
+     style="fill:#000000;font-family:sans-serif;font-size:40px;letter-spacing:0px;line-height:1.25;word-spacing:0px"
+     xml:space="preserve"
+     id="text98"><tspan
+       x="48.445312"
+       y="187.04008"
+       id="tspan96"><tspan
+         x="48.445312"
+         y="187.04008"
+         style="fill:#ffffff;font-size:21.333px"
+         id="tspan94">Dokument</tspan></tspan></text>
+  <g
+     id="g3824"
+     transform="matrix(0.11029491,0,0,0.11253755,132.94631,86.908177)">
+    <path
+       id="path3810"
+       d="M 256,0 C 114.83594,0 0,114.83594 0,256 0,397.16406 114.83594,512 256,512 397.16406,512 512,397.16406 512,256 512,114.83594 397.16406,0 256,0 Z m 0,0"
+       inkscape:connector-curvature="0"
+       style="fill:#2196f3" />
+    <path
+       id="path3812"
+       d="M 368,277.33203 H 277.33203 V 368 c 0,11.77734 -9.55469,21.33203 -21.33203,21.33203 -11.77734,0 -21.33203,-9.55469 -21.33203,-21.33203 V 277.33203 H 144 c -11.77734,0 -21.33203,-9.55469 -21.33203,-21.33203 0,-11.77734 9.55469,-21.33203 21.33203,-21.33203 h 90.66797 V 144 c 0,-11.77734 9.55469,-21.33203 21.33203,-21.33203 11.77734,0 21.33203,9.55469 21.33203,21.33203 v 90.66797 H 368 c 11.77734,0 21.33203,9.55469 21.33203,21.33203 0,11.77734 -9.55469,21.33203 -21.33203,21.33203 z m 0,0"
+       inkscape:connector-curvature="0"
+       style="fill:#ff0000" />
+  </g>
+</svg>
+</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="..WarstwaWord\BlokiKonstrukcyjne2\BB_PodpisTab.ahk" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" width="205px" height="205px" version="1.1" viewBox="0 0 205 205" xmlns="http://www.w3.org/2000/svg">
+ <rect x="4.0977" y="4.1016" width="200" height="200" style="fill:#db3b3b;paint-order:fill markers stroke;stroke-linecap:round;stroke-width:1.8898;stroke:#000"/>
+ <g transform="matrix(.21193 0 0 .16344 57.053 27.026)" style="fill:#fff">
+  <path d="m184.3 512c-4.1992 0-8.2773-1.6445-11.305-4.6914-3.9258-3.9258-5.5274-9.582-4.2656-14.977l23.254-98.668c0.67969-2.9023 2.1523-5.5469 4.2656-7.6367l203.65-203.65c18.109-18.133 49.75-18.156 67.883 0l30.164 30.164c9.0664 9.0469 14.059 21.121 14.059 33.922 0 12.82-4.9922 24.895-14.059 33.941l-203.65 203.62c-2.1133 2.1133-4.7578 3.5859-7.6367 4.2656l-98.668 23.254c-1.2344 0.32031-2.4727 0.44922-3.6914 0.44922zm37.781-106.58-16.277 69.078 69.078-16.277 200.43-200.43c3.0274-3.0312 4.6914-7.0391 4.6914-11.309 0-4.2656-1.6641-8.2969-4.6914-11.305l-30.168-30.168c-6.25-6.2266-16.383-6.25-22.633 0zm60.91 67.328h0.21094z" style="fill:#fff"/>
+  <path d="m433.84 337.9c-4.0977 0-8.1914-1.5586-11.309-4.6914l-75.434-75.438c-6.25-6.25-6.25-16.383 0-22.633s16.383-6.25 22.633 0l75.438 75.434c6.25 6.25 6.25 16.383 0 22.637-3.1367 3.1328-7.2344 4.6914-11.328 4.6914z" style="fill:#fff"/>
+  <path d="m145.92 448h-97.922c-26.477 0-48-21.523-48-48v-352c0-26.477 21.523-48 48-48h309.33c26.477 0 48 21.523 48 48v98.773c0 8.832-7.168 16-16 16s-16-7.168-16-16v-98.773c0-8.832-7.168-16-16-16h-309.33c-8.832 0-16 7.168-16 16v352c0 8.832 7.168 16 16 16h97.922c8.832 0 16 7.168 16 16s-7.168 16-16 16z" style="fill:#fff"/>
+  <path d="m389.33 138.67h-373.33c-8.832 0-16-7.168-16-16s7.168-16 16-16h373.33c8.832 0 16 7.168 16 16s-7.168 16-16 16z" style="fill:#fff"/>
+  <path d="m310.83 245.33h-294.83c-8.832 0-16-7.168-16-16s7.168-16 16-16h294.83c8.832 0 16 7.168 16 16s-7.168 16-16 16z" style="fill:#fff"/>
+  <path d="m202.67 352h-186.67c-8.832 0-16-7.168-16-16s7.168-16 16-16h186.67c8.832 0 16 7.168 16 16s-7.168 16-16 16z" style="fill:#fff"/>
+  <path d="m202.67 352c-8.832 0-16-7.168-16-16v-213.33c0-8.832 7.168-16 16-16s16 7.168 16 16v213.33c0 8.832-7.168 16-16 16z" style="fill:#fff"/>
+ </g>
+ <text x="36.835938" y="185.43852" style="fill:#000000;font-family:sans-serif;font-size:40px;letter-spacing:0px;line-height:1.25;word-spacing:0px" xml:space="preserve"><tspan x="36.835938" y="185.43852"><tspan x="36.835938" y="185.43852" style="fill:#ffffff;font-size:21.333px">Podpis tabeli</tspan></tspan></text>
+ <g transform="matrix(.77686 0 0 .71253 6.6435 82.408)">
+  <g transform="matrix(.82945 0 0 .62759 11.339 10.145)" style="fill:#0ff">
+   <path d="m114.82 83.667c5e-3 -3e-3 0.011-5e-3 0.016-8e-3l-0.242-0.438-0.174-0.469c-2.889 1.074-5.479 1.014-7.918-0.184-7.797-3.829-12.357-18.479-16.769-32.646-4.267-13.702-8.295-26.646-15.083-28.488-2.775-0.755-5.739 0.351-9.064 3.382-4.777 4.55-9.23 14.32-13.539 23.769-5.142 11.281-10.459 22.945-15.573 23.427-3.446 0.344-6.995-4.27-10.74-9.134-6.261-8.13-14.054-18.248-25.66-10.945l0.229 0.365c-0.084 0.058-0.167 0.105-0.251 0.165l0.24 0.339c-0.087 0.066-0.173 0.121-0.26 0.189l0.249 0.316c-0.089 0.074-0.178 0.136-0.267 0.213l0.254 0.293c-0.09 0.082-0.18 0.15-0.27 0.235l0.686 0.729c2.635-2.484 5.091-3.456 7.498-2.976 6.335 1.265 11.459 12.705 15.979 22.798 4.567 10.196 8.524 19.032 13.547 19.032 0.11 0 0.221-4e-3 0.333-0.013 7.147-0.553 9.792-10.111 12.855-21.179 2.173-7.854 4.636-16.753 9.091-23.108 3.963-5.409 7.5-7.907 10.817-7.629 5.937 0.494 10.636 9.831 15.611 19.717 5.268 10.469 10.717 21.292 18.522 23.691 3.108 0.956 6.427 0.473 9.86-1.432 2e-3 0 4e-3 -1e-3 6e-3 -2e-3 6e-3 -3e-3 0.012-5e-3 0.017-9e-3zm-90.291-14.476c4.388 7.786 8.159 14.507 12.775 14.122 6.434-0.546 10.442-11.369 14.686-22.826 3.227-8.712 6.564-17.721 11.146-23.053 3.447-4.012 6.49-5.736 9.291-5.266 6.006 1.004 10.359 11.948 14.968 23.534 2.541 6.386 5.128 12.874 8.129 18.122-2.808-4.604-5.325-10.21-7.8-15.729-4.921-10.982-9.572-21.355-16.068-22.145-3.406-0.418-6.973 1.813-10.88 6.815-4.667 5.972-7.538 14.824-10.313 23.385-3.473 10.709-6.752 20.825-12.871 21.32-4.2 0.358-8.168-7.59-12.355-15.985-1.759-3.528-3.542-7.097-5.426-10.274 1.656 2.557 3.221 5.326 4.718 7.98zm-6.25-11.914c2.314 2.75 4.445 6.018 6.449 9.103 4.243 6.528 7.916 12.162 12.208 11.781 6.056-0.541 10.657-11.662 15.528-23.435 3.739-9.035 7.604-18.378 12.241-23.236 3.227-3.38 6.053-4.754 8.648-4.196 6.096 1.309 10.256 13.104 14.66 25.591 2.211 6.268 4.457 12.633 7.051 18.011-2.417-4.699-4.596-10.17-6.74-15.563-4.715-11.855-9.169-23.053-15.73-24.15-3.176-0.529-6.521 1.3-10.217 5.601-4.699 5.467-8.067 14.562-11.325 23.357-4.13 11.15-8.032 21.685-13.833 22.177-3.943 0.333-7.774-6.441-11.819-13.616-2.195-3.894-4.534-8.035-7.121-11.425zm6.663 6.212c4.088 5.309 7.611 9.898 11.626 9.52 5.69-0.536 10.887-11.937 16.389-24.006 4.268-9.362 8.681-19.042 13.31-23.452 3.044-2.775 5.701-3.804 8.121-3.149 6.258 1.698 10.207 14.387 14.391 27.822 2.001 6.428 4.034 12.95 6.4 18.56-2.241-4.952-4.246-10.63-6.223-16.231-4.501-12.759-8.752-24.81-15.395-26.236-2.961-0.635-6.096 0.831-9.581 4.484-4.767 4.993-8.668 14.424-12.441 23.544-4.752 11.484-9.241 22.333-14.693 22.819-3.694 0.341-7.383-5.333-11.281-11.331-2.567-3.948-5.333-8.194-8.471-11.336 2.849 2.505 5.412 5.828 7.848 8.992zm45.945-22.783c-3.684-0.308-7.521 2.321-11.713 8.043-4.56 6.504-7.046 15.493-9.242 23.424-2.962 10.705-5.521 19.95-11.968 20.448-4.478 0.347-8.564-8.773-12.89-18.432-1.322-2.952-2.657-5.93-4.038-8.73 1.141 2.136 2.241 4.336 3.305 6.472 4.421 8.864 8.252 16.551 12.978 16.55 0.117 0 0.235-5e-3 0.354-0.015 6.783-0.549 10.008-10.493 13.741-22.009 2.749-8.478 5.592-17.245 10.15-23.077 3.674-4.702 6.941-6.806 9.972-6.438 5.935 0.722 10.474 10.844 15.277 21.561 2.743 6.119 5.538 12.334 8.753 17.243-2.96-4.259-5.633-9.56-8.258-14.775-5.105-10.144-9.927-19.725-16.421-20.265z" style="fill:#0ff"/>
+  </g>
+ </g>
+</svg>
+</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   " id="" class="box_item" href="Layer1.html"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" class="StronaGlowna" name="Strona glowna" width="205px" height="205px" version="1.1" viewBox="0 0 205 205" xmlns="http://www.w3.org/2000/svg">
+ <g>
+  <rect x="3.6797" y="4.0977" width="200" height="200" fill="#0082b4" stroke="#000" stroke-linecap="round" stroke-width="1.8898" style="paint-order:fill markers stroke"/>
+  <text x="102.68917" y="162.99924" fill="#ffffff" font-family="sans-serif" font-size="21.333px" letter-spacing="0px" text-anchor="middle" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><tspan class="iTxt" x="102.68917" y="162.99924" text-align="center">STRONA</tspan><tspan class="iTxt"  x="102.68917" y="199.66589" text-align="center"> GŁÓWNA</tspan></text>
+  <g transform="matrix(7.1415 0 0 7.1415 18.592 -5.3742)" fill="#fff">
+   <g fill="#fff">
+    <path d="m6.934 12.202c-0.341 0-0.62 0.271-0.62 0.612v6.025c0 0.341 0.28 0.616 0.62 0.616h10.145c0.34 0 0.611-0.275 0.611-0.616v-6.025c0-0.341-0.271-0.612-0.611-0.612-0.341 0-0.621 0.271-0.621 0.612v5.409h-8.913v-5.409c0-0.341-0.279-0.612-0.611-0.612z"/>
+    <path d="m4.181 12.98c0.236 0.236 0.63 0.236 0.865 0l6.951-6.946 6.96 6.946c0.236 0.236 0.629 0.236 0.865 0 0.24-0.236 0.24-0.629 0-0.865l-7.374-7.383-0.013-9e-3c-0.24-0.236-0.63-0.236-0.87 0l-7.383 7.392c-0.245 0.236-0.245 0.629-1e-3 0.865z"/>
    </g>
   </g>
  </g>
@@ -629,7 +1115,7 @@
   </g>
  </g>
 </svg>
-</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   " id="Layer1\ToWordLayer.ahk" class="box_item" href="Layer2.html"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" width="206px" height="206px" version="1.1" viewBox="0 0 206 206" xmlns="http://www.w3.org/2000/svg">
+</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   " id="Layer1\ToWordLayer.ahk" class="box_item" href="Layer2.html"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" class="WarstwaWord" name="Warstwa word" width="206px" height="206px" version="1.1" viewBox="0 0 206 206" xmlns="http://www.w3.org/2000/svg">
  <g transform="matrix(3.7795 0 0 3.7795 -1795.2 2502.6)">
   <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-392.69" y="-63.57" width="758.02" height="397.52"/></flowRegion><flowPara/></flowRoot>
   <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-251.87" y="-84.492" width="624.44" height="455.45"/></flowRegion><flowPara/></flowRoot>

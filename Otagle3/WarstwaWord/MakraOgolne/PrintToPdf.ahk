@@ -1,4 +1,4 @@
-PrintToPdf()
+﻿PrintToPdf()
 {
 	oWord := ComObjActive("Word.Application")
 	Send, {LAlt}

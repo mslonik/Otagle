@@ -1,4 +1,4 @@
-GoToPreviousComment()
+﻿GoToPreviousComment()
 {
 	oWord := ComObjActive("Word.Application")
 	PrevPos := oWord.Selection.Range.Start
@@ -6,7 +6,7 @@ GoToPreviousComment()
 	oWord.Browser.Previous
 	CurPos := oWord.Selection.Range.Start
 	if (PrevPos <= CurPos)
-		MsgBox, % MsgText("Brak wcześniejszych komentarzy.")
+		MsgBox, % "Brak wcześniejszych komentarzy."
 	oWord := ""
 	WinActivate, ahk_class OpusApp
 	WinGetPos, WinX, WinY,WinW,WinH,A

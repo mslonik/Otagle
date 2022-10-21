@@ -1,4 +1,4 @@
-TableBorderOff()
+﻿TableBorderOff()
 {
 	oWord := ComObjActive("Word.Application")
 

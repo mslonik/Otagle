@@ -1,4 +1,4 @@
-TableRowsAllowBreakAcrossPages() ; zezwalaj na dzielenie wierszy mi�dzy stronami
+﻿TableRowsAllowBreakAcrossPages() ; zezwalaj na dzielenie wierszy między stronami 
 {
 	oWord := ComObjActive("Word.Application")
 	StateOfBreakAcrossPages := oWord.Selection.Tables(1).Rows.AllowBreakAcrossPages

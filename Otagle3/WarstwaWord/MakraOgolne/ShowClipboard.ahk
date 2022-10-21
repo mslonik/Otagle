@@ -1,4 +1,4 @@
-ShowClipboard()
+﻿ShowClipboard()
 {
 	oWord := ComObjActive("Word.Application")
 	oWord.Application.ShowClipboard

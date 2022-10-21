@@ -1,4 +1,4 @@
-Group()
+﻿Group()
 {
 	oWord := ComObjActive("Word.Application")
 	oWord.Selection.ChildShapeRange.Group

@@ -1,9 +1,9 @@
-RunOrActivate_TotalCommander()
+﻿RunOrActivate_TotalCommander()
 { 
 	Process, Exist, totalcmd64.exe
 	if (ErrorLevel = 0)
 		{
-		Run, "c:\totalcmd\TOTALCMD64.EXE"
+		Run, C:\Program Files\totalcmd\TOTALCMD64.EXE
 		}
 		else
 		{
@@ -15,6 +15,7 @@ RunOrActivate_TotalCommander()
 		else
 			{
 			WinActivate ahk_exe TOTALCMD64.EXE
+			
 			}
 		}
 }

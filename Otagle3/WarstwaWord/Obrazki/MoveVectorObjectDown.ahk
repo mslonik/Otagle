@@ -1,4 +1,4 @@
-MoveVectorObjectDown()
+﻿MoveVectorObjectDown()
 {
 	oWord := ComObjActive("Word.Application")
 	oWord.Selection.ChildShapeRange.IncrementTop(25)

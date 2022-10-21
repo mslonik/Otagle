@@ -1,4 +1,4 @@
-HideSelectedText() ; 2019-10-22 2019-11-08
+﻿HideSelectedText() ; 2019-10-22 2019-11-08
 {
 	oWord := ComObjActive("Word.Application")
 	OurTempPL := "S:\OrgFirma\Szablony\Word\OgolneZmakrami\TQ-S402-pl_OgolnyTechDok.dotm"

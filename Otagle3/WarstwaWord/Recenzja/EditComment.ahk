@@ -1,4 +1,4 @@
-EditComment() ; edytuj komentarz
+﻿EditComment() ; edytuj komentarz
 {	
 	oWord := ComObjActive("Word.Application")
 	try
@@ -8,7 +8,7 @@ EditComment() ; edytuj komentarz
 	}
 	catch e
 	{
-		MsgBox, 48,, % MsgText("Aby edytować komentarz, musisz umieścić kursor w obrębie tekstu, którego komentarz dotyczy.")
+		MsgBox, 48,, % "Aby edytować komentarz, musisz umieścić kursor w obrębie tekstu, którego komentarz dotyczy."
 	}
 	oWord := ""
 	WinActivate, ahk_class OpusApp

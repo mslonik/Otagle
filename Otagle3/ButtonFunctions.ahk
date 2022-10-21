@@ -1,3 +1,5 @@
+﻿#Include *i Layer1\RunOrActivate_FrameMaker.ahk
+#Include *i Layer1\RunOrActivate_TotalCommander.ahk
 #Include *i Layer1\ToWordLayer.ahk
 #Include *i Layer1\ToStylesLayer.ahk
 #Include *i Layer1\ToMacrosLayer.ahk
@@ -161,6 +163,12 @@
 #Include *i WarstwaWord\BlokiKonstrukcyjne2\BB_UsuwanieOstatniejSekcji.ahk
 #Include *i WarstwaWord\BlokiKonstrukcyjne2\BB_Utylizacja.ahk
 #Include *i WarstwaWord\BlokiKonstrukcyjne2\BB_UtylizacjaOpakowania.ahk
+#Include *i WarstwaWord\BlokiKonstrukcyjne2\BB_SRAC_czynnosc.ahk
+#Include *i WarstwaWord\BlokiKonstrukcyjne2\BB_SRAC_zastosowanie.ahk
+#Include *i WarstwaWord\BlokiKonstrukcyjne2\BB_Cewka.ahk
+#Include *i WarstwaWord\BlokiKonstrukcyjne2\BB_NowyDokument.ahk
+#Include *i WarstwaWord\BlokiKonstrukcyjne2\BB_PodpisTab.ahk
+#Include *i WarstwaWord\BlokiKonstrukcyjne2\BB_Symbole_elektryczne.ahk
 #Include *i Layer1\ToBuildingBlocksLayer2.ahk
 #Include *i Layer1\ToSVNLayer.ahk
 #Include *i WarstwaWord\BlokiKonstrukcyjne1\BB_SpisSkrotow.ahk
