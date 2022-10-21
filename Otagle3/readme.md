@@ -19,16 +19,11 @@ Every script that will be read by Otagle must be a function, with the same name 
 * Now you need to manualy assign your script to ButtonFunctions.ahk file. For example: #Include *i Layer1\RunOrActivate_FrameMaker.ahk. Also is recommend to organise your script layers into subfolders.
 ### Additional information
 * How to quicly check if script works before assiging it to button? - In your script add the introduction lines from AHK script and repeat the function calling line, for example:
-  
+ ```AutoHotkey
                 #NoEnv
-
                 #SingleInstance, Force
-
                 SendMode, Input
-
                 SetBatchLines, -1
-
                 SetWorkingDir, %A_ScriptDir%
-
                 RunOrActivate_FrameMaker()
-  
+```
