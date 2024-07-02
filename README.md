@@ -78,9 +78,9 @@ flowchart LR
 	tsport 	======= tp
 ```
 Hardware example:
-![Physical Device](pictures\IMG_5520_PhysicalDevice_zm.jpg)
-![Physical Device ports](pictures\IMG_5521_PhysicalDevicePorts_zm.jpg)
-![HDMI to USB-A adapter](pictures\IMG_5522_Adapter_zm.jpg )
+![Physical Device](/pictures/IMG_5520_PhysicalDevice_zm.jpg)
+![Physical Device ports](/pictures/IMG_5521_PhysicalDevicePorts_zm.jpg)
+![HDMI to USB-A adapter](/pictures/IMG_5522_Adapter_zm.jpg)
 
 Some parameters:
 - display size: 7'' =  1024 pixels x 600 pixels TFT (Thin Film Transistor)
