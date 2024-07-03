@@ -1,4 +1,4 @@
-/*
+﻿/*
 Author:      Maciej Słojewski, mslonik, http://mslonik.pl
 Purpose:     Facilitate normal operation for company desktop.
 Description: Hotkeys and hotstrings for my everyday professional activities and office cockpit.
@@ -1121,3 +1121,12 @@ F_CalculateButtonsAndGaps()
      WizardStep2_MarginVertically := Abs(MonitorBoundingCoordinates_Top - MonitorBoundingCoordinates_Bottom) - ((WizardStep2_AmountOfKeysVertically-1) * ButtonVerticalGap + WizardStep2_AmountOfKeysVertically * ButtonHeight )
      }
 
+; - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+MsgText(string)     ;https://www.autohotkey.com/boards/viewtopic.php?style=17&t=67950
+{
+    vSize := StrPut(string, "CP0")
+    VarSetCapacity(vUtf8, vSize)
+    vSize := StrPut(string, &vUtf8, vSize, "CP0")
+    Return StrGet(&vUtf8, "UTF-8") 
+}
