@@ -29,13 +29,83 @@ block-beta
 	R1C1["T 5 s"] --> VS["AutoHotkey script, call video editor"]
 ```
 
-The matrix of icons / buttons can have pure software form, e.g. as a separate Otagle application window, but it makes much more sense to make it over more touchable, tactile piece of hardware, a *Physical Device*. To follow this challenge I found cheap, small touch screens, which can be interfaced to a computer over: 
-- two USB-A wires (the 1st to connect video signal, the 2nd to connect touch screen feedback)
-- one HDMI wire (to connect video signal) and one USB-A wire (to connect touch screen feedback)
+The matrix of icons / buttons can have pure software form, e.g. as a separate Otagle application window, but it makes much more sense to make it over more touchable, tactile piece of hardware, a *Physical Device* aka touch screen. To follow this challenge I found cheap, small touch screens, which can be interfaced to a computer over: 
+- **recommended**: one HDMI wire (to connect video signal) and one USB-A wire (to connect touch screen feedback)
+- **optional**: two USB-A wires (the 1st to connect video signal, the 2nd to connect touch screen feedback)
+
+---
 
 ```mermaid
 flowchart LR
-	subgraph pd["`**Physical Device**`"]
+	subgraph rm["`**Regular Screen**`"]
+		display[["display"]]
+		dp1["`display **port** e.g. HDMI`"]
+		ps1["`power supply **port**`"]
+	end
+
+	subgraph ts["`Personal Computer`"]
+		ps2["`power supply **port**`"]
+		dp2["`display **port**  e.g. HDMI`"]
+	end
+
+	ps[["power supply / mains"]]
+
+	dp1 	--- dp2
+	ps1		--- ps
+	ps2		--- ps
+```
+
+```mermaid
+flowchart LR
+	subgraph rm["`Generic **Touch Screen**`"]
+		display[["display"]]
+		ps1["`power supply **port**`"]
+		dp1["`display **port** e.g. HDMI`"]
+		tp["` touch **port** USB`"]
+	end
+
+	subgraph ts["`Personal Computer`"]
+		ps2["`power supply **port**`"]
+		dp2["`display **port**  e.g. HDMI`"]
+		usbp["`**port** USB`"]
+	end
+
+	ps[["power supply / mains"]]
+
+	dp1 	--- dp2
+	ps1		--- ps
+	ps2		--- ps
+	tp		--- usbp
+```
+
+```mermaid
+flowchart LR
+	subgraph rm["`Specific **Touch Screen**`"]
+		display[["display"]]
+		dp1["`display **port** e.g. HDMI`"]
+		tp["` touch **port** microUSB`"]
+	end
+
+	subgraph ts["`Personal Computer`"]
+		ps2["`power supply **port**`"]
+		dp2["`display **port**  e.g. HDMI`"]
+		usbp["`**port** USB`"]
+	end
+
+	ps[["power supply / mains"]]
+
+	dp1 	--- dp2
+	ps2		--- ps
+	tp		--- usbp
+```
+
+##### Picture 1. Comparison between classical screen (display) and specific touch screen.
+
+---
+
+```mermaid
+flowchart LR
+	subgraph pd["`Specific **Touch Screen**`"]
 		display[["HDMI display"]]
 		TS[["touch screen"]]
 		hport["HDMI port"]
@@ -59,7 +129,7 @@ flowchart LR
 
 ```mermaid
 flowchart LR
-	subgraph pd["`**Physical Device**`"]
+	subgraph pd["`Specific **Touch Screen**`"]
 		display[["HDMI display"]]
 		TS[["touch screen"]]
 		hport["HDMI port"]
@@ -77,6 +147,9 @@ flowchart LR
 	hport 	======= hdmip
 	tsport 	======= tp
 ```
+
+##### Picture 2. Comparison of recommended and optional connection between a **Physical Device** and Personal Computer (PC).
+
 Hardware example:
 ![Physical Device](/pictures/IMG_5520_PhysicalDevice_zm.jpg)
 ![Physical Device ports](/pictures/IMG_5521_PhysicalDevicePorts_zm.jpg)
@@ -85,11 +158,30 @@ Hardware example:
 Some parameters:
 - display size: 7'' =  1024 pixels x 600 pixels TFT (Thin Film Transistor)
 
-## Existing versions of code
+#### Hardware configuration.
+In order to run this touch screen both cables must be connected (HDMI and USB). Power is delivered from computer to the touch screen over USB cable, which is also used to 
 
-- **Otagle1**, non-scallable window, 1024 x 600 px, replaces numeric keypad (numpad)
+The HDMI cable could be connected directly to HDMI port or at first to the HDMI to USB adapter. Such adapter is fully plug-and-play, doesn't require any configuration. The one presented at picture above actually stopped working out of sudden, so I don't recommend it.
+
+Configuration of additional display in Microsoft Windows is available after pressing keyboard shortcut **# + I** (chord: Windows key and I) in *System* settings → *Display*.
+![Display Configuration](/pictures/DisplayConfiguration_zm.png)
+
+Information regarding actual touch screen activity are transfered over USB port. From operating system point of view this is just another input device. The issue is it must be logically connected to the correct screen.
+
+Run application *(…)* and configure relation between correct screen and touch.
+![Tablet Configuration](/pictures/TabletSettings.png)
+![Screen choice](/pictures/ApproveSetting.png )
+
+You're done.
+
+## Existing versions of Otagle scripts
+
+- [**Otagle1**](https://github.com/mslonik/Otagle/tree/master/Otagle1/README.md), non-scallable window, 1024 x 600 px, replaces numeric keypad (numpad)
 - **Otagle2**, 
 - **Otagle3**,
 
 For details please see dedicated folders and readme.md files.
 
+## Additional links
+
+AutoHotkey forum [topic dedicated to Otagle](https://www.autohotkey.com/boards/viewtopic.php?t=69690)
