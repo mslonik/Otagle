@@ -2,7 +2,7 @@
 
 - Mimics numeric pad (numpad) of keyboard. 
 - Window size is dedicated to dedicated touch screen (1024 x 600 px).
-- The oldest release of Otagle concept. For more info please see [the main readme of the project](https://github.com/mslonik/Otagle/README.md).
+- The oldest release of Otagle concept. For more info please see [the main readme of the project](https://github.com/mslonik/Otagle/tree/master/README.md).
 
 ![Full keyboard with numeric pad](/Otagle1/pictures/IMG_5525_FullKeyboard_zm.jpg)
 #### Picture 1. Full keyboard with numeric pad.
@@ -27,13 +27,55 @@ After running you should see the default window / layer, see *Picture 3* above. 
 
 ## Function description
 
+Layer by layer. The default layer is displayed upon Otagle1 starts.
+
 ### The default layer
 
-Top row, from the left: 
-1. Icon: NumLock. Function: toggles the NumLock key (ON / OFF).
-2. Icon: KeePass. Function: runs or activates the [KeePass application](https://keepass.info/) (password manager).
-3. Icon: Word. Function: runs or activates Microsoft Word.
-4. Icon: diskette. Function: runs or activates [Total Commander](https://www.ghisler.com/) (twin-window file manager).
+![Layer0_BaseLayer](/Otagle1/pictures/Layer0_BaseLayer.png)
+
+| row          | icon / key     | function                           |
+| :---         |     :---       | :---                               |
+| top          | NumLock        | toggles the NumLock key (ON / OFF) |
+| top          | KeePass        | runs or activates the [KeePass application](https://keepass.info/) (password manager)      |
+| top          | Word           | runs or activates Microsoft Word, switches to Word sublayer      |
+| top          | diskette       | runs or activates [Total Commander](https://www.ghisler.com/) (twin-window file manager)      |
+
+### Layer1 (Word_BaseLayer)
+
+![Layer1_Word_BaseLayer](/Otagle1/pictures/Layer1_Word_BaseLayer.png)
+
+| row          | icon / key         | function                           |
+| :---         |     :---           | :---                               |
+| top          | NumLock            | toggles the NumLock key (ON / OFF) |
+| top          | Styles             | moves to Layer3 (Word_TemplateStyles1) |
+| top          | Building Blocks    | moves to Layer2 (Word_BBLayer) |
+| top          | Macros             | moves to Layer6 (Macro_Layer) |
+| 2nd          | Attach a template to this document | Attaches one of the defined templates (DOTM files) |
+| 2nd / 3rd    | Back               | Return to previous layer |
+| 3rd          | Text Strikethrough | Font level formatting, strikethrough |
+| 3rd          | Text Hidden        | Specific style to better show hidden text |
+
+### Layer3 (Word_TemplateStyles1)
+
+![Layer3_Word_TemplateStyles1](/Otagle1/pictures/Layer3_Word_TemplateStyles1.png)
+
+| row          | icon / key         | function                                   |
+| :---         |     :---           | :---                                       |
+| top          | Normal             | Applies dedicated template paragraph style |
+| top          | Normal between     | Applies dedicated template paragraph style |
+| top          | Heading 1          | Applies dedicated template paragraph style |
+| 2nd          | Heading 2          | Applies dedicated template paragraph style |
+| 2nd          | Heading 3          | Applies dedicated template paragraph style |
+| 2nd          | Heading 4          | Applies dedicated template paragraph style |
+| 2nd / 3rd    | Back               | Moves back to previous layer               |
+| 3rd          | Heading 5          | Applies dedicated template paragraph style |
+| 3rd          | Heading 6          | Applies dedicated template paragraph style |
+| 3rd          | Heading 7          | Applies dedicated template paragraph style |
+| 4th          | Heading 8          | Applies dedicated template paragraph style |
+| 4th / 5th    | Forward            | Moves forward to the next layer            |
+| 5th          | Small line         | Applies dedicated template paragraph style |
+| 5th          | Hidden special     | Applies dedicated template paragraph style |
+
 
 ## Additional links
 
