@@ -1,4 +1,4 @@
-ToggleStylePane()
+﻿ToggleStylePane()
 {
 	oWord := ComObjActive("Word.Application")
 	StateOfStylesPane := oWord.Application.TaskPanes(wdTaskPaneApplyStyles := 0).Visible

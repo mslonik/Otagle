@@ -1,4 +1,4 @@
-Captions()
+﻿Captions()
 {
 	global flag_ti, flag_ti2, H, W, X, Y, MyListBox3, CaptionList, fl, myLabels, Index
 	static oWord, Hti, Wti, e, Mon, MonTop, MonRight, MonLeft, MonBottom, Var, N

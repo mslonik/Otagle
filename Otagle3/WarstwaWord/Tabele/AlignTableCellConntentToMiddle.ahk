@@ -1,4 +1,4 @@
-AlignTableCellConntentToMiddle() ; Wyrównanie treœci komórki do œrodka i do œrodka w pionie
+ï»¿AlignTableCellConntentToMiddle() ; WyrÃ³wnanie treÅ›ci komÃ³rki do Å›rodka i do Å›rodka w pionie
 {
 	oWord := ComObjActive("Word.Application")
 	oWord.Selection.SelectCell

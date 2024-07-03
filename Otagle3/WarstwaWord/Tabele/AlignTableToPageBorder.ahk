@@ -1,4 +1,4 @@
-AlignTableToPageBorder()
+﻿AlignTableToPageBorder()
 ;~ by Jakub Masiak
 {
 	wdWithInTable := 12 ; WdInformation enumeration: wdWithInTable = 12 Returns True if the selection is in a table.

@@ -1,4 +1,4 @@
-DisplayGridLines() ; w³¹cz / wy³¹cz linie siatki
+ï»¿DisplayGridLines() ; wÅ‚Ä…cz / wyÅ‚Ä…cz linie siatki
 ;~ by Jakub Masiak
 {
 	oWord := ComObjActive("Word.Application")

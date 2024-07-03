@@ -6,26 +6,25 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="../Assets/font-awesome-4.7.0/css/font-awesome.min.css">
         <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
-        <link href="../Style/Bootstrap/bootstrap.min.css" rel="stylesheet">
-        <script src="../Style/Bootstrap/jquery.min.js"></script>
-        <script src="../Style/Bootstrap/bootstrap.min.js"></script>
         <link rel="stylesheet" href="../Style/index.css" />
         <title>Otagle</title>
         </head>
         <body>
         <div class="AboutBox">
-        <h2 class="AboutBox__title">O T A G L E v.2.0 by mslonik (🐘)</h2>
+        <h2 class="AboutBox__title">O T A G L E v.2.0 by mslonik (??)</h2>
         <div class="AboutBox__introdution">
         <p class="AboutBox__introdution-p"> Make your computer Personal a g a i n...</p>
         <p class="AboutBox__introdution-p">Open source release of Stream Deck concept. Works at its best with touch screens.</p>
         <p class="AboutBox__introdution-p">For project description visit the following webpages:</p>
-            <a class="AboutBox__introdution-a"  href="#">http://mslonik.pl/biuro/1095-o-t-a-g-l-e-q-a</a>
-        <a class="AboutBox__introdution-a" href="#">https://www.autohotkey.com/boards/viewtopic.php?t=69690&p=300713</a>
-        <a class="AboutBox__introdution-a" href="#">https://github.com/mslonik/Autohotkey-scripts/tree/master/Otagle2</a>
+        <ul>
+        <l1><a class="AboutBox__introdution-a"  href="#">http://mslonik.pl/biuro/1095-o-t-a-g-l-e-q-a</a></li>
+        <l1><a class="AboutBox__introdution-a" href="#">https://www.autohotkey.com/boards/viewtopic.php?t=69690&p=300713</a></li>
+        <l1><a class="AboutBox__introdution-a" href="#">https://github.com/mslonik/Autohotkey-scripts/tree/master/Otagle2</a></li>
+        </ul>
         </div>
         <button class="btnOk">ok</button>
         </div>
-        <header><img class="bar-icon" src="../Assets/OtagleIcon.ico" alt="icon"><span class="title-bar"  onmousedown="neutron.DragTitleBar()" >Otagle: Layer11 - Recenzja</span><span class="title-btn__item Options"">
+        <header><img class="bar-icon" src="../Assets/OtagleIcon.ico" alt="icon"><span class="title-bar"  onmousedown="neutron.DragTitleBar()" >Otagle: Layer11 - Recenzja</span><span class="title-btn__item Options">
         <i class="fa fa-wrench" aria-hidden="true"></i>
         </span>
         <span class="title-btn__item" onclick="neutron.Minimize()">
@@ -38,38 +37,37 @@
         </span>
         </header>
         <nav class="menu-bar">
-        <ul class="menu-bar__list">
-        <li class="menu-bar__item dropD">
-            <a class="item__link">Configure</a>
-        <ul class="sub-menu">
-        <li class="sub-menu__item"  id="selectMonitor" onclick="ahk.BarF(event,id)"><a class="item__link sub__link" href="#"><i class="fa fa-arrow-down" aria-hidden="true"></i> +
- <span class="flag">S</span>elect Monitor</a></li>
-        <li class="sub-menu__item"  id="addLayers" onclick="ahk.BarF(event,id)"><a class="item__link sub__link" href="#"><i class="fa fa-arrow-down" aria-hidden="true"></i> +<span class="flag">A</span>dd layer</a></li>
-        <li class="sub-menu__item" id="ConfigureEraseLayer" onclick="ahk.BarF(event,id)"><a class="item__link sub__link" href="#"><i class="fa fa-arrow-down" aria-hidden="true"></i> +<span class="flag">E</span>rase layer</a></li>
-        </ul>
-        </li>
-        <li class="menu-bar__item dropD">
-        <a class="item__link"  href="#">Edit Buttons</a>
-        <ul class="sub-menu">
-        <li class="sub-menu__item" id="AddBtn" onclick="ahk.BarF(event,id)"><a class="item__link sub__link" href="#"><i class="fa fa-arrow-up" aria-hidden="true"></i>
-+<span class="flag">A</span>dd button</a></li>
-        <li class="sub-menu__item" id="F_display_configurator" onclick="ahk.BarF(event,id)" ><a class="item__link sub__link" href="#"><i class="fa fa-arrow-up" aria-hidden="true"></i>
-+<span class="flag">S</span>wap button</a></li>
-        <li class="sub-menu__item" id="FdGuiDelete" onclick="ahk.BarF(event,id)"><a class="item__link sub__link" href="#"><i class="fa fa-arrow-up" aria-hidden="true"></i>
-+<span class="flag">D</span>elete button</a></li>
-        <li class="sub-menu__item" id="Clone" onclick="ahk.BarF(event,id)"><a class="item__link sub__link" href="#"><i class="fa fa-arrow-up" aria-hidden="true"></i>
-+<span class="flag">C</span>lone button</a></li>
-        </ul>
-        </li>
-        <li class="menu-bar__item"  onclick="ahk.rWizard(event)">
-        <a class="item__link" href="#" ><i class="fa fa-arrow-right" aria-hidden="true"></i>+<span class="flag">R</span>un Wizard</a></li>
-        <li class="menu-bar__item">
-        <a class="item__link Order" href="#"><i class="fa fa-toggle-off" aria-hidden="true"></i><i class="fa fa-toggle-on" aria-hidden="true"> </i> <i class="fa fa-arrow-right" aria-hidden="true"></i>+<span class="flag">A</span>rrangement Buttons</a>
-        </li>
-        <li class="menu-bar__item">
-        <a class="item__link About" href="#">About</a>
-        </li>
-        </ul>
+            <ul class="menu-bar__list">
+                <li class="menu-bar__item dropD1 ">
+                    <button class="item__link trigger">Configure</button>
+                    <ul class="sub-menu D1">
+                        <li class="sub-menu__item" id="selectMonitor" onclick="ahk.BarF(event,id)"><a class="item__link sub__link" href="#"><i class="fa fa-arrow-down" aria-hidden="true"></i> + <span class="flag">S</span>elect Monitor</a></li>
+                        <li class="sub-menu__item" id="addLayers" onclick="ahk.BarF(event,id)"><a class="item__link sub__link" href="#"><i class="fa fa-arrow-down" aria-hidden="true"></i> +<span class="flag">A</span>dd layer</a></li>
+                        <li class="sub-menu__item" id="ConfigureEraseLayer" onclick="ahk.BarF(event,id)"><a class="item__link sub__link" href="#"><i class="fa fa-arrow-down" aria-hidden="true"></i> +<span class="flag">E</span>rase layer</a></li>
+                    </ul>
+                </li>
+                <li class="menu-bar__item dropD2">
+                    <button class="item__link trigger" href="#">Edit Buttons</button>
+                    <ul class="sub-menu D2">
+                        <li class="sub-menu__item" id="AddBtn" onclick="ahk.BarF(event,id)"><a class="item__link sub__link" href="#"><i class="fa fa-arrow-up" aria-hidden="true"></i>
+                        +<span class="flag">A</span>dd button</a></li>
+                        <li class="sub-menu__item" id="F_display_configurator" onclick="ahk.BarF(event,id)"><a class="item__link sub__link" href="#"><i class="fa fa-arrow-up" aria-hidden="true"></i>
+                        +<span class="flag">S</span>wap button</a></li>
+                        <li class="sub-menu__item" id="FdGuiDelete" onclick="ahk.BarF(event,id)"><a class="item__link sub__link" href="#"><i class="fa fa-arrow-up" aria-hidden="true"></i>
+                        +<span class="flag">D</span>elete button</a></li>
+                        <li class="sub-menu__item" id="Clone" onclick="ahk.BarF(event,id)"><a class="item__link sub__link" href="#"><i class="fa fa-arrow-up" aria-hidden="true"></i>
+                        +<span class="flag">C</span>lone button</a></li>
+                    </ul>
+                </li>
+                <li class="menu-bar__item" onclick="ahk.rWizard(event)">
+                    <button class="item__link trigger" href="#"><i class="fa fa-arrow-right" aria-hidden="true"></i>+<span class="flag">R</span>un Wizard</button></li>
+                <li class="menu-bar__item" id="rBox" onclick="ahk.resizeBox(event,id)">
+                    <button class="item__link Order trigger" href="#"><span class="flag">A</span>utoscaling buttons</button>
+                </li>
+                <li class="menu-bar__item">
+                    <button class="item__link About trigger" href="#">About</button>
+                </li>
+            </ul>
         </nav>
         <div class="wrapper" style="position: relative;"><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="WarstwaWord\Recenzja\EditComment.ahk" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" class="EdytujKomentarz" name="Edytuj komentarz" width="206px" height="206px" version="1.1" viewBox="0 0 206 206" xmlns="http://www.w3.org/2000/svg">
  <g transform="matrix(3.7795 0 0 3.7795 -5465.1 -1392.5)">
@@ -142,21 +140,21 @@
   </g>
  </g>
 </svg>
-</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="WarstwaWord\Recenzja\DeleteCurrentComment.ahk" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" width="206px" height="206px" version="1.1" viewBox="0 0 206 206" xmlns="http://www.w3.org/2000/svg">
+</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="WarstwaWord\Recenzja\DeleteCurrentComment.ahk" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" class="UsunKomentarz" name="Usun komentarz" width="206px" height="206px" version="1.1" viewBox="0 0 206 206" xmlns="http://www.w3.org/2000/svg">
  <g transform="matrix(3.7795 0 0 3.7795 -5465.1 -1392.5)">
   <g transform="translate(568.99 .31936)">
    <rect x="877.89" y="369.54" width="52.258" height="52.258" fill="#fff" stroke="#000" stroke-linecap="round" stroke-width=".5" style="paint-order:fill markers stroke"/>
-   <text x="904.37592" y="418.298" font-family="sans-serif" font-size="6.35px" letter-spacing="0px" stroke-width=".26458" text-align="center" text-anchor="middle" word-spacing="0px" style="line-height:0.94999999" xml:space="preserve"><tspan x="904.37592" y="418.298" font-family="sans-serif" class="svgT" letter-spacing=".5px" font-size="5.2px" stroke-width=".26458" text-align="center" text-anchor="middle">Usuń komentarz</tspan></text>
+   <text x="904.37592" y="418.298" font-family="sans-serif" font-size="6.35px" letter-spacing="0px" stroke-width=".26458" text-align="center" text-anchor="middle" word-spacing="0px" style="line-height:0.94999999" xml:space="preserve"><tspan x="904.37592" y="418.298" font-family="sans-serif" class="iTxt" letter-spacing=".5px" font-size="5.2px" stroke-width=".26458" text-align="center" text-anchor="middle">Usuń komentarz</tspan></text>
    <path d="m886.48 395.59h7.8268l6.6646 5.4684v-5.4684h2.4064c1.2142 0 2.202-1.0052 2.202-2.2406v-11.359c0-1.2355-.98717-2.2406-2.202-2.2406h-16.898c-1.2142 0-2.202 1.0052-2.202 2.2406v11.358c0 1.2361.98784 2.2413 2.202 2.2413zm-.87068-13.599c0-.50124.39007-.90929.87068-.90929h16.898c.47927 0 .87002.40805.87002.90929v11.358c0 .50125-.39075.90929-.87069.90929h-3.7377v3.9846l-4.8567-3.9846h-8.3028c-.48061.00067-.87068-.40738-.87068-.90862z"/>
    <text x="897.50104" y="402.86057" font-family="sans-serif" font-size="38.585px" letter-spacing="0px" stroke-width=".66718" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><tspan x="897.50104" y="402.86057" font-family="sans-serif" stroke-width=".66718">X</tspan></text>
   </g>
  </g>
 </svg>
-</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="WarstwaWord\Recenzja\AcceptChange.ahk" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" width="206px" height="206px" version="1.1" viewBox="0 0 206 206" xmlns="http://www.w3.org/2000/svg">
+</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="WarstwaWord\Recenzja\AcceptChange.ahk" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" class="ZaakceptujZmiane" name="ZaakceptujZmiane" width="206px" height="206px" version="1.1" viewBox="0 0 206 206" xmlns="http://www.w3.org/2000/svg">
  <g transform="matrix(3.7795 0 0 3.7795 -5465.1 -1392.5)">
   <g transform="translate(513.15 -.21291)">
    <rect x="934.05" y="369.54" width="52.258" height="52.258" fill="#fff" stroke="#000" stroke-linecap="round" stroke-width=".5" style="paint-order:fill markers stroke"/>
-   <text x="960.53546" y="411.86691" font-family="sans-serif" class="svgT" letter-spacing=".5px" font-size="5.2px" stroke-width=".26458" text-align="center" text-anchor="middle" word-spacing="0px" style="line-height:0.94999999" xml:space="preserve"><tspan x="960.53546" y="411.86691" text-align="center">Zaakceptuj</tspan><tspan x="960.53546" y="417.89941" text-align="center">zmianę</tspan></text>
+   <text x="960.53546" y="411.86691" font-family="sans-serif" class="svgT" letter-spacing=".5px" font-size="5.2px" stroke-width=".26458" text-align="center" text-anchor="middle" word-spacing="0px" style="line-height:0.94999999" xml:space="preserve"><tspan class="iTxt" x="960.53546" y="411.86691" text-align="center">Zaakceptuj</tspan><tspan class="iTxt" x="960.53546" y="417.89941" text-align="center">zmianę</tspan></text>
    <g transform="matrix(.5281 0 0 .5281 934.96 361.96)">
     <path d="m75.8 42.8-5.4-3.3c-.3-.2-.5-.6-.6-1l-.1-6c0-1.3-.6-2.5-1.6-3.3s-2.3-1.2-3.5-1l-6.2.9c-.4.1-.8-.1-1-.4l-4.1-4.6c-.9-1-2.1-1.5-3.4-1.5s-2.5.5-3.4 1.5l-4.1 4.6c-.3.3-.7.4-1 .4l-6.1-1.1c-1.3-.2-2.6.2-3.5 1-1 .8-1.6 2.1-1.6 3.3l-.1 6c0 .4-.2.8-.6 1l-5.4 3.3c-1.1.7-1.9 1.8-2.1 3.1s.2 2.6 1 3.6l3.8 4.6c.3.3.3.7.2 1.1l-2 6c-.4 1.2-.3 2.6.4 3.7s1.8 1.9 3.1 2.1l5.9 1c.4.1.8.4.9.7l2.2 5.8c.5 1.2 1.4 2.2 2.7 2.7.5.2 1 .3 1.5.3.8 0 1.6-.2 2.2-.6l5.3-3.1c.4-.2.8-.2 1.2 0l5.3 3.1c1.1.7 2.5.8 3.8.3 1.2-.4 2.2-1.4 2.7-2.7l2.2-5.8c.1-.4.5-.7.9-.7l5.9-1c1.3-.2 2.4-1 3.1-2.1s.8-2.5.4-3.7l-2-6c-.1-.4-.1-.8.2-1.1l3.8-4.6c.8-1 1.2-2.3 1-3.6 0-1.1-.8-2.2-1.9-2.9zm-1.4 4.5-3.9 4.7c-1 1.2-1.3 2.8-.8 4.3l2 6c.2.4 0 .8-.1 1s-.3.5-.8.6l-5.9 1c-1.6.3-2.9 1.4-3.4 2.8l-2.2 5.8c-.2.4-.5.6-.7.7s-.6.1-1-.1l-5.3-3.1c-1.4-.8-3.1-.8-4.5 0l-5.3 3.1c-.4.2-.8.2-1 .1s-.5-.2-.7-.7l-2.2-5.8c-.6-1.5-1.9-2.6-3.4-2.9l-5.9-1c-.5-.1-.7-.4-.8-.6s-.3-.5-.1-1l2-6c.5-1.5.2-3.1-.8-4.3l-3.8-4.6c-.3-.4-.3-.7-.3-.9s.1-.6.5-.8l5.4-3.3c1.3-.8 2.1-2.2 2.1-3.7l.1-6c0-.5.3-.7.4-.9.1-.1.4-.3.8-.3h.2l6.2.9c1.5.2 3-.3 4-1.5l4.1-4.6c.3-.3.7-.4.9-.4s.6.1.9.4l4.1 4.6c1 1.1 2.5 1.7 4 1.5l6.2-.9c.5-.1.8.1.9.3.1.1.4.4.4.9l.1 6c0 1.5.8 2.9 2.1 3.7l5.4 3.3c.4.2.5.6.5.8-.2.2-.1.6-.4.9z"/>
     <path d="m59 41.6-13 14.9-5-5.6c-.6-.7-1.7-.7-2.3-.1-.7.6-.7 1.7-.1 2.3l6.3 7c.3.4.8.5 1.2.5.5 0 .9-.2 1.2-.6l14.3-16.3c.6-.7.5-1.7-.2-2.3s-1.8-.5-2.4.2z"/>
@@ -213,36 +211,19 @@
   </g>
  </g>
 </svg>
-</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   " id="" class="box_item" href="Layer1.html"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" class="StronaGlowna" name="Strona glowna" width="205" height="203" version="1.1" viewBox="0 0 205 203" xmlns="http://www.w3.org/2000/svg">
- <g transform="translate(0,2)">
-  <g transform="matrix(3.7795 0 0 3.7795 10.171 -6.7758)">
-   <g transform="translate(-1.0884 -121.69)">
-    <g transform="translate(1.6608 -59.209)">
-     <g transform="translate(-.6443 -59.335)">
-      <g transform="translate(-1396.8 269.89)">
-       <g transform="translate(-57.972 -.024822)">
-        <g transform="translate(1658.1 73.867)">
-         <g>
-          <rect x="-205.07" y="-101.86" width="52.917" height="52.917" fill="#0082b4" stroke="#000" stroke-linecap="round" stroke-width=".5" style="paint-order:fill markers stroke"/>
-          <text x="-178.87273" y="-60.77029" fill="#ffffff" font-family="sans-serif" class="svgT" letter-spacing=".5px" font-size="5.2px" stroke-width=".26458" text-anchor="middle" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><tspan class="iTxt" x="-178.87273" y="-60.77029" text-align="center">STRONA</tspan><tspan class="iTxt" x="-178.87273" y="-52.83279" text-align="center"> GŁÓWNA</tspan></text>
-          <g transform="matrix(1.8895 0 0 1.8895 -201.12 -104.9)" fill="#fff">
-           <g fill="#fff">
-            <path d="m6.934 12.202c-.341 0-.62.271-.62.612v6.025c0 .341.28.616.62.616h10.145c.34 0 .611-.275.611-.616v-6.025c0-.341-.271-.612-.611-.612-.341 0-.621.271-.621.612v5.409h-8.913v-5.409c0-.341-.279-.612-.611-.612z"/>
-            <path d="m4.181 12.98c.236.236.63.236.865 0l6.951-6.946 6.96 6.946c.236.236.629.236.865 0 .24-.236.24-.629 0-.865l-7.374-7.383-.013-.009c-.24-.236-.63-.236-.87 0l-7.383 7.392c-.245.236-.245.629-.001.865z"/>
-           </g>
-          </g>
-         </g>
-         <rect x="-131.95" y="-55.38" width="2.0774" height=".41548" stroke-width=".26458"/>
-        </g>
-       </g>
-      </g>
-     </g>
-    </g>
+</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   " id="" class="box_item" href="Layer1.html"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" class="StronaGlowna" name="Strona glowna" width="205px" height="205px" version="1.1" viewBox="0 0 205 205" xmlns="http://www.w3.org/2000/svg">
+ <g>
+  <rect x="3.6797" y="4.0977" width="200" height="200" fill="#0082b4" stroke="#000" stroke-linecap="round" stroke-width="1.8898" style="paint-order:fill markers stroke"/>
+  <text x="102.68917" y="162.99924" fill="#ffffff" font-family="sans-serif" font-size="21.333px" letter-spacing="0px" text-anchor="middle" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><tspan class="iTxt" x="102.68917" y="162.99924" text-align="center">STRONA</tspan><tspan class="iTxt"  x="102.68917" y="199.66589" text-align="center"> GŁÓWNA</tspan></text>
+  <g transform="matrix(7.1415 0 0 7.1415 18.592 -5.3742)" fill="#fff">
+   <g fill="#fff">
+    <path d="m6.934 12.202c-0.341 0-0.62 0.271-0.62 0.612v6.025c0 0.341 0.28 0.616 0.62 0.616h10.145c0.34 0 0.611-0.275 0.611-0.616v-6.025c0-0.341-0.271-0.612-0.611-0.612-0.341 0-0.621 0.271-0.621 0.612v5.409h-8.913v-5.409c0-0.341-0.279-0.612-0.611-0.612z"/>
+    <path d="m4.181 12.98c0.236 0.236 0.63 0.236 0.865 0l6.951-6.946 6.96 6.946c0.236 0.236 0.629 0.236 0.865 0 0.24-0.236 0.24-0.629 0-0.865l-7.374-7.383-0.013-9e-3c-0.24-0.236-0.63-0.236-0.87 0l-7.383 7.392c-0.245 0.236-0.245 0.629-1e-3 0.865z"/>
    </g>
   </g>
  </g>
 </svg>
-</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   " id="Layer1\ToWordLayer.ahk" class="box_item" href="Layer2.html"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" width="206px" height="206px" version="1.1" viewBox="0 0 206 206" xmlns="http://www.w3.org/2000/svg">
+</a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   "  id="" class="box_item" href="#"  onclick="ahk.ClickF(event,id)"></a><a style="max-width:300px; max-height:300px; height:10vw; width:10vw;   " id="Layer1\ToWordLayer.ahk" class="box_item" href="Layer2.html"  onclick="ahk.ClickF(event,id)"><svg id="SVGRoot" class="WarstwaWord" name="Warstwa word" width="206px" height="206px" version="1.1" viewBox="0 0 206 206" xmlns="http://www.w3.org/2000/svg">
  <g transform="matrix(3.7795 0 0 3.7795 -1795.2 2502.6)">
   <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-392.69" y="-63.57" width="758.02" height="397.52"/></flowRegion><flowPara/></flowRoot>
   <flowRoot fill="black" font-family="sans-serif" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="-251.87" y="-84.492" width="624.44" height="455.45"/></flowRegion><flowPara/></flowRoot>

@@ -1,4 +1,4 @@
-FlipHorizontally()
+﻿FlipHorizontally()
 {
 	oWord := ComObjActive("Word.Application")
 	oWord.Selection.ChildShapeRange.Flip(msoFlipHorizontal := 0) ; MsoFlipCmd 

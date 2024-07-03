@@ -1,4 +1,4 @@
-RepeatTableHeader() ; powtórz wiersz nag³ówka tabeli
+ï»¿RepeatTableHeader() ; powtÃ³rz wiersz nagÅ‚Ã³wka tabeli
 ;~ by Jakub Masiak
 {
 	oWord := ComObjActive("Word.Application")

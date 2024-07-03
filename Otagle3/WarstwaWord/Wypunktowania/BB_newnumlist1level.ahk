@@ -1,4 +1,4 @@
-BB_newnumlist1level()
+﻿BB_newnumlist1level()
 {
 	OurTempPL := "S:\OrgFirma\Szablony\Word\OgolneZmakrami\TQ-S402-pl_OgolnyTechDok.dotm"
 	OurTempEN := "S:\OrgFirma\Szablony\Word\OgolneZmakrami\TQ-S402-en_OgolnyTechDok.dotm"
@@ -12,7 +12,7 @@ BB_newnumlist1level()
 	OurTemplate := oWord.ActiveDocument.AttachedTemplate.FullName
 	if  ((OurTemplate != OurTempPL) and (OurTemplate != OurTempEN) and (OurTemplate != LocTempPL) and (OurTemplate != LocTempEN) and (OurTemplate != SzabTempPL) and (OurTemplate != SzabTempEN))
 		{
-		MsgBox, 16, % MsgText("Próba wywołania stylu z szablonu"),  % MsgText("Próbujesz wywołać styl przypisany do szablonu, ale szablon nie został jeszcze dołączony do tego pliku.`r`nNajpierw dołącz szablon, a następnie wywołaj ponownie tę funkcję.")
+		MsgBox, 16, % "Próba wywołania stylu z szablonu",  % "Próbujesz wstawić blok konstrukcyjny przypisany do szablonu, ale szablon nie został jeszcze dołączony do tego pliku.`r`nNajpierw dołącz szablon, a następnie wywołaj ponownie tę funkcję."
 		oWord := "" ; Clear global COM objects when done with them
 		return
 		}
@@ -24,7 +24,7 @@ BB_newnumlist1level()
 			oWord.Selection.MoveRight(Unit := wdCharacter := 1, Count:=1)
 			oWord.Selection.MoveUp(Unit := wdParagraph := 4, Count:=1)
 		}
-		oWord.Templates(OurTemplate).BuildingBlockEntries("newnum1lev").Insert(oWord.Selection.Range, -1)
+		oWord.Templates(OurTemplate).BuildingBlockEntries("NewNumListWciecie").Insert(oWord.Selection.Range, -1)
 		oWord := "" ; Clear global COM objects when done with them
 		}
 	WinActivate, ahk_class OpusApp

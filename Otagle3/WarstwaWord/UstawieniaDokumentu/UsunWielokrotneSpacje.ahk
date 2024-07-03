@@ -1,4 +1,4 @@
-UsunWielokrotneSpacje()
+﻿UsunWielokrotneSpacje()
 {
 	; Autor: Piotr Węgorek
     ; Przepisanie z VBA na AHK: Jakub Masiak

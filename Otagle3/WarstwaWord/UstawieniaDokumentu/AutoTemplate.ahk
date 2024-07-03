@@ -142,7 +142,7 @@ BBOK:
 	if (ID == 1)
 		BB_Insert("identyfikator")
 	if (ChangeLog == 1)
-		BB_Insert("Lista zmian")
+		BB_Insert("ChangeLog")
 	if (TOC == 1)
 	{
 		BB_Insert("Spis treści")
@@ -195,7 +195,7 @@ BB_Insert(Name_BB)
 	OurTemplate := oWord.ActiveDocument.AttachedTemplate.FullName
 	if  ((OurTemplate != OurTempPL) and (OurTemplate != OurTempEN) and (OurTemplate != LocTempPL) and (OurTemplate != LocTempEN) and (OurTemplate != SzabTempPL) and (OurTemplate != SzabTempEN))
 	{
-		MsgBox, 16, % MsgText("Próba wywołania stylu z szablonu"), % MsgText("Próbujesz wstawić blok konstrukcyjny przypisany do szablonu, ale szablon nie został jeszcze dołączony do tego pliku.`r`n Najpierw dołącz szablon, a następnie wywołaj ponownie tę funkcję.")
+		MsgBox, 16, % "Próba wywołania stylu z szablonu",  % "Próbujesz wstawić blok konstrukcyjny przypisany do szablonu, ale szablon nie został jeszcze dołączony do tego pliku.`r`nNajpierw dołącz szablon, a następnie wywołaj ponownie tę funkcję."
 	}
 	else
 		{

@@ -1,4 +1,4 @@
-SeparateTableCell1xRow2xColumn()
+﻿SeparateTableCell1xRow2xColumn()
 {
 	oWord := ComObjActive("Word.Application")
 	oWord.Selection.Cells.Split(1, 2) 

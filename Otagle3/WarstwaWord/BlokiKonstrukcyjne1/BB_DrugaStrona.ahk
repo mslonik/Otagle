@@ -1,4 +1,4 @@
-BB_DrugaStrona()
+﻿BB_DrugaStrona()
 {
 	OurTempPL := "S:\OrgFirma\Szablony\Word\OgolneZmakrami\TQ-S402-pl_OgolnyTechDok.dotm"
 	OurTempEN := "S:\OrgFirma\Szablony\Word\OgolneZmakrami\TQ-S402-en_OgolnyTechDok.dotm"
@@ -12,11 +12,11 @@ BB_DrugaStrona()
 	OurTemplate := oWord.ActiveDocument.AttachedTemplate.FullName
 	if  ((OurTemplate != OurTempPL) and (OurTemplate != OurTempEN) and (OurTemplate != LocTempPL) and (OurTemplate != LocTempEN) and (OurTemplate != SzabTempPL) and (OurTemplate != SzabTempEN))
 		{
-		MsgBox, 16, % MsgText("Próba wywołania stylu z szablonu"),  % MsgText("Próbujesz wstawić blok konstrukcyjny przypisany do szablonu, ale szablon nie został jeszcze dołączony do tego pliku.`r`nNajpierw dołącz szablon, a następnie wywołaj ponownie tę funkcję.")
+		MsgBox, 16, % "Próba wywołania stylu z szablonu",  % "Próbujesz wstawić blok konstrukcyjny przypisany do szablonu, ale szablon nie został jeszcze dołączony do tego pliku.`r`nNajpierw dołącz szablon, a następnie wywołaj ponownie tę funkcję."
 	}
 	else
 	{
-		oWord.Templates(OurTemplate).BuildingBlockEntries("Druga strona").Insert(oWord.Selection.Range, -1)
+		oWord.Templates(OurTemplate).BuildingBlockEntries("DrugaStrona").Insert(oWord.Selection.Range, -1)
 	}
 	oWord :=  "" ; Clear global COM objects when done with them
 	WinActivate, ahk_class OpusApp

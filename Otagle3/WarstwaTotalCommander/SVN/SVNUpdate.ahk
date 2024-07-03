@@ -1,4 +1,4 @@
-SVNUpdate()
+﻿SVNUpdate()
 {
 	WinActivate, ahk_class TTOTAL_CMD
 	if WinActive("ahk_class TTOTAL_CMD")

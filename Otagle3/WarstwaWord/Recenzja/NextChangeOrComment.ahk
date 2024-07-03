@@ -1,4 +1,4 @@
-NextChangeOrComment() ; nast�pna zmiana lub komentarz
+﻿NextChangeOrComment() ; nast�pna zmiana lub komentarz
 {
 	oWord := ComObjActive("Word.Application")
 	try

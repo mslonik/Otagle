@@ -1,4 +1,4 @@
-ChangeZoom()
+﻿ChangeZoom()
 {
 	oWord := ComObjActive("Word.Application")
 	ZoomValue := oWord.ActiveWindow.ActivePane.View.Zoom.Percentage

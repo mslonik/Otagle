@@ -1,4 +1,4 @@
-UsunKolor(){
+﻿UsunKolor(){
 oWord := ComObjActive("Word.Application")
 Loop, % oWord.ActiveDocument.Styles.Count{
  

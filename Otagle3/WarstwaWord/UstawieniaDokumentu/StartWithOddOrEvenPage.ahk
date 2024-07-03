@@ -1,4 +1,4 @@
-StartWithOddOrEvenPage()
+﻿StartWithOddOrEvenPage()
 {
 	oWord := ComObjActive("Word.Application")
 	state := oWord.ActiveDocument.PageSetup.SectionStart

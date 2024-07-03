@@ -1,4 +1,4 @@
-
+﻿
 if !(FileExist(A_ScriptDir . "\Templates\"))
     FileCreateDir, % A_ScriptDir . "\Templates\"
 

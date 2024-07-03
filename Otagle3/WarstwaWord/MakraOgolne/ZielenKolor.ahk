@@ -1,4 +1,4 @@
-
+﻿
 ZielenKolor()
 {
 oWord := ComObjActive("Word.Application")

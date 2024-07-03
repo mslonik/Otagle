@@ -1,4 +1,4 @@
-FlipVertically()
+﻿FlipVertically()
 {
 	oWord := ComObjActive("Word.Application")
 	oWord.Selection.ChildShapeRange.Flip(msoFlipVertical := 1) ; MsoFlipCmd 

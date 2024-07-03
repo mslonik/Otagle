@@ -1,4 +1,4 @@
-Refresh()
+﻿Refresh()
 {
     static RefTxt 
 
@@ -13,7 +13,7 @@ Refresh()
 	OurTemplate := oWord.ActiveDocument.AttachedTemplate.FullName
 	if  ((OurTemplate != OurTempPL) and (OurTemplate != OurTempEN) and (OurTemplate != LocTempPL) and (OurTemplate != LocTempEN) and (OurTemplate != SzabTempPL) and (OurTemplate != SzabTempEN))
 	{
-    	MsgBox, 16,% MsgText("Próba wywołania makra"), % MsgText("Próbujesz wywołać makro przypisane do szablonu, ale szablon nie został jeszcze dołączony do tego pliku. Najpierw dołącz szablon, a następnie wywołaj ponownie tę funkcję.")
+		MsgBox, 16, % "Próba wywołania stylu z szablonu",  % "Próbujesz wstawić blok konstrukcyjny przypisany do szablonu, ale szablon nie został jeszcze dołączony do tego pliku.`r`nNajpierw dołącz szablon, a następnie wywołaj ponownie tę funkcję."
 	}
 	else
 	{
@@ -21,7 +21,7 @@ Refresh()
         oWord.DisplayAlerts := 0
         
         Gui, Ref:New, -Border
-        Gui, Ref:Add, Text, h25 w200 vRefTxt, % MsgText("Działanie makra w toku")
+        Gui, Ref:Add, Text, h25 w200 vRefTxt, % "Działanie makra w toku"
         Gui, Ref:Show, h25 w200
 
         if oWord.ActiveWindow.ActivePane.view.SeekView == 0
@@ -29,7 +29,7 @@ Refresh()
              oWord.Selection.Bookmarks.Add("pozycja")
         }
 
-        GuiControl,, RefTxt, % MsgText("Odświeżanie pól")
+        GuiControl,, RefTxt, % "Odświeżanie pól"
         Loop, 17
         {
             try
@@ -39,7 +39,7 @@ Refresh()
             }
         }
 
-        GuiControl,, RefTxt, % MsgText("Odświeżanie spisów treści")
+        GuiControl,, RefTxt, % "Odświeżanie spisów treści"
         toCcnt := oWord.ActiveDocument.TablesOfContents.Count
         Loop, %toCcnt%
         {

@@ -1,4 +1,4 @@
-#NoEnv
+﻿#NoEnv
 #SingleInstance Force
 #Persistent
 SetWorkingDir, %A_ScriptDir%
@@ -13,7 +13,7 @@ return
 Update:
 if !WinExist(A_ScriptName) and (flagFlow == 1)
 {
-   MsgBox, %A_ScriptName%
+   TrayTip,, %A_ScriptName%,2
    SetTimer, Update, Off
 }
 if WinExist(A_ScriptName)

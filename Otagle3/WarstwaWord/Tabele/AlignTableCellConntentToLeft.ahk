@@ -1,4 +1,4 @@
-AlignTableCellConntentToLeft() ; Wyrównanie treœci komórki do lewej i do œrodka w pionie
+ï»¿AlignTableCellConntentToLeft() ; WyrÃ³wnanie treÅ›ci komÃ³rki do lewej i do Å›rodka w pionie
 {
 	oWord := ComObjActive("Word.Application")
 	oWord.Selection.SelectCell

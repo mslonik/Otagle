@@ -1,4 +1,4 @@
-InsertHeadingNumber()
+﻿InsertHeadingNumber()
 {
 	local vMyListBoxNumber
 	static oWord, Hlb, Wlb, e, Mon, MonTop, MonRight, MonLeft, MonBottom, Var, N
@@ -40,11 +40,11 @@ InsertHeadingNumber()
 			GuiControl,, MyListBoxNumber, % myHeadings[A_Index]
 		}
 		Gui, number:Add, Button, Hidden Default gOKNumber,OKNumber
-		Gui, number:Show,X%X% Y%Y% H%H% W%W%, % MsgText("Wstaw numer nagłówka")
+		Gui, number:Show,X%X% Y%Y% H%H% W%W%, % "Wstaw numer nagłówka"
 	}
 	else if(flag_number == 1)
 	{
-		WinGetPos, X, Y, W, H, % MsgText("Wstaw numer nagłówka")
+		WinGetPos, X, Y, W, H, % "Wstaw numer nagłówka"
 		Gui, number:Destroy
 		flag_number := 0
 		WinActivate, ahk_class OpusApp

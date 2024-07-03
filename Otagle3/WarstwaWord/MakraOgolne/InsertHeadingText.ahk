@@ -1,4 +1,4 @@
-InsertHeadingText()
+﻿InsertHeadingText()
 {
 	local vMyListBoxText
 	static oWord, Hlb, Wlb, e, Mon, MonTop, MonRight, MonLeft, MonBottom, Var, N
@@ -40,11 +40,11 @@ InsertHeadingText()
 			GuiControl,, MyListBoxText, % myHeadings[A_Index]
 		}
 		Gui, text:Add, Button, Hidden Default gOKText,OKText
-		Gui, text:Show,X%X% Y%Y% H%H% W%W%, % MsgText("Wstaw tekst nagłówka")
+		Gui, text:Show,X%X% Y%Y% H%H% W%W%, % "Wstaw tekst nagłówka"
 	}
 	else if(flag_text == 1)
 	{
-		WinGetPos, X, Y, W, H, % MsgText("Wstaw tekst nagłówka")
+		WinGetPos, X, Y, W, H, % "Wstaw tekst nagłówka"
 		Gui, text:Destroy
 		flag_text := 0
 		WinActivate, ahk_class OpusApp

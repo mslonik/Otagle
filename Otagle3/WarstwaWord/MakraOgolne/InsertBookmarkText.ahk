@@ -1,4 +1,4 @@
-InsertBookmarkText()
+﻿InsertBookmarkText()
 {
 	local vMyListBoxBookmark
 	static oWord, Hlb, Wlb, e, Mon, MonTop, MonRight, MonLeft, MonBottom, Var, N
@@ -40,11 +40,11 @@ InsertBookmarkText()
 			GuiControl,, MyListBoxbookmark, % myHeadings[A_Index]
 		}
 		Gui, bookmark:Add, Button, Hidden Default gOKBookmark,OKbookmark
-		Gui, bookmark:Show,X%X% Y%Y% H%H% W%W%, % MsgText("Wstaw tekst zakładki")
+		Gui, bookmark:Show,X%X% Y%Y% H%H% W%W%, % "Wstaw tekst zakładki"
 	}
 	else if(flag_bookmark == 1)
 	{
-		WinGetPos, X, Y, W, H, % MsgText("Wstaw tekst zakładki")
+		WinGetPos, X, Y, W, H, % "Wstaw tekst zakładki"
 		Gui, bookmark:Destroy
 		flag_bookmark := 0
 		WinActivate, ahk_class OpusApp

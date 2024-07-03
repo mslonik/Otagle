@@ -1,4 +1,4 @@
-ParagraphPageBreakBefore()
+﻿ParagraphPageBreakBefore()
 {
 	oWord := ComObjActive("Word.Application")
 	StateOfParagraph_PageBreakBefore := oWord.Selection.ParagraphFormat.PageBreakBefore

@@ -1,4 +1,4 @@
-GoToNextComment() ; Przejd� do kolejnego komentarza
+﻿GoToNextComment() ; Przejd� do kolejnego komentarza
 {
 	oWord := ComObjActive("Word.Application")
 	PrevPos := oWord.Selection.Range.Start
@@ -6,7 +6,7 @@ GoToNextComment() ; Przejd� do kolejnego komentarza
 	oWord.Browser.Next 
 	CurPos := oWord.Selection.Range.Start
 	if (PrevPos >= CurPos)
-		MsgBox, % MsgText("Brak późniejszych komentarzy.")
+		MsgBox, % "Brak późniejszych komentarzy."
 	oWord := ""
 	WinActivate, ahk_class OpusApp
 	WinGetPos, WinX, WinY,WinW,WinH,A

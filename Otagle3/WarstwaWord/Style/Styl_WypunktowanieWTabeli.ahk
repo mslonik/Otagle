@@ -12,7 +12,7 @@ Styl_WypunktowanieWTabeli()
 	OurTemplate := oWord.ActiveDocument.AttachedTemplate.FullName
 	if  ((OurTemplate != OurTempPL) and (OurTemplate != OurTempEN) and (OurTemplate != LocTempPL) and (OurTemplate != LocTempEN) and (OurTemplate != SzabTempPL) and (OurTemplate != SzabTempEN))
 		{
-		MsgBox, 16, % MsgText("Próba wywołania stylu z szablonu"),  % MsgText("Próbujesz wstawić styl przypisany do szablonu, ale szablon nie został jeszcze dołączony do tego pliku.`r`nNajpierw dołącz szablon, a następnie wywołaj ponownie tę funkcję.")
+		MsgBox, 16, % "Próba wywołania stylu z szablonu",  % "Próbujesz wstawić blok konstrukcyjny przypisany do szablonu, ale szablon nie został jeszcze dołączony do tego pliku.`r`nNajpierw dołącz szablon, a następnie wywołaj ponownie tę funkcję."
 	}
 	else
 	{

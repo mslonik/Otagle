@@ -1,4 +1,4 @@
-InsertEnumNumber()
+﻿InsertEnumNumber()
 {
 	local vMyListBoxEnum
 	static oWord, Hlb, Wlb, e, Mon, MonTop, MonRight, MonLeft, MonBottom, Var, N

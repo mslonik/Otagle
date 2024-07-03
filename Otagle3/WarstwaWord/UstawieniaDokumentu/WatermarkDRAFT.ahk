@@ -1,4 +1,4 @@
-WatermarkDRAFT()
+﻿WatermarkDRAFT()
 {
 	WordFalse := 0
 	WordTrue := -1

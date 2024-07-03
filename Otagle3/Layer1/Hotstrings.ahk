@@ -1,4 +1,4 @@
-Hotstrings()
+﻿Hotstrings()
 {
     DetectHiddenWindows, On
     SetTitleMatchMode, 2

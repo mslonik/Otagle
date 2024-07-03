@@ -1,4 +1,4 @@
-MSWordSetFont() {
+﻿MSWordSetFont() {
    IfWinNotActive, ahk_class OpusApp
 	{
 	Send {"U+223C"}

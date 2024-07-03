@@ -1,4 +1,4 @@
-StrikeThroughText() ; 2019-10-03 2019-11-08
+﻿StrikeThroughText() ; 2019-10-03 2019-11-08
 {
 	oWord := ComObjActive("Word.Application")
 	StateOfStrikeThrough := oWord.Selection.Font.StrikeThrough ; := wdToggle := 9999998 

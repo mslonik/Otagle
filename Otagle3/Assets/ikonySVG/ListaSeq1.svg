@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="52.913551mm"
+   height="52.87812mm"
+   viewBox="0 0 52.913551 52.87812"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
+   sodipodi:docname="ListaSeq1.svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.5"
+     inkscape:cx="-781.43656"
+     inkscape:cy="123.32448"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="986"
+     inkscape:window-x="-11"
+     inkscape:window-y="-11"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-115.32135,-32.917203)">
+    <g
+       id="g834"
+       transform="matrix(0.99994116,0,0,0.99927161,-2.2593864,8.7513169)">
+      <rect
+         y="24.390207"
+         x="117.79436"
+         height="52.503254"
+         width="52.503254"
+         id="rect826"
+         style="fill:#ffec8e;fill-opacity:1;stroke:#000000;stroke-width:0.41341144;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <g
+         transform="matrix(0.72531549,0,0,0.72531547,96.202516,12.043419)"
+         id="g884">
+        <path
+           style="fill:#000000;stroke-width:0.46868005"
+           inkscape:connector-curvature="0"
+           d="m 37.408558,26.471654 a 4.6586798,4.6586798 0 1 0 4.658679,-4.658679 4.6868006,4.6868006 0 0 0 -4.658679,4.658679 z m 4.658679,-3.721319 a 3.7213197,3.7213197 0 1 1 -3.721319,3.721319 3.7494405,3.7494405 0 0 1 3.721319,-3.721319 z"
+           id="path830" />
+        <path
+           style="fill:#000000;stroke-width:0.62075609"
+           inkscape:connector-curvature="0"
+           d="M 93.694261,26.031095 H 52.445623 a 0.82217739,0.46868006 0 0 0 0,0.93736 h 41.248638 a 0.82217739,0.46868006 0 0 0 0,-0.93736 z"
+           id="path832" />
+      </g>
+      <path
+         id="path832-0"
+         d="m 164.16041,57.325831 h -29.91828 a 0.59633853,0.33994121 0 0 0 0,0.679882 h 29.91828 a 0.59633853,0.33994121 0 0 0 0,-0.679882 z"
+         inkscape:connector-curvature="0"
+         style="fill:#000000;stroke-width:0.45024401" />
+      <path
+         id="path832-1"
+         d="m 164.16041,48.525282 h -29.91828 a 0.59633891,0.33994143 0 0 0 0,0.679882 h 29.91828 a 0.59633891,0.33994143 0 0 0 0,-0.679882 z"
+         inkscape:connector-curvature="0"
+         style="fill:#000000;stroke-width:0.45024401" />
+      <path
+         id="path832-1-6"
+         d="m 164.16041,39.724737 h -29.91828 a 0.59633853,0.33994121 0 0 0 0,0.679882 h 29.91828 a 0.59633853,0.33994121 0 0 0 0,-0.679882 z"
+         inkscape:connector-curvature="0"
+         style="fill:#000000;stroke-width:0.45024401" />
+      <text
+         id="text974"
+         y="71.536476"
+         x="126.20522"
+         style="font-style:normal;font-weight:normal;font-size:8.75054169px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.21876355"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:calibri;-inkscape-font-specification:calibri;stroke-width:0.21876355"
+           y="71.536476"
+           x="126.20522"
+           id="tspan972"
+           sodipodi:role="line">ListaSeq 1</tspan></text>
+      <text
+         id="text1050"
+         y="33.189629"
+         x="125.06828"
+         style="font-style:normal;font-weight:normal;font-size:5.29645205px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.1324113"
+         xml:space="preserve"><tspan
+           style="stroke-width:0.1324113"
+           y="33.189629"
+           x="125.06828"
+           id="tspan1048"
+           sodipodi:role="line">1</tspan></text>
+    </g>
+  </g>
+</svg>

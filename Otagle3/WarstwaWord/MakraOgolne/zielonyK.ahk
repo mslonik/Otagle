@@ -1,4 +1,4 @@
-F11::
+﻿F11::
 UsunKolor()
 Return
 

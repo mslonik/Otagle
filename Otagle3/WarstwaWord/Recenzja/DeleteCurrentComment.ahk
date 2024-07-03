@@ -1,4 +1,4 @@
-DeleteCurrentComment() ; usu� aktualnie wybrany komentarz
+﻿DeleteCurrentComment() ; usu� aktualnie wybrany komentarz
 	{
 	try
 		{
@@ -9,7 +9,7 @@ DeleteCurrentComment() ; usu� aktualnie wybrany komentarz
 		}
 		catch e
 		{
-		MsgBox, 48, Usuwanie komentarza, % MsgText("By usunąć komentarz musisz go najpierw wyedytować (Edytuj komentarz).")
+		MsgBox, 48, Usuwanie komentarza, % "By usunąć komentarz musisz go najpierw wyedytować (Edytuj komentarz)."
 		}
 	WinActivate, ahk_class OpusApp
 	WinGetPos, WinX, WinY,WinW,WinH,A

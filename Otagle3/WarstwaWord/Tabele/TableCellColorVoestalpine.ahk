@@ -1,4 +1,4 @@
-TableCellColorVoestalpine() ; kolor wype³nienia komórki tabeli 0 | 130 | 180
+ï»¿TableCellColorVoestalpine() ; kolor wypeÅ‚nienia komÃ³rki tabeli 0 | 130 | 180 
 {
 	oWord := ComObjActive("Word.Application")
 	color := oWord.Selection.Shading.BackgroundPatternColor

@@ -1,4 +1,4 @@
-ToggleFormattingPane()
+﻿ToggleFormattingPane()
 {
 	oWord := ComObjActive("Word.Application")
 	StateOfFormattingPane := oWord.Application.TaskPanes(1).Visible

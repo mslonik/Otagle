@@ -1,4 +1,4 @@
-DeleteTableRow()
+﻿DeleteTableRow()
 {
 	oWord := ComObjActive("Word.Application")
 	oWord.Selection.Rows.Delete 

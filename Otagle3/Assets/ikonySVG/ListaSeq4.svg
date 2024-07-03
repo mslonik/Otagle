@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="52.916664mm"
+   height="52.916664mm"
+   viewBox="0 0 52.916664 52.916664"
+   version="1.1"
+   id="svg1058"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
+   sodipodi:docname="ListaSeq4.svg">
+  <defs
+     id="defs1052" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.49497475"
+     inkscape:cx="26.636978"
+     inkscape:cy="-83.179"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="986"
+     inkscape:window-x="-11"
+     inkscape:window-y="-11"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata1055">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-76.101194,-180.07738)">
+    <rect
+       style="fill:#ffec8e;fill-opacity:1;stroke:#000000;stroke-width:0.41341144;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect826"
+       width="52.503254"
+       height="52.503254"
+       x="76.307899"
+       y="180.28409" />
+    <path
+       style="fill:#000000;stroke-width:0.33994091"
+       inkscape:connector-curvature="0"
+       d="m 81.849059,213.70691 a 3.3790127,3.3790126 0 1 0 3.379012,-3.37901 3.399409,3.3994091 0 0 0 -3.379012,3.37901 z m 3.379012,-2.69914 a 2.6991308,2.6991308 0 1 1 -2.69913,2.69914 2.7195274,2.7195273 0 0 1 2.69913,-2.69914 z"
+       id="path830" />
+    <path
+       style="fill:#000000;stroke-width:0.45024401"
+       inkscape:connector-curvature="0"
+       d="M 122.67395,186.81805 H 92.755676 a 0.59634519,0.339945 0 0 0 0,0.67989 h 29.918274 a 0.59634519,0.339945 0 0 0 0,-0.67989 z"
+       id="path832" />
+    <path
+       style="fill:#000000;stroke-width:0.45024401"
+       inkscape:connector-curvature="0"
+       d="M 122.67395,213.21971 H 92.755675 a 0.59633854,0.3399412 0 0 0 0,0.67988 h 29.918275 a 0.59633854,0.3399412 0 0 0 0,-0.67988 z"
+       id="path832-0" />
+    <path
+       style="fill:#000000;stroke-width:0.45024401"
+       inkscape:connector-curvature="0"
+       d="M 122.67395,204.41916 H 92.755675 a 0.59634545,0.33994514 0 0 0 0,0.67989 h 29.918275 a 0.59634545,0.33994514 0 0 0 0,-0.67989 z"
+       id="path832-1" />
+    <path
+       style="fill:#000000;stroke-width:0.45024401"
+       inkscape:connector-curvature="0"
+       d="M 122.67395,195.61862 H 92.755675 a 0.59633869,0.33994129 0 0 0 0,0.67988 h 29.918275 a 0.59633869,0.33994129 0 0 0 0,-0.67988 z"
+       id="path832-1-6" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:8.75054169px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.21876355"
+       x="84.718758"
+       y="227.43034"
+       id="text974"><tspan
+         sodipodi:role="line"
+         id="tspan972"
+         x="84.718758"
+         y="227.43034"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:calibri;-inkscape-font-specification:calibri;stroke-width:0.21876355">ListaSeq 4</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:5.29645205px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.1324113"
+       x="83.581818"
+       y="215.65282"
+       id="text1050"><tspan
+         sodipodi:role="line"
+         id="tspan1048"
+         x="83.581818"
+         y="215.65282"
+         style="stroke-width:0.1324113">4</tspan></text>
+  </g>
+</svg>

@@ -1,4 +1,4 @@
-SetDefaultInterlines()
+﻿SetDefaultInterlines()
 {
     WinActivate, ahk_class OpusApp
     oWord := ComObjActive("Word.Application")

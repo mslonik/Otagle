@@ -1,4 +1,4 @@
-FormatObjectPane()
+﻿FormatObjectPane()
 ;~ by Jakub Masiak
 {
     oWord := ComObjActive("Word.Application")

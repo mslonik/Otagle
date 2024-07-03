@@ -1,4 +1,4 @@
-ReapplyStyles()
+﻿ReapplyStyles()
 {
 	oWord := ComObjActive("Word.Application")
 	sStyleName := oWord.Selection.Style.NameLocal

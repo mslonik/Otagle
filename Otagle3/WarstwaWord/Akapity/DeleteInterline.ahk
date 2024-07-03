@@ -1,4 +1,4 @@
-DeleteInterline() ; usuwa interliniê u góry strony (przerwê poprzedzaj¹c¹ ustawia na zero pkt; przywrócenie domyœlnego formatowania akapitu: Ctrl + q)
+ï»¿DeleteInterline() ; usuwa interliniÄ™ u gÃ³ry strony (przerwÄ™ poprzedzajÄ…cÄ… ustawia na zero pkt; przywrÃ³cenie domyÅ›lnego formatowania akapitu: Ctrl + q)
 ;~ by Jakub Masiak
 {
 	oWord := ComObjActive("Word.Application")

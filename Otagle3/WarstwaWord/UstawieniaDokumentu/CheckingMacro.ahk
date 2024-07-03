@@ -16,6 +16,7 @@
     Gui, CheckMacro:Add, CheckBox, gState vSize, Zmniejsz rozmiar obrazków w dokumencie
     Gui, CheckMacro:Font, cRed bold
     Gui, CheckMacro:Add, Text, xm+15, Zaktualizuj Change Log
+    Gui, CheckMacro:Add, Text, xm+15, Wstaw numer wersji dokumentu z Sharepoint
     Gui, CheckMacro:Font, cBlack norm
     Gui, CheckMacro:Add, Button, gGoNext vGoNext Disabled, Dalej
     Gui, CheckMacro:Add, Button, yp x+m gCheckMacroGuiClose Default, Anuluj
