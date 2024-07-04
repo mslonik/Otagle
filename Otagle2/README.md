@@ -117,8 +117,6 @@ Tip: I made a mistake and now matrix shows activated icon by default. Now you ca
 ![Otagle2 after reload](/Otagle2/pictures/Otagle2_AfterReload.png)
 ##### Picture. After reload application starts.
 
-**Comment**: As you can see on the last picture, something went wrong and instead of matrix 6 x 11 only 1 x 11 is displayed. Consider it as a bug.
-
 ---
 Added or changed files when configuration wizard is finished:
 - Config.ini
