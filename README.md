@@ -183,10 +183,12 @@ Run system application *Calibrate the screen for pen or touch input* aka *Tablet
 
 You're done.
 
+By the way, there are available touch overlays to regular screens of specific size. Such overlays are usually glued (by adhesive tape) or clamped to regular size monitors (e.g. 24''). Thanks to that one can get access to huge button matrix if switching between layers is somehow cumbersome or unwanted.
+
 ## Existing versions of Otagle scripts
 
 - [**Otagle1**](https://github.com/mslonik/Otagle/tree/master/Otagle1/README.md), non-scallable window, 1024 x 600 px, replaces numeric keypad (numpad)
-- **Otagle2**, 
+- [**Otagle2**](https://github.com/mslonik/Otagle/tree/master/Otagle2/README.md), non-scalleble window of any size, with rectangular buttons, 
 - **Otagle3**.
 
 For details please see dedicated folders and readme.md files.

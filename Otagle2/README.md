@@ -27,8 +27,8 @@ The required set of information:
 ##### Picture. Choose a monitor where GUI will be located.
 
 Tip: To make your choice ease you can check monitor numbering by pressing the corresponding button. Then small digit is displayed on each of your monitors. 
----
 
+---
 ![Configuration Wizard, Step 2 of 3](/Otagle2/pictures/Otagle2_ConfigWizard_Step2of3.png)
 ##### Picture. Specify amount and size of buttons. 
 
@@ -117,9 +117,30 @@ Tip: I made a mistake and now matrix shows activated icon by default. Now you ca
 ![Otagle2 after reload](/Otagle2/pictures/Otagle2_AfterReload.png)
 ##### Picture. After reload application starts.
 
----
-*Comment*: As you can see on the last picture, something went wrong and instead of matrix 6 x 11 only 1 x 11 is displayed. Consider it as a bug.
+**Comment**: As you can see on the last picture, something went wrong and instead of matrix 6 x 11 only 1 x 11 is displayed. Consider it as a bug.
 
+---
 Added or changed files when configuration wizard is finished:
 - Config.ini
 - ButtonFunctions.ahk
+
+---
+
+## Pros and cons, final comments
+
+Pros: 
+- it works,
+- now not only AutoHotkey scripts can be assigned to buttons, but also executable files,
+- configuration of layers and dedicated pictures as well as files is now stored within configuration file, no longer hard coded,
+- dedicated icon.
+
+Cons: 
+- two pictures per button,
+- all the icons must be manually created / converted with use of external application,
+- all the pictures must be PNG or JPG,
+- the fusion of small, cheap touch screen with AutoHotkey script proved to be useful.
+
+Comments:
+1. Actually you need 3x files: source file (SVG) and then generate two output raster graphics files in PNG or JPG format. Depending on your liking, it would be good to prepare a pair of PNG / JPG files: deactivated aka not active and activated aka active. This isn't very flexible or automatized process at the moment. For example if you decide to change pattern of the buttons, e.g. to reduce the size or number of buttons at specific layer, you need to remember about scaling of raster graphics. 
+2. Future: combine the excellent [Imagemagick](https://imagemagick.org/) tool with this script to adjust source graphic files with output files.
+3. This is intermediate version of Otagle concept: Otagle1 → **Otagle2** → Otagle3.
