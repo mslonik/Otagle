@@ -1,5 +1,7 @@
 # O T A G L E 2
 
+![Otagle2 Big Logo](/Otagle2/Core/OtagleBigLogo.png)
+
 By default just run *Otagle.ahk*. If you run it for the very first time, the *Configuration Wizard* will guide you through the process of *Otagle* configuration. Below it is shown on example screen shots. The configuration is stored within *Config.ini*, which is human readable and editable. 
 
 The required set of information:
