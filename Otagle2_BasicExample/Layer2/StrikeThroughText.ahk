@@ -8,4 +8,4 @@
 
 ; - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 ; the following line has been prepared for O T A G L E
-StrikeThroughText()
+; StrikeThroughText()
