@@ -156,21 +156,30 @@ Hardware example:
 ![HDMI to USB-A adapter](/pictures/IMG_5522_Adapter_zm.jpg)
 
 Some parameters:
-- display size: 7'' =  1024 pixels x 600 pixels TFT (Thin Film Transistor)
+- display size: 7''
+- display size [pixels]: 1024 x 600
+- display active size [cm]: 15.5 x 8.6
+- display passive size [cm]: 16.5 x 9.9
+- display type: TFT (Thin Film Transistor)
+- screen size [cm]: 18 x 12.5
 
 #### Hardware configuration.
 In order to run this touch screen both cables must be connected (HDMI and USB). Power is delivered from computer to the touch screen over USB cable, which is also used to 
 
 The HDMI cable could be connected directly to HDMI port or at first to the HDMI to USB adapter. Such adapter is fully plug-and-play, doesn't require any configuration. The one presented at picture above actually stopped working out of sudden, so I don't recommend it.
 
-Configuration of additional display in Microsoft Windows is available after pressing keyboard shortcut **# + I** (chord: Windows key and I) in *System* settings → *Display*.
+Configuration of additional display in Microsoft Windows is available in *System* settings:
+- menu *Start* → Configuration
+![Configuration](/pictures/Configuration_zm.png)
+
+- or press keyboard shortcut **# + I** (keyboard chord: Windows key and I) in *System* settings → *Display*.
 ![Display Configuration](/pictures/DisplayConfiguration_zm.png)
 
 Information regarding actual touch screen activity are transfered over USB port. From operating system point of view this is just another input device. The issue is it must be logically connected to the correct screen.
 
-Run application *(…)* and configure relation between correct screen and touch.
+Run system application *Calibrate the screen for pen or touch input* aka *Tablet PC Settings* (you can search for it) and configure relation between correct screen and touch.
 ![Tablet Configuration](/pictures/TabletSettings.png)
-![Screen choice](/pictures/ApproveSetting.png )
+![Screen choice](/pictures/ApproveSetting.png)
 
 You're done.
 
@@ -178,7 +187,7 @@ You're done.
 
 - [**Otagle1**](https://github.com/mslonik/Otagle/tree/master/Otagle1/README.md), non-scallable window, 1024 x 600 px, replaces numeric keypad (numpad)
 - **Otagle2**, 
-- **Otagle3**,
+- **Otagle3**.
 
 For details please see dedicated folders and readme.md files.
 
