@@ -1,6 +1,10 @@
 # Otagle, introduction
 Otagle is inspaired by commercial product [Elgato stream deck](https://www.elgato.com/us/en/s/welcome-to-stream-deck). Once upon a time I decided to make something similar with fraction of a cost. The name of my software framework, *Otagle* is actually anagram to word *Elgato*; the word *otagle* is formed by reading the word *elgato* backwards.
 
+https://youtu.be/5zKbTOXBqEs
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5zKbTOXBqEs?si=LOfvZQGw7mHdZdJG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 The idea behind is simple: configurable tool, where you can easily connect any icon to any button and to any script.
 
 ```mermaid
