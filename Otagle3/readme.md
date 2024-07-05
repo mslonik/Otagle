@@ -5,7 +5,7 @@
 *Otagle3* is the newest version of the *Otagle* concept. In comparison to previous version, the main improvement is GUI and scallable icons / buttons. If you didn't yet read general introduction to *Otagle* concept [I strongly recommend to do so](https://github.com/mslonik/Otagle).
 
 ### How it works?
-*Otagle3* is based on *Neutron.ahk* (https://github.com/G33kDude/Neutron.ahk). It means that Graphical User Interface (GUI) is kept within Internet browser. As you may already know, Internet browsers are one of not so many applications, which are able to display videos, pictures and text together, within the same window. If your pictures are prepared as vector oriented graphics, such windows are scallable. So the idea behind is to open a window containing matrix of buttons, where all icons are vector graphics and all are scallable. 
+*Otagle3* is based on [*Neutron.ahk*](https://github.com/G33kDude/Neutron.ahk). It means that Graphical User Interface (GUI) is kept within Internet browser. As you may already know, Internet browsers are one of not so many applications, which are able to display videos, pictures and text together, within the same window. If your pictures are prepared as vector oriented graphics, such windows are scallable. So the idea behind is to open a window containing matrix of buttons, where all icons are vector graphics and all are scallable. 
 
 Of course script window doesn't looks like Internet browser. Only core functions related to rendering of text and vector graphics are supported. The *Neutron* is actually software interface to *Trident* aka [*MSHTML*](https://en.wikipedia.org/wiki/Trident_(software)), which is a browser engine of the *Internet Explorer*. 
 
@@ -21,7 +21,7 @@ There are actually two scripts:
 ### How to configure if it already runs?
 In the top-right corner of the window you will find the wrench icon. 
 
-![Wrench icon 🛠](/pictures/WrenchIcon_Configuration.png)
+![Wrench icon 🛠](/Otagle3/pictures/WrenchIcon_Configuration.png)
 
 After clicking you can 
 - edit your buttons (add, swap, remove), you
