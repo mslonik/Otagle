@@ -1,4 +1,7 @@
 # O T A G L E 3
+
+![Otagle3 Big Logo](/Otagle2/Core/OtagleBigLogo.png)
+
 *Otagle3* is the newest version of the *Otagle* concept. In comparison to previous version, the main improvement is GUI and scallable icons / buttons. If you didn't yet read general introduction to *Otagle* concept [I strongly recommend to do so](https://github.com/mslonik/Otagle).
 
 ### How it works?
@@ -16,7 +19,11 @@ There are actually two scripts:
 - *Flow.ahk*, the experimental script, which exchanges information with *Microsoft Word* about its current context. If the context changes, *Flow.ahk* follows it and automatically switches between available layers. Of course it works only with the provided example scripts (stored in subfolder *WarstwaWord*) and only with *Microsoft Word*.
 
 ### How to configure if it already runs?
-In the top-right corner of the window you will find the wrench icon. After clicking you can 
+In the top-right corner of the window you will find the wrench icon. 
+
+![Wrench icon 🛠](/pictures/WrenchIcon_Configuration.png)
+
+After clicking you can 
 - edit your buttons (add, swap, remove), you
 - configurate layers 
 - chose monitor you wish Otagle to open.
