@@ -152,7 +152,17 @@ flowchart LR
 
 ##### Picture 2. Comparison of recommended and optional connection between a **Physical Device** and Personal Computer (PC).
 
-Hardware example:
+## Existing versions of Otagle scripts
+
+- [**Otagle1**](https://github.com/mslonik/Otagle/tree/master/Otagle1/README.md), non-scallable window, 1024 x 600 px, replaces numeric keypad (numpad)
+- [**Otagle2**](https://github.com/mslonik/Otagle/tree/master/Otagle2/README.md), non-scalleble window of any size, with rectangular buttons, 
+- [**Otagle3**](https://github.com/mslonik/Otagle/tree/master/Otagle3/README.md), scallable window of any size, with rectangular buttons.
+
+For details please see dedicated folders and *README.md* files.
+
+
+## Hardware example
+
 ![Physical Device](/pictures/IMG_5520_PhysicalDevice_zm.jpg)
 ![Physical Device ports](/pictures/IMG_5521_PhysicalDevicePorts_zm.jpg)
 ![HDMI to USB-A adapter](/pictures/IMG_5522_Adapter_zm.jpg)
@@ -186,14 +196,6 @@ Run system application *Calibrate the screen for pen or touch input* aka *Tablet
 You're done.
 
 By the way, there are available touch overlays to regular screens of specific size. Such overlays are usually glued (by adhesive tape) or clamped to regular size monitors (e.g. 24''). Thanks to that one can get access to huge button matrix if switching between layers is somehow cumbersome or unwanted.
-
-## Existing versions of Otagle scripts
-
-- [**Otagle1**](https://github.com/mslonik/Otagle/tree/master/Otagle1/README.md), non-scallable window, 1024 x 600 px, replaces numeric keypad (numpad)
-- [**Otagle2**](https://github.com/mslonik/Otagle/tree/master/Otagle2/README.md), non-scalleble window of any size, with rectangular buttons, 
-- [**Otagle3**](https://github.com/mslonik/Otagle/tree/master/Otagle3/README.md), scallable window of any size, with rectangular buttons.
-
-For details please see dedicated folders and *README.md* files.
 
 ## Additional links
 
