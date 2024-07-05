@@ -3,7 +3,7 @@ Otagle is inspaired by commercial product [Elgato stream deck](https://www.elgat
 
 https://youtu.be/5zKbTOXBqEs
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/5zKbTOXBqEs?si=LOfvZQGw7mHdZdJG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+[![Watch the video](https://img.youtube.com/vi/)](https://www.youtube.com/embed/5zKbTOXBqEs)
 
 The idea behind is simple: configurable tool, where you can easily connect any icon to any button and to any script.
 
