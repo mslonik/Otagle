@@ -1,8 +1,6 @@
 # Otagle, introduction
 Otagle is inspaired by commercial product [Elgato stream deck](https://www.elgato.com/us/en/s/welcome-to-stream-deck). Once upon a time I decided to make something similar with fraction of a cost. The name of my software framework, *Otagle* is actually anagram to word *Elgato*; the word *otagle* is formed by reading the word *elgato* backwards.
 
-https://youtu.be/5zKbTOXBqEs
-
 [Watch the video](https://youtu.be/5zKbTOXBqEs)
 
 The idea behind is simple: configurable tool, where you can easily connect any icon to any button and to any script.
@@ -199,4 +197,4 @@ For details please see dedicated folders and readme.md files.
 
 ## Additional links
 
-AutoHotkey forum [topic dedicated to Otagle](https://www.autohotkey.com/boards/viewtopic.php?t=69690)
+AutoHotkey forum [topic dedicated to Otagle](https://www.autohotkey.com/boards/viewtopic.php?t=69690). You can find there discussion about pros and cons as well as syntetic comparison with Elgato Stream Deck.
