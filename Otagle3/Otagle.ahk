@@ -100,3 +100,11 @@ rBox(){
 }
   
 }
+
+MsgText(string) ; future: remove calls to this function, as it is no longer required if all the files are UTF-8 with BOM. 
+{   ;https://www.autohotkey.com/boards/viewtopic.php?t=67950
+    vSize := StrPut(string, "CP0")
+    VarSetCapacity(vUtf8, vSize)
+    vSize := StrPut(string, &vUtf8, vSize, "CP0")
+    Return StrGet(&vUtf8, "UTF-8") 
+}

@@ -473,15 +473,6 @@ SaveConfigurationWizard:
 return
 ; .................... BUTTONS ARRANGE (SWAP, DELETE, ADD)................................
 
-
-MsgText(string)
-{
-    vSize := StrPut(string, "CP0")
-    VarSetCapacity(vUtf8, vSize)
-    vSize := StrPut(string, &vUtf8, vSize, "CP0")
-    Return StrGet(&vUtf8, "UTF-8") 
-}
-
 ExitWizard:
 ExitApp
 

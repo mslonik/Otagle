@@ -36,12 +36,14 @@ If (Contents2 == MD5(data,StrLen(data))){
 ;Przy inicjalizacji tworzenia nowych plików, jest utworzony nowy folder z o nzawie PlikiHtml - Powoduje to usunięcie starych plików wraz z folderem.
 ; Zabieg stosowany aby nie nadpisywać itniejącej struktury. Nadpisanie spowoduje dublowanie się okienek i przycisków.
 
-if !(FileExist("PlikiHtml")){
+if !(FileExist("PlikiHtml"))
+{
     FileCreateDir, PlikiHtml
     BuildHTMLFile()
-}Else {
+}
+Else 
+{
     Gosub, Gui
-    
 }
 
 return
@@ -59,14 +61,16 @@ return
 
 ;Usuwanie folderu, aby nie nadpisywać plików Html.
 
-RemoveFolder(){
+RemoveFolder()
+{
     FileRemoveDir, PlikiHtml,1
 }
 
 ; Za pomocą metody FileAppend tworzone są pliki html.
 ; Pierwsze użycie tej metody zapisuje plik PlikiHtml/a_Welcome.html, gdzie zdefiniowany został plik html.
 
-BuildHTMLFile(){
+BuildHTMLFile()
+{
     FileAppend,
     (
     <!DOCTYPE html>
@@ -293,14 +297,17 @@ BuildHTMLFile(){
 
 ;Funkcje do wyświetlania aplikacni za pośrednictem neutrona.
 
-DisplayLoader(){
+DisplayLoader()
+{
     global
     neutron := new NeutronWindow()
     neutron.Load("PlikiHtml/a_Welcome.html")
     neutron.Gui("+LabelNeutron")
     neutron.Show("w620 h350")
 }
-DisplayMainGui(){
+
+DisplayMainGui()
+{
     global
     neutron.Close("PlikiHtml/a_Welcome.html")
     neutron := new NeutronWindow()
@@ -308,12 +315,4 @@ DisplayMainGui(){
     neutron.Gui("+LabelNeutron")
     neutron.Show("w1300 h800")
     neutron.Maximize()
-}
-
-MsgText(string)
-{
-    vSize := StrPut(string, "CP0")
-    VarSetCapacity(vUtf8, vSize)
-    vSize := StrPut(string, &vUtf8, vSize, "CP0")
-    Return StrGet(&vUtf8, "UTF-8") 
 }
