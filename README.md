@@ -191,7 +191,7 @@ By the way, there are available touch overlays to regular screens of specific si
 
 - [**Otagle1**](https://github.com/mslonik/Otagle/tree/master/Otagle1/README.md), non-scallable window, 1024 x 600 px, replaces numeric keypad (numpad)
 - [**Otagle2**](https://github.com/mslonik/Otagle/tree/master/Otagle2/README.md), non-scalleble window of any size, with rectangular buttons, 
-- [**Otagle3**](https://github.com/mslonik/Otagle/tree/master/Otagle3/readme.md), scallable window of any size, with rectangular buttons.
+- [**Otagle3**](https://github.com/mslonik/Otagle/tree/master/Otagle3/README.md), scallable window of any size, with rectangular buttons.
 
 For details please see dedicated folders and *README.md* files.
 
