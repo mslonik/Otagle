@@ -1,12 +1,18 @@
-﻿#NoEnv
+﻿/*
+    O T A G L E 3
+    Written by: Ernest Mgłosiek, Maciej Słojewski
+    License: GNU GPL 3.x
+*/
+
+#NoEnv
 #SingleInstance, Force
 SetBatchLines, -1
 SetWorkingDir %A_ScriptDir%
 
 Menu, Tray, Icon, % A_ScriptDir . "\Assets\OtagleIcon.ico"
-#Include 		%A_ScriptDir%\OtagleScripts\CopyTemplate.ahk
+#Include 		%A_ScriptDir%\OtagleScripts\CopyTemplate.ahk    ;this file is not necessary for pure Otagle3. If you wish you can comment it out.
 #Include 		%A_ScriptDir%\lib\Neutron.ahk
-#Include *i 	%A_ScriptDir%\ButtonFunctions.ahk ;this file may not exist
+#Include *i 	%A_ScriptDir%\ButtonFunctions.ahk ;this file may not exist on startup, so it is run with "*i" parameter
 #Include 		%A_ScriptDir%\OtagleScripts\GuiGenerator.ahk
 #Include 		%A_ScriptDir%\OtagleScripts\ConfigBuilder.ahk
 #Include 		%A_ScriptDir%\OtagleScripts\ArrangeBtn.ahk
