@@ -132,32 +132,57 @@ BuildHTMLFile()
             VarVertical := A_Index
             Loop, %AmoountHBtn%
             {
-                IniRead, BtnX ,% A_ScriptDir . "\Config.ini", Layer%Ln%, % "Button_" . VarVertical . "_" . A_Index . "_X"
-                IniRead, BtnY ,% A_ScriptDir . "\Config.ini", Layer%Ln%, % "Button_" . VarVertical . "_" . A_Index . "_Y"
-                IniRead, PictureDef,% A_ScriptDir . "\Config.ini",Layer%Ln%,  % "Button_" . VarVertical . "_" . A_Index . "_Picture"
-                iconName:= SubStr(MsgText(PictureDef),20)
-                FileRead, Contents, % A_ScriptDir . "\Assets\ikonySVG\" . iconName
-                IniRead, ButtonA, % A_ScriptDir . "\Config.ini", Layer%Ln%, % "Button_" . VarVertical . "_" . A_Index . "_Action"
-                IniRead, Path ,% A_ScriptDir . "\Config.ini", Layer%Ln%, % "Button_" . VarVertical . "_" . A_Index . "_Path",#
-                IniRead, Name ,% A_ScriptDir . "\Config.ini", Layer%Ln%, % "Button_" . VarVertical . "_" . A_Index . "_Name",Tekst Testowy lalala
+               IniRead
+			 	, BtnX
+				, % A_ScriptDir . "\Config.ini"
+				, Layer%Ln%
+				, % "Button_" . VarVertical . "_" . A_Index . "_X"
+               IniRead 
+			 	, BtnY
+				, % A_ScriptDir . "\Config.ini"
+				, Layer%Ln%
+				, % "Button_" . VarVertical . "_" . A_Index . "_Y"
+               IniRead 
+			 	, PictureDef
+				, % A_ScriptDir . "\Config.ini"
+				, Layer%Ln%
+				, % "Button_" . VarVertical . "_" . A_Index . "_Picture"
+               iconName:= SubStr(PictureDef, 20)
+               FileRead, Contents, % A_ScriptDir . "\Assets\ikonySVG\" . iconName
+               IniRead 
+			 	, ButtonA
+				, % A_ScriptDir . "\Config.ini"
+				, Layer%Ln%
+				, % "Button_" . VarVertical . "_" . A_Index . "_Action"
+               IniRead 
+			 	, Path
+				, % A_ScriptDir . "\Config.ini"
+				, Layer%Ln%
+				, % "Button_" . VarVertical . "_" . A_Index . "_Path"
+				, #	;to be investigated
+               IniRead 
+			 	, Name
+				, % A_ScriptDir . "\Config.ini"
+				, Layer%Ln%
+				, % "Button_" . VarVertical . "_" . A_Index . "_Name"
 
-                Bw := BtnWidth
-                Bh := BtnHeight
+               Bw := BtnWidth,
+          	Bh := BtnHeight
 
     ; Link pełni rolę wyłacznie rolę kontenera, na który ustawione jest nasłuchiwanie na zdarzenie "klik".
     ; Każda ikona posiada przypisane id, gdzie zawarta jest nazwa metody (Skrypt AHK). Określona jest akcja po kliknieciu.
     ; Nadane zostały style CSS np: maksymalny rozmiar kafelka, nadanie klasy wykorzystane jest do dodania styli w zewnętrzym pliku Css w katalogu Style.
     ; Wenatrz wszystkich kafelek umieszczona jest ikona SVG.
 
-                If (Path == "#"){
+               If (Path == "#")
+			{
                     btn:= % "<a style=""max-width:300px; max-height:300px; height:" . Bh . "vw; width:" . Bw . "vw;   ""  id=""" . ButtonA . """ class=""box_item"" href=""#""  onclick=""ahk.ClickF(event,id)"">" . Contents . "</a>"
-                }
-                Else{
+               }
+               Else
+			{
                     btn:= % "<a style=""max-width:300px; max-height:300px; height:" . Bh . "vw; width:" . Bw . "vw;   "" id=""" . ButtonA . """ class=""box_item"" href=""" . "Layer" . Path . ".html" . """  onclick=""ahk.ClickF(event,id)"">" . Contents . "</a>"
-                }
-                
-                btns[VarVertical,A_Index]:= btn
-                
+               }
+               btns[VarVertical,A_Index]:= btn
             }
         }
 

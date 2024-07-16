@@ -20,14 +20,14 @@ if !(FileExist("Config.ini"))
 global Flag := False
 
 
-;Install filles
-; FileInstall, Layer1.html, Layer1.html
-; FileInstall, index.js, index.js
-; FileInstall, index.css, index.css
-; FileInstall, Assets/ikonySVG, *
-; FileInstall, bootstrap.min.css, bootstrap.min.css
-; FileInstall, bootstrap.min.js, bootstrap.min.js
-; FileInstall, jquery.min.js, jquery.min.js
+; Add filles to executable (EXE)
+FileInstall, Layer1.html, Layer1.html
+FileInstall, index.js, index.js
+FileInstall, index.css, index.css
+FileInstall, Assets/ikonySVG, *
+FileInstall, bootstrap.min.css, bootstrap.min.css
+FileInstall, bootstrap.min.js, bootstrap.min.js
+FileInstall, jquery.min.js, jquery.min.js
 
 
 ; Obsługa kafelka - przekzane jest z poziomu html zdarzenie, które jest zawiera nazwę metody.
@@ -102,12 +102,4 @@ rBox()
      	   FileAppend,%A_LoopField%`n,PlikiHtml/Layer%index%.html,UTF-8
     		}
 	}
-}
-
-MsgText(string)	;future:remove calls to this function, as it is no longer required if all .ahk  files are UTF-8 with BOM.
-{	;https://WWW.AutoHotkey.com/boards/viewtopic.PHP?t=67950
-	vSize := StrPut(string, "CP0")
-	VarSetCapacity(VUtf8, vSize)
-	vSize := StrPut(string, &vUtf8, vSize, "CP0")
-	return StrGet(&vUtf8, "UTF-8")
 }

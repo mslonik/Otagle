@@ -394,7 +394,6 @@ F_ReadConfig_ini()
           IniRead, AmountOfKeysHorizontally,             % A_ScriptDir . "\Config.ini", % "Layer" . LayerIndex, Amount of buttons horizontally
           IniRead, AmountOfKeysVertically,               % A_ScriptDir . "\Config.ini", % "Layer" . LayerIndex, Amount of buttons vertically
           TableOfLayers[LayerIndex] := []
-          Title%LayerIndex% := % MsgText(Title%LayerIndex%)
           Gui, % "Layer" . LayerIndex . ": New", % "+hwndGuiLayer" . LayerIndex . "Hwnd" . " +LabelMyGui_On"
           Loop, % AmountOfKeysVertically
                {
