@@ -1,35 +1,35 @@
-﻿#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
-#SingleInstance, Force
+﻿FileRead, Contents2, Assets/hashCode.txt ;Read CheckSum File
 
-FileRead, Contents2,Assets/hashCode.txt ;Read CheckSum File
-
-;Zmienne
-
+;Global variables
 hashCodeR                                   := 0
 pages                                       := 0
 
-; Utorzenie sumy kontrolnej przy pomocy kodowania md5.Za pomocą sumy kontrolnej sprawdzamy czy zaszły zmiany w konfiguracji(config.ini).
-; Przy każdej zmianie konfiguracji jest generowane nowe gui - czyli pliki html znajdujace się w folderze PlikiHtml.
+; Utorzenie sumy kontrolnej przy pomocy kodowania md5. Za pomocą sumy kontrolnej sprawdzamy czy zaszły zmiany w konfiguracji (pliku Config.ini).
+; Przy każdej zmianie konfiguracji jest generowane nowe GUI, czyli pliki html znajdujace się w folderze PlikiHtml.
 
-FileRead, Contents,Config.ini
+FileRead, Contents, Config.ini
 data := Contents
-MD5( ByRef V, L=0 ) {
-    VarSetCapacity( MD5_CTX,104,0 ), DllCall( "advapi32\MD5Init", Str,MD5_CTX )
-    DllCall( "advapi32\MD5Update", Str,MD5_CTX, Str,V, UInt,L ? L : VarSetCapacity(V) )
-    DllCall( "advapi32\MD5Final", Str,MD5_CTX )
-    Loop % StrLen( Hex:="123456789ABCDEF0" )
-        N := NumGet( MD5_CTX,87+A_Index,"Char"), MD5 .= SubStr(Hex,N>>4,1) . SubStr(Hex,N&15,1)
+
+MD5(ByRef V, L = 0) ;tu jestem
+{
+    VarSetCapacity(MD5_CTX, 104, 0), DllCall("advapi32\MD5Init", Str, MD5_CTX)
+    DllCall("advapi32\MD5Update", Str, MD5_CTX, Str, V, UInt, L ? L : VarSetCapacity(V))
+    DllCall("advapi32\MD5Final", Str, MD5_CTX)
+    Loop % StrLen(Hex:="123456789ABCDEF0")
+        N := NumGet( MD5_CTX,87+A_Index,"Char"), MD5 .= SubStr(Hex, N>>4, 1) . SubStr(Hex, N&15, 1)
     Return MD5
 }
-; Sprawdzona zostaje liczba hash jeżeli jest inna niż w wcześniej utworzonym plkku, oznacza to że konfiguracja jest zmieniona.
 
-If (Contents2 == MD5(data,StrLen(data))){
+; Sprawdzona zostaje liczba hash jeżeli jest inna niż w wcześniej utworzonym plkku, oznacza to że konfiguracja jest zmieniona.
+If (Contents2 == MD5(data, StrLen(data)))
+{
     FileDelete, Assets/hashCode.txt
-    FileAppend,% MD5(data,StrLen(data)),Assets/hashCode.txt
-    
-}Else If(Contents2 != MD5(data,StrLen(data))){
+    FileAppend, % MD5(data, StrLen(data)), Assets/hashCode.txt
+}
+Else If (Contents2 != MD5(data, StrLen(data)))
+{
     FileDelete, Assets/hashCode.txt
-    FileAppend,% MD5(data,StrLen(data)),Assets/hashCode.txt
+    FileAppend, % MD5(data,StrLen(data)), Assets/hashCode.txt
     RemoveFolder()
 }
 

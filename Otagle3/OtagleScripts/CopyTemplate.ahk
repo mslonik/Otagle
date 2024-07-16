@@ -12,8 +12,8 @@ if !(FileExist(A_ScriptDir . "\Templates\"))
     OurTemplateEN := "S:\OrgFirma\Szablony\Word\OgolneZmakrami\TQ-S402-en_OgolnyTechDok.dotm"
 ,   OurTemplatePL := "S:\OrgFirma\Szablony\Word\OgolneZmakrami\TQ-S402-pl_OgolnyTechDok.dotm"
 
-,   TemplatePL := % A_ScriptDir . "\Templates\TQ-S402-pl_OgolnyTechDok.dotm"
-,   TemplateEN := % A_ScriptDir . "\Templates\TQ-S402-en_OgolnyTechDok.dotm"
+,   TemplatePL := A_ScriptDir . "\Templates\TQ-S402-pl_OgolnyTechDok.dotm"
+,   TemplateEN := A_ScriptDir . "\Templates\TQ-S402-en_OgolnyTechDok.dotm"
 
 
 FileGetTime, OurTimePL, %OurTemplatePL%
